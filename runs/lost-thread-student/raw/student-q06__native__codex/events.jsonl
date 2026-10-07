@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a112f2-fb72-70e2-b4c8-e3144f9a26cf"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"You’re probably thinking of **“How to stop getting distracted”** from **August 25**. You wrote:\n\n> “I literally cannot focus today. I've been 'working' for 3 hours and all I've done is read reddit and listen to lofi. how do you force yourself to start?”"}}
+{"type":"turn.completed","usage":{"input_tokens":5200,"cached_input_tokens":2688,"cache_write_input_tokens":0,"output_tokens":66,"reasoning_output_tokens":0}}

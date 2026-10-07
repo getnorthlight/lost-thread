@@ -1,0 +1,167 @@
+{
+  "title": "Lost Thread: raw counts (not scores)",
+  "run": "lost-thread-student",
+  "traces": 54,
+  "trace_lines_incl_superseded": 54,
+  "superseded_with_errors": 0,
+  "lock_sha256": "204b00dd8a3963b35c4ef7ad2b5aecd5fad95fe8653eaeb6fd21dc49a113f33c",
+  "first_start": "2026-10-06T15:34:39.966110-05:00",
+  "last_start": "2026-10-06T15:44:47.096215-05:00",
+  "finished": "2026-10-06T15:44:58.100997-05:00",
+  "attempts_total": 54,
+  "system_variants": [
+    "symmetric-v1"
+  ],
+  "cells": {
+    "dd | claude": {
+      "runs": 9,
+      "errors": 0,
+      "timeouts": 0,
+      "isolation_flags": 0,
+      "mean_seconds": 12.5,
+      "runs_using_daydream": 9,
+      "mean_tool_calls": 5.89,
+      "checkable_hits": "7/11",
+      "cost_usd_api_equiv": 0.485,
+      "tokens_in_out": [
+        181393,
+        7588
+      ],
+      "answered": 9
+    },
+    "dd | codex": {
+      "runs": 9,
+      "errors": 0,
+      "timeouts": 0,
+      "isolation_flags": 0,
+      "mean_seconds": 18.4,
+      "runs_using_daydream": 9,
+      "mean_tool_calls": 7.0,
+      "checkable_hits": "6/11",
+      "cost_usd_api_equiv": null,
+      "tokens_in_out": [
+        473023,
+        2671
+      ],
+      "answered": 9
+    },
+    "native | claude": {
+      "runs": 9,
+      "errors": 0,
+      "timeouts": 0,
+      "isolation_flags": 0,
+      "mean_seconds": 6.1,
+      "runs_using_daydream": 0,
+      "mean_tool_calls": 0.0,
+      "checkable_hits": "2/11",
+      "cost_usd_api_equiv": 0.132,
+      "tokens_in_out": [
+        7344,
+        3671
+      ],
+      "answered": 9
+    },
+    "native | codex": {
+      "runs": 9,
+      "errors": 0,
+      "timeouts": 0,
+      "isolation_flags": 0,
+      "mean_seconds": 6.2,
+      "runs_using_daydream": 0,
+      "mean_tool_calls": 0.0,
+      "checkable_hits": "2/11",
+      "cost_usd_api_equiv": null,
+      "tokens_in_out": [
+        46794,
+        778
+      ],
+      "answered": 9
+    },
+    "native+dd | claude": {
+      "runs": 9,
+      "errors": 0,
+      "timeouts": 0,
+      "isolation_flags": 0,
+      "mean_seconds": 11.2,
+      "runs_using_daydream": 9,
+      "mean_tool_calls": 4.67,
+      "checkable_hits": "6/11",
+      "cost_usd_api_equiv": 0.468,
+      "tokens_in_out": [
+        156059,
+        6544
+      ],
+      "answered": 9
+    },
+    "native+dd | codex": {
+      "runs": 9,
+      "errors": 0,
+      "timeouts": 0,
+      "isolation_flags": 0,
+      "mean_seconds": 14.3,
+      "runs_using_daydream": 6,
+      "mean_tool_calls": 4.33,
+      "checkable_hits": "5/11",
+      "cost_usd_api_equiv": null,
+      "tokens_in_out": [
+        341551,
+        1910
+      ],
+      "answered": 9
+    }
+  },
+  "by_type": {
+    "dd | claude | control": "1/1",
+    "dd | claude | cross_app": "1/2",
+    "dd | claude | decision": "1/1",
+    "dd | claude | exact_recall": "1/1",
+    "dd | claude | negative": "0/1",
+    "dd | claude | time_spent": "1/1",
+    "dd | claude | vague": "2/2",
+    "dd | claude | where_left_off": "0/2",
+    "dd | codex | control": "1/1",
+    "dd | codex | cross_app": "0/2",
+    "dd | codex | decision": "1/1",
+    "dd | codex | exact_recall": "1/1",
+    "dd | codex | negative": "0/1",
+    "dd | codex | time_spent": "1/1",
+    "dd | codex | vague": "2/2",
+    "dd | codex | where_left_off": "0/2",
+    "native | claude | control": "1/1",
+    "native | claude | cross_app": "0/2",
+    "native | claude | decision": "1/1",
+    "native | claude | exact_recall": "0/1",
+    "native | claude | negative": "0/1",
+    "native | claude | time_spent": "0/1",
+    "native | claude | vague": "0/2",
+    "native | claude | where_left_off": "0/2",
+    "native | codex | control": "1/1",
+    "native | codex | cross_app": "0/2",
+    "native | codex | decision": "1/1",
+    "native | codex | exact_recall": "0/1",
+    "native | codex | negative": "0/1",
+    "native | codex | time_spent": "0/1",
+    "native | codex | vague": "0/2",
+    "native | codex | where_left_off": "0/2",
+    "native+dd | claude | control": "1/1",
+    "native+dd | claude | cross_app": "0/2",
+    "native+dd | claude | decision": "1/1",
+    "native+dd | claude | exact_recall": "1/1",
+    "native+dd | claude | negative": "0/1",
+    "native+dd | claude | time_spent": "1/1",
+    "native+dd | claude | vague": "2/2",
+    "native+dd | claude | where_left_off": "0/2",
+    "native+dd | codex | control": "1/1",
+    "native+dd | codex | cross_app": "0/2",
+    "native+dd | codex | decision": "1/1",
+    "native+dd | codex | exact_recall": "1/1",
+    "native+dd | codex | negative": "0/1",
+    "native+dd | codex | time_spent": "1/1",
+    "native+dd | codex | vague": "1/2",
+    "native+dd | codex | where_left_off": "0/2"
+  },
+  "models": [
+    "claude: claude-opus-5-5 / claude-code 2.1.289",
+    "codex: gpt-6.1-sol / codex-cli 0.159.2"
+  ]
+}

@@ -1,0 +1,27 @@
+{"pair_id": "P0088", "winner": "2", "reason": "correct 18 min", "judge": "p2"}
+{"pair_id": "P0096", "winner": "tie", "reason": "identical wrong", "judge": "p2"}
+{"pair_id": "P0062", "winner": "2", "reason": "correctly finds no Leo email", "judge": "p2"}
+{"pair_id": "P0059", "winner": "1", "reason": "same content shorter", "judge": "p2"}
+{"pair_id": "P0098", "winner": "1", "reason": "identifies the article", "judge": "p2"}
+{"pair_id": "P0045", "winner": "1", "reason": "exact email wording", "judge": "p2"}
+{"pair_id": "P0042", "winner": "2", "reason": "grounded timeline with honest caveats", "judge": "p2"}
+{"pair_id": "P0022", "winner": "2", "reason": "correct convention and vote", "judge": "p2"}
+{"pair_id": "P0090", "winner": "2", "reason": "finds INFO 6502 choice", "judge": "p2"}
+{"pair_id": "P0081", "winner": "1", "reason": "honest unknown beats wrong claim", "judge": "p2"}
+{"pair_id": "P0105", "winner": "2", "reason": "grounded evidence on tackle box", "judge": "p2"}
+{"pair_id": "P0054", "winner": "2", "reason": "grounded evidence with honest uncertainty", "judge": "p2"}
+{"pair_id": "P0063", "winner": "1", "reason": "correct no Leo email", "judge": "p2"}
+{"pair_id": "P0058", "winner": "1", "reason": "identifies roaster map Figma", "judge": "p2"}
+{"pair_id": "P0072", "winner": "tie", "reason": "same correct fact", "judge": "p2"}
+{"pair_id": "P0074", "winner": "1", "reason": "correct invoice number", "judge": "p2"}
+{"pair_id": "P0023", "winner": "tie", "reason": "equivalent hedges", "judge": "p2"}
+{"pair_id": "P0064", "winner": "2", "reason": "correct no Leo email", "judge": "p2"}
+{"pair_id": "P0061", "winner": "1", "reason": "correct no Leo email", "judge": "p2"}
+{"pair_id": "P0094", "winner": "1", "reason": "correct thread", "judge": "p2"}
+{"pair_id": "P0089", "winner": "1", "reason": "correct choice", "judge": "p2"}
+{"pair_id": "P0086", "winner": "1", "reason": "correct 18 min", "judge": "p2"}
+{"pair_id": "P0076", "winner": "1", "reason": "correct invoice", "judge": "p2"}
+{"pair_id": "P0040", "winner": "tie", "reason": "equal unknowns", "judge": "p2"}
+{"pair_id": "P0030", "winner": "2", "reason": "grounded no call evidence", "judge": "p2"}
+{"pair_id": "P0107", "winner": "tie", "reason": "equivalent", "judge": "p2"}
+{"pair_id": "P0095", "winner": "tie", "reason": "identical", "judge": "p2"}

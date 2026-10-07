@@ -1,0 +1,17 @@
+{
+  "home": "<lost-thread>/stores/student/home",
+  "kept": {
+    "app.activated": 214,
+    "keyboard.submit": 16,
+    "keyboard.text_input": 34,
+    "mouse.click": 782,
+    "window.changed": 578
+  },
+  "loadedAt": "2026-10-06T20:34:19Z",
+  "policyRevision": "C44ACD06-6AD3-44AB-B836-57BD533A251D",
+  "refused": {},
+  "refusedIDs": [],
+  "rows": 1624,
+  "typedRetention": "30d",
+  "store_sha256": "9acb7ce1e368c018ff7096ead6bc2dc28439c01584d2f57a2c5446f3887f9516"
+}

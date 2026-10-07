@@ -1,0 +1,1001 @@
+{
+  "step": "fill-d5",
+  "model": "deepseek/deepseek-v4-flash-0731",
+  "requested_model": "deepseek/deepseek-v4-flash-0731",
+  "base_url": "<local OpenRouter proxy>",
+  "temperature": 0.7,
+  "seconds": 32.08,
+  "usage": {
+    "prompt_tokens": 8037,
+    "completion_tokens": 5423,
+    "total_tokens": 13460,
+    "cost": 0.00175966,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 8036,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00175966,
+      "upstream_inference_prompt_cost": 0.00024122,
+      "upstream_inference_completions_cost": 0.00151844
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "attempt": 1,
+  "system": "You generate realistic synthetic test data for a research benchmark about personal memory. Everything you write is fiction: invent every person, company, client and product name (never use real people you know of, and avoid famous companies as employers). Write like real life, not like a tidy diary: people get interrupted, leave things half done, revisit things, procrastinate, and type casually. Reply with JSON only.",
+  "user": "Person: {\"name\": \"Maya Chen\", \"role\": \"Graduate student (MS in Information Science)\", \"company\": \"University of Minnesota\", \"summary\": \"Maya is a second-year master's student juggling a part-time research assistantship, a group project for her human-computer interaction seminar, and a side project building a small web app for a local nonprofit. She tends to start her day late, get distracted by social media and music, and then work in bursts. She is trying to be better about using her calendar and Notion to track tasks, but often falls back on sticky notes and her own memory.\", \"workday\": {\"start\": \"09:45\", \"end\": \"18:30\", \"lunch\": \"13:00\"}}\nPeople: [{\"key\": \"prof_abrams\", \"name\": \"Dr. Ellen Abrams\", \"role\": \"Advisor / HCI professor\", \"channel\": \"email\"}, {\"key\": \"raj\", \"name\": \"Raj Patel\", \"role\": \"Teammate in HCI group project\", \"channel\": \"slack\"}, {\"key\": \"sophia\", \"name\": \"Sophia Nguyen\", \"role\": \"Teammate in HCI group project\", \"channel\": \"slack\"}, {\"key\": \"marcus\", \"name\": \"Marcus Webb\", \"role\": \"Teammate in HCI group project\", \"channel\": \"slack\"}, {\"key\": \"lila\", \"name\": \"Lila Thompson\", \"role\": \"Nonprofit contact at Open Streets Collective\", \"channel\": \"email\"}, {\"key\": \"dad\", \"name\": \"Dad\", \"role\": \"Family\", \"channel\": \"messages\"}, {\"key\": \"priya\", \"name\": \"Priya Shah\", \"role\": \"Friend from undergrad\", \"channel\": \"messages\"}, {\"key\": \"lab_pi\", \"name\": \"Dr. Tom Okafor\", \"role\": \"Research lab PI\", \"channel\": \"email\"}]\nDay 5 plan: {\"blocks\": [{\"start\": \"09:48\", \"thread\": \"hci_group_project\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"calendar\", \"about\": \"checking today's schedule: class at 11:15, group presentation at 11:15, no other meetings\", \"min\": 2}, {\"do\": \"app\", \"app\": \"slack\", \"about\": \"#hci-group-project: sees Raj's message from last night asking if anyone has the final slide deck\", \"min\": 3}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"replies to Raj in #hci-group-project: 'I have the deck, just doing a final pass on the methods slide now'\", \"sent\": true, \"to\": \"Raj Patel\"}, {\"do\": \"app\", \"app\": \"keynote\", \"about\": \"opens HCI presentation deck, scrolls through slides, notices the methods slide has a typo in the participant count\", \"min\": 8}, {\"do\": \"type\", \"where\": \"keynote\", \"intent\": \"fixes typo on methods slide: changes '8 participants' to '8 unmoderated + 3 moderated'\", \"sent\": true, \"to\": null}]}, {\"start\": \"10:05\", \"thread\": \"hci_group_project\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"spotify\", \"about\": \"puts on lofi playlist to focus\", \"min\": 1}, {\"do\": \"app\", \"app\": \"keynote\", \"about\": \"continues editing slides, moves the usability issues screenshot to the right slide\", \"min\": 10}, {\"do\": \"page\", \"host\": \"www.reddit.com\", \"about\": \"r/ADHD - 'How do you stop procrastinating?' - scrolls for 5 minutes, doesn't read the top comment\", \"min\": 5, \"new_tab\": true}, {\"do\": \"app\", \"app\": \"keynote\", \"about\": \"back to slides, adds speaker notes for the methods section\", \"min\": 7}]}, {\"start\": \"10:28\", \"thread\": \"ra_position\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"mail\", \"about\": \"checks inbox: sees Dr. Okafor's reply about the community trust code definition from Friday, also sees a new email from the lab about a meeting this afternoon\", \"min\": 3}, {\"do\": \"type\", \"where\": \"mail\", \"intent\": \"replies to Dr. Okafor: 'Thanks, that helps. I'll finalize the summary today.'\", \"sent\": true, \"to\": \"Dr. Tom Okafor\"}, {\"do\": \"app\", \"app\": \"vscode\", \"about\": \"opens the lab's NVivo export file to check the coding summary she submitted Friday\", \"min\": 5}, {\"do\": \"app\", \"app\": \"terminal\", \"about\": \"runs a quick grep to count coded references per theme in the export\", \"min\": 3}]}, {\"start\": \"10:45\", \"thread\": \"open_streets_webapp\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"mail\", \"about\": \"sees Lila's reply about the invoice: board approved, payment will be sent by end of week\", \"min\": 2}, {\"do\": \"type\", \"where\": \"mail\", \"intent\": \"replies to Lila: 'Great, thank you! Let me know if you need any tweaks after the board tests it.'\", \"sent\": true, \"to\": \"Lila Thompson\"}, {\"do\": \"app\", \"app\": \"vscode\", \"about\": \"opens the Open Streets app code, checks if there are any console errors from the admin page\", \"min\": 6}, {\"do\": \"app\", \"app\": \"terminal\", \"about\": \"runs npm run build to make sure the production build still works\", \"min\": 4}]}, {\"start\": \"11:00\", \"thread\": \"hci_group_project\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"DMs from Sophia: 'are we meeting before class? I have the usability report draft'\", \"min\": 2}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"replies to Sophia: 'I'm in the library, want to meet at 11:05 by the stairs?'\", \"sent\": true, \"to\": \"Sophia Nguyen\"}, {\"do\": \"app\", \"app\": \"keynote\", \"about\": \"exports the deck to PDF as backup, saves to Google Drive\", \"min\": 3}, {\"do\": \"app\", \"app\": \"finder\", \"about\": \"looks for the usability report file, finds it in Downloads, drags it to the HCI folder\", \"min\": 2}]}, {\"start\": \"11:15\", \"thread\": \"hci_group_project\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"zoom\", \"about\": \"joins the HCI class presentation - presents the usability study findings with the group\", \"min\": 45}]}, {\"start\": \"12:00\", \"thread\": \"hci_group_project\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"#hci-group-project: Sophia posts the final report draft, Marcus says 'great job everyone'\", \"min\": 3}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"replies in #hci-group-project: 'Thanks all! I'll upload the slides to the shared drive.'\", \"sent\": true, \"to\": \"Sophia Nguyen\"}, {\"do\": \"app\", \"app\": \"mail\", \"about\": \"sends the presentation slides to Prof. Abrams as a courtesy\", \"min\": 2}]}, {\"start\": \"12:10\", \"thread\": \"course_registration\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"calendar\", \"about\": \"checks if there are any registration deadlines this week - sees the add/drop deadline is Friday\", \"min\": 2}, {\"do\": \"page\", \"host\": \"www.ratemyprofessors.com\", \"about\": \"rechecks INFO 6502 professor ratings - still mixed, but sees a new comment about the class being 'challenging but worth it'\", \"min\": 4, \"new_tab\": true}, {\"do\": \"app\", \"app\": \"notion\", \"about\": \"opens the course planning page, confirms INFO 6502 is still the plan, notes the add/drop deadline\", \"min\": 3}]}, {\"start\": \"12:20\", \"thread\": \"dad_birthday\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"messages\", \"about\": \"sees a text from Dad: 'Got the tackle box, you shouldn't have! Love it.'\", \"min\": 2}, {\"do\": \"type\", \"where\": \"messages\", \"intent\": \"replies to Dad: 'Glad you like it! Happy early birthday.'\", \"sent\": true, \"to\": \"Dad\"}, {\"do\": \"app\", \"app\": \"messages\", \"about\": \"texts Priya: 'Dad got the gift, he loves it!'\", \"min\": 1}, {\"do\": \"type\", \"where\": \"messages\", \"intent\": \"sends the text to Priya\", \"sent\": true, \"to\": \"Priya Shah\"}]}, {\"start\": \"12:30\", \"thread\": \"ra_position\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"mail\", \"about\": \"reads the lab meeting reminder for 2pm, sees the agenda includes 'coding consistency check'\", \"min\": 2}, {\"do\": \"app\", \"app\": \"vscode\", \"about\": \"opens the NVivo export again, prepares a few example quotes for the meeting\", \"min\": 8}]}, {\"start\": \"12:45\", \"thread\": \"hci_group_project\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"DMs from Raj: 'Can you send me the slide deck? I want to review the discussion section'\", \"min\": 2}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"replies to Raj: 'Just uploaded to the shared drive, check there'\", \"sent\": true, \"to\": \"Raj Patel\"}, {\"do\": \"page\", \"host\": \"www.youtube.com\", \"about\": \"lofi hip hop radio - lets it play in the background\", \"min\": 3, \"new_tab\": true}]}, {\"start\": \"13:00\", \"thread\": \"ra_position\", \"noise\": false, \"steps\": [{\"do\": \"idle\", \"min\": 45, \"about\": \"lunch - walks to the student union, gets a sandwich, scrolls through Instagram\"}]}, {\"start\": \"13:50\", \"thread\": \"ra_position\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"vscode\", \"about\": \"opens the lab coding summary document, reviews the community trust examples from Dr. Okafor's email\", \"min\": 10}, {\"do\": \"app\", \"app\": \"terminal\", \"about\": \"runs a script to generate a quick summary table of theme frequencies for the lab meeting\", \"min\": 5}]}, {\"start\": \"14:05\", \"thread\": \"ra_position\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"zoom\", \"about\": \"joins the lab meeting - discusses coding consistency, shares the summary table, takes notes on feedback\", \"min\": 50}]}, {\"start\": \"15:00\", \"thread\": \"ra_position\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"notes\", \"about\": \"types up lab meeting notes, adds action items: 'update codebook with community trust examples'\", \"min\": 5}, {\"do\": \"app\", \"app\": \"vscode\", \"about\": \"opens the codebook file, adds the examples from Dr. Okafor's email\", \"min\": 10}, {\"do\": \"type\", \"where\": \"vscode\", \"intent\": \"edits the codebook to include the new community trust examples\", \"sent\": true, \"to\": null}]}, {\"start\": \"15:20\", \"thread\": \"open_streets_webapp\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"mail\", \"about\": \"sees a new email from Lila: 'The board wants to see a demo of the admin page. Can you record a quick Loom?'\", \"min\": 2}, {\"do\": \"type\", \"where\": \"mail\", \"intent\": \"replies to Lila: 'Sure, I'll record a short demo and send it over today.'\", \"sent\": true, \"to\": \"Lila Thompson\"}, {\"do\": \"app\", \"app\": \"vscode\", \"about\": \"opens the admin page code, checks if the event form has all the fields Lila needs\", \"min\": 8}, {\"do\": \"app\", \"app\": \"terminal\", \"about\": \"starts the local dev server to test the admin page\", \"min\": 3}]}, {\"start\": \"15:40\", \"thread\": \"open_streets_webapp\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"vscode\", \"about\": \"notices the admin page doesn't have a 'delete event' button - adds it quickly\", \"min\": 12}, {\"do\": \"app\", \"app\": \"terminal\", \"about\": \"commits the change and pushes to GitHub\", \"min\": 3}, {\"do\": \"page\", \"host\": \"console.firebase.google.com\", \"about\": \"checks if the Firestore rules allow the delete operation - they do\", \"min\": 2, \"new_tab\": true}]}, {\"start\": \"16:00\", \"thread\": \"open_streets_webapp\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"vscode\", \"about\": \"opens the Loom app to record a demo of the admin page\", \"min\": 2}, {\"do\": \"app\", \"app\": \"terminal\", \"about\": \"makes sure the dev server is still running, opens the admin page in the browser\", \"min\": 2}, {\"do\": \"app\", \"app\": \"preview\", \"about\": \"records a 3-minute Loom demo showing how to add an event, edit it, and delete it\", \"min\": 5}, {\"do\": \"type\", \"where\": \"mail\", \"intent\": \"sends the Loom link to Lila with a short note: 'Here's the demo. Let me know if the board wants any changes.'\", \"sent\": true, \"to\": \"Lila Thompson\"}]}, {\"start\": \"16:15\", \"thread\": \"hci_group_project\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"#hci-group-project: Marcus posts a message about the class feedback - 'Prof. Abrams said our presentation was solid'\", \"min\": 2}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"replies in #hci-group-project: 'Nice! Glad it went well.'\", \"sent\": true, \"to\": \"Marcus Webb\"}, {\"do\": \"page\", \"host\": \"www.reddit.com\", \"about\": \"r/ADHD - scrolls for a few minutes, gets distracted by a post about 'body doubling'\", \"min\": 5, \"new_tab\": true}]}, {\"start\": \"16:30\", \"thread\": \"course_registration\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"mail\", \"about\": \"sees an email from the registrar: 'Waitlist update for INFO 6502' - opens it, she's moved to position 1\", \"min\": 2}, {\"do\": \"app\", \"app\": \"notion\", \"about\": \"updates the course planning page: 'INFO 6502 - waitlist position 1, add/drop deadline Friday'\", \"min\": 3}, {\"do\": \"page\", \"host\": \"canvas.umn.edu\", \"about\": \"checks if the AI Ethics course page is visible yet - it's not, but the Data Viz page is still there\", \"min\": 2, \"new_tab\": true}]}, {\"start\": \"16:40\", \"thread\": \"dad_birthday\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"messages\", \"about\": \"sees a text from Priya: 'Yay! What did you end up getting him?'\", \"min\": 1}, {\"do\": \"type\", \"where\": \"messages\", \"intent\": \"replies to Priya: 'A personalized tackle box from Etsy. He said he loves it.'\", \"sent\": true, \"to\": \"Priya Shah\"}]}, {\"start\": \"16:50\", \"thread\": \"ra_position\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"mail\", \"about\": \"writes a follow-up email to Dr. Okafor with the updated codebook and lab meeting notes\", \"min\": 5}, {\"do\": \"type\", \"where\": \"mail\", \"intent\": \"sends the email to Dr. Okafor: 'Attached is the updated codebook with the community trust examples. Let me know if you want any changes.'\", \"sent\": true, \"to\": \"Dr. Tom Okafor\"}]}, {\"start\": \"17:00\", \"thread\": \"hci_group_project\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"DMs from Sophia: 'Do you want to grab coffee this week to debrief the presentation?'\", \"min\": 2}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"replies to Sophia: 'Sure! How about Wednesday after class?'\", \"sent\": true, \"to\": \"Sophia Nguyen\"}, {\"do\": \"page\", \"host\": \"www.nytimes.com\", \"about\": \"The Sunday Read: 'The Lost Art of Doing Nothing' - opens the article, reads the first few paragraphs, gets distracted\", \"min\": 6, \"new_tab\": true}]}, {\"start\": \"17:15\", \"thread\": \"open_streets_webapp\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"mail\", \"about\": \"sees Lila's reply: 'The board loved the demo! Can you send the final invoice to our accountant?'\", \"min\": 2}, {\"do\": \"type\", \"where\": \"mail\", \"intent\": \"replies to Lila: 'Great! I'll send the invoice to the accountant now.'\", \"sent\": true, \"to\": \"Lila Thompson\"}, {\"do\": \"app\", \"app\": \"mail\", \"about\": \"forwards the invoice to the accountant email Lila provided\", \"min\": 3}]}, {\"start\": \"17:25\", \"thread\": \"course_registration\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"calendar\", \"about\": \"sets a reminder for Friday to check the add/drop deadline and confirm INFO 6502 registration\", \"min\": 2}, {\"do\": \"app\", \"app\": \"notion\", \"about\": \"adds a task: 'Check waitlist status Friday'\", \"min\": 2}]}, {\"start\": \"17:35\", \"thread\": \"hci_group_project\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"#hci-group-project: Raj posts a meme about group projects, everyone reacts with laughing emojis\", \"min\": 3}, {\"do\": \"page\", \"host\": \"www.youtube.com\", \"about\": \"lofi hip hop radio - keeps playing in the background\", \"min\": 2, \"new_tab\": true}]}, {\"start\": \"17:45\", \"thread\": \"ra_position\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"vscode\", \"about\": \"opens the lab coding summary one more time, double-checks the theme counts\", \"min\": 5}, {\"do\": \"app\", \"app\": \"terminal\", \"about\": \"runs the summary script again, confirms the numbers match\", \"min\": 2}]}, {\"start\": \"17:55\", \"thread\": \"open_streets_webapp\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"vscode\", \"about\": \"checks if there are any remaining issues in the GitHub issues list - sees one about mobile responsiveness, decides to leave it for tomorrow\", \"min\": 3}, {\"do\": \"app\", \"app\": \"terminal\", \"about\": \"closes the dev server, commits any remaining changes\", \"min\": 2}]}, {\"start\": \"18:05\", \"thread\": \"course_registration\", \"noise\": true, \"steps\": [{\"do\": \"page\", \"host\": \"www.reddit.com\", \"about\": \"r/ADHD - scrolls through a thread about 'how do you actually finish things' - reads a few comments, doesn't save the post\", \"min\": 8, \"new_tab\": true}]}, {\"start\": \"18:20\", \"thread\": \"hci_group_project\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"mail\", \"about\": \"checks if Prof. Abrams replied to the slides email - she did: 'Great job today, Maya. Nice work on the methods section.'\", \"min\": 2}, {\"do\": \"type\", \"where\": \"mail\", \"intent\": \"replies to Prof. Abrams: 'Thank you! It was a great team effort.'\", \"sent\": true, \"to\": \"Dr. Ellen Abrams\"}]}, {\"start\": \"18:30\", \"thread\": \"hci_group_project\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"#hci-group-project: posts a final message: 'Thanks everyone, great work this week. I'll clean up the shared drive.'\", \"min\": 2}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"sends the message to the group\", \"sent\": true, \"to\": \"Raj Patel, Sophia Nguyen, Marcus Webb\"}]}], \"summary\": \"Maya started the day by finishing the HCI presentation slides, then presented the usability study findings with her group in class. After lunch, she attended the lab meeting, updated the codebook with Dr. Okafor's feedback, and recorded a Loom demo of the Open Streets admin page for Lila. She also confirmed her dad's gift arrived, moved up on the INFO 6502 waitlist, and wrapped up loose ends on the web app and lab summary before ending the day with a quick Slack wrap-up for the group project.\"}\n\nFill in exact content as JSON {\"steps\": {\"b<block>s<step>\": {...}}} for every app/page/search/type step:\n- app: {\"title\": exact macOS window title, e.g. \"budget_v3.xlsx\", \"retry_worker.go — fern-api\", \"#design (Channel) - Acme - Slack\",\n         \"titles\": optional list of window titles they rotate through}\n- page: {\"title\": the tab title exactly as the site shows it (\"... - Google Docs\", \"... - YouTube\", Gmail: the email subject,\n         \"Inbox\" for the inbox), \"path\": a plausible URL path}\n- search: {\"query\": the words typed into Google}\n- type: {\"text\": the exact words typed (casual where casual, typos allowed in chats), \"title\": window title for apps,\n         \"place\": the page/subject it was typed in for web:<host>, \"field\": \"message\"|\"body\"|\"textArea\"|\"oneLine\",\n         \"seal\": \"submit\" (Return/send) | \"idle\" (stopped typing) | \"submitChord\" (Cmd-Return in email)}\nKeep identifiers and numbers consistent with the thread arcs and earlier days.\nReturn exactly these keys (block and step numbers start at 0), each a flat object with the fields above:\nb0s0: app calendar: checking today's schedule: class at 11:15, group presentation at 11:15, no other meetings\nb0s1: app slack: #hci-group-project: sees Raj's message from last night asking if anyone has the final slide deck\nb0s2: type in slack: replies to Raj in #hci-group-project: 'I have the deck, just doing a final pass on the methods slide now'\nb0s3: app keynote: opens HCI presentation deck, scrolls through slides, notices the methods slide has a typo in the participant count\nb0s4: type in keynote: fixes typo on methods slide: changes '8 participants' to '8 unmoderated + 3 moderated'\nb1s0: app spotify: puts on lofi playlist to focus\nb1s1: app keynote: continues editing slides, moves the usability issues screenshot to the right slide\nb1s2: page www.reddit.com: r/ADHD - 'How do you stop procrastinating?' - scrolls for 5 minutes, doesn't read the top comment\nb1s3: app keynote: back to slides, adds speaker notes for the methods section\nb2s0: app mail: checks inbox: sees Dr. Okafor's reply about the community trust code definition from Friday, also sees a new email from the lab about a meeting this afternoon\nb2s1: type in mail: replies to Dr. Okafor: 'Thanks, that helps. I'll finalize the summary today.'\nb2s2: app vscode: opens the lab's NVivo export file to check the coding summary she submitted Friday\nb2s3: app terminal: runs a quick grep to count coded references per theme in the export\nb3s0: app mail: sees Lila's reply about the invoice: board approved, payment will be sent by end of week\nb3s1: type in mail: replies to Lila: 'Great, thank you! Let me know if you need any tweaks after the board tests it.'\nb3s2: app vscode: opens the Open Streets app code, checks if there are any console errors from the admin page\nb3s3: app terminal: runs npm run build to make sure the production build still works\nb4s0: app slack: DMs from Sophia: 'are we meeting before class? I have the usability report draft'\nb4s1: type in slack: replies to Sophia: 'I'm in the library, want to meet at 11:05 by the stairs?'\nb4s2: app keynote: exports the deck to PDF as backup, saves to Google Drive\nb4s3: app finder: looks for the usability report file, finds it in Downloads, drags it to the HCI folder\nb5s0: app zoom: joins the HCI class presentation - presents the usability study findings with the group\nb6s0: app slack: #hci-group-project: Sophia posts the final report draft, Marcus says 'great job everyone'\nb6s1: type in slack: replies in #hci-group-project: 'Thanks all! I'll upload the slides to the shared drive.'\nb6s2: app mail: sends the presentation slides to Prof. Abrams as a courtesy\nb7s0: app calendar: checks if there are any registration deadlines this week - sees the add/drop deadline is Friday\nb7s1: page www.ratemyprofessors.com: rechecks INFO 6502 professor ratings - still mixed, but sees a new comment about the class being 'challenging but worth it'\nb7s2: app notion: opens the course planning page, confirms INFO 6502 is still the plan, notes the add/drop deadline\nb8s0: app messages: sees a text from Dad: 'Got the tackle box, you shouldn't have! Love it.'\nb8s1: type in messages: replies to Dad: 'Glad you like it! Happy early birthday.'\nb8s2: app messages: texts Priya: 'Dad got the gift, he loves it!'\nb8s3: type in messages: sends the text to Priya\nb9s0: app mail: reads the lab meeting reminder for 2pm, sees the agenda includes 'coding consistency check'\nb9s1: app vscode: opens the NVivo export again, prepares a few example quotes for the meeting\nb10s0: app slack: DMs from Raj: 'Can you send me the slide deck? I want to review the discussion section'\nb10s1: type in slack: replies to Raj: 'Just uploaded to the shared drive, check there'\nb10s2: page www.youtube.com: lofi hip hop radio - lets it play in the background\nb12s0: app vscode: opens the lab coding summary document, reviews the community trust examples from Dr. Okafor's email\nb12s1: app terminal: runs a script to generate a quick summary table of theme frequencies for the lab meeting\nb13s0: app zoom: joins the lab meeting - discusses coding consistency, shares the summary table, takes notes on feedback\nb14s0: app notes: types up lab meeting notes, adds action items: 'update codebook with community trust examples'\nb14s1: app vscode: opens the codebook file, adds the examples from Dr. Okafor's email\nb14s2: type in vscode: edits the codebook to include the new community trust examples\nb15s0: app mail: sees a new email from Lila: 'The board wants to see a demo of the admin page. Can you record a quick Loom?'\nb15s1: type in mail: replies to Lila: 'Sure, I'll record a short demo and send it over today.'\nb15s2: app vscode: opens the admin page code, checks if the event form has all the fields Lila needs\nb15s3: app terminal: starts the local dev server to test the admin page\nb16s0: app vscode: notices the admin page doesn't have a 'delete event' button - adds it quickly\nb16s1: app terminal: commits the change and pushes to GitHub\nb16s2: page console.firebase.google.com: checks if the Firestore rules allow the delete operation - they do\nb17s0: app vscode: opens the Loom app to record a demo of the admin page\nb17s1: app terminal: makes sure the dev server is still running, opens the admin page in the browser\nb17s2: app preview: records a 3-minute Loom demo showing how to add an event, edit it, and delete it\nb17s3: type in mail: sends the Loom link to Lila with a short note: 'Here's the demo. Let me know if the board wants any changes.'\nb18s0: app slack: #hci-group-project: Marcus posts a message about the class feedback - 'Prof. Abrams said our presentation was solid'\nb18s1: type in slack: replies in #hci-group-project: 'Nice! Glad it went well.'\nb18s2: page www.reddit.com: r/ADHD - scrolls for a few minutes, gets distracted by a post about 'body doubling'\nb19s0: app mail: sees an email from the registrar: 'Waitlist update for INFO 6502' - opens it, she's moved to position 1\nb19s1: app notion: updates the course planning page: 'INFO 6502 - waitlist position 1, add/drop deadline Friday'\nb19s2: page canvas.umn.edu: checks if the AI Ethics course page is visible yet - it's not, but the Data Viz page is still there\nb20s0: app messages: sees a text from Priya: 'Yay! What did you end up getting him?'\nb20s1: type in messages: replies to Priya: 'A personalized tackle box from Etsy. He said he loves it.'\nb21s0: app mail: writes a follow-up email to Dr. Okafor with the updated codebook and lab meeting notes\nb21s1: type in mail: sends the email to Dr. Okafor: 'Attached is the updated codebook with the community trust examples. Let me know if you want any changes.'\nb22s0: app slack: DMs from Sophia: 'Do you want to grab coffee this week to debrief the presentation?'\nb22s1: type in slack: replies to Sophia: 'Sure! How about Wednesday after class?'\nb22s2: page www.nytimes.com: The Sunday Read: 'The Lost Art of Doing Nothing' - opens the article, reads the first few paragraphs, gets distracted\nb23s0: app mail: sees Lila's reply: 'The board loved the demo! Can you send the final invoice to our accountant?'\nb23s1: type in mail: replies to Lila: 'Great! I'll send the invoice to the accountant now.'\nb23s2: app mail: forwards the invoice to the accountant email Lila provided\nb24s0: app calendar: sets a reminder for Friday to check the add/drop deadline and confirm INFO 6502 registration\nb24s1: app notion: adds a task: 'Check waitlist status Friday'\nb25s0: app slack: #hci-group-project: Raj posts a meme about group projects, everyone reacts with laughing emojis\nb25s1: page www.youtube.com: lofi hip hop radio - keeps playing in the background\nb26s0: app vscode: opens the lab coding summary one more time, double-checks the theme counts\nb26s1: app terminal: runs the summary script again, confirms the numbers match\nb27s0: app vscode: checks if there are any remaining issues in the GitHub issues list - sees one about mobile responsiveness, decides to leave it for tomorrow\nb27s1: app terminal: closes the dev server, commits any remaining changes\nb28s0: page www.reddit.com: r/ADHD - scrolls through a thread about 'how do you actually finish things' - reads a few comments, doesn't save the post\nb29s0: app mail: checks if Prof. Abrams replied to the slides email - she did: 'Great job today, Maya. Nice work on the methods section.'\nb29s1: type in mail: replies to Prof. Abrams: 'Thank you! It was a great team effort.'\nb30s0: app slack: #hci-group-project: posts a final message: 'Thanks everyone, great work this week. I'll clean up the shared drive.'\nb30s1: type in slack: sends the message to the group",
+  "raw": "{\n  \"b0s0\": {\n    \"app\": \"calendar\",\n    \"title\": \"Calendar\",\n    \"about\": \"checking today's schedule: class at 11:15, group presentation at 11:15, no other meetings\"\n  },\n  \"b0s1\": {\n    \"app\": \"slack\",\n    \"title\": \"#hci-group-project - University of Minnesota - Slack\",\n    \"about\": \"sees Raj's message from last night asking if anyone has the final slide deck\"\n  },\n  \"b0s2\": {\n    \"type\": \"slack\",\n    \"text\": \"I have the deck, just doing a final pass on the methods slide now\",\n    \"title\": \"#hci-group-project - University of Minnesota - Slack\",\n    \"place\": \"#hci-group-project\",\n    \"field\": \"message\",\n    \"seal\": \"submit\"\n  },\n  \"b0s3\": {\n    \"app\": \"keynote\",\n    \"title\": \"HCI Group Presentation - Keynote\",\n    \"about\": \"opens HCI presentation deck, scrolls through slides, notices the methods slide has a typo in the participant count\"\n  },\n  \"b0s4\": {\n    \"type\": \"keynote\",\n    \"text\": \"8 unmoderated + 3 moderated\",\n    \"title\": \"HCI Group Presentation - Keynote\",\n    \"place\": \"Methods slide\",\n    \"field\": \"textArea\",\n    \"seal\": \"submit\"\n  },\n  \"b1s0\": {\n    \"app\": \"spotify\",\n    \"title\": \"lofi hip hop radio - beats to relax/study to - Spotify\",\n    \"about\": \"puts on lofi playlist to focus\"\n  },\n  \"b1s1\": {\n    \"app\": \"keynote\",\n    \"title\": \"HCI Group Presentation - Keynote\",\n    \"about\": \"continues editing slides, moves the usability issues screenshot to the right slide\"\n  },\n  \"b1s2\": {\n    \"page\": \"www.reddit.com\",\n    \"title\": \"How do you stop procrastinating? : r/ADHD - Reddit\",\n    \"path\": \"/r/ADHD/comments/how_do_you_stop_procrastinating/\",\n    \"about\": \"scrolls for 5 minutes, doesn't read the top comment\"\n  },\n  \"b1s3\": {\n    \"app\": \"keynote\",\n    \"title\": \"HCI Group Presentation - Keynote\",\n    \"about\": \"back to slides, adds speaker notes for the methods section\"\n  },\n  \"b2s0\": {\n    \"app\": \"mail\",\n    \"title\": \"Inbox - maya.chen@umn.edu - Gmail\",\n    \"about\": \"checks inbox: sees Dr. Okafor's reply about the community trust code definition from Friday, also sees a new email from the lab about a meeting this afternoon\"\n  },\n  \"b2s1\": {\n    \"type\": \"mail\",\n    \"text\": \"Thanks, that helps. I'll finalize the summary today.\",\n    \"title\": \"Re: community trust code definition - maya.chen@umn.edu - Gmail\",\n    \"place\": \"Re: community trust code definition\",\n    \"field\": \"body\",\n    \"seal\": \"submitChord\"\n  },\n  \"b2s2\": {\n    \"app\": \"vscode\",\n    \"title\": \"coding_summary_final.nvpx - Visual Studio Code\",\n    \"about\": \"opens the lab's NVivo export file to check the coding summary she submitted Friday\"\n  },\n  \"b2s3\": {\n    \"app\": \"terminal\",\n    \"title\": \"maya@MacBook-Pro: ~/lab/nvivo_export — -zsh\",\n    \"about\": \"runs a quick grep to count coded references per theme in the export\"\n  },\n  \"b3s0\": {\n    \"app\": \"mail\",\n    \"title\": \"Inbox - maya.chen@umn.edu - Gmail\",\n    \"about\": \"sees Lila's reply about the invoice: board approved, payment will be sent by end of week\"\n  },\n  \"b3s1\": {\n    \"type\": \"mail\",\n    \"text\": \"Great, thank you! Let me know if you need any tweaks after the board tests it.\",\n    \"title\": \"Re: Open Streets web app invoice - maya.chen@umn.edu - Gmail\",\n    \"place\": \"Re: Open Streets web app invoice\",\n    \"field\": \"body\",\n    \"seal\": \"submitChord\"\n  },\n  \"b3s2\": {\n    \"app\": \"vscode\",\n    \"title\": \"open-streets-app - Visual Studio Code\",\n    \"about\": \"opens the Open Streets app code, checks if there are any console errors from the admin page\"\n  },\n  \"b3s3\": {\n    \"app\": \"terminal\",\n    \"title\": \"maya@MacBook-Pro: ~/open-streets-app — -zsh\",\n    \"about\": \"runs npm run build to make sure the production build still works\"\n  },\n  \"b4s0\": {\n    \"app\": \"slack\",\n    \"title\": \"Sophia Nguyen - University of Minnesota - Slack\",\n    \"about\": \"DMs from Sophia: 'are we meeting before class? I have the usability report draft'\"\n  },\n  \"b4s1\": {\n    \"type\": \"slack\",\n    \"text\": \"I'm in the library, want to meet at 11:05 by the stairs?\",\n    \"title\": \"Sophia Nguyen - University of Minnesota - Slack\",\n    \"place\": \"DM with Sophia Nguyen\",\n    \"field\": \"message\",\n    \"seal\": \"submit\"\n  },\n  \"b4s2\": {\n    \"app\": \"keynote\",\n    \"title\": \"HCI Group Presentation - Keynote\",\n    \"about\": \"exports the deck to PDF as backup, saves to Google Drive\"\n  },\n  \"b4s3\": {\n    \"app\": \"finder\",\n    \"title\": \"Downloads\",\n    \"about\": \"looks for the usability report file, finds it in Downloads, drags it to the HCI folder\"\n  },\n  \"b5s0\": {\n    \"app\": \"zoom\",\n    \"title\": \"HCI Seminar - Zoom Meeting\",\n    \"about\": \"joins the HCI class presentation - presents the usability study findings with the group\"\n  },\n  \"b6s0\": {\n    \"app\": \"slack\",\n    \"title\": \"#hci-group-project - University of Minnesota - Slack\",\n    \"about\": \"Sophia posts the final report draft, Marcus says 'great job everyone'\"\n  },\n  \"b6s1\": {\n    \"type\": \"slack\",\n    \"text\": \"Thanks all! I'll upload the slides to the shared drive.\",\n    \"title\": \"#hci-group-project - University of Minnesota - Slack\",\n    \"place\": \"#hci-group-project\",\n    \"field\": \"message\",\n    \"seal\": \"submit\"\n  },\n  \"b6s2\": {\n    \"app\": \"mail\",\n    \"title\": \"HCI Group Presentation Slides - maya.chen@umn.edu - Gmail\",\n    \"about\": \"sends the presentation slides to Prof. Abrams as a courtesy\"\n  },\n  \"b7s0\": {\n    \"app\": \"calendar\",\n    \"title\": \"Calendar\",\n    \"about\": \"checks if there are any registration deadlines this week - sees the add/drop deadline is Friday\"\n  },\n  \"b7s1\": {\n    \"page\": \"www.ratemyprofessors.com\",\n    \"title\": \"Professor Ratings for INFO 6502 - Rate My Professors\",\n    \"path\": \"/search?q=INFO+6502\",\n    \"about\": \"rechecks INFO 6502 professor ratings - still mixed, but sees a new comment about the class being 'challenging but worth it'\"\n  },\n  \"b7s2\": {\n    \"app\": \"notion\",\n    \"title\": \"Course Planning - Notion\",\n    \"about\": \"opens the course planning page, confirms INFO 6502 is still the plan, notes the add/drop deadline\"\n  },\n  \"b8s0\": {\n    \"app\": \"messages\",\n    \"title\": \"Dad - Messages\",\n    \"about\": \"sees a text from Dad: 'Got the tackle box, you shouldn't have! Love it.'\"\n  },\n  \"b8s1\": {\n    \"type\": \"messages\",\n    \"text\": \"Glad you like it! Happy early birthday.\",\n    \"title\": \"Dad - Messages\",\n    \"place\": \"Dad\",\n    \"field\": \"message\",\n    \"seal\": \"submit\"\n  },\n  \"b8s2\": {\n    \"app\": \"messages\",\n    \"title\": \"Priya Shah - Messages\",\n    \"about\": \"texts Priya: 'Dad got the gift, he loves it!'\"\n  },\n  \"b8s3\": {\n    \"type\": \"messages\",\n    \"text\": \"Dad got the gift, he loves it!\",\n    \"title\": \"Priya Shah - Messages\",\n    \"place\": \"Priya Shah\",\n    \"field\": \"message\",\n    \"seal\": \"submit\"\n  },\n  \"b9s0\": {\n    \"app\": \"mail\",\n    \"title\": \"Lab meeting reminder - maya.chen@umn.edu - Gmail\",\n    \"about\": \"reads the lab meeting reminder for 2pm, sees the agenda includes 'coding consistency check'\"\n  },\n  \"b9s1\": {\n    \"app\": \"vscode\",\n    \"title\": \"coding_summary_final.nvpx - Visual Studio Code\",\n    \"about\": \"opens the NVivo export again, prepares a few example quotes for the meeting\"\n  },\n  \"b10s0\": {\n    \"app\": \"slack\",\n    \"title\": \"Raj Patel - University of Minnesota - Slack\",\n    \"about\": \"DMs from Raj: 'Can you send me the slide deck? I want to review the discussion section'\"\n  },\n  \"b10s1\": {\n    \"type\": \"slack\",\n    \"text\": \"Just uploaded to the shared drive, check there\",\n    \"title\": \"Raj Patel - University of Minnesota - Slack\",\n    \"place\": \"DM with Raj Patel\",\n    \"field\": \"message\",\n    \"seal\": \"submit\"\n  },\n  \"b10s2\": {\n    \"page\": \"www.youtube.com\",\n    \"title\": \"lofi hip hop radio - beats to relax/study to - YouTube\",\n    \"path\": \"/watch?v=jfKfPfyJRdk\",\n    \"about\": \"lets it play in the background\"\n  },\n  \"b12s0\": {\n    \"app\": \"vscode\",\n    \"title\": \"coding_summary_final.nvpx - Visual Studio Code\",\n    \"about\": \"opens the lab coding summary document, reviews the community trust examples from Dr. Okafor's email\"\n  },\n  \"b12s1\": {\n    \"app\": \"terminal\",\n    \"title\": \"maya@MacBook-Pro: ~/lab/nvivo_export — -zsh\",\n    \"about\": \"runs a script to generate a quick summary table of theme frequencies for the lab meeting\"\n  },\n  \"b13s0\": {\n    \"app\": \"zoom\",\n    \"title\": \"Okafor Lab Meeting - Zoom Meeting\",\n    \"about\": \"joins the lab meeting - discusses coding consistency, shares the summary table, takes notes on feedback\"\n  },\n  \"b14s0\": {\n    \"app\": \"notes\",\n    \"title\": \"Lab Meeting Notes 5/12 - Notes\",\n    \"about\": \"types up lab meeting notes, adds action items: 'update codebook with community trust examples'\"\n  },\n  \"b14s1\": {\n    \"app\": \"vscode\",\n    \"title\": \"codebook.md - Visual Studio Code\",\n    \"about\": \"opens the codebook file, adds the examples from Dr. Okafor's email\"\n  },\n  \"b14s2\": {\n    \"type\": \"vscode\",\n    \"text\": \"## Community Trust\\n\\nExamples from Dr. Okafor (5/12):\\n- [quote about local orgs]\",\n    \"title\": \"codebook.md - Visual Studio Code\",\n    \"place\": \"codebook.md\",\n    \"field\": \"textArea\",\n    \"seal\": \"submit\"\n  },\n  \"b15s0\": {\n    \"app\": \"mail\",\n    \"title\": \"Inbox - maya.chen@umn.edu - Gmail\",\n    \"about\": \"sees a new email from Lila: 'The board wants to see a demo of the admin page. Can you record a quick Loom?'\"\n  },\n  \"b15s1\": {\n    \"type\": \"mail\",\n    \"text\": \"Sure, I'll record a short demo and send it over today.\",\n    \"title\": \"Re: Admin page demo - maya.chen@umn.edu - Gmail\",\n    \"place\": \"Re: Admin page demo\",\n    \"field\": \"body\",\n    \"seal\": \"submitChord\"\n  },\n  \"b15s2\": {\n    \"app\": \"vscode\",\n    \"title\": \"open-streets-app - Visual Studio Code\",\n    \"about\": \"opens the admin page code, checks if the event form has all the fields Lila needs\"\n  },\n  \"b15s3\": {\n    \"app\": \"terminal\",\n    \"title\": \"maya@MacBook-Pro: ~/open-streets-app — -zsh\",\n    \"about\": \"starts the local dev server to test the admin page\"\n  },\n  \"b16s0\": {\n    \"app\": \"vscode\",\n    \"title\": \"open-streets-app - Visual Studio Code\",\n    \"about\": \"notices the admin page doesn't have a 'delete event' button - adds it quickly\"\n  },\n  \"b16s1\": {\n    \"app\": \"terminal\",\n    \"title\": \"maya@MacBook-Pro: ~/open-streets-app — -zsh\",\n    \"about\": \"commits the change and pushes to GitHub\"\n  },\n  \"b16s2\": {\n    \"page\": \"console.firebase.google.com\",\n    \"title\": \"Firebase Console - Open Streets Collective\",\n    \"path\": \"/project/open-streets-collective/firestore/rules\",\n    \"about\": \"checks if the Firestore rules allow the delete operation - they do\"\n  },\n  \"b17s0\": {\n    \"app\": \"vscode\",\n    \"title\": \"open-streets-app - Visual Studio Code\",\n    \"about\": \"opens the Loom app to record a demo of the admin page\"\n  },\n  \"b17s1\": {\n    \"app\": \"terminal\",\n    \"title\": \"maya@MacBook-Pro: ~/open-streets-app — -zsh\",\n    \"about\": \"makes sure the dev server is still running, opens the admin page in the browser\"\n  },\n  \"b17s2\": {\n    \"app\": \"preview\",\n    \"title\": \"Admin Page - Open Streets Collective - Loom\",\n    \"about\": \"records a 3-minute Loom demo showing how to add an event, edit it, and delete it\"\n  },\n  \"b17s3\": {\n    \"type\": \"mail\",\n    \"text\": \"Here's the demo. Let me know if the board wants any changes.\",\n    \"title\": \"Re: Admin page demo - maya.chen@umn.edu - Gmail\",\n    \"place\": \"Re: Admin page demo\",\n    \"field\": \"body\",\n    \"seal\": \"submitChord\"\n  },\n  \"b18s0\": {\n    \"app\": \"slack\",\n    \"title\": \"#hci-group-project - University of Minnesota - Slack\",\n    \"about\": \"Marcus posts a message about the class feedback - 'Prof. Abrams said our presentation was solid'\"\n  },\n  \"b18s1\": {\n    \"type\": \"slack\",\n    \"text\": \"Nice! Glad it went well.\",\n    \"title\": \"#hci-group-project - University of Minnesota - Slack\",\n    \"place\": \"#hci-group-project\",\n    \"field\": \"message\",\n    \"seal\": \"submit\"\n  },\n  \"b18s2\": {\n    \"page\": \"www.reddit.com\",\n    \"title\": \"Body doubling changed my life : r/ADHD - Reddit\",\n    \"path\": \"/r/ADHD/comments/body_doubling_changed_my_life/\",\n    \"about\": \"scrolls for a few minutes, gets distracted by a post about 'body doubling'\"\n  },\n  \"b19s0\": {\n    \"app\": \"mail\",\n    \"title\": \"Waitlist update for INFO 6502 - maya.chen@umn.edu - Gmail\",\n    \"about\": \"sees an email from the registrar: 'Waitlist update for INFO 6502' - opens it, she's moved to position 1\"\n  },\n  \"b19s1\": {\n    \"app\": \"notion\",\n    \"title\": \"Course Planning - Notion\",\n    \"about\": \"updates the course planning page: 'INFO 6502 - waitlist position 1, add/drop deadline Friday'\"\n  },\n  \"b19s2\": {\n    \"page\": \"canvas.umn.edu\",\n    \"title\": \"Dashboard - University of Minnesota - Canvas\",\n    \"path\": \"/courses\",\n    \"about\": \"checks if the AI Ethics course page is visible yet - it's not, but the Data Viz page is still there\"\n  },\n  \"b20s0\": {\n    \"app\": \"messages\",\n    \"title\": \"Priya Shah - Messages\",\n    \"about\": \"sees a text from Priya: 'Yay! What did you end up getting him?'\"\n  },\n  \"b20s1\": {\n    \"type\": \"messages\",\n    \"text\": \"A personalized tackle box from Etsy. He said he loves it.\",\n    \"title\": \"Priya Shah - Messages\",\n    \"place\": \"Priya Shah\",\n    \"field\": \"message\",\n    \"seal\": \"submit\"\n  },\n  \"b21s0\": {\n    \"app\": \"mail\",\n    \"title\": \"Updated codebook and lab meeting notes - maya.chen@umn.edu - Gmail\",\n    \"about\": \"writes a follow-up email to Dr. Okafor with the updated codebook and lab meeting notes\"\n  },\n  \"b21s1\": {\n    \"type\": \"mail\",\n    \"text\": \"Attached is the updated codebook with the community trust examples. Let me know if you want any changes.\",\n    \"title\": \"Updated codebook and lab meeting notes - maya.chen@umn.edu - Gmail\",\n    \"place\": \"Updated codebook and lab meeting notes\",\n    \"field\": \"body\",\n    \"seal\": \"submitChord\"\n  },\n  \"b22s0\": {\n    \"app\": \"slack\",\n    \"title\": \"Sophia Nguyen - University of Minnesota - Slack\",\n    \"about\": \"DMs from Sophia: 'Do you want to grab coffee this week to debrief the presentation?'\"\n  },\n  \"b22s1\": {\n    \"type\": \"slack\",\n    \"text\": \"Sure! How about Wednesday after class?\",\n    \"title\": \"Sophia Nguyen - University of Minnesota - Slack\",\n    \"place\": \"DM with Sophia Nguyen\",\n    \"field\": \"message\",\n    \"seal\": \"submit\"\n  },\n  \"b22s2\": {\n    \"page\": \"www.nytimes.com\",\n    \"title\": \"The Lost Art of Doing Nothing - The New York Times\",\n    \"path\": \"/2024/05/12/magazine/lost-art-of-doing-nothing.html\",\n    \"about\": \"opens the article, reads the first few paragraphs, gets distracted\"\n  },\n  \"b23s0\": {\n    \"app\": \"mail\",\n    \"title\": \"Inbox - maya.chen@umn.edu - Gmail\",\n    \"about\": \"sees Lila's reply: 'The board loved the demo! Can you send the final invoice to our accountant?'\"\n  },\n  \"b23s1\": {\n    \"type\": \"mail\",\n    \"text\": \"Great! I'll send the invoice to the accountant now.\",\n    \"title\": \"Re: Admin page demo - maya.chen@umn.edu - Gmail\",\n    \"place\": \"Re: Admin page demo\",\n    \"field\": \"body\",\n    \"seal\": \"submitChord\"\n  },\n  \"b23s2\": {\n    \"app\": \"mail\",\n    \"title\": \"Fwd: Open Streets web app invoice - maya.chen@umn.edu - Gmail\",\n    \"about\": \"forwards the invoice to the accountant email Lila provided\"\n  },\n  \"b24s0\": {\n    \"app\": \"calendar\",\n    \"title\": \"Calendar\",\n    \"about\": \"sets a reminder for Friday to check the add/drop deadline and confirm INFO 6502 registration\"\n  },\n  \"b24s1\": {\n    \"app\": \"notion\",\n    \"title\": \"Course Planning - Notion\",\n    \"about\": \"adds a task: 'Check waitlist status Friday'\"\n  },\n  \"b25s0\": {\n    \"app\": \"slack\",\n    \"title\": \"#hci-group-project - University of Minnesota - Slack\",\n    \"about\": \"Raj posts a meme about group projects, everyone reacts with laughing emojis\"\n  },\n  \"b25s1\": {\n    \"page\": \"www.youtube.com\",\n    \"title\": \"lofi hip hop radio - beats to relax/study to - YouTube\",\n    \"path\": \"/watch?v=jfKfPfyJRdk\",\n    \"about\": \"keeps playing in the background\"\n  },\n  \"b26s0\": {\n    \"app\": \"vscode\",\n    \"title\": \"coding_summary_final.nvpx - Visual Studio Code\",\n    \"about\": \"opens the lab coding summary one more time, double-checks the theme counts\"\n  },\n  \"b26s1\": {\n    \"app\": \"terminal\",\n    \"title\": \"maya@MacBook-Pro: ~/lab/nvivo_export — -zsh\",\n    \"about\": \"runs the summary script again, confirms the numbers match\"\n  },\n  \"b27s0\": {\n    \"app\": \"vscode\",\n    \"title\": \"open-streets-app - Visual Studio Code\",\n    \"about\": \"checks if there are any remaining issues in the GitHub issues list - sees one about mobile responsiveness, decides to leave it for tomorrow\"\n  },\n  \"b27s1\": {\n    \"app\": \"terminal\",\n    \"title\": \"maya@MacBook-Pro: ~/open-streets-app — -zsh\",\n    \"about\": \"closes the dev server, commits any remaining changes\"\n  },\n  \"b28s0\": {\n    \"page\": \"www.reddit.com\",\n    \"title\": \"How do you actually finish things? : r/ADHD - Reddit\",\n    \"path\": \"/r/ADHD/comments/how_do_you_actually_finish_things/\",\n    \"about\": \"scrolls through a thread about 'how do you actually finish things' - reads a few comments, doesn't save the post\"\n  },\n  \"b29s0\": {\n    \"app\": \"mail\",\n    \"title\": \"Re: HCI Group Presentation Slides - maya.chen@umn.edu - Gmail\",\n    \"about\": \"checks if Prof. Abrams replied to the slides email - she did: 'Great job today, Maya. Nice work on the methods section.'\"\n  },\n  \"b29s1\": {\n    \"type\": \"mail\",\n    \"text\": \"Thank you! It was a great team effort.\",\n    \"title\": \"Re: HCI Group Presentation Slides - maya.chen@umn.edu - Gmail\",\n    \"place\": \"Re: HCI Group Presentation Slides\",\n    \"field\": \"body\",\n    \"seal\": \"submitChord\"\n  },\n  \"b30s0\": {\n    \"app\": \"slack\",\n    \"title\": \"#hci-group-project - University of Minnesota - Slack\",\n    \"about\": \"posts a final message: 'Thanks everyone, great work this week. I'll clean up the shared drive.'\"\n  },\n  \"b30s1\": {\n    \"type\": \"slack\",\n    \"text\": \"Thanks everyone, great work this week. I'll clean up the shared drive.\",\n    \"title\": \"#hci-group-project - University of Minnesota - Slack\",\n    \"place\": \"#hci-group-project\",\n    \"field\": \"message\",\n    \"seal\": \"submit\"\n  }\n}",
+  "parsed": {
+    "b0s0": {
+      "app": "calendar",
+      "title": "Calendar",
+      "about": "checking today's schedule: class at 11:15, group presentation at 11:15, no other meetings"
+    },
+    "b0s1": {
+      "app": "slack",
+      "title": "#hci-group-project - University of Minnesota - Slack",
+      "about": "sees Raj's message from last night asking if anyone has the final slide deck"
+    },
+    "b0s2": {
+      "type": "slack",
+      "text": "I have the deck, just doing a final pass on the methods slide now",
+      "title": "#hci-group-project - University of Minnesota - Slack",
+      "place": "#hci-group-project",
+      "field": "message",
+      "seal": "submit"
+    },
+    "b0s3": {
+      "app": "keynote",
+      "title": "HCI Group Presentation - Keynote",
+      "about": "opens HCI presentation deck, scrolls through slides, notices the methods slide has a typo in the participant count"
+    },
+    "b0s4": {
+      "type": "keynote",
+      "text": "8 unmoderated + 3 moderated",
+      "title": "HCI Group Presentation - Keynote",
+      "place": "Methods slide",
+      "field": "textArea",
+      "seal": "submit"
+    },
+    "b1s0": {
+      "app": "spotify",
+      "title": "lofi hip hop radio - beats to relax/study to - Spotify",
+      "about": "puts on lofi playlist to focus"
+    },
+    "b1s1": {
+      "app": "keynote",
+      "title": "HCI Group Presentation - Keynote",
+      "about": "continues editing slides, moves the usability issues screenshot to the right slide"
+    },
+    "b1s2": {
+      "page": "www.reddit.com",
+      "title": "How do you stop procrastinating? : r/ADHD - Reddit",
+      "path": "/r/ADHD/comments/how_do_you_stop_procrastinating/",
+      "about": "scrolls for 5 minutes, doesn't read the top comment"
+    },
+    "b1s3": {
+      "app": "keynote",
+      "title": "HCI Group Presentation - Keynote",
+      "about": "back to slides, adds speaker notes for the methods section"
+    },
+    "b2s0": {
+      "app": "mail",
+      "title": "Inbox - maya.chen@umn.edu - Gmail",
+      "about": "checks inbox: sees Dr. Okafor's reply about the community trust code definition from Friday, also sees a new email from the lab about a meeting this afternoon"
+    },
+    "b2s1": {
+      "type": "mail",
+      "text": "Thanks, that helps. I'll finalize the summary today.",
+      "title": "Re: community trust code definition - maya.chen@umn.edu - Gmail",
+      "place": "Re: community trust code definition",
+      "field": "body",
+      "seal": "submitChord"
+    },
+    "b2s2": {
+      "app": "vscode",
+      "title": "coding_summary_final.nvpx - Visual Studio Code",
+      "about": "opens the lab's NVivo export file to check the coding summary she submitted Friday"
+    },
+    "b2s3": {
+      "app": "terminal",
+      "title": "maya@MacBook-Pro: ~/lab/nvivo_export — -zsh",
+      "about": "runs a quick grep to count coded references per theme in the export"
+    },
+    "b3s0": {
+      "app": "mail",
+      "title": "Inbox - maya.chen@umn.edu - Gmail",
+      "about": "sees Lila's reply about the invoice: board approved, payment will be sent by end of week"
+    },
+    "b3s1": {
+      "type": "mail",
+      "text": "Great, thank you! Let me know if you need any tweaks after the board tests it.",
+      "title": "Re: Open Streets web app invoice - maya.chen@umn.edu - Gmail",
+      "place": "Re: Open Streets web app invoice",
+      "field": "body",
+      "seal": "submitChord"
+    },
+    "b3s2": {
+      "app": "vscode",
+      "title": "open-streets-app - Visual Studio Code",
+      "about": "opens the Open Streets app code, checks if there are any console errors from the admin page"
+    },
+    "b3s3": {
+      "app": "terminal",
+      "title": "maya@MacBook-Pro: ~/open-streets-app — -zsh",
+      "about": "runs npm run build to make sure the production build still works"
+    },
+    "b4s0": {
+      "app": "slack",
+      "title": "Sophia Nguyen - University of Minnesota - Slack",
+      "about": "DMs from Sophia: 'are we meeting before class? I have the usability report draft'"
+    },
+    "b4s1": {
+      "type": "slack",
+      "text": "I'm in the library, want to meet at 11:05 by the stairs?",
+      "title": "Sophia Nguyen - University of Minnesota - Slack",
+      "place": "DM with Sophia Nguyen",
+      "field": "message",
+      "seal": "submit"
+    },
+    "b4s2": {
+      "app": "keynote",
+      "title": "HCI Group Presentation - Keynote",
+      "about": "exports the deck to PDF as backup, saves to Google Drive"
+    },
+    "b4s3": {
+      "app": "finder",
+      "title": "Downloads",
+      "about": "looks for the usability report file, finds it in Downloads, drags it to the HCI folder"
+    },
+    "b5s0": {
+      "app": "zoom",
+      "title": "HCI Seminar - Zoom Meeting",
+      "about": "joins the HCI class presentation - presents the usability study findings with the group"
+    },
+    "b6s0": {
+      "app": "slack",
+      "title": "#hci-group-project - University of Minnesota - Slack",
+      "about": "Sophia posts the final report draft, Marcus says 'great job everyone'"
+    },
+    "b6s1": {
+      "type": "slack",
+      "text": "Thanks all! I'll upload the slides to the shared drive.",
+      "title": "#hci-group-project - University of Minnesota - Slack",
+      "place": "#hci-group-project",
+      "field": "message",
+      "seal": "submit"
+    },
+    "b6s2": {
+      "app": "mail",
+      "title": "HCI Group Presentation Slides - maya.chen@umn.edu - Gmail",
+      "about": "sends the presentation slides to Prof. Abrams as a courtesy"
+    },
+    "b7s0": {
+      "app": "calendar",
+      "title": "Calendar",
+      "about": "checks if there are any registration deadlines this week - sees the add/drop deadline is Friday"
+    },
+    "b7s1": {
+      "page": "www.ratemyprofessors.com",
+      "title": "Professor Ratings for INFO 6502 - Rate My Professors",
+      "path": "/search?q=INFO+6502",
+      "about": "rechecks INFO 6502 professor ratings - still mixed, but sees a new comment about the class being 'challenging but worth it'"
+    },
+    "b7s2": {
+      "app": "notion",
+      "title": "Course Planning - Notion",
+      "about": "opens the course planning page, confirms INFO 6502 is still the plan, notes the add/drop deadline"
+    },
+    "b8s0": {
+      "app": "messages",
+      "title": "Dad - Messages",
+      "about": "sees a text from Dad: 'Got the tackle box, you shouldn't have! Love it.'"
+    },
+    "b8s1": {
+      "type": "messages",
+      "text": "Glad you like it! Happy early birthday.",
+      "title": "Dad - Messages",
+      "place": "Dad",
+      "field": "message",
+      "seal": "submit"
+    },
+    "b8s2": {
+      "app": "messages",
+      "title": "Priya Shah - Messages",
+      "about": "texts Priya: 'Dad got the gift, he loves it!'"
+    },
+    "b8s3": {
+      "type": "messages",
+      "text": "Dad got the gift, he loves it!",
+      "title": "Priya Shah - Messages",
+      "place": "Priya Shah",
+      "field": "message",
+      "seal": "submit"
+    },
+    "b9s0": {
+      "app": "mail",
+      "title": "Lab meeting reminder - maya.chen@umn.edu - Gmail",
+      "about": "reads the lab meeting reminder for 2pm, sees the agenda includes 'coding consistency check'"
+    },
+    "b9s1": {
+      "app": "vscode",
+      "title": "coding_summary_final.nvpx - Visual Studio Code",
+      "about": "opens the NVivo export again, prepares a few example quotes for the meeting"
+    },
+    "b10s0": {
+      "app": "slack",
+      "title": "Raj Patel - University of Minnesota - Slack",
+      "about": "DMs from Raj: 'Can you send me the slide deck? I want to review the discussion section'"
+    },
+    "b10s1": {
+      "type": "slack",
+      "text": "Just uploaded to the shared drive, check there",
+      "title": "Raj Patel - University of Minnesota - Slack",
+      "place": "DM with Raj Patel",
+      "field": "message",
+      "seal": "submit"
+    },
+    "b10s2": {
+      "page": "www.youtube.com",
+      "title": "lofi hip hop radio - beats to relax/study to - YouTube",
+      "path": "/watch?v=jfKfPfyJRdk",
+      "about": "lets it play in the background"
+    },
+    "b12s0": {
+      "app": "vscode",
+      "title": "coding_summary_final.nvpx - Visual Studio Code",
+      "about": "opens the lab coding summary document, reviews the community trust examples from Dr. Okafor's email"
+    },
+    "b12s1": {
+      "app": "terminal",
+      "title": "maya@MacBook-Pro: ~/lab/nvivo_export — -zsh",
+      "about": "runs a script to generate a quick summary table of theme frequencies for the lab meeting"
+    },
+    "b13s0": {
+      "app": "zoom",
+      "title": "Okafor Lab Meeting - Zoom Meeting",
+      "about": "joins the lab meeting - discusses coding consistency, shares the summary table, takes notes on feedback"
+    },
+    "b14s0": {
+      "app": "notes",
+      "title": "Lab Meeting Notes 5/12 - Notes",
+      "about": "types up lab meeting notes, adds action items: 'update codebook with community trust examples'"
+    },
+    "b14s1": {
+      "app": "vscode",
+      "title": "codebook.md - Visual Studio Code",
+      "about": "opens the codebook file, adds the examples from Dr. Okafor's email"
+    },
+    "b14s2": {
+      "type": "vscode",
+      "text": "## Community Trust\n\nExamples from Dr. Okafor (5/12):\n- [quote about local orgs]",
+      "title": "codebook.md - Visual Studio Code",
+      "place": "codebook.md",
+      "field": "textArea",
+      "seal": "submit"
+    },
+    "b15s0": {
+      "app": "mail",
+      "title": "Inbox - maya.chen@umn.edu - Gmail",
+      "about": "sees a new email from Lila: 'The board wants to see a demo of the admin page. Can you record a quick Loom?'"
+    },
+    "b15s1": {
+      "type": "mail",
+      "text": "Sure, I'll record a short demo and send it over today.",
+      "title": "Re: Admin page demo - maya.chen@umn.edu - Gmail",
+      "place": "Re: Admin page demo",
+      "field": "body",
+      "seal": "submitChord"
+    },
+    "b15s2": {
+      "app": "vscode",
+      "title": "open-streets-app - Visual Studio Code",
+      "about": "opens the admin page code, checks if the event form has all the fields Lila needs"
+    },
+    "b15s3": {
+      "app": "terminal",
+      "title": "maya@MacBook-Pro: ~/open-streets-app — -zsh",
+      "about": "starts the local dev server to test the admin page"
+    },
+    "b16s0": {
+      "app": "vscode",
+      "title": "open-streets-app - Visual Studio Code",
+      "about": "notices the admin page doesn't have a 'delete event' button - adds it quickly"
+    },
+    "b16s1": {
+      "app": "terminal",
+      "title": "maya@MacBook-Pro: ~/open-streets-app — -zsh",
+      "about": "commits the change and pushes to GitHub"
+    },
+    "b16s2": {
+      "page": "console.firebase.google.com",
+      "title": "Firebase Console - Open Streets Collective",
+      "path": "/project/open-streets-collective/firestore/rules",
+      "about": "checks if the Firestore rules allow the delete operation - they do"
+    },
+    "b17s0": {
+      "app": "vscode",
+      "title": "open-streets-app - Visual Studio Code",
+      "about": "opens the Loom app to record a demo of the admin page"
+    },
+    "b17s1": {
+      "app": "terminal",
+      "title": "maya@MacBook-Pro: ~/open-streets-app — -zsh",
+      "about": "makes sure the dev server is still running, opens the admin page in the browser"
+    },
+    "b17s2": {
+      "app": "preview",
+      "title": "Admin Page - Open Streets Collective - Loom",
+      "about": "records a 3-minute Loom demo showing how to add an event, edit it, and delete it"
+    },
+    "b17s3": {
+      "type": "mail",
+      "text": "Here's the demo. Let me know if the board wants any changes.",
+      "title": "Re: Admin page demo - maya.chen@umn.edu - Gmail",
+      "place": "Re: Admin page demo",
+      "field": "body",
+      "seal": "submitChord"
+    },
+    "b18s0": {
+      "app": "slack",
+      "title": "#hci-group-project - University of Minnesota - Slack",
+      "about": "Marcus posts a message about the class feedback - 'Prof. Abrams said our presentation was solid'"
+    },
+    "b18s1": {
+      "type": "slack",
+      "text": "Nice! Glad it went well.",
+      "title": "#hci-group-project - University of Minnesota - Slack",
+      "place": "#hci-group-project",
+      "field": "message",
+      "seal": "submit"
+    },
+    "b18s2": {
+      "page": "www.reddit.com",
+      "title": "Body doubling changed my life : r/ADHD - Reddit",
+      "path": "/r/ADHD/comments/body_doubling_changed_my_life/",
+      "about": "scrolls for a few minutes, gets distracted by a post about 'body doubling'"
+    },
+    "b19s0": {
+      "app": "mail",
+      "title": "Waitlist update for INFO 6502 - maya.chen@umn.edu - Gmail",
+      "about": "sees an email from the registrar: 'Waitlist update for INFO 6502' - opens it, she's moved to position 1"
+    },
+    "b19s1": {
+      "app": "notion",
+      "title": "Course Planning - Notion",
+      "about": "updates the course planning page: 'INFO 6502 - waitlist position 1, add/drop deadline Friday'"
+    },
+    "b19s2": {
+      "page": "canvas.umn.edu",
+      "title": "Dashboard - University of Minnesota - Canvas",
+      "path": "/courses",
+      "about": "checks if the AI Ethics course page is visible yet - it's not, but the Data Viz page is still there"
+    },
+    "b20s0": {
+      "app": "messages",
+      "title": "Priya Shah - Messages",
+      "about": "sees a text from Priya: 'Yay! What did you end up getting him?'"
+    },
+    "b20s1": {
+      "type": "messages",
+      "text": "A personalized tackle box from Etsy. He said he loves it.",
+      "title": "Priya Shah - Messages",
+      "place": "Priya Shah",
+      "field": "message",
+      "seal": "submit"
+    },
+    "b21s0": {
+      "app": "mail",
+      "title": "Updated codebook and lab meeting notes - maya.chen@umn.edu - Gmail",
+      "about": "writes a follow-up email to Dr. Okafor with the updated codebook and lab meeting notes"
+    },
+    "b21s1": {
+      "type": "mail",
+      "text": "Attached is the updated codebook with the community trust examples. Let me know if you want any changes.",
+      "title": "Updated codebook and lab meeting notes - maya.chen@umn.edu - Gmail",
+      "place": "Updated codebook and lab meeting notes",
+      "field": "body",
+      "seal": "submitChord"
+    },
+    "b22s0": {
+      "app": "slack",
+      "title": "Sophia Nguyen - University of Minnesota - Slack",
+      "about": "DMs from Sophia: 'Do you want to grab coffee this week to debrief the presentation?'"
+    },
+    "b22s1": {
+      "type": "slack",
+      "text": "Sure! How about Wednesday after class?",
+      "title": "Sophia Nguyen - University of Minnesota - Slack",
+      "place": "DM with Sophia Nguyen",
+      "field": "message",
+      "seal": "submit"
+    },
+    "b22s2": {
+      "page": "www.nytimes.com",
+      "title": "The Lost Art of Doing Nothing - The New York Times",
+      "path": "/2024/05/12/magazine/lost-art-of-doing-nothing.html",
+      "about": "opens the article, reads the first few paragraphs, gets distracted"
+    },
+    "b23s0": {
+      "app": "mail",
+      "title": "Inbox - maya.chen@umn.edu - Gmail",
+      "about": "sees Lila's reply: 'The board loved the demo! Can you send the final invoice to our accountant?'"
+    },
+    "b23s1": {
+      "type": "mail",
+      "text": "Great! I'll send the invoice to the accountant now.",
+      "title": "Re: Admin page demo - maya.chen@umn.edu - Gmail",
+      "place": "Re: Admin page demo",
+      "field": "body",
+      "seal": "submitChord"
+    },
+    "b23s2": {
+      "app": "mail",
+      "title": "Fwd: Open Streets web app invoice - maya.chen@umn.edu - Gmail",
+      "about": "forwards the invoice to the accountant email Lila provided"
+    },
+    "b24s0": {
+      "app": "calendar",
+      "title": "Calendar",
+      "about": "sets a reminder for Friday to check the add/drop deadline and confirm INFO 6502 registration"
+    },
+    "b24s1": {
+      "app": "notion",
+      "title": "Course Planning - Notion",
+      "about": "adds a task: 'Check waitlist status Friday'"
+    },
+    "b25s0": {
+      "app": "slack",
+      "title": "#hci-group-project - University of Minnesota - Slack",
+      "about": "Raj posts a meme about group projects, everyone reacts with laughing emojis"
+    },
+    "b25s1": {
+      "page": "www.youtube.com",
+      "title": "lofi hip hop radio - beats to relax/study to - YouTube",
+      "path": "/watch?v=jfKfPfyJRdk",
+      "about": "keeps playing in the background"
+    },
+    "b26s0": {
+      "app": "vscode",
+      "title": "coding_summary_final.nvpx - Visual Studio Code",
+      "about": "opens the lab coding summary one more time, double-checks the theme counts"
+    },
+    "b26s1": {
+      "app": "terminal",
+      "title": "maya@MacBook-Pro: ~/lab/nvivo_export — -zsh",
+      "about": "runs the summary script again, confirms the numbers match"
+    },
+    "b27s0": {
+      "app": "vscode",
+      "title": "open-streets-app - Visual Studio Code",
+      "about": "checks if there are any remaining issues in the GitHub issues list - sees one about mobile responsiveness, decides to leave it for tomorrow"
+    },
+    "b27s1": {
+      "app": "terminal",
+      "title": "maya@MacBook-Pro: ~/open-streets-app — -zsh",
+      "about": "closes the dev server, commits any remaining changes"
+    },
+    "b28s0": {
+      "page": "www.reddit.com",
+      "title": "How do you actually finish things? : r/ADHD - Reddit",
+      "path": "/r/ADHD/comments/how_do_you_actually_finish_things/",
+      "about": "scrolls through a thread about 'how do you actually finish things' - reads a few comments, doesn't save the post"
+    },
+    "b29s0": {
+      "app": "mail",
+      "title": "Re: HCI Group Presentation Slides - maya.chen@umn.edu - Gmail",
+      "about": "checks if Prof. Abrams replied to the slides email - she did: 'Great job today, Maya. Nice work on the methods section.'"
+    },
+    "b29s1": {
+      "type": "mail",
+      "text": "Thank you! It was a great team effort.",
+      "title": "Re: HCI Group Presentation Slides - maya.chen@umn.edu - Gmail",
+      "place": "Re: HCI Group Presentation Slides",
+      "field": "body",
+      "seal": "submitChord"
+    },
+    "b30s0": {
+      "app": "slack",
+      "title": "#hci-group-project - University of Minnesota - Slack",
+      "about": "posts a final message: 'Thanks everyone, great work this week. I'll clean up the shared drive.'"
+    },
+    "b30s1": {
+      "type": "slack",
+      "text": "Thanks everyone, great work this week. I'll clean up the shared drive.",
+      "title": "#hci-group-project - University of Minnesota - Slack",
+      "place": "#hci-group-project",
+      "field": "message",
+      "seal": "submit"
+    },
+    "steps": {
+      "b0s0": {
+        "app": "calendar",
+        "title": "Calendar",
+        "about": "checking today's schedule: class at 11:15, group presentation at 11:15, no other meetings"
+      },
+      "b0s1": {
+        "app": "slack",
+        "title": "#hci-group-project - University of Minnesota - Slack",
+        "about": "sees Raj's message from last night asking if anyone has the final slide deck"
+      },
+      "b0s2": {
+        "type": "slack",
+        "text": "I have the deck, just doing a final pass on the methods slide now",
+        "title": "#hci-group-project - University of Minnesota - Slack",
+        "place": "#hci-group-project",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b0s3": {
+        "app": "keynote",
+        "title": "HCI Group Presentation - Keynote",
+        "about": "opens HCI presentation deck, scrolls through slides, notices the methods slide has a typo in the participant count"
+      },
+      "b0s4": {
+        "type": "keynote",
+        "text": "8 unmoderated + 3 moderated",
+        "title": "HCI Group Presentation - Keynote",
+        "place": "Methods slide",
+        "field": "textArea",
+        "seal": "submit"
+      },
+      "b1s0": {
+        "app": "spotify",
+        "title": "lofi hip hop radio - beats to relax/study to - Spotify",
+        "about": "puts on lofi playlist to focus"
+      },
+      "b1s1": {
+        "app": "keynote",
+        "title": "HCI Group Presentation - Keynote",
+        "about": "continues editing slides, moves the usability issues screenshot to the right slide"
+      },
+      "b1s2": {
+        "page": "www.reddit.com",
+        "title": "How do you stop procrastinating? : r/ADHD - Reddit",
+        "path": "/r/ADHD/comments/how_do_you_stop_procrastinating/",
+        "about": "scrolls for 5 minutes, doesn't read the top comment"
+      },
+      "b1s3": {
+        "app": "keynote",
+        "title": "HCI Group Presentation - Keynote",
+        "about": "back to slides, adds speaker notes for the methods section"
+      },
+      "b2s0": {
+        "app": "mail",
+        "title": "Inbox - maya.chen@umn.edu - Gmail",
+        "about": "checks inbox: sees Dr. Okafor's reply about the community trust code definition from Friday, also sees a new email from the lab about a meeting this afternoon"
+      },
+      "b2s1": {
+        "type": "mail",
+        "text": "Thanks, that helps. I'll finalize the summary today.",
+        "title": "Re: community trust code definition - maya.chen@umn.edu - Gmail",
+        "place": "Re: community trust code definition",
+        "field": "body",
+        "seal": "submitChord"
+      },
+      "b2s2": {
+        "app": "vscode",
+        "title": "coding_summary_final.nvpx - Visual Studio Code",
+        "about": "opens the lab's NVivo export file to check the coding summary she submitted Friday"
+      },
+      "b2s3": {
+        "app": "terminal",
+        "title": "maya@MacBook-Pro: ~/lab/nvivo_export — -zsh",
+        "about": "runs a quick grep to count coded references per theme in the export"
+      },
+      "b3s0": {
+        "app": "mail",
+        "title": "Inbox - maya.chen@umn.edu - Gmail",
+        "about": "sees Lila's reply about the invoice: board approved, payment will be sent by end of week"
+      },
+      "b3s1": {
+        "type": "mail",
+        "text": "Great, thank you! Let me know if you need any tweaks after the board tests it.",
+        "title": "Re: Open Streets web app invoice - maya.chen@umn.edu - Gmail",
+        "place": "Re: Open Streets web app invoice",
+        "field": "body",
+        "seal": "submitChord"
+      },
+      "b3s2": {
+        "app": "vscode",
+        "title": "open-streets-app - Visual Studio Code",
+        "about": "opens the Open Streets app code, checks if there are any console errors from the admin page"
+      },
+      "b3s3": {
+        "app": "terminal",
+        "title": "maya@MacBook-Pro: ~/open-streets-app — -zsh",
+        "about": "runs npm run build to make sure the production build still works"
+      },
+      "b4s0": {
+        "app": "slack",
+        "title": "Sophia Nguyen - University of Minnesota - Slack",
+        "about": "DMs from Sophia: 'are we meeting before class? I have the usability report draft'"
+      },
+      "b4s1": {
+        "type": "slack",
+        "text": "I'm in the library, want to meet at 11:05 by the stairs?",
+        "title": "Sophia Nguyen - University of Minnesota - Slack",
+        "place": "DM with Sophia Nguyen",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b4s2": {
+        "app": "keynote",
+        "title": "HCI Group Presentation - Keynote",
+        "about": "exports the deck to PDF as backup, saves to Google Drive"
+      },
+      "b4s3": {
+        "app": "finder",
+        "title": "Downloads",
+        "about": "looks for the usability report file, finds it in Downloads, drags it to the HCI folder"
+      },
+      "b5s0": {
+        "app": "zoom",
+        "title": "HCI Seminar - Zoom Meeting",
+        "about": "joins the HCI class presentation - presents the usability study findings with the group"
+      },
+      "b6s0": {
+        "app": "slack",
+        "title": "#hci-group-project - University of Minnesota - Slack",
+        "about": "Sophia posts the final report draft, Marcus says 'great job everyone'"
+      },
+      "b6s1": {
+        "type": "slack",
+        "text": "Thanks all! I'll upload the slides to the shared drive.",
+        "title": "#hci-group-project - University of Minnesota - Slack",
+        "place": "#hci-group-project",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b6s2": {
+        "app": "mail",
+        "title": "HCI Group Presentation Slides - maya.chen@umn.edu - Gmail",
+        "about": "sends the presentation slides to Prof. Abrams as a courtesy"
+      },
+      "b7s0": {
+        "app": "calendar",
+        "title": "Calendar",
+        "about": "checks if there are any registration deadlines this week - sees the add/drop deadline is Friday"
+      },
+      "b7s1": {
+        "page": "www.ratemyprofessors.com",
+        "title": "Professor Ratings for INFO 6502 - Rate My Professors",
+        "path": "/search?q=INFO+6502",
+        "about": "rechecks INFO 6502 professor ratings - still mixed, but sees a new comment about the class being 'challenging but worth it'"
+      },
+      "b7s2": {
+        "app": "notion",
+        "title": "Course Planning - Notion",
+        "about": "opens the course planning page, confirms INFO 6502 is still the plan, notes the add/drop deadline"
+      },
+      "b8s0": {
+        "app": "messages",
+        "title": "Dad - Messages",
+        "about": "sees a text from Dad: 'Got the tackle box, you shouldn't have! Love it.'"
+      },
+      "b8s1": {
+        "type": "messages",
+        "text": "Glad you like it! Happy early birthday.",
+        "title": "Dad - Messages",
+        "place": "Dad",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b8s2": {
+        "app": "messages",
+        "title": "Priya Shah - Messages",
+        "about": "texts Priya: 'Dad got the gift, he loves it!'"
+      },
+      "b8s3": {
+        "type": "messages",
+        "text": "Dad got the gift, he loves it!",
+        "title": "Priya Shah - Messages",
+        "place": "Priya Shah",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b9s0": {
+        "app": "mail",
+        "title": "Lab meeting reminder - maya.chen@umn.edu - Gmail",
+        "about": "reads the lab meeting reminder for 2pm, sees the agenda includes 'coding consistency check'"
+      },
+      "b9s1": {
+        "app": "vscode",
+        "title": "coding_summary_final.nvpx - Visual Studio Code",
+        "about": "opens the NVivo export again, prepares a few example quotes for the meeting"
+      },
+      "b10s0": {
+        "app": "slack",
+        "title": "Raj Patel - University of Minnesota - Slack",
+        "about": "DMs from Raj: 'Can you send me the slide deck? I want to review the discussion section'"
+      },
+      "b10s1": {
+        "type": "slack",
+        "text": "Just uploaded to the shared drive, check there",
+        "title": "Raj Patel - University of Minnesota - Slack",
+        "place": "DM with Raj Patel",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b10s2": {
+        "page": "www.youtube.com",
+        "title": "lofi hip hop radio - beats to relax/study to - YouTube",
+        "path": "/watch?v=jfKfPfyJRdk",
+        "about": "lets it play in the background"
+      },
+      "b12s0": {
+        "app": "vscode",
+        "title": "coding_summary_final.nvpx - Visual Studio Code",
+        "about": "opens the lab coding summary document, reviews the community trust examples from Dr. Okafor's email"
+      },
+      "b12s1": {
+        "app": "terminal",
+        "title": "maya@MacBook-Pro: ~/lab/nvivo_export — -zsh",
+        "about": "runs a script to generate a quick summary table of theme frequencies for the lab meeting"
+      },
+      "b13s0": {
+        "app": "zoom",
+        "title": "Okafor Lab Meeting - Zoom Meeting",
+        "about": "joins the lab meeting - discusses coding consistency, shares the summary table, takes notes on feedback"
+      },
+      "b14s0": {
+        "app": "notes",
+        "title": "Lab Meeting Notes 5/12 - Notes",
+        "about": "types up lab meeting notes, adds action items: 'update codebook with community trust examples'"
+      },
+      "b14s1": {
+        "app": "vscode",
+        "title": "codebook.md - Visual Studio Code",
+        "about": "opens the codebook file, adds the examples from Dr. Okafor's email"
+      },
+      "b14s2": {
+        "type": "vscode",
+        "text": "## Community Trust\n\nExamples from Dr. Okafor (5/12):\n- [quote about local orgs]",
+        "title": "codebook.md - Visual Studio Code",
+        "place": "codebook.md",
+        "field": "textArea",
+        "seal": "submit"
+      },
+      "b15s0": {
+        "app": "mail",
+        "title": "Inbox - maya.chen@umn.edu - Gmail",
+        "about": "sees a new email from Lila: 'The board wants to see a demo of the admin page. Can you record a quick Loom?'"
+      },
+      "b15s1": {
+        "type": "mail",
+        "text": "Sure, I'll record a short demo and send it over today.",
+        "title": "Re: Admin page demo - maya.chen@umn.edu - Gmail",
+        "place": "Re: Admin page demo",
+        "field": "body",
+        "seal": "submitChord"
+      },
+      "b15s2": {
+        "app": "vscode",
+        "title": "open-streets-app - Visual Studio Code",
+        "about": "opens the admin page code, checks if the event form has all the fields Lila needs"
+      },
+      "b15s3": {
+        "app": "terminal",
+        "title": "maya@MacBook-Pro: ~/open-streets-app — -zsh",
+        "about": "starts the local dev server to test the admin page"
+      },
+      "b16s0": {
+        "app": "vscode",
+        "title": "open-streets-app - Visual Studio Code",
+        "about": "notices the admin page doesn't have a 'delete event' button - adds it quickly"
+      },
+      "b16s1": {
+        "app": "terminal",
+        "title": "maya@MacBook-Pro: ~/open-streets-app — -zsh",
+        "about": "commits the change and pushes to GitHub"
+      },
+      "b16s2": {
+        "page": "console.firebase.google.com",
+        "title": "Firebase Console - Open Streets Collective",
+        "path": "/project/open-streets-collective/firestore/rules",
+        "about": "checks if the Firestore rules allow the delete operation - they do"
+      },
+      "b17s0": {
+        "app": "vscode",
+        "title": "open-streets-app - Visual Studio Code",
+        "about": "opens the Loom app to record a demo of the admin page"
+      },
+      "b17s1": {
+        "app": "terminal",
+        "title": "maya@MacBook-Pro: ~/open-streets-app — -zsh",
+        "about": "makes sure the dev server is still running, opens the admin page in the browser"
+      },
+      "b17s2": {
+        "app": "preview",
+        "title": "Admin Page - Open Streets Collective - Loom",
+        "about": "records a 3-minute Loom demo showing how to add an event, edit it, and delete it"
+      },
+      "b17s3": {
+        "type": "mail",
+        "text": "Here's the demo. Let me know if the board wants any changes.",
+        "title": "Re: Admin page demo - maya.chen@umn.edu - Gmail",
+        "place": "Re: Admin page demo",
+        "field": "body",
+        "seal": "submitChord"
+      },
+      "b18s0": {
+        "app": "slack",
+        "title": "#hci-group-project - University of Minnesota - Slack",
+        "about": "Marcus posts a message about the class feedback - 'Prof. Abrams said our presentation was solid'"
+      },
+      "b18s1": {
+        "type": "slack",
+        "text": "Nice! Glad it went well.",
+        "title": "#hci-group-project - University of Minnesota - Slack",
+        "place": "#hci-group-project",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b18s2": {
+        "page": "www.reddit.com",
+        "title": "Body doubling changed my life : r/ADHD - Reddit",
+        "path": "/r/ADHD/comments/body_doubling_changed_my_life/",
+        "about": "scrolls for a few minutes, gets distracted by a post about 'body doubling'"
+      },
+      "b19s0": {
+        "app": "mail",
+        "title": "Waitlist update for INFO 6502 - maya.chen@umn.edu - Gmail",
+        "about": "sees an email from the registrar: 'Waitlist update for INFO 6502' - opens it, she's moved to position 1"
+      },
+      "b19s1": {
+        "app": "notion",
+        "title": "Course Planning - Notion",
+        "about": "updates the course planning page: 'INFO 6502 - waitlist position 1, add/drop deadline Friday'"
+      },
+      "b19s2": {
+        "page": "canvas.umn.edu",
+        "title": "Dashboard - University of Minnesota - Canvas",
+        "path": "/courses",
+        "about": "checks if the AI Ethics course page is visible yet - it's not, but the Data Viz page is still there"
+      },
+      "b20s0": {
+        "app": "messages",
+        "title": "Priya Shah - Messages",
+        "about": "sees a text from Priya: 'Yay! What did you end up getting him?'"
+      },
+      "b20s1": {
+        "type": "messages",
+        "text": "A personalized tackle box from Etsy. He said he loves it.",
+        "title": "Priya Shah - Messages",
+        "place": "Priya Shah",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b21s0": {
+        "app": "mail",
+        "title": "Updated codebook and lab meeting notes - maya.chen@umn.edu - Gmail",
+        "about": "writes a follow-up email to Dr. Okafor with the updated codebook and lab meeting notes"
+      },
+      "b21s1": {
+        "type": "mail",
+        "text": "Attached is the updated codebook with the community trust examples. Let me know if you want any changes.",
+        "title": "Updated codebook and lab meeting notes - maya.chen@umn.edu - Gmail",
+        "place": "Updated codebook and lab meeting notes",
+        "field": "body",
+        "seal": "submitChord"
+      },
+      "b22s0": {
+        "app": "slack",
+        "title": "Sophia Nguyen - University of Minnesota - Slack",
+        "about": "DMs from Sophia: 'Do you want to grab coffee this week to debrief the presentation?'"
+      },
+      "b22s1": {
+        "type": "slack",
+        "text": "Sure! How about Wednesday after class?",
+        "title": "Sophia Nguyen - University of Minnesota - Slack",
+        "place": "DM with Sophia Nguyen",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b22s2": {
+        "page": "www.nytimes.com",
+        "title": "The Lost Art of Doing Nothing - The New York Times",
+        "path": "/2024/05/12/magazine/lost-art-of-doing-nothing.html",
+        "about": "opens the article, reads the first few paragraphs, gets distracted"
+      },
+      "b23s0": {
+        "app": "mail",
+        "title": "Inbox - maya.chen@umn.edu - Gmail",
+        "about": "sees Lila's reply: 'The board loved the demo! Can you send the final invoice to our accountant?'"
+      },
+      "b23s1": {
+        "type": "mail",
+        "text": "Great! I'll send the invoice to the accountant now.",
+        "title": "Re: Admin page demo - maya.chen@umn.edu - Gmail",
+        "place": "Re: Admin page demo",
+        "field": "body",
+        "seal": "submitChord"
+      },
+      "b23s2": {
+        "app": "mail",
+        "title": "Fwd: Open Streets web app invoice - maya.chen@umn.edu - Gmail",
+        "about": "forwards the invoice to the accountant email Lila provided"
+      },
+      "b24s0": {
+        "app": "calendar",
+        "title": "Calendar",
+        "about": "sets a reminder for Friday to check the add/drop deadline and confirm INFO 6502 registration"
+      },
+      "b24s1": {
+        "app": "notion",
+        "title": "Course Planning - Notion",
+        "about": "adds a task: 'Check waitlist status Friday'"
+      },
+      "b25s0": {
+        "app": "slack",
+        "title": "#hci-group-project - University of Minnesota - Slack",
+        "about": "Raj posts a meme about group projects, everyone reacts with laughing emojis"
+      },
+      "b25s1": {
+        "page": "www.youtube.com",
+        "title": "lofi hip hop radio - beats to relax/study to - YouTube",
+        "path": "/watch?v=jfKfPfyJRdk",
+        "about": "keeps playing in the background"
+      },
+      "b26s0": {
+        "app": "vscode",
+        "title": "coding_summary_final.nvpx - Visual Studio Code",
+        "about": "opens the lab coding summary one more time, double-checks the theme counts"
+      },
+      "b26s1": {
+        "app": "terminal",
+        "title": "maya@MacBook-Pro: ~/lab/nvivo_export — -zsh",
+        "about": "runs the summary script again, confirms the numbers match"
+      },
+      "b27s0": {
+        "app": "vscode",
+        "title": "open-streets-app - Visual Studio Code",
+        "about": "checks if there are any remaining issues in the GitHub issues list - sees one about mobile responsiveness, decides to leave it for tomorrow"
+      },
+      "b27s1": {
+        "app": "terminal",
+        "title": "maya@MacBook-Pro: ~/open-streets-app — -zsh",
+        "about": "closes the dev server, commits any remaining changes"
+      },
+      "b28s0": {
+        "page": "www.reddit.com",
+        "title": "How do you actually finish things? : r/ADHD - Reddit",
+        "path": "/r/ADHD/comments/how_do_you_actually_finish_things/",
+        "about": "scrolls through a thread about 'how do you actually finish things' - reads a few comments, doesn't save the post"
+      },
+      "b29s0": {
+        "app": "mail",
+        "title": "Re: HCI Group Presentation Slides - maya.chen@umn.edu - Gmail",
+        "about": "checks if Prof. Abrams replied to the slides email - she did: 'Great job today, Maya. Nice work on the methods section.'"
+      },
+      "b29s1": {
+        "type": "mail",
+        "text": "Thank you! It was a great team effort.",
+        "title": "Re: HCI Group Presentation Slides - maya.chen@umn.edu - Gmail",
+        "place": "Re: HCI Group Presentation Slides",
+        "field": "body",
+        "seal": "submitChord"
+      },
+      "b30s0": {
+        "app": "slack",
+        "title": "#hci-group-project - University of Minnesota - Slack",
+        "about": "posts a final message: 'Thanks everyone, great work this week. I'll clean up the shared drive.'"
+      },
+      "b30s1": {
+        "type": "slack",
+        "text": "Thanks everyone, great work this week. I'll clean up the shared drive.",
+        "title": "#hci-group-project - University of Minnesota - Slack",
+        "place": "#hci-group-project",
+        "field": "message",
+        "seal": "submit"
+      }
+    }
+  }
+}

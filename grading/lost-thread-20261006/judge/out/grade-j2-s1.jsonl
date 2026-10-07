@@ -1,0 +1,42 @@
+{"blind_id": "A0122", "item_id": "developer-q01", "judge": "j2", "correct": 2, "helpful": 4, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Correct #1187, merge hedged."}
+{"blind_id": "A0149", "item_id": "developer-q01", "judge": "j2", "correct": 0, "helpful": 1, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Non-answer."}
+{"blind_id": "A0087", "item_id": "developer-q01", "judge": "j2", "correct": 2, "helpful": 4, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Correct #1187, hedged merge."}
+{"blind_id": "A0023", "item_id": "developer-q01", "judge": "j2", "correct": 2, "helpful": 4, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Correct, concise."}
+{"blind_id": "A0043", "item_id": "developer-q01", "judge": "j2", "correct": 0, "helpful": 1, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Non-answer with generic advice."}
+{"blind_id": "A0021", "item_id": "developer-q01", "judge": "j2", "correct": 2, "helpful": 4, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Correct, concise."}
+{"blind_id": "A0060", "item_id": "developer-q05", "judge": "j2", "correct": 0, "helpful": 1, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Says no access."}
+{"blind_id": "A0069", "item_id": "developer-q05", "judge": "j2", "correct": 1, "helpful": 2, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Gives about 80 min vs about 61 reference."}
+{"blind_id": "A0126", "item_id": "developer-q05", "judge": "j2", "correct": 0, "helpful": 1, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Non-answer."}
+{"blind_id": "A0161", "item_id": "developer-q05", "judge": "j2", "correct": 1, "helpful": 2, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "About 80 min, overshoots reference."}
+{"blind_id": "A0150", "item_id": "developer-q05", "judge": "j2", "correct": 1, "helpful": 2, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "About 80 min, overshoots reference."}
+{"blind_id": "A0086", "item_id": "developer-q05", "judge": "j2", "correct": 1, "helpful": 2, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "About 80 min, overshoots reference."}
+{"blind_id": "A0139", "item_id": "developer-q09", "judge": "j2", "correct": 2, "helpful": 3, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Lena, first name only."}
+{"blind_id": "A0078", "item_id": "developer-q09", "judge": "j2", "correct": 2, "helpful": 4, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Lena Park with source."}
+{"blind_id": "A0019", "item_id": "developer-q09", "judge": "j2", "correct": 2, "helpful": 3, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Lena, first name only."}
+{"blind_id": "A0014", "item_id": "developer-q09", "judge": "j2", "correct": 2, "helpful": 3, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Lena only."}
+{"blind_id": "A0006", "item_id": "developer-q09", "judge": "j2", "correct": 2, "helpful": 3, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Lena, hedged inference."}
+{"blind_id": "A0131", "item_id": "developer-q09", "judge": "j2", "correct": 2, "helpful": 3, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Lena only."}
+{"blind_id": "A0137", "item_id": "founder-q04", "judge": "j2", "correct": 1, "helpful": 3, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "66 min vs 78 reference."}
+{"blind_id": "A0071", "item_id": "founder-q04", "judge": "j2", "correct": 1, "helpful": 3, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "66 min vs 78 reference."}
+{"blind_id": "A0065", "item_id": "founder-q04", "judge": "j2", "correct": 1, "helpful": 3, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "66 min vs 78 reference."}
+{"blind_id": "A0154", "item_id": "founder-q04", "judge": "j2", "correct": 0, "helpful": 1, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Says no data."}
+{"blind_id": "A0153", "item_id": "founder-q04", "judge": "j2", "correct": 1, "helpful": 3, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "66 min vs 78 reference."}
+{"blind_id": "A0041", "item_id": "founder-q04", "judge": "j2", "correct": 0, "helpful": 1, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Non-answer."}
+{"blind_id": "A0018", "item_id": "founder-q08", "judge": "j2", "correct": 1, "helpful": 2, "fabrications": 0, "overclaim": 0, "negative_verdict": "unsure", "note": "Found nothing but declines to conclude."}
+{"blind_id": "A0032", "item_id": "founder-q08", "judge": "j2", "correct": 2, "helpful": 3, "fabrications": 0, "overclaim": 0, "negative_verdict": "correct", "note": "No sign of reply, well caveated."}
+{"blind_id": "A0090", "item_id": "founder-q08", "judge": "j2", "correct": 1, "helpful": 2, "fabrications": 0, "overclaim": 0, "negative_verdict": "unsure", "note": "Found nothing, hedges."}
+{"blind_id": "A0143", "item_id": "founder-q08", "judge": "j2", "correct": 0, "helpful": 1, "fabrications": 0, "overclaim": 0, "negative_verdict": "unsure", "note": "Generic non-answer."}
+{"blind_id": "A0045", "item_id": "founder-q08", "judge": "j2", "correct": 0, "helpful": 1, "fabrications": 0, "overclaim": 0, "negative_verdict": "unsure", "note": "Non-answer."}
+{"blind_id": "A0144", "item_id": "founder-q08", "judge": "j2", "correct": 2, "helpful": 3, "fabrications": 0, "overclaim": 0, "negative_verdict": "correct", "note": "No sign of reply, wordy but fine."}
+{"blind_id": "A0091", "item_id": "student-q03", "judge": "j2", "correct": 0, "helpful": 1, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Misses the happy-to-wait reply."}
+{"blind_id": "A0145", "item_id": "student-q03", "judge": "j2", "correct": 0, "helpful": 0, "fabrications": 1, "overclaim": 0, "negative_verdict": null, "note": "Confidently gives wrong message."}
+{"blind_id": "A0022", "item_id": "student-q03", "judge": "j2", "correct": 0, "helpful": 1, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Non-answer."}
+{"blind_id": "A0083", "item_id": "student-q03", "judge": "j2", "correct": 1, "helpful": 2, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Lists the right quote but says it came before."}
+{"blind_id": "A0121", "item_id": "student-q03", "judge": "j2", "correct": 0, "helpful": 1, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "No answer, wrong email."}
+{"blind_id": "A0052", "item_id": "student-q03", "judge": "j2", "correct": 0, "helpful": 1, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Non-answer."}
+{"blind_id": "A0007", "item_id": "student-q07", "judge": "j2", "correct": 2, "helpful": 4, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Correct article, hedged."}
+{"blind_id": "A0047", "item_id": "student-q07", "judge": "j2", "correct": 2, "helpful": 4, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Correct article with visits."}
+{"blind_id": "A0110", "item_id": "student-q07", "judge": "j2", "correct": 2, "helpful": 4, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Correct article."}
+{"blind_id": "A0026", "item_id": "student-q07", "judge": "j2", "correct": 2, "helpful": 4, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Correct article."}
+{"blind_id": "A0063", "item_id": "student-q07", "judge": "j2", "correct": 0, "helpful": 1, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Non-answer."}
+{"blind_id": "A0079", "item_id": "student-q07", "judge": "j2", "correct": 0, "helpful": 1, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Non-answer."}

@@ -1,0 +1,50 @@
+{
+  "saved_memories": [
+    {
+      "from": "c01",
+      "text": "Works at a SaaS company that sells wholesale invoicing software to roasters"
+    },
+    {
+      "from": "c02",
+      "text": "Is considering raising the Starter plan price from $29 to $39"
+    },
+    {
+      "from": "c04",
+      "text": "Company is at $41k MRR with 2.1% churn and 14 new customers this month"
+    },
+    {
+      "from": "c05",
+      "text": "Is building a side project: a map of independent coffee roasters"
+    },
+    {
+      "from": "c06",
+      "text": "Lives in Austin and is negotiating a lease renewal"
+    },
+    {
+      "from": "c09",
+      "text": "Has a colleague named Dana who works on the invoice export service"
+    },
+    {
+      "from": "c10",
+      "text": "Has an investor named Sarah who receives monthly updates"
+    },
+    {
+      "from": "c11",
+      "text": "Has a customer named Tom, a roaster in Austin, who wants API access"
+    },
+    {
+      "from": "c13",
+      "text": "Has a colleague named Marcus who is worried about customer churn from the pricing change"
+    },
+    {
+      "from": "c19",
+      "text": "Company's median customer has 50 orders per month"
+    }
+  ],
+  "claude_summary": {
+    "Work context": "Works at a B2B SaaS company serving coffee roasters, with invoicing/API features. Colleagues include Dana (engineering) and Marcus (pricing/churn concerns). Reports to an investor named Sarah. Currently deciding whether to raise the Starter plan from $29 to $39, possibly with a usage cap instead. Recently fixed an invoice export bug where line items were dropped for orders with more than 5 items.",
+    "Personal context": "Lives in Austin, negotiating a lease renewal with a 12% rent increase. Building a side project: a map of independent coffee roasters, currently adding data manually after hitting a rate limit. Decluttering/packing in case of a move.",
+    "Top of mind": "Recent chats focus on the pricing decision (survey design, churn risk, usage cap), the invoice export bug postmortem and regression tests, preparing for a customer call with Tom, and the investor update for Sarah. Also actively working on the roaster map side project.",
+    "Brief history": "Over the past two months, the user has been juggling a pricing change investigation, an invoice export bug fix, investor updates, and a side project. They started by debugging the invoice export issue, then moved to pricing strategy, helped a customer (Tom) get started with the API, and prepared an investor update. The invoice bug was reproduced and traced to a likely hardcoded limit/pagination issue. The user also surveyed customers about the price increase and considered a usage cap. Alongside work, they've been building a roaster map, negotiating their lease, and planning to declutter."
+  }
+}

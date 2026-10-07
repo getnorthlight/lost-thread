@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a112f1-bfe1-7e52-83f5-cc2781adbd9c"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"I don’t have that exchange with Lila in the conversation history available here. If you paste the messages around when you checked the Firebase console, I can help find what you told her."}}
+{"type":"turn.completed","usage":{"input_tokens":5205,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":73,"reasoning_output_tokens":29}}

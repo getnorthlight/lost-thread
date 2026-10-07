@@ -1,0 +1,184 @@
+{
+  "step": "persona",
+  "model": "deepseek/deepseek-v4-flash-0731",
+  "requested_model": "deepseek/deepseek-v4-flash-0731",
+  "base_url": "<local OpenRouter proxy>",
+  "temperature": 0.9,
+  "seconds": 27.0,
+  "usage": {
+    "prompt_tokens": 632,
+    "completion_tokens": 1343,
+    "total_tokens": 1975,
+    "cost": 0.00046452,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00046452,
+      "upstream_inference_prompt_cost": 8.848e-05,
+      "upstream_inference_completions_cost": 0.00037604
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "attempt": 3,
+  "system": "You generate realistic synthetic test data for a research benchmark about personal memory. Everything you write is fiction: invent every person, company, client and product name (never use real people you know of, and avoid famous companies as employers). Write like real life, not like a tidy diary: people get interrupted, leave things half done, revisit things, procrastinate, and type casually. Reply with JSON only.",
+  "user": "Invent one person for a 5-workday slice of their life. Archetype: developer. Variety seed: developer.\nThey live in the US Central time zone and use a Mac.\n\nReturn JSON:\n{\"persona\": {\"name\", \"role\", \"company\" (invented), \"summary\", \"workday\": {\"start\": \"HH:MM\", \"end\": \"HH:MM\", \"lunch\": \"HH:MM\"}},\n \"people\": [{\"key\", \"name\" (invented, first+last unless family), \"role\", \"channel\"}],   // 5-9\n \"threads\": [{\"key\" (snake_case), \"title\", \"kind\": one of \"main\"|\"decision\"|\"correspondence\"|\"side_project\"|\"personal\",\n              \"arc\": \"how it develops over the 5 days, with concrete numbers/identifiers that change\"}],  // 4-6\n \"apps\": [app keys they use, from: slack (Slack), vscode (Code), terminal (Terminal), xcode (Xcode), zoom (zoom.us), messages (Messages), mail (Mail), notes (Notes), chatgpt (ChatGPT), claude (Claude), spotify (Spotify), finder (Finder), figma (Figma), calendar (Calendar), preview (Preview), excel (Microsoft Excel), keynote (Keynote), notion (Notion)],\n \"sites\": [hosts they use for work and life, e.g. \"docs.google.com\", \"mail.google.com\", \"github.com\", \"canvas.instructure.com\"],\n \"noise\": {\"slack_titles\": [window titles if they use Slack], \"pages\": [{\"host\", \"title\", \"path\"}]}   // distractions\n}\nThreads must include a decision whose number or choice changes across days, a correspondence with someone outside\ntheir team over email, and something personal. Include at least one concrete identifier (ticket, PR, order, invoice,\nroom, course code). Use Google Chrome for all websites.\n\nYour previous reply had these problems; fix them and reply with the full JSON again:\n- thread key 'consumer_group_decision' must be short snake_case",
+  "raw": "{\n  \"persona\": {\n    \"name\": \"Maya Chen\",\n    \"role\": \"Senior Software Engineer\",\n    \"company\": \"Lumenary Systems\",\n    \"summary\": \"Backend-focused developer on the integrations team, currently migrating a legacy event pipeline to Kafka. She works from home in Austin, uses a MacBook Pro, and tends to start late after a slow morning.\",\n    \"workday\": {\n      \"start\": \"09:45\",\n      \"end\": \"18:30\",\n      \"lunch\": \"13:00\"\n    }\n  },\n  \"people\": [\n    {\"key\": \"dana\", \"name\": \"Dana Whitfield\", \"role\": \"Engineering Manager\", \"channel\": \"slack\"},\n    {\"key\": \"priya\", \"name\": \"Priya Raghavan\", \"role\": \"Staff Engineer, Integrations\", \"channel\": \"slack\"},\n    {\"key\": \"marcus\", \"name\": \"Marcus Bell\", \"role\": \"Product Manager\", \"channel\": \"slack\"},\n    {\"key\": \"tom\", \"name\": \"Tom Okafor\", \"role\": \"DevOps Engineer\", \"channel\": \"slack\"},\n    {\"key\": \"jules\", \"name\": \"Jules Fontaine\", \"role\": \"Data Analyst (client side)\", \"channel\": \"email\"},\n    {\"key\": \"lena\", \"name\": \"Lena Park\", \"role\": \"Friend from college\", \"channel\": \"messages\"},\n    {\"key\": \"grandma\", \"name\": \"Grandma Ruth\", \"role\": \"Family\", \"channel\": \"messages\"}\n  ],\n  \"threads\": [\n    {\n      \"key\": \"kafka_migration\",\n      \"title\": \"Kafka migration for event pipeline\",\n      \"kind\": \"main\",\n      \"arc\": \"Monday: Maya picks up ticket EV-482 to move the order-events topic from the old RabbitMQ bridge. Tuesday: she hits a serialization issue with the Avro schema and posts in #integrations; Priya suggests reusing the existing schema registry subject. Wednesday: she writes a migration script and runs it against staging, but the consumer lag spikes. Thursday: she fixes the consumer group offset reset and coordinates with Tom to deploy the new bridge. Friday: PR #1187 is approved and merged; she updates the runbook and closes EV-482.\"\n    },\n    {\n      \"key\": \"consumer_group\",\n      \"title\": \"Consumer group naming decision\",\n      \"kind\": \"decision\",\n      \"arc\": \"Monday: Maya proposes naming consumer groups by service and environment (e.g. `order-sync-prod`). Tuesday: Marcus pushes back, wanting a version suffix. Wednesday: she creates a short comparison doc and polls the team in Slack. Thursday: the team votes 4-2 for `order-sync-prod-v2` style. Friday: she updates the migration script and the runbook to use the new convention.\"\n    },\n    {\n      \"key\": \"invoice_question\",\n      \"title\": \"Invoice question from Jules at Northwind Analytics\",\n      \"kind\": \"correspondence\",\n      \"arc\": \"Tuesday: Jules emails Maya asking why invoice #INV-22904 is missing from the exported dataset. Wednesday: Maya checks the pipeline logs and finds the event was dropped due to a malformed timestamp. Thursday: she sends Jules a corrected CSV and explains the fix. Friday: Jules confirms the invoice now appears and asks for a small schema change; Maya adds it to the backlog.\"\n    },\n    {\n      \"key\": \"weekend_plans\",\n      \"title\": \"Weekend trip to Fredericksburg\",\n      \"kind\": \"personal\",\n      \"arc\": \"Monday: Lena texts Maya about booking a cabin for the weekend. Tuesday: Maya checks Airbnb and sends Lena two options. Wednesday: they book the cabin (reservation #HB-88231) and split the cost. Thursday: Maya texts Grandma Ruth to ask if she wants to join for Saturday wine tasting. Friday: Grandma says yes, and Maya adds a stop at the wildflower farm to the itinerary.\"\n    },\n    {\n      \"key\": \"side_project\",\n      \"title\": \"Side project: recipe scraper\",\n      \"kind\": \"side_project\",\n      \"arc\": \"Maya tinkers with a small Python script to scrape recipes from a cooking site. Monday: she refactors the parser to use BeautifulSoup. Wednesday: she gets blocked by a Cloudflare challenge and tries using Playwright. Friday: she gets it working for a few test URLs and commits it to a private GitHub repo.\"\n    }\n  ],\n  \"apps\": [\n    \"slack\",\n    \"vscode\",\n    \"terminal\",\n    \"zoom\",\n    \"messages\",\n    \"mail\",\n    \"notes\",\n    \"chatgpt\",\n    \"spotify\",\n    \"finder\",\n    \"calendar\",\n    \"preview\",\n    \"notion\"\n  ],\n  \"sites\": [\n    \"github.com\",\n    \"docs.google.com\",\n    \"mail.google.com\",\n    \"grafana.example.com\",\n    \"confluence.lumenary.dev\",\n    \"airbnb.com\",\n    \"openai.com\"\n  ],\n  \"noise\": {\n    \"slack_titles\": [\n      \"#integrations\",\n      \"#incidents\",\n      \"#random\",\n      \"Dana Whitfield (direct message)\",\n      \"Priya Raghavan (direct message)\"\n    ],\n    \"pages\": [\n      {\"host\": \"github.com\", \"title\": \"lumenary/event-bridge · Pull Request #1187\", \"path\": \"/lumenary/event-bridge/pull/1187\"},\n      {\"host\": \"docs.google.com\", \"title\": \"Consumer Group Naming - Lumenary\", \"path\": \"/document/d/1abc123/edit\"},\n      {\"host\": \"mail.google.com\", \"title\": \"Invoice #INV-22904 missing from export - Jules Fontaine\", \"path\": \"/mail/u/0/#inbox\"},\n      {\"host\": \"airbnb.com\", \"title\": \"Cabin in Fredericksburg, TX - reservation #HB-88231\", \"path\": \"/rooms/99887766\"},\n      {\"host\": \"confluence.lumenary.dev\", \"title\": \"Runbook: Kafka Event Bridge\", \"path\": \"/display/ENG/Runbook+Kafka+Event+Bridge\"}\n    ]\n  }\n}",
+  "parsed": {
+    "persona": {
+      "name": "Maya Chen",
+      "role": "Senior Software Engineer",
+      "company": "Lumenary Systems",
+      "summary": "Backend-focused developer on the integrations team, currently migrating a legacy event pipeline to Kafka. She works from home in Austin, uses a MacBook Pro, and tends to start late after a slow morning.",
+      "workday": {
+        "start": "09:45",
+        "end": "18:30",
+        "lunch": "13:00"
+      }
+    },
+    "people": [
+      {
+        "key": "dana",
+        "name": "Dana Whitfield",
+        "role": "Engineering Manager",
+        "channel": "slack"
+      },
+      {
+        "key": "priya",
+        "name": "Priya Raghavan",
+        "role": "Staff Engineer, Integrations",
+        "channel": "slack"
+      },
+      {
+        "key": "marcus",
+        "name": "Marcus Bell",
+        "role": "Product Manager",
+        "channel": "slack"
+      },
+      {
+        "key": "tom",
+        "name": "Tom Okafor",
+        "role": "DevOps Engineer",
+        "channel": "slack"
+      },
+      {
+        "key": "jules",
+        "name": "Jules Fontaine",
+        "role": "Data Analyst (client side)",
+        "channel": "email"
+      },
+      {
+        "key": "lena",
+        "name": "Lena Park",
+        "role": "Friend from college",
+        "channel": "messages"
+      },
+      {
+        "key": "grandma",
+        "name": "Grandma Ruth",
+        "role": "Family",
+        "channel": "messages"
+      }
+    ],
+    "threads": [
+      {
+        "key": "kafka_migration",
+        "title": "Kafka migration for event pipeline",
+        "kind": "main",
+        "arc": "Monday: Maya picks up ticket EV-482 to move the order-events topic from the old RabbitMQ bridge. Tuesday: she hits a serialization issue with the Avro schema and posts in #integrations; Priya suggests reusing the existing schema registry subject. Wednesday: she writes a migration script and runs it against staging, but the consumer lag spikes. Thursday: she fixes the consumer group offset reset and coordinates with Tom to deploy the new bridge. Friday: PR #1187 is approved and merged; she updates the runbook and closes EV-482."
+      },
+      {
+        "key": "consumer_group",
+        "title": "Consumer group naming decision",
+        "kind": "decision",
+        "arc": "Monday: Maya proposes naming consumer groups by service and environment (e.g. `order-sync-prod`). Tuesday: Marcus pushes back, wanting a version suffix. Wednesday: she creates a short comparison doc and polls the team in Slack. Thursday: the team votes 4-2 for `order-sync-prod-v2` style. Friday: she updates the migration script and the runbook to use the new convention."
+      },
+      {
+        "key": "invoice_question",
+        "title": "Invoice question from Jules at Northwind Analytics",
+        "kind": "correspondence",
+        "arc": "Tuesday: Jules emails Maya asking why invoice #INV-22904 is missing from the exported dataset. Wednesday: Maya checks the pipeline logs and finds the event was dropped due to a malformed timestamp. Thursday: she sends Jules a corrected CSV and explains the fix. Friday: Jules confirms the invoice now appears and asks for a small schema change; Maya adds it to the backlog."
+      },
+      {
+        "key": "weekend_plans",
+        "title": "Weekend trip to Fredericksburg",
+        "kind": "personal",
+        "arc": "Monday: Lena texts Maya about booking a cabin for the weekend. Tuesday: Maya checks Airbnb and sends Lena two options. Wednesday: they book the cabin (reservation #HB-88231) and split the cost. Thursday: Maya texts Grandma Ruth to ask if she wants to join for Saturday wine tasting. Friday: Grandma says yes, and Maya adds a stop at the wildflower farm to the itinerary."
+      },
+      {
+        "key": "side_project",
+        "title": "Side project: recipe scraper",
+        "kind": "side_project",
+        "arc": "Maya tinkers with a small Python script to scrape recipes from a cooking site. Monday: she refactors the parser to use BeautifulSoup. Wednesday: she gets blocked by a Cloudflare challenge and tries using Playwright. Friday: she gets it working for a few test URLs and commits it to a private GitHub repo."
+      }
+    ],
+    "apps": [
+      "slack",
+      "vscode",
+      "terminal",
+      "zoom",
+      "messages",
+      "mail",
+      "notes",
+      "chatgpt",
+      "spotify",
+      "finder",
+      "calendar",
+      "preview",
+      "notion"
+    ],
+    "sites": [
+      "github.com",
+      "docs.google.com",
+      "mail.google.com",
+      "grafana.example.com",
+      "confluence.lumenary.dev",
+      "airbnb.com",
+      "openai.com"
+    ],
+    "noise": {
+      "slack_titles": [
+        "#integrations",
+        "#incidents",
+        "#random",
+        "Dana Whitfield (direct message)",
+        "Priya Raghavan (direct message)"
+      ],
+      "pages": [
+        {
+          "host": "github.com",
+          "title": "lumenary/event-bridge · Pull Request #1187",
+          "path": "/lumenary/event-bridge/pull/1187"
+        },
+        {
+          "host": "docs.google.com",
+          "title": "Consumer Group Naming - Lumenary",
+          "path": "/document/d/1abc123/edit"
+        },
+        {
+          "host": "mail.google.com",
+          "title": "Invoice #INV-22904 missing from export - Jules Fontaine",
+          "path": "/mail/u/0/#inbox"
+        },
+        {
+          "host": "airbnb.com",
+          "title": "Cabin in Fredericksburg, TX - reservation #HB-88231",
+          "path": "/rooms/99887766"
+        },
+        {
+          "host": "confluence.lumenary.dev",
+          "title": "Runbook: Kafka Event Bridge",
+          "path": "/display/ENG/Runbook+Kafka+Event+Bridge"
+        }
+      ]
+    }
+  }
+}

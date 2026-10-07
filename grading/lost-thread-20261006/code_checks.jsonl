@@ -1,0 +1,162 @@
+{"blind_id": "A0112", "item_id": "developer-q08", "checks": {}}
+{"blind_id": "A0140", "item_id": "developer-q08", "checks": {}}
+{"blind_id": "A0149", "item_id": "developer-q01", "checks": {"f01": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0015", "item_id": "developer-q02", "checks": {"f02": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0115", "item_id": "developer-q06", "checks": {"f08": {"kind": "regex", "score": 2}, "f09": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0104", "item_id": "developer-q08", "checks": {}}
+{"blind_id": "A0051", "item_id": "developer-q02", "checks": {"f02": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0130", "item_id": "developer-q04", "checks": {"f05": {"kind": "regex", "score": 2}, "f06": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0151", "item_id": "developer-q03", "checks": {"f03": {"kind": "regex", "score": 0}, "f04": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0067", "item_id": "developer-q06", "checks": {"f08": {"kind": "regex", "score": 2}, "f09": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0034", "item_id": "developer-q08", "checks": {}}
+{"blind_id": "A0056", "item_id": "developer-q03", "checks": {"f03": {"kind": "regex", "score": 0}, "f04": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0106", "item_id": "developer-q04", "checks": {"f05": {"kind": "regex", "score": 0}, "f06": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0073", "item_id": "developer-q02", "checks": {"f02": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0093", "item_id": "developer-q07", "checks": {"f10": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0131", "item_id": "developer-q09", "checks": {"f12": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0078", "item_id": "developer-q09", "checks": {"f12": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0030", "item_id": "developer-q07", "checks": {"f10": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0068", "item_id": "developer-q03", "checks": {"f03": {"kind": "regex", "score": 0}, "f04": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0081", "item_id": "developer-q04", "checks": {"f05": {"kind": "regex", "score": 2}, "f06": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0161", "item_id": "developer-q05", "checks": {"f07": {"kind": "number", "score": 2, "found": 60.0, "rel_error": 0.016}}}
+{"blind_id": "A0139", "item_id": "developer-q09", "checks": {"f12": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0012", "item_id": "developer-q03", "checks": {"f03": {"kind": "regex", "score": 0}, "f04": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0126", "item_id": "developer-q05", "checks": {"f07": {"kind": "number", "score": 0, "found": 29.0, "rel_error": 0.525}}}
+{"blind_id": "A0129", "item_id": "developer-q08", "checks": {}}
+{"blind_id": "A0043", "item_id": "developer-q01", "checks": {"f01": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0107", "item_id": "developer-q04", "checks": {"f05": {"kind": "regex", "score": 0}, "f06": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0150", "item_id": "developer-q05", "checks": {"f07": {"kind": "number", "score": 2, "found": 60.0, "rel_error": 0.016}}}
+{"blind_id": "A0006", "item_id": "developer-q09", "checks": {"f12": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0147", "item_id": "developer-q06", "checks": {"f08": {"kind": "regex", "score": 0}, "f09": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0037", "item_id": "developer-q06", "checks": {"f08": {"kind": "regex", "score": 0}, "f09": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0109", "item_id": "developer-q02", "checks": {"f02": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0134", "item_id": "developer-q08", "checks": {}}
+{"blind_id": "A0010", "item_id": "developer-q07", "checks": {"f10": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0136", "item_id": "developer-q07", "checks": {"f10": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0005", "item_id": "developer-q03", "checks": {"f03": {"kind": "regex", "score": 0}, "f04": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0014", "item_id": "developer-q09", "checks": {"f12": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0086", "item_id": "developer-q05", "checks": {"f07": {"kind": "number", "score": 2, "found": 60.0, "rel_error": 0.016}}}
+{"blind_id": "A0069", "item_id": "developer-q05", "checks": {"f07": {"kind": "number", "score": 2, "found": 60.0, "rel_error": 0.016}}}
+{"blind_id": "A0087", "item_id": "developer-q01", "checks": {"f01": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0023", "item_id": "developer-q01", "checks": {"f01": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0138", "item_id": "developer-q03", "checks": {"f03": {"kind": "regex", "score": 0}, "f04": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0133", "item_id": "developer-q06", "checks": {"f08": {"kind": "regex", "score": 0}, "f09": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0019", "item_id": "developer-q09", "checks": {"f12": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0095", "item_id": "developer-q07", "checks": {"f10": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0117", "item_id": "developer-q04", "checks": {"f05": {"kind": "regex", "score": 2}, "f06": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0036", "item_id": "developer-q02", "checks": {"f02": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0031", "item_id": "developer-q06", "checks": {"f08": {"kind": "regex", "score": 2}, "f09": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0021", "item_id": "developer-q01", "checks": {"f01": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0122", "item_id": "developer-q01", "checks": {"f01": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0157", "item_id": "developer-q07", "checks": {"f10": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0060", "item_id": "developer-q05", "checks": {"f07": {"kind": "number", "score": 0, "found": 29.0, "rel_error": 0.525}}}
+{"blind_id": "A0103", "item_id": "developer-q02", "checks": {"f02": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0027", "item_id": "developer-q04", "checks": {"f05": {"kind": "regex", "score": 2}, "f06": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0135", "item_id": "student-q08", "checks": {"f08a": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0141", "item_id": "student-q08", "checks": {"f08a": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0064", "item_id": "student-q01", "checks": {"f01a": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0038", "item_id": "student-q02", "checks": {"f02a": {"kind": "regex", "score": 0}, "f02b": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0059", "item_id": "student-q06", "checks": {"f06a": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0155", "item_id": "student-q08", "checks": {"f08a": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0148", "item_id": "student-q02", "checks": {"f02a": {"kind": "regex", "score": 0}, "f02b": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0085", "item_id": "student-q04", "checks": {"f04a": {"kind": "number", "score": 2, "found": 18.0, "rel_error": 0.0}}}
+{"blind_id": "A0121", "item_id": "student-q03", "checks": {"f03a": {"kind": "regex", "score": 0}, "f03b": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0113", "item_id": "student-q06", "checks": {"f06a": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0011", "item_id": "student-q08", "checks": {"f08a": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0145", "item_id": "student-q03", "checks": {"f03a": {"kind": "regex", "score": 0}, "f03b": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0066", "item_id": "student-q04", "checks": {"f04a": {"kind": "number", "score": 0, "found": 29.0, "rel_error": 0.611}}}
+{"blind_id": "A0092", "item_id": "student-q02", "checks": {"f02a": {"kind": "regex", "score": 0}, "f02b": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0007", "item_id": "student-q07", "checks": {"f07a": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0061", "item_id": "student-q09", "checks": {"f09a": {"kind": "regex", "score": 2}, "f09b": {"kind": "regex", "score": 0}, "f09c": {"kind": "regex", "score": 0}, "f09d": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0080", "item_id": "student-q09", "checks": {"f09a": {"kind": "regex", "score": 2}, "f09b": {"kind": "regex", "score": 0}, "f09c": {"kind": "regex", "score": 0}, "f09d": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0063", "item_id": "student-q07", "checks": {"f07a": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0083", "item_id": "student-q03", "checks": {"f03a": {"kind": "regex", "score": 0}, "f03b": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0160", "item_id": "student-q04", "checks": {"f04a": {"kind": "number", "score": 2, "found": 18.0, "rel_error": 0.0}}}
+{"blind_id": "A0089", "item_id": "student-q05", "checks": {"f05a": {"kind": "regex", "score": 2}, "f05b": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0055", "item_id": "student-q09", "checks": {"f09a": {"kind": "regex", "score": 2}, "f09b": {"kind": "regex", "score": 0}, "f09c": {"kind": "regex", "score": 0}, "f09d": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0022", "item_id": "student-q03", "checks": {"f03a": {"kind": "regex", "score": 0}, "f03b": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0096", "item_id": "student-q05", "checks": {"f05a": {"kind": "regex", "score": 2}, "f05b": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0001", "item_id": "student-q08", "checks": {"f08a": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0057", "item_id": "student-q01", "checks": {"f01a": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0111", "item_id": "student-q04", "checks": {"f04a": {"kind": "number", "score": 0, "found": 29.0, "rel_error": 0.611}}}
+{"blind_id": "A0072", "item_id": "student-q05", "checks": {"f05a": {"kind": "regex", "score": 2}, "f05b": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0054", "item_id": "student-q09", "checks": {"f09a": {"kind": "regex", "score": 2}, "f09b": {"kind": "regex", "score": 0}, "f09c": {"kind": "regex", "score": 0}, "f09d": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0108", "item_id": "student-q06", "checks": {"f06a": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0070", "item_id": "student-q06", "checks": {"f06a": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0062", "item_id": "student-q02", "checks": {"f02a": {"kind": "regex", "score": 0}, "f02b": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0094", "item_id": "student-q08", "checks": {"f08a": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0110", "item_id": "student-q07", "checks": {"f07a": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0047", "item_id": "student-q07", "checks": {"f07a": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0091", "item_id": "student-q03", "checks": {"f03a": {"kind": "regex", "score": 0}, "f03b": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0029", "item_id": "student-q09", "checks": {"f09a": {"kind": "regex", "score": 2}, "f09b": {"kind": "regex", "score": 0}, "f09c": {"kind": "regex", "score": 0}, "f09d": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0097", "item_id": "student-q05", "checks": {"f05a": {"kind": "regex", "score": 2}, "f05b": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0077", "item_id": "student-q05", "checks": {"f05a": {"kind": "regex", "score": 2}, "f05b": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0053", "item_id": "student-q01", "checks": {"f01a": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0142", "item_id": "student-q01", "checks": {"f01a": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0052", "item_id": "student-q03", "checks": {"f03a": {"kind": "regex", "score": 0}, "f03b": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0074", "item_id": "student-q06", "checks": {"f06a": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0024", "item_id": "student-q09", "checks": {"f09a": {"kind": "regex", "score": 2}, "f09b": {"kind": "regex", "score": 0}, "f09c": {"kind": "regex", "score": 0}, "f09d": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0079", "item_id": "student-q07", "checks": {"f07a": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0101", "item_id": "student-q04", "checks": {"f04a": {"kind": "number", "score": 2, "found": 18.0, "rel_error": 0.0}}}
+{"blind_id": "A0004", "item_id": "student-q02", "checks": {"f02a": {"kind": "regex", "score": 0}, "f02b": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0082", "item_id": "student-q06", "checks": {"f06a": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0050", "item_id": "student-q01", "checks": {"f01a": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0099", "item_id": "student-q01", "checks": {"f01a": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0026", "item_id": "student-q07", "checks": {"f07a": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0009", "item_id": "student-q05", "checks": {"f05a": {"kind": "regex", "score": 2}, "f05b": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0046", "item_id": "student-q02", "checks": {"f02a": {"kind": "regex", "score": 0}, "f02b": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0039", "item_id": "student-q04", "checks": {"f04a": {"kind": "number", "score": 2, "found": 18.0, "rel_error": 0.0}}}
+{"blind_id": "A0032", "item_id": "founder-q08", "checks": {}}
+{"blind_id": "A0143", "item_id": "founder-q08", "checks": {}}
+{"blind_id": "A0003", "item_id": "founder-q01", "checks": {"f01a": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0128", "item_id": "founder-q02", "checks": {"f02a": {"kind": "regex", "score": 2}, "f02b": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0102", "item_id": "founder-q06", "checks": {"f06a": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0018", "item_id": "founder-q08", "checks": {}}
+{"blind_id": "A0088", "item_id": "founder-q02", "checks": {"f02a": {"kind": "regex", "score": 2}, "f02b": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0071", "item_id": "founder-q04", "checks": {"f04a": {"kind": "number", "score": 2, "found": 66, "rel_error": 0.154}}}
+{"blind_id": "A0017", "item_id": "founder-q03", "checks": {"f03a": {"kind": "regex", "score": 0}, "f03b": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0132", "item_id": "founder-q06", "checks": {"f06a": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0144", "item_id": "founder-q08", "checks": {}}
+{"blind_id": "A0116", "item_id": "founder-q03", "checks": {"f03a": {"kind": "regex", "score": 0}, "f03b": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0041", "item_id": "founder-q04", "checks": {"f04a": {"kind": "number", "score": 0, "found": null}}}
+{"blind_id": "A0125", "item_id": "founder-q02", "checks": {"f02a": {"kind": "regex", "score": 2}, "f02b": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0105", "item_id": "founder-q07", "checks": {}}
+{"blind_id": "A0016", "item_id": "founder-q09", "checks": {"f09a": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0008", "item_id": "founder-q09", "checks": {"f09a": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0084", "item_id": "founder-q07", "checks": {}}
+{"blind_id": "A0162", "item_id": "founder-q03", "checks": {"f03a": {"kind": "regex", "score": 2}, "f03b": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0137", "item_id": "founder-q04", "checks": {"f04a": {"kind": "number", "score": 2, "found": 66, "rel_error": 0.154}}}
+{"blind_id": "A0013", "item_id": "founder-q05", "checks": {"f05a": {"kind": "regex", "score": 0}, "f05b": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0058", "item_id": "founder-q09", "checks": {"f09a": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0158", "item_id": "founder-q03", "checks": {"f03a": {"kind": "regex", "score": 0}, "f03b": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0118", "item_id": "founder-q05", "checks": {"f05a": {"kind": "regex", "score": 2}, "f05b": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0090", "item_id": "founder-q08", "checks": {}}
+{"blind_id": "A0049", "item_id": "founder-q01", "checks": {"f01a": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0154", "item_id": "founder-q04", "checks": {"f04a": {"kind": "number", "score": 0, "found": null}}}
+{"blind_id": "A0124", "item_id": "founder-q05", "checks": {"f05a": {"kind": "regex", "score": 0}, "f05b": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0042", "item_id": "founder-q09", "checks": {"f09a": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0002", "item_id": "founder-q06", "checks": {"f06a": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0100", "item_id": "founder-q06", "checks": {"f06a": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0152", "item_id": "founder-q02", "checks": {"f02a": {"kind": "regex", "score": 0}, "f02b": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0045", "item_id": "founder-q08", "checks": {}}
+{"blind_id": "A0020", "item_id": "founder-q07", "checks": {}}
+{"blind_id": "A0075", "item_id": "founder-q07", "checks": {}}
+{"blind_id": "A0156", "item_id": "founder-q03", "checks": {"f03a": {"kind": "regex", "score": 2}, "f03b": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0114", "item_id": "founder-q09", "checks": {"f09a": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0119", "item_id": "founder-q05", "checks": {"f05a": {"kind": "regex", "score": 2}, "f05b": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0120", "item_id": "founder-q05", "checks": {"f05a": {"kind": "regex", "score": 2}, "f05b": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0048", "item_id": "founder-q01", "checks": {"f01a": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0028", "item_id": "founder-q01", "checks": {"f01a": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0035", "item_id": "founder-q03", "checks": {"f03a": {"kind": "regex", "score": 0}, "f03b": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0127", "item_id": "founder-q06", "checks": {"f06a": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0044", "item_id": "founder-q09", "checks": {"f09a": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0098", "item_id": "founder-q07", "checks": {}}
+{"blind_id": "A0153", "item_id": "founder-q04", "checks": {"f04a": {"kind": "number", "score": 2, "found": 66, "rel_error": 0.154}}}
+{"blind_id": "A0076", "item_id": "founder-q02", "checks": {"f02a": {"kind": "regex", "score": 0}, "f02b": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0033", "item_id": "founder-q06", "checks": {"f06a": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0040", "item_id": "founder-q01", "checks": {"f01a": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0123", "item_id": "founder-q01", "checks": {"f01a": {"kind": "regex", "score": 2}}}
+{"blind_id": "A0025", "item_id": "founder-q07", "checks": {}}
+{"blind_id": "A0159", "item_id": "founder-q05", "checks": {"f05a": {"kind": "regex", "score": 2}, "f05b": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0146", "item_id": "founder-q02", "checks": {"f02a": {"kind": "regex", "score": 2}, "f02b": {"kind": "regex", "score": 0}}}
+{"blind_id": "A0065", "item_id": "founder-q04", "checks": {"f04a": {"kind": "number", "score": 2, "found": 66, "rel_error": 0.154}}}

@@ -1,0 +1,498 @@
+{
+  "step": "plan-d1",
+  "model": "deepseek/deepseek-v4-flash-0731",
+  "requested_model": "deepseek/deepseek-v4-flash-0731",
+  "base_url": "<local OpenRouter proxy>",
+  "temperature": 0.8,
+  "seconds": 41.07,
+  "usage": {
+    "prompt_tokens": 1797,
+    "completion_tokens": 2659,
+    "total_tokens": 4456,
+    "cost": 0.00080019,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 1781,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00080019,
+      "upstream_inference_prompt_cost": 5.567e-05,
+      "upstream_inference_completions_cost": 0.00074452
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "attempt": 3,
+  "system": "You generate realistic synthetic test data for a research benchmark about personal memory. Everything you write is fiction: invent every person, company, client and product name (never use real people you know of, and avoid famous companies as employers). Write like real life, not like a tidy diary: people get interrupted, leave things half done, revisit things, procrastinate, and type casually. Reply with JSON only.",
+  "user": "Person and threads:\n{\"persona\": {\"name\": \"Maya Chen\", \"role\": \"Senior Software Engineer\", \"company\": \"Lumenary Systems\", \"summary\": \"Backend-focused developer on the integrations team, currently migrating a legacy event pipeline to Kafka. She works from home in Austin, uses a MacBook Pro, and tends to start late after a slow morning.\", \"workday\": {\"start\": \"09:45\", \"end\": \"18:30\", \"lunch\": \"13:00\"}}, \"people\": [{\"key\": \"dana\", \"name\": \"Dana Whitfield\", \"role\": \"Engineering Manager\", \"channel\": \"slack\"}, {\"key\": \"priya\", \"name\": \"Priya Raghavan\", \"role\": \"Staff Engineer, Integrations\", \"channel\": \"slack\"}, {\"key\": \"marcus\", \"name\": \"Marcus Bell\", \"role\": \"Product Manager\", \"channel\": \"slack\"}, {\"key\": \"tom\", \"name\": \"Tom Okafor\", \"role\": \"DevOps Engineer\", \"channel\": \"slack\"}, {\"key\": \"jules\", \"name\": \"Jules Fontaine\", \"role\": \"Data Analyst (client side)\", \"channel\": \"email\"}, {\"key\": \"lena\", \"name\": \"Lena Park\", \"role\": \"Friend from college\", \"channel\": \"messages\"}, {\"key\": \"grandma\", \"name\": \"Grandma Ruth\", \"role\": \"Family\", \"channel\": \"messages\"}], \"threads\": [{\"key\": \"kafka_migration\", \"title\": \"Kafka migration for event pipeline\", \"kind\": \"main\", \"arc\": \"Monday: Maya picks up ticket EV-482 to move the order-events topic from the old RabbitMQ bridge. Tuesday: she hits a serialization issue with the Avro schema and posts in #integrations; Priya suggests reusing the existing schema registry subject. Wednesday: she writes a migration script and runs it against staging, but the consumer lag spikes. Thursday: she fixes the consumer group offset reset and coordinates with Tom to deploy the new bridge. Friday: PR #1187 is approved and merged; she updates the runbook and closes EV-482.\"}, {\"key\": \"consumer_group\", \"title\": \"Consumer group naming decision\", \"kind\": \"decision\", \"arc\": \"Monday: Maya proposes naming consumer groups by service and environment (e.g. `order-sync-prod`). Tuesday: Marcus pushes back, wanting a version suffix. Wednesday: she creates a short comparison doc and polls the team in Slack. Thursday: the team votes 4-2 for `order-sync-prod-v2` style. Friday: she updates the migration script and the runbook to use the new convention.\"}, {\"key\": \"invoice_question\", \"title\": \"Invoice question from Jules at Northwind Analytics\", \"kind\": \"correspondence\", \"arc\": \"Tuesday: Jules emails Maya asking why invoice #INV-22904 is missing from the exported dataset. Wednesday: Maya checks the pipeline logs and finds the event was dropped due to a malformed timestamp. Thursday: she sends Jules a corrected CSV and explains the fix. Friday: Jules confirms the invoice now appears and asks for a small schema change; Maya adds it to the backlog.\"}, {\"key\": \"weekend_plans\", \"title\": \"Weekend trip to Fredericksburg\", \"kind\": \"personal\", \"arc\": \"Monday: Lena texts Maya about booking a cabin for the weekend. Tuesday: Maya checks Airbnb and sends Lena two options. Wednesday: they book the cabin (reservation #HB-88231) and split the cost. Thursday: Maya texts Grandma Ruth to ask if she wants to join for Saturday wine tasting. Friday: Grandma says yes, and Maya adds a stop at the wildflower farm to the itinerary.\"}, {\"key\": \"side_project\", \"title\": \"Side project: recipe scraper\", \"kind\": \"side_project\", \"arc\": \"Maya tinkers with a small Python script to scrape recipes from a cooking site. Monday: she refactors the parser to use BeautifulSoup. Wednesday: she gets blocked by a Cloudflare challenge and tries using Playwright. Friday: she gets it working for a few test URLs and commits it to a private GitHub repo.\"}], \"apps\": [\"slack\", \"vscode\", \"terminal\", \"zoom\", \"messages\", \"mail\", \"notes\", \"chatgpt\", \"spotify\", \"finder\", \"calendar\", \"preview\", \"notion\"], \"sites\": [\"github.com\", \"docs.google.com\", \"mail.google.com\", \"grafana.example.com\", \"confluence.lumenary.dev\", \"airbnb.com\", \"openai.com\"], \"noise\": {\"slack_titles\": [\"#integrations\", \"#incidents\", \"#random\", \"Dana Whitfield (direct message)\", \"Priya Raghavan (direct message)\"], \"pages\": [{\"host\": \"github.com\", \"title\": \"lumenary/event-bridge · Pull Request #1187\", \"path\": \"/lumenary/event-bridge/pull/1187\"}, {\"host\": \"docs.google.com\", \"title\": \"Consumer Group Naming - Lumenary\", \"path\": \"/document/d/1abc123/edit\"}, {\"host\": \"mail.google.com\", \"title\": \"Invoice #INV-22904 missing from export - Jules Fontaine\", \"path\": \"/mail/u/0/#inbox\"}, {\"host\": \"airbnb.com\", \"title\": \"Cabin in Fredericksburg, TX - reservation #HB-88231\", \"path\": \"/rooms/99887766\"}, {\"host\": \"confluence.lumenary.dev\", \"title\": \"Runbook: Kafka Event Bridge\", \"path\": \"/display/ENG/Runbook+Kafka+Event+Bridge\"}]}}\n\nPlan workday 1 (Tuesday) as JSON {\"blocks\": [...], \"summary\": \"2-3 sentences of what happened\"}.\nWhat happened on earlier days: []\n\nEach block: {\"start\": \"HH:MM\", \"thread\": one of ['consumer_group', 'invoice_question', 'kafka_migration', 'side_project', 'weekend_plans'], \"noise\": true|false, \"steps\": [...]}.\nSteps (in order):\n- {\"do\": \"app\", \"app\": <key from slack, vscode, terminal, xcode, zoom, messages, mail, notes, chatgpt, claude, spotify, finder, figma, calendar, preview, excel, keynote, notion>, \"about\": \"what window/document\", \"min\": minutes}\n- {\"do\": \"page\", \"host\": \"<site>\", \"about\": \"what page\", \"min\": minutes, \"new_tab\": optional bool}\n- {\"do\": \"search\", \"about\": \"what they googled\"}\n- {\"do\": \"type\", \"where\": <app key or \"web:<host>\">, \"intent\": \"what they write, to whom, and whether they send it\",\n   \"sent\": true|false, \"to\": \"<person name if a message/email>\"}\n- {\"do\": \"idle\", \"min\": minutes, \"about\": \"lunch / walk / away\"}\nMake it a real day: 9-16 blocks, threads interleaved, meetings (zoom/calendar), messages that interrupt, distraction\nbrowsing, something left unfinished, something read but not answered, an abandoned tab. Keep each thread's arc moving.\nTyping happens wherever it really would: Slack, email in the browser, Google Docs, notes, terminals, AI chat apps.\n\nYour previous reply was not valid JSON. Reply with JSON only.",
+  "raw": "{ \"blocks\": [ { \"start\": \"09:45\", \"thread\": \"kafka_migration\", \"noise\": false, \"steps\": [ { \"do\": \"app\", \"app\": \"slack\", \"about\": \"Check #integrations for overnight messages from Priya about the Avro schema\", \"min\": 8 }, { \"do\": \"app\", \"app\": \"terminal\", \"about\": \"Open project repo and inspect the Avro schema file for order-events\", \"min\": 12 }, { \"do\": \"app\", \"app\": \"vscode\", \"about\": \"Edit the Avro schema to add the missing timestamp field\", \"min\": 15 } ] }, { \"start\": \"10:25\", \"thread\": \"invoice_question\", \"noise\": true, \"steps\": [ { \"do\": \"app\", \"app\": \"mail\", \"about\": \"Inbox - see Jules' email about invoice #INV-22904 missing from export\", \"min\": 5 }, { \"do\": \"app\", \"app\": \"slack\", \"about\": \"Glance at #random meme thread, then switch back to mail\", \"min\": 3 }, { \"do\": \"app\", \"app\": \"terminal\", \"about\": \"Query pipeline logs for INV-22904 event\", \"min\": 10 } ] }, { \"start\": \"10:50\", \"thread\": \"consumer_group\", \"noise\": false, \"steps\": [ { \"do\": \"app\", \"app\": \"slack\", \"about\": \"Read Marcus's message pushing back on consumer group naming\", \"min\": 4 }, { \"do\": \"app\", \"app\": \"notes\", \"about\": \"Draft comparison of naming options with pros/cons\", \"min\": 8 }, { \"do\": \"app\", \"app\": \"slack\", \"about\": \"Reply to Marcus explaining the service-env convention and ask for his version suffix example\", \"min\": 6, \"type\": true, \"sent\": true, \"to\": \"Marcus Bell\" } ] }, { \"start\": \"11:15\", \"thread\": \"kafka_migration\", \"noise\": true, \"steps\": [ { \"do\": \"app\", \"app\": \"vscode\", \"about\": \"Continue editing Avro schema, get distracted by a lint warning\", \"min\": 7 }, { \"do\": \"page\", \"host\": \"github.com\", \"about\": \"Check PR #1187 diff and comments\", \"min\": 6 }, { \"do\": \"app\", \"app\": \"slack\", \"about\": \"DM Priya about the schema registry subject suggestion\", \"min\": 5, \"type\": true, \"sent\": true, \"to\": \"Priya Raghavan\" } ] }, { \"start\": \"11:40\", \"thread\": \"weekend_plans\", \"noise\": false, \"steps\": [ { \"do\": \"app\", \"app\": \"messages\", \"about\": \"Text Lena back about the two Airbnb options for Fredericksburg\", \"min\": 6, \"type\": true, \"sent\": true, \"to\": \"Lena Park\" }, { \"do\": \"page\", \"host\": \"airbnb.com\", \"about\": \"Re-check the cabin listing and availability for Saturday\", \"min\": 8 } ] }, { \"start\": \"12:00\", \"thread\": \"side_project\", \"noise\": true, \"steps\": [ { \"do\": \"app\", \"app\": \"terminal\", \"about\": \"Run the recipe scraper against a test URL, see Cloudflare challenge\", \"min\": 10 }, { \"do\": \"search\", \"about\": \"playwright bypass cloudflare challenge python\" }, { \"do\": \"app\", \"app\": \"chatgpt\", \"about\": \"Ask for a Playwright snippet to handle Cloudflare challenge\", \"min\": 8 } ] }, { \"start\": \"12:30\", \"thread\": \"invoice_question\", \"noise\": false, \"steps\": [ { \"do\": \"app\", \"app\": \"terminal\", \"about\": \"Find the malformed timestamp in the pipeline log for INV-22904\", \"min\": 12 }, { \"do\": \"app\", \"app\": \"mail\", \"about\": \"Draft reply to Jules explaining the fix and attach corrected CSV\", \"min\": 10, \"type\": true, \"sent\": true, \"to\": \"Jules Fontaine\" } ] }, { \"start\": \"13:00\", \"thread\": \"kafka_migration\", \"noise\": false, \"steps\": [ { \"do\": \"idle\", \"min\": 45, \"about\": \"Lunch - walk to the kitchen, eat leftover stir-fry, scroll phone\" } ] }, { \"start\": \"13:50\", \"thread\": \"consumer_group\", \"noise\": true, \"steps\": [ { \"do\": \"app\", \"app\": \"slack\", \"about\": \"See Marcus's reply with version suffix example, plus a message from Dana about the naming doc\", \"min\": 6 }, { \"do\": \"page\", \"host\": \"docs.google.com\", \"about\": \"Open the Consumer Group Naming doc and add the version suffix option\", \"min\": 10 }, { \"do\": \"app\", \"app\": \"slack\", \"about\": \"Post a poll in #integrations for naming convention\", \"min\": 5, \"type\": true, \"sent\": true, \"to\": \"#integrations\" } ] }, { \"start\": \"14:20\", \"thread\": \"kafka_migration\", \"noise\": false, \"steps\": [ { \"do\": \"app\", \"app\": \"vscode\", \"about\": \"Write the migration script for the order-events topic\", \"min\": 20 }, { \"do\": \"app\", \"app\": \"terminal\", \"about\": \"Run the migration script against staging\", \"min\": 8 }, { \"do\": \"page\", \"host\": \"grafana.example.com\", \"about\": \"Check consumer lag after migration - see spike\", \"min\": 7 } ] }, { \"start\": \"15:00\", \"thread\": \"weekend_plans\", \"noise\": true, \"steps\": [ { \"do\": \"app\", \"app\": \"messages\", \"about\": \"Lena confirms the cabin booking #HB-88231 and asks about splitting cost\", \"min\": 5, \"type\": true, \"sent\": true, \"to\": \"Lena Park\" }, { \"do\": \"app\", \"app\": \"messages\", \"about\": \"Text Grandma Ruth asking if she wants to join Saturday wine tasting\", \"min\": 4, \"type\": true, \"sent\": true, \"to\": \"Grandma Ruth\" } ] }, { \"start\": \"15:20\", \"thread\": \"kafka_migration\", \"noise\": false, \"steps\": [ { \"do\": \"app\", \"app\": \"slack\", \"about\": \"DM Tom about the consumer lag spike and ask if he can check the bridge deployment\", \"min\": 6, \"type\": true, \"sent\": true, \"to\": \"Tom Okafor\" }, { \"do\": \"app\", \"app\": \"terminal\", \"about\": \"Inspect consumer group offsets and reset the offset for the new group\", \"min\": 12 } ] }, { \"start\": \"15:50\", \"thread\": \"side_project\", \"noise\": true, \"steps\": [ { \"do\": \"app\", \"app\": \"vscode\", \"about\": \"Try the Playwright snippet from ChatGPT on the recipe site\", \"min\": 12 }, { \"do\": \"app\", \"app\": \"terminal\", \"about\": \"Test scraper on two more URLs - one works, one still blocked\", \"min\": 8 }, { \"do\": \"app\", \"app\": \"notes\", \"about\": \"Jot down the working approach and the remaining issue\", \"min\": 4 } ] }, { \"start\": \"16:20\", \"thread\": \"consumer_group\", \"noise\": false, \"steps\": [ { \"do\": \"app\", \"app\": \"slack\", \"about\": \"Check poll results - 4 votes for service-env-v2, 2 for plain service-env\", \"min\": 5 }, { \"do\": \"app\", \"app\": \"notes\", \"about\": \"Update the comparison doc with the final decision\", \"min\": 6 }, { \"do\": \"app\", \"app\": \"slack\", \"about\": \"Tell Marcus the team voted for the version suffix convention\", \"min\": 4, \"type\": true, \"sent\": true, \"to\": \"Marcus Bell\" } ] }, { \"start\": \"16:40\", \"thread\": \"invoice_question\", \"noise\": true, \"steps\": [ { \"do\": \"app\", \"app\": \"mail\", \"about\": \"See Jules's reply confirming the invoice appears and asking for a schema change\", \"min\": 5 }, { \"do\": \"app\", \"app\": \"notion\", \"about\": \"Add the schema change request to the backlog\", \"min\": 6 }, { \"do\": \"app\", \"app\": \"mail\", \"about\": \"Draft a short reply to Jules saying it's in the backlog - leave unsent\", \"min\": 3, \"type\": true, \"sent\": false, \"to\": \"Jules Fontaine\" } ] }, { \"start\": \"17:00\", \"thread\": \"kafka_migration\", \"noise\": false, \"steps\": [ { \"do\": \"app\", \"app\": \"slack\", \"about\": \"Tom replies that the bridge deploy is done and lag should settle\", \"min\": 4 }, { \"do\": \"page\", \"host\": \"grafana.example.com\", \"about\": \"Check consumer lag again - back to normal\", \"min\": 6 }, { \"do\": \"app\", \"app\": \"vscode\", \"about\": \"Update the migration script to use the new consumer group naming convention\", \"min\": 10 } ] }, { \"start\": \"17:30\", \"thread\": \"weekend_plans\", \"noise\": true, \"steps\": [ { \"do\": \"app\", \"app\": \"messages\", \"about\": \"Grandma Ruth says yes to Saturday wine tasting\", \"min\": 3, \"type\": true, \"sent\": true, \"to\": \"Grandma Ruth\" }, { \"do\": \"search\", \"about\": \"fredericksburg tx wildflower farm hours\" }, { \"do\": \"app\", \"app\": \"notes\", \"about\": \"Add wildflower farm stop to the weekend itinerary\", \"min\": 5 } ] }, { \"start\": \"17:50\", \"thread\": \"side_project\", \"noise\": true, \"steps\": [ { \"do\": \"app\", \"app\": \"terminal\", \"about\": \"Commit the working scraper to the private GitHub repo\", \"min\": 8 }, { \"do\": \"page\", \"host\": \"github.com\", \"about\": \"Check the commit landed and the repo is private\", \"min\": 4 } ] }, { \"start\": \"18:10\", \"thread\": \"kafka_migration\", \"noise\": false, \"steps\": [ { \"do\": \"app\", \"app\": \"slack\", \"about\": \"Post a summary of the migration progress in #integrations\", \"min\": 5, \"type\": true, \"sent\": true, \"to\": \"#integrations\" }, { \"do\": \"app\", \"app\": \"calendar\", \"about\": \"Check tomorrow's meetings and block focus time for the PR review\", \"min\": 4 } ] } ], \"summary\": \"Tuesday was a mixed day: Maya dug into the Kafka migration and hit a consumer lag spike after running the staging script, which she worked through with Tom. She also handled Jules's invoice question by finding the malformed timestamp and sending a corrected CSV, while the consumer group naming debate moved toward a team vote. In between, she booked the Fredericksburg cabin with Lena, got Grandma Ruth on board for wine tasting, and made progress on the recipe scraper with a Playwright workaround.\" }",
+  "parsed": {
+    "blocks": [
+      {
+        "start": "09:45",
+        "thread": "kafka_migration",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "Check #integrations for overnight messages from Priya about the Avro schema",
+            "min": 8
+          },
+          {
+            "do": "app",
+            "app": "terminal",
+            "about": "Open project repo and inspect the Avro schema file for order-events",
+            "min": 12
+          },
+          {
+            "do": "app",
+            "app": "vscode",
+            "about": "Edit the Avro schema to add the missing timestamp field",
+            "min": 15
+          }
+        ]
+      },
+      {
+        "start": "10:25",
+        "thread": "invoice_question",
+        "noise": true,
+        "steps": [
+          {
+            "do": "app",
+            "app": "mail",
+            "about": "Inbox - see Jules' email about invoice #INV-22904 missing from export",
+            "min": 5
+          },
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "Glance at #random meme thread, then switch back to mail",
+            "min": 3
+          },
+          {
+            "do": "app",
+            "app": "terminal",
+            "about": "Query pipeline logs for INV-22904 event",
+            "min": 10
+          }
+        ]
+      },
+      {
+        "start": "10:50",
+        "thread": "consumer_group",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "Read Marcus's message pushing back on consumer group naming",
+            "min": 4
+          },
+          {
+            "do": "app",
+            "app": "notes",
+            "about": "Draft comparison of naming options with pros/cons",
+            "min": 8
+          },
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "Reply to Marcus explaining the service-env convention and ask for his version suffix example",
+            "min": 6,
+            "type": true,
+            "sent": true,
+            "to": "Marcus Bell"
+          }
+        ]
+      },
+      {
+        "start": "11:15",
+        "thread": "kafka_migration",
+        "noise": true,
+        "steps": [
+          {
+            "do": "app",
+            "app": "vscode",
+            "about": "Continue editing Avro schema, get distracted by a lint warning",
+            "min": 7
+          },
+          {
+            "do": "page",
+            "host": "github.com",
+            "about": "Check PR #1187 diff and comments",
+            "min": 6
+          },
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "DM Priya about the schema registry subject suggestion",
+            "min": 5,
+            "type": true,
+            "sent": true,
+            "to": "Priya Raghavan"
+          }
+        ]
+      },
+      {
+        "start": "11:40",
+        "thread": "weekend_plans",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "messages",
+            "about": "Text Lena back about the two Airbnb options for Fredericksburg",
+            "min": 6,
+            "type": true,
+            "sent": true,
+            "to": "Lena Park"
+          },
+          {
+            "do": "page",
+            "host": "airbnb.com",
+            "about": "Re-check the cabin listing and availability for Saturday",
+            "min": 8
+          }
+        ]
+      },
+      {
+        "start": "12:00",
+        "thread": "side_project",
+        "noise": true,
+        "steps": [
+          {
+            "do": "app",
+            "app": "terminal",
+            "about": "Run the recipe scraper against a test URL, see Cloudflare challenge",
+            "min": 10
+          },
+          {
+            "do": "search",
+            "about": "playwright bypass cloudflare challenge python"
+          },
+          {
+            "do": "app",
+            "app": "chatgpt",
+            "about": "Ask for a Playwright snippet to handle Cloudflare challenge",
+            "min": 8
+          }
+        ]
+      },
+      {
+        "start": "12:30",
+        "thread": "invoice_question",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "terminal",
+            "about": "Find the malformed timestamp in the pipeline log for INV-22904",
+            "min": 12
+          },
+          {
+            "do": "app",
+            "app": "mail",
+            "about": "Draft reply to Jules explaining the fix and attach corrected CSV",
+            "min": 10,
+            "type": true,
+            "sent": true,
+            "to": "Jules Fontaine"
+          }
+        ]
+      },
+      {
+        "start": "13:00",
+        "thread": "kafka_migration",
+        "noise": false,
+        "steps": [
+          {
+            "do": "idle",
+            "min": 45,
+            "about": "Lunch - walk to the kitchen, eat leftover stir-fry, scroll phone"
+          }
+        ]
+      },
+      {
+        "start": "13:50",
+        "thread": "consumer_group",
+        "noise": true,
+        "steps": [
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "See Marcus's reply with version suffix example, plus a message from Dana about the naming doc",
+            "min": 6
+          },
+          {
+            "do": "page",
+            "host": "docs.google.com",
+            "about": "Open the Consumer Group Naming doc and add the version suffix option",
+            "min": 10
+          },
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "Post a poll in #integrations for naming convention",
+            "min": 5,
+            "type": true,
+            "sent": true,
+            "to": "#integrations"
+          }
+        ]
+      },
+      {
+        "start": "14:20",
+        "thread": "kafka_migration",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "vscode",
+            "about": "Write the migration script for the order-events topic",
+            "min": 20
+          },
+          {
+            "do": "app",
+            "app": "terminal",
+            "about": "Run the migration script against staging",
+            "min": 8
+          },
+          {
+            "do": "page",
+            "host": "grafana.example.com",
+            "about": "Check consumer lag after migration - see spike",
+            "min": 7
+          }
+        ]
+      },
+      {
+        "start": "15:00",
+        "thread": "weekend_plans",
+        "noise": true,
+        "steps": [
+          {
+            "do": "app",
+            "app": "messages",
+            "about": "Lena confirms the cabin booking #HB-88231 and asks about splitting cost",
+            "min": 5,
+            "type": true,
+            "sent": true,
+            "to": "Lena Park"
+          },
+          {
+            "do": "app",
+            "app": "messages",
+            "about": "Text Grandma Ruth asking if she wants to join Saturday wine tasting",
+            "min": 4,
+            "type": true,
+            "sent": true,
+            "to": "Grandma Ruth"
+          }
+        ]
+      },
+      {
+        "start": "15:20",
+        "thread": "kafka_migration",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "DM Tom about the consumer lag spike and ask if he can check the bridge deployment",
+            "min": 6,
+            "type": true,
+            "sent": true,
+            "to": "Tom Okafor"
+          },
+          {
+            "do": "app",
+            "app": "terminal",
+            "about": "Inspect consumer group offsets and reset the offset for the new group",
+            "min": 12
+          }
+        ]
+      },
+      {
+        "start": "15:50",
+        "thread": "side_project",
+        "noise": true,
+        "steps": [
+          {
+            "do": "app",
+            "app": "vscode",
+            "about": "Try the Playwright snippet from ChatGPT on the recipe site",
+            "min": 12
+          },
+          {
+            "do": "app",
+            "app": "terminal",
+            "about": "Test scraper on two more URLs - one works, one still blocked",
+            "min": 8
+          },
+          {
+            "do": "app",
+            "app": "notes",
+            "about": "Jot down the working approach and the remaining issue",
+            "min": 4
+          }
+        ]
+      },
+      {
+        "start": "16:20",
+        "thread": "consumer_group",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "Check poll results - 4 votes for service-env-v2, 2 for plain service-env",
+            "min": 5
+          },
+          {
+            "do": "app",
+            "app": "notes",
+            "about": "Update the comparison doc with the final decision",
+            "min": 6
+          },
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "Tell Marcus the team voted for the version suffix convention",
+            "min": 4,
+            "type": true,
+            "sent": true,
+            "to": "Marcus Bell"
+          }
+        ]
+      },
+      {
+        "start": "16:40",
+        "thread": "invoice_question",
+        "noise": true,
+        "steps": [
+          {
+            "do": "app",
+            "app": "mail",
+            "about": "See Jules's reply confirming the invoice appears and asking for a schema change",
+            "min": 5
+          },
+          {
+            "do": "app",
+            "app": "notion",
+            "about": "Add the schema change request to the backlog",
+            "min": 6
+          },
+          {
+            "do": "app",
+            "app": "mail",
+            "about": "Draft a short reply to Jules saying it's in the backlog - leave unsent",
+            "min": 3,
+            "type": true,
+            "sent": false,
+            "to": "Jules Fontaine"
+          }
+        ]
+      },
+      {
+        "start": "17:00",
+        "thread": "kafka_migration",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "Tom replies that the bridge deploy is done and lag should settle",
+            "min": 4
+          },
+          {
+            "do": "page",
+            "host": "grafana.example.com",
+            "about": "Check consumer lag again - back to normal",
+            "min": 6
+          },
+          {
+            "do": "app",
+            "app": "vscode",
+            "about": "Update the migration script to use the new consumer group naming convention",
+            "min": 10
+          }
+        ]
+      },
+      {
+        "start": "17:30",
+        "thread": "weekend_plans",
+        "noise": true,
+        "steps": [
+          {
+            "do": "app",
+            "app": "messages",
+            "about": "Grandma Ruth says yes to Saturday wine tasting",
+            "min": 3,
+            "type": true,
+            "sent": true,
+            "to": "Grandma Ruth"
+          },
+          {
+            "do": "search",
+            "about": "fredericksburg tx wildflower farm hours"
+          },
+          {
+            "do": "app",
+            "app": "notes",
+            "about": "Add wildflower farm stop to the weekend itinerary",
+            "min": 5
+          }
+        ]
+      },
+      {
+        "start": "17:50",
+        "thread": "side_project",
+        "noise": true,
+        "steps": [
+          {
+            "do": "app",
+            "app": "terminal",
+            "about": "Commit the working scraper to the private GitHub repo",
+            "min": 8
+          },
+          {
+            "do": "page",
+            "host": "github.com",
+            "about": "Check the commit landed and the repo is private",
+            "min": 4
+          }
+        ]
+      },
+      {
+        "start": "18:10",
+        "thread": "kafka_migration",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "Post a summary of the migration progress in #integrations",
+            "min": 5,
+            "type": true,
+            "sent": true,
+            "to": "#integrations"
+          },
+          {
+            "do": "app",
+            "app": "calendar",
+            "about": "Check tomorrow's meetings and block focus time for the PR review",
+            "min": 4
+          }
+        ]
+      }
+    ],
+    "summary": "Tuesday was a mixed day: Maya dug into the Kafka migration and hit a consumer lag spike after running the staging script, which she worked through with Tom. She also handled Jules's invoice question by finding the malformed timestamp and sending a corrected CSV, while the consumer group naming debate moved toward a team vote. In between, she booked the Fredericksburg cabin with Lena, got Grandma Ruth on board for wine tasting, and made progress on the recipe scraper with a Playwright workaround."
+  }
+}

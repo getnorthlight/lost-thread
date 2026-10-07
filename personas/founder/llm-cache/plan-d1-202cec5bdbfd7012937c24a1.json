@@ -1,0 +1,643 @@
+{
+  "step": "plan-d1",
+  "model": "deepseek/deepseek-v4-flash-0731",
+  "requested_model": "deepseek/deepseek-v4-flash-0731",
+  "base_url": "<local OpenRouter proxy>",
+  "temperature": 0.8,
+  "seconds": 48.96,
+  "usage": {
+    "prompt_tokens": 1802,
+    "completion_tokens": 3635,
+    "total_tokens": 5437,
+    "cost": 0.00127008,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00127008,
+      "upstream_inference_prompt_cost": 0.00025228,
+      "upstream_inference_completions_cost": 0.0010178
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "attempt": 1,
+  "system": "You generate realistic synthetic test data for a research benchmark about personal memory. Everything you write is fiction: invent every person, company, client and product name (never use real people you know of, and avoid famous companies as employers). Write like real life, not like a tidy diary: people get interrupted, leave things half done, revisit things, procrastinate, and type casually. Reply with JSON only.",
+  "user": "Person and threads:\n{\"persona\": {\"name\": \"Maya Chen\", \"role\": \"Founder & CEO\", \"company\": \"Loomly Labs\", \"summary\": \"Maya runs a small B2B SaaS startup that helps independent coffee roasters manage wholesale orders. She spends her days switching between customer calls, product decisions, and the occasional fire drill. She is pragmatic, slightly overwhelmed, and tries to keep Fridays for deep work.\", \"workday\": {\"start\": \"08:15\", \"end\": \"18:30\", \"lunch\": \"12:45\"}}, \"people\": [{\"key\": \"dana\", \"name\": \"Dana Whitfield\", \"role\": \"Co-founder & CTO\", \"channel\": \"slack\"}, {\"key\": \"marcus\", \"name\": \"Marcus Reid\", \"role\": \"Head of Sales\", \"channel\": \"slack\"}, {\"key\": \"priya\", \"name\": \"Priya Natarajan\", \"role\": \"Customer Success Lead\", \"channel\": \"slack\"}, {\"key\": \"leo\", \"name\": \"Leo Park\", \"role\": \"Freelance Designer\", \"channel\": \"email\"}, {\"key\": \"sarah\", \"name\": \"Sarah Kim\", \"role\": \"Investor (Seed)\", \"channel\": \"email\"}, {\"key\": \"tom\", \"name\": \"Tom Alvarez\", \"role\": \"Coffee Roaster (Customer)\", \"channel\": \"email\"}, {\"key\": \"jordan\", \"name\": \"Jordan Lee\", \"role\": \"Accountant\", \"channel\": \"email\"}], \"threads\": [{\"key\": \"wholesale_invoice_export\", \"title\": \"Wholesale invoice export bug\", \"kind\": \"main\", \"arc\": \"On Monday, a customer reports that invoice #2841 is missing line items. Maya and Dana reproduce the bug in staging. Tuesday they identify the root cause in the export service. Wednesday they ship a hotfix and email the customer. Thursday they add a regression test. Friday they close the ticket and plan a postmortem.\"}, {\"key\": \"pricing_tier_change\", \"title\": \"Should we change the Starter plan price?\", \"kind\": \"decision\", \"arc\": \"Maya starts the week leaning toward raising the Starter plan from $29 to $39. Marcus pushes back, citing 3 churn risks. By Wednesday, they run a quick survey of 12 customers. Thursday the numbers show 8 would stay, 2 would downgrade, 2 would cancel. Friday Maya decides to keep $29 but add a usage cap, and schedules a rollout for the next sprint.\"}, {\"key\": \"email_with_tom\", \"title\": \"Tom Alvarez onboarding follow-up\", \"kind\": \"correspondence\", \"arc\": \"Tom, a roaster in Austin, emails Monday asking about API access. Maya replies with docs and offers a 15-min walkthrough. Tuesday Tom sends a list of 4 feature requests. Wednesday Maya responds with a timeline: 2 are in the roadmap, 1 is possible, 1 is not. Thursday Tom books a call for next Tuesday. Friday Maya sends a summary and a Loom video.\"}, {\"key\": \"investor_update_draft\", \"title\": \"Investor update for Sarah\", \"kind\": \"correspondence\", \"arc\": \"Maya drafts the monthly investor update on Monday. Tuesday she adds metrics: MRR $41k, churn 2.1%, 14 new customers. Wednesday she rewrites the 'risks' section after a security scare. Thursday she sends it to Sarah. Friday Sarah replies with a question about runway, and Maya schedules a call for Monday.\"}, {\"key\": \"side_project_roaster_map\", \"title\": \"Roaster map side project\", \"kind\": \"side_project\", \"arc\": \"Maya is building a small map of independent roasters for fun. Monday she sketches the layout in Figma. Tuesday she picks a color palette. Wednesday she writes a scraper for roaster locations. Thursday she hits a rate limit and switches to manual data entry. Friday she adds 3 roasters and shares the prototype with Dana.\"}, {\"key\": \"moving_apartment\", \"title\": \"Apartment lease renewal\", \"kind\": \"personal\", \"arc\": \"Maya's lease is up in 60 days. Monday she checks rental listings and saves 2. Tuesday she gets a renewal offer from her landlord with a 12% rent increase. Wednesday she negotiates down to 7%. Thursday she signs the renewal. Friday she texts her mom about it and starts packing.\"}], \"apps\": [\"slack\", \"vscode\", \"terminal\", \"zoom\", \"messages\", \"mail\", \"notes\", \"chatgpt\", \"claude\", \"spotify\", \"finder\", \"figma\", \"calendar\", \"preview\", \"excel\", \"notion\"], \"sites\": [\"docs.google.com\", \"mail.google.com\", \"github.com\", \"loomlylabs.com\", \"stripe.com\", \"zillow.com\", \"reddit.com\", \"twitter.com\"], \"noise\": {\"slack_titles\": [\"#general\", \"#eng\", \"#sales\", \"#random\", \"DMs with Dana\", \"DMs with Marcus\"], \"pages\": [{\"host\": \"reddit.com\", \"title\": \"r/coffee - What's your favorite single-origin bean right now?\"}, {\"host\": \"twitter.com\", \"title\": \"Home / X\"}, {\"host\": \"zillow.com\", \"title\": \"Apartments for Rent in Austin, TX\"}, {\"host\": \"youtube.com\", \"title\": \"Lofi hip hop radio - beats to relax/study to\"}, {\"host\": \"news.ycombinator.com\", \"title\": \"Show HN: I built a tiny tool for coffee roasters\"}]}}\n\nPlan workday 1 (Tuesday) as JSON {\"blocks\": [...], \"summary\": \"2-3 sentences of what happened\"}.\nWhat happened on earlier days: []\n\nEach block: {\"start\": \"HH:MM\", \"thread\": one of ['email_with_tom', 'investor_update_draft', 'moving_apartment', 'pricing_tier_change', 'side_project_roaster_map', 'wholesale_invoice_export'], \"noise\": true|false, \"steps\": [...]}.\nSteps (in order):\n- {\"do\": \"app\", \"app\": <key from slack, vscode, terminal, xcode, zoom, messages, mail, notes, chatgpt, claude, spotify, finder, figma, calendar, preview, excel, keynote, notion>, \"about\": \"what window/document\", \"min\": minutes}\n- {\"do\": \"page\", \"host\": \"<site>\", \"about\": \"what page\", \"min\": minutes, \"new_tab\": optional bool}\n- {\"do\": \"search\", \"about\": \"what they googled\"}\n- {\"do\": \"type\", \"where\": <app key or \"web:<host>\">, \"intent\": \"what they write, to whom, and whether they send it\",\n   \"sent\": true|false, \"to\": \"<person name if a message/email>\"}\n- {\"do\": \"idle\", \"min\": minutes, \"about\": \"lunch / walk / away\"}\nMake it a real day: 9-16 blocks, threads interleaved, meetings (zoom/calendar), messages that interrupt, distraction\nbrowsing, something left unfinished, something read but not answered, an abandoned tab. Keep each thread's arc moving.\nTyping happens wherever it really would: Slack, email in the browser, Google Docs, notes, terminals, AI chat apps.",
+  "raw": "{\n  \"blocks\": [\n    {\n      \"start\": \"08:15\",\n      \"thread\": \"wholesale_invoice_export\",\n      \"noise\": false,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"slack\", \"about\": \"DMs with Dana about invoice #2841 root cause\", \"min\": 8},\n        {\"do\": \"app\", \"app\": \"vscode\", \"about\": \"export service code, tracing line item filtering\", \"min\": 20},\n        {\"do\": \"app\", \"app\": \"terminal\", \"about\": \"run export service tests in staging\", \"min\": 10},\n        {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Message Dana: reproduced, root cause looks like the line item filter dropping null quantity rows. Propose hotfix.\", \"sent\": true, \"to\": \"Dana Whitfield\"}\n      ]\n    },\n    {\n      \"start\": \"08:55\",\n      \"thread\": \"email_with_tom\",\n      \"noise\": false,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"mail\", \"about\": \"Inbox: Tom's API access question from Monday\", \"min\": 5},\n        {\"do\": \"type\", \"where\": \"mail\", \"intent\": \"Reply to Tom with API docs link and offer a 15-min walkthrough this week.\", \"sent\": true, \"to\": \"Tom Alvarez\"},\n        {\"do\": \"app\", \"app\": \"calendar\", \"about\": \"Check availability for a walkthrough slot\", \"min\": 3}\n      ]\n    },\n    {\n      \"start\": \"09:10\",\n      \"thread\": \"pricing_tier_change\",\n      \"noise\": true,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"slack\", \"about\": \"#general and #sales unread messages\", \"min\": 4},\n        {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Message Marcus: saw his churn risk list, want to talk after standup. Also ask if he has the 12-customer list ready.\", \"sent\": true, \"to\": \"Marcus Reid\"},\n        {\"do\": \"page\", \"host\": \"reddit.com\", \"about\": \"r/coffee - What's your favorite single-origin bean right now?\", \"min\": 6, \"new_tab\": true}\n      ]\n    },\n    {\n      \"start\": \"09:30\",\n      \"thread\": \"wholesale_invoice_export\",\n      \"noise\": false,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"zoom\", \"about\": \"Standup with Dana and Marcus\", \"min\": 15},\n        {\"do\": \"app\", \"app\": \"slack\", \"about\": \"Dana confirms root cause, says she'll prep hotfix\", \"min\": 3}\n      ]\n    },\n    {\n      \"start\": \"09:50\",\n      \"thread\": \"investor_update_draft\",\n      \"noise\": false,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"notion\", \"about\": \"Investor update draft - add MRR $41k, churn 2.1%, 14 new customers\", \"min\": 15},\n        {\"do\": \"app\", \"app\": \"excel\", \"about\": \"Metrics spreadsheet, verify MRR and churn numbers\", \"min\": 8},\n        {\"do\": \"type\", \"where\": \"notion\", \"intent\": \"Write draft section: 'Metrics this month' with MRR, churn, new customers. Not sent, just draft.\", \"sent\": false}\n      ]\n    },\n    {\n      \"start\": \"10:20\",\n      \"thread\": \"side_project_roaster_map\",\n      \"noise\": true,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"figma\", \"about\": \"Roaster map layout sketch\", \"min\": 12},\n        {\"do\": \"page\", \"host\": \"twitter.com\", \"about\": \"Home / X - scrolling coffee content\", \"min\": 5, \"new_tab\": true}\n      ]\n    },\n    {\n      \"start\": \"10:45\",\n      \"thread\": \"pricing_tier_change\",\n      \"noise\": false,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"slack\", \"about\": \"DMs with Marcus about churn risks and survey plan\", \"min\": 10},\n        {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Message Marcus: OK let's run a quick survey of 12 customers. I'll draft the questions, you pick who.\", \"sent\": true, \"to\": \"Marcus Reid\"},\n        {\"do\": \"app\", \"app\": \"notes\", \"about\": \"Draft survey questions for Starter plan price change\", \"min\": 8}\n      ]\n    },\n    {\n      \"start\": \"11:10\",\n      \"thread\": \"email_with_tom\",\n      \"noise\": false,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"mail\", \"about\": \"Inbox: Tom replied with 4 feature requests\", \"min\": 6},\n        {\"do\": \"app\", \"app\": \"notion\", \"about\": \"Roadmap page, check status of Tom's feature requests\", \"min\": 10},\n        {\"do\": \"type\", \"where\": \"mail\", \"intent\": \"Draft reply to Tom: 2 in roadmap, 1 possible, 1 not. Don't send yet, want Dana to confirm timeline.\", \"sent\": false, \"to\": \"Tom Alvarez\"}\n      ]\n    },\n    {\n      \"start\": \"11:40\",\n      \"thread\": \"wholesale_invoice_export\",\n      \"noise\": false,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"slack\", \"about\": \"Dana pushed hotfix branch, asks for review\", \"min\": 5},\n        {\"do\": \"app\", \"app\": \"vscode\", \"about\": \"Review hotfix diff in export service\", \"min\": 15},\n        {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Message Dana: hotfix looks good, ship it. I'll email the customer.\", \"sent\": true, \"to\": \"Dana Whitfield\"}\n      ]\n    },\n    {\n      \"start\": \"12:05\",\n      \"thread\": \"wholesale_invoice_export\",\n      \"noise\": false,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"mail\", \"about\": \"Email customer about invoice #2841 hotfix\", \"min\": 8},\n        {\"do\": \"type\", \"where\": \"mail\", \"intent\": \"Email Tom? No, the customer is Tom Alvarez. Wait, Tom is the customer. Send apology and confirm fix.\", \"sent\": true, \"to\": \"Tom Alvarez\"}\n      ]\n    },\n    {\n      \"start\": \"12:20\",\n      \"thread\": \"moving_apartment\",\n      \"noise\": true,\n      \"steps\": [\n        {\"do\": \"page\", \"host\": \"zillow.com\", \"about\": \"Apartments for Rent in Austin, TX - check saved listings\", \"min\": 10, \"new_tab\": true},\n        {\"do\": \"app\", \"app\": \"messages\", \"about\": \"Text mom about apartment search, mention landlord hasn't sent renewal yet\", \"min\": 4}\n      ]\n    },\n    {\n      \"start\": \"12:45\",\n      \"thread\": \"moving_apartment\",\n      \"noise\": false,\n      \"steps\": [\n        {\"do\": \"idle\", \"min\": 45, \"about\": \"Lunch - walk to taco truck\"}\n      ]\n    },\n    {\n      \"start\": \"13:30\",\n      \"thread\": \"pricing_tier_change\",\n      \"noise\": false,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"slack\", \"about\": \"Marcus sent the 12-customer list, review it\", \"min\": 6},\n        {\"do\": \"app\", \"app\": \"notes\", \"about\": \"Finalize survey questions, send to Marcus\", \"min\": 5},\n        {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Message Marcus: survey questions ready, can you send them out today?\", \"sent\": true, \"to\": \"Marcus Reid\"}\n      ]\n    },\n    {\n      \"start\": \"13:50\",\n      \"thread\": \"investor_update_draft\",\n      \"noise\": false,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"notion\", \"about\": \"Investor update draft - rewrite risks section after security scare\", \"min\": 20},\n        {\"do\": \"app\", \"app\": \"slack\", \"about\": \"Check Dana's message about security scare details\", \"min\": 5}\n      ]\n    },\n    {\n      \"start\": \"14:20\",\n      \"thread\": \"side_project_roaster_map\",\n      \"noise\": true,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"terminal\", \"about\": \"Write scraper for roaster locations\", \"min\": 20},\n        {\"do\": \"page\", \"host\": \"github.com\", \"about\": \"Check rate limits for the scraper API\", \"min\": 5, \"new_tab\": true}\n      ]\n    },\n    {\n      \"start\": \"14:50\",\n      \"thread\": \"email_with_tom\",\n      \"noise\": false,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"slack\", \"about\": \"Dana confirms timeline for Tom's feature requests\", \"min\": 4},\n        {\"do\": \"app\", \"app\": \"mail\", \"about\": \"Send final reply to Tom with timeline and Loom video\", \"min\": 10},\n        {\"do\": \"type\", \"where\": \"mail\", \"intent\": \"Send email to Tom: 2 in roadmap, 1 possible, 1 not, plus Loom video.\", \"sent\": true, \"to\": \"Tom Alvarez\"}\n      ]\n    },\n    {\n      \"start\": \"15:10\",\n      \"thread\": \"wholesale_invoice_export\",\n      \"noise\": false,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"slack\", \"about\": \"Dana says hotfix is live, customer confirmed\", \"min\": 3},\n        {\"do\": \"app\", \"app\": \"notion\", \"about\": \"Add regression test task to sprint board\", \"min\": 5}\n      ]\n    },\n    {\n      \"start\": \"15:25\",\n      \"thread\": \"moving_apartment\",\n      \"noise\": true,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"mail\", \"about\": \"Inbox: landlord sent renewal offer with 12% increase\", \"min\": 5},\n        {\"do\": \"type\", \"where\": \"mail\", \"intent\": \"Draft reply to landlord negotiating down to 7%, don't send yet.\", \"sent\": false, \"to\": \"Landlord\"}\n      ]\n    },\n    {\n      \"start\": \"15:45\",\n      \"thread\": \"pricing_tier_change\",\n      \"noise\": false,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"slack\", \"about\": \"Marcus says survey sent, first responses coming in\", \"min\": 5},\n        {\"do\": \"app\", \"app\": \"excel\", \"about\": \"Start tallying survey responses\", \"min\": 10}\n      ]\n    },\n    {\n      \"start\": \"16:05\",\n      \"thread\": \"investor_update_draft\",\n      \"noise\": false,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"notion\", \"about\": \"Finish risks section, read through full draft\", \"min\": 15},\n        {\"do\": \"type\", \"where\": \"notion\", \"intent\": \"Add note: send to Sarah Thursday after final numbers check.\", \"sent\": false}\n      ]\n    },\n    {\n      \"start\": \"16:30\",\n      \"thread\": \"side_project_roaster_map\",\n      \"noise\": true,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"terminal\", \"about\": \"Scraper hit rate limit, switch to manual data entry\", \"min\": 10},\n        {\"do\": \"app\", \"app\": \"figma\", \"about\": \"Add 3 roasters manually to prototype\", \"min\": 10}\n      ]\n    },\n    {\n      \"start\": \"17:00\",\n      \"thread\": \"wholesale_invoice_export\",\n      \"noise\": false,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"slack\", \"about\": \"Dana asks about postmortem timing\", \"min\": 3},\n        {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Message Dana: let's do postmortem Friday, I'll add it to the calendar.\", \"sent\": true, \"to\": \"Dana Whitfield\"}\n      ]\n    },\n    {\n      \"start\": \"17:10\",\n      \"thread\": \"pricing_tier_change\",\n      \"noise\": false,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"slack\", \"about\": \"Marcus shares survey responses so far\", \"min\": 5},\n        {\"do\": \"app\", \"app\": \"excel\", \"about\": \"Update survey tally: 8 would stay, 2 downgrade, 2 cancel\", \"min\": 8}\n      ]\n    },\n    {\n      \"start\": \"17:30\",\n      \"thread\": \"moving_apartment\",\n      \"noise\": true,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"messages\", \"about\": \"Text mom about renewal offer, ask if 7% is reasonable\", \"min\": 5},\n        {\"do\": \"page\", \"host\": \"zillow.com\", \"about\": \"Compare saved listings vs renewal\", \"min\": 8, \"new_tab\": true}\n      ]\n    },\n    {\n      \"start\": \"17:50\",\n      \"thread\": \"email_with_tom\",\n      \"noise\": false,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"calendar\", \"about\": \"Book call with Tom for next Tuesday\", \"min\": 5},\n        {\"do\": \"app\", \"app\": \"mail\", \"about\": \"Send calendar invite to Tom\", \"min\": 3}\n      ]\n    },\n    {\n      \"start\": \"18:00\",\n      \"thread\": \"investor_update_draft\",\n      \"noise\": false,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"notion\", \"about\": \"Re-read investor update draft, make small edits\", \"min\": 10},\n        {\"do\": \"type\", \"where\": \"notion\", \"intent\": \"Leave comment: 'Ask Dana about security scare details before sending.'\", \"sent\": false}\n      ]\n    },\n    {\n      \"start\": \"18:20\",\n      \"thread\": \"side_project_roaster_map\",\n      \"noise\": true,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"slack\", \"about\": \"Share prototype link with Dana\", \"min\": 5},\n        {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Message Dana: check out the roaster map prototype, feedback welcome.\", \"sent\": true, \"to\": \"Dana Whitfield\"}\n      ]\n    },\n    {\n      \"start\": \"18:30\",\n      \"thread\": \"moving_apartment\",\n      \"noise\": true,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"mail\", \"about\": \"Send negotiation reply to landlord asking for 7%\", \"min\": 5},\n        {\"do\": \"type\", \"where\": \"mail\", \"intent\": \"Send email to landlord: ask to reduce increase to 7%, mention long-term tenant.\", \"sent\": true, \"to\": \"Landlord\"}\n      ]\n    }\n  ],\n  \"summary\": \"Tuesday was a mix of shipping the invoice hotfix, drafting the investor update, and starting the pricing survey. Maya also juggled Tom's feature requests, hit a rate limit on her roaster map scraper, and negotiated her lease renewal.\"\n}",
+  "parsed": {
+    "blocks": [
+      {
+        "start": "08:15",
+        "thread": "wholesale_invoice_export",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "DMs with Dana about invoice #2841 root cause",
+            "min": 8
+          },
+          {
+            "do": "app",
+            "app": "vscode",
+            "about": "export service code, tracing line item filtering",
+            "min": 20
+          },
+          {
+            "do": "app",
+            "app": "terminal",
+            "about": "run export service tests in staging",
+            "min": 10
+          },
+          {
+            "do": "type",
+            "where": "slack",
+            "intent": "Message Dana: reproduced, root cause looks like the line item filter dropping null quantity rows. Propose hotfix.",
+            "sent": true,
+            "to": "Dana Whitfield"
+          }
+        ]
+      },
+      {
+        "start": "08:55",
+        "thread": "email_with_tom",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "mail",
+            "about": "Inbox: Tom's API access question from Monday",
+            "min": 5
+          },
+          {
+            "do": "type",
+            "where": "mail",
+            "intent": "Reply to Tom with API docs link and offer a 15-min walkthrough this week.",
+            "sent": true,
+            "to": "Tom Alvarez"
+          },
+          {
+            "do": "app",
+            "app": "calendar",
+            "about": "Check availability for a walkthrough slot",
+            "min": 3
+          }
+        ]
+      },
+      {
+        "start": "09:10",
+        "thread": "pricing_tier_change",
+        "noise": true,
+        "steps": [
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "#general and #sales unread messages",
+            "min": 4
+          },
+          {
+            "do": "type",
+            "where": "slack",
+            "intent": "Message Marcus: saw his churn risk list, want to talk after standup. Also ask if he has the 12-customer list ready.",
+            "sent": true,
+            "to": "Marcus Reid"
+          },
+          {
+            "do": "page",
+            "host": "reddit.com",
+            "about": "r/coffee - What's your favorite single-origin bean right now?",
+            "min": 6,
+            "new_tab": true
+          }
+        ]
+      },
+      {
+        "start": "09:30",
+        "thread": "wholesale_invoice_export",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "zoom",
+            "about": "Standup with Dana and Marcus",
+            "min": 15
+          },
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "Dana confirms root cause, says she'll prep hotfix",
+            "min": 3
+          }
+        ]
+      },
+      {
+        "start": "09:50",
+        "thread": "investor_update_draft",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "notion",
+            "about": "Investor update draft - add MRR $41k, churn 2.1%, 14 new customers",
+            "min": 15
+          },
+          {
+            "do": "app",
+            "app": "excel",
+            "about": "Metrics spreadsheet, verify MRR and churn numbers",
+            "min": 8
+          },
+          {
+            "do": "type",
+            "where": "notion",
+            "intent": "Write draft section: 'Metrics this month' with MRR, churn, new customers. Not sent, just draft.",
+            "sent": false
+          }
+        ]
+      },
+      {
+        "start": "10:20",
+        "thread": "side_project_roaster_map",
+        "noise": true,
+        "steps": [
+          {
+            "do": "app",
+            "app": "figma",
+            "about": "Roaster map layout sketch",
+            "min": 12
+          },
+          {
+            "do": "page",
+            "host": "twitter.com",
+            "about": "Home / X - scrolling coffee content",
+            "min": 5,
+            "new_tab": true
+          }
+        ]
+      },
+      {
+        "start": "10:45",
+        "thread": "pricing_tier_change",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "DMs with Marcus about churn risks and survey plan",
+            "min": 10
+          },
+          {
+            "do": "type",
+            "where": "slack",
+            "intent": "Message Marcus: OK let's run a quick survey of 12 customers. I'll draft the questions, you pick who.",
+            "sent": true,
+            "to": "Marcus Reid"
+          },
+          {
+            "do": "app",
+            "app": "notes",
+            "about": "Draft survey questions for Starter plan price change",
+            "min": 8
+          }
+        ]
+      },
+      {
+        "start": "11:10",
+        "thread": "email_with_tom",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "mail",
+            "about": "Inbox: Tom replied with 4 feature requests",
+            "min": 6
+          },
+          {
+            "do": "app",
+            "app": "notion",
+            "about": "Roadmap page, check status of Tom's feature requests",
+            "min": 10
+          },
+          {
+            "do": "type",
+            "where": "mail",
+            "intent": "Draft reply to Tom: 2 in roadmap, 1 possible, 1 not. Don't send yet, want Dana to confirm timeline.",
+            "sent": false,
+            "to": "Tom Alvarez"
+          }
+        ]
+      },
+      {
+        "start": "11:40",
+        "thread": "wholesale_invoice_export",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "Dana pushed hotfix branch, asks for review",
+            "min": 5
+          },
+          {
+            "do": "app",
+            "app": "vscode",
+            "about": "Review hotfix diff in export service",
+            "min": 15
+          },
+          {
+            "do": "type",
+            "where": "slack",
+            "intent": "Message Dana: hotfix looks good, ship it. I'll email the customer.",
+            "sent": true,
+            "to": "Dana Whitfield"
+          }
+        ]
+      },
+      {
+        "start": "12:05",
+        "thread": "wholesale_invoice_export",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "mail",
+            "about": "Email customer about invoice #2841 hotfix",
+            "min": 8
+          },
+          {
+            "do": "type",
+            "where": "mail",
+            "intent": "Email Tom? No, the customer is Tom Alvarez. Wait, Tom is the customer. Send apology and confirm fix.",
+            "sent": true,
+            "to": "Tom Alvarez"
+          }
+        ]
+      },
+      {
+        "start": "12:20",
+        "thread": "moving_apartment",
+        "noise": true,
+        "steps": [
+          {
+            "do": "page",
+            "host": "zillow.com",
+            "about": "Apartments for Rent in Austin, TX - check saved listings",
+            "min": 10,
+            "new_tab": true
+          },
+          {
+            "do": "app",
+            "app": "messages",
+            "about": "Text mom about apartment search, mention landlord hasn't sent renewal yet",
+            "min": 4
+          }
+        ]
+      },
+      {
+        "start": "12:45",
+        "thread": "moving_apartment",
+        "noise": false,
+        "steps": [
+          {
+            "do": "idle",
+            "min": 45,
+            "about": "Lunch - walk to taco truck"
+          }
+        ]
+      },
+      {
+        "start": "13:30",
+        "thread": "pricing_tier_change",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "Marcus sent the 12-customer list, review it",
+            "min": 6
+          },
+          {
+            "do": "app",
+            "app": "notes",
+            "about": "Finalize survey questions, send to Marcus",
+            "min": 5
+          },
+          {
+            "do": "type",
+            "where": "slack",
+            "intent": "Message Marcus: survey questions ready, can you send them out today?",
+            "sent": true,
+            "to": "Marcus Reid"
+          }
+        ]
+      },
+      {
+        "start": "13:50",
+        "thread": "investor_update_draft",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "notion",
+            "about": "Investor update draft - rewrite risks section after security scare",
+            "min": 20
+          },
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "Check Dana's message about security scare details",
+            "min": 5
+          }
+        ]
+      },
+      {
+        "start": "14:20",
+        "thread": "side_project_roaster_map",
+        "noise": true,
+        "steps": [
+          {
+            "do": "app",
+            "app": "terminal",
+            "about": "Write scraper for roaster locations",
+            "min": 20
+          },
+          {
+            "do": "page",
+            "host": "github.com",
+            "about": "Check rate limits for the scraper API",
+            "min": 5,
+            "new_tab": true
+          }
+        ]
+      },
+      {
+        "start": "14:50",
+        "thread": "email_with_tom",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "Dana confirms timeline for Tom's feature requests",
+            "min": 4
+          },
+          {
+            "do": "app",
+            "app": "mail",
+            "about": "Send final reply to Tom with timeline and Loom video",
+            "min": 10
+          },
+          {
+            "do": "type",
+            "where": "mail",
+            "intent": "Send email to Tom: 2 in roadmap, 1 possible, 1 not, plus Loom video.",
+            "sent": true,
+            "to": "Tom Alvarez"
+          }
+        ]
+      },
+      {
+        "start": "15:10",
+        "thread": "wholesale_invoice_export",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "Dana says hotfix is live, customer confirmed",
+            "min": 3
+          },
+          {
+            "do": "app",
+            "app": "notion",
+            "about": "Add regression test task to sprint board",
+            "min": 5
+          }
+        ]
+      },
+      {
+        "start": "15:25",
+        "thread": "moving_apartment",
+        "noise": true,
+        "steps": [
+          {
+            "do": "app",
+            "app": "mail",
+            "about": "Inbox: landlord sent renewal offer with 12% increase",
+            "min": 5
+          },
+          {
+            "do": "type",
+            "where": "mail",
+            "intent": "Draft reply to landlord negotiating down to 7%, don't send yet.",
+            "sent": false,
+            "to": "Landlord"
+          }
+        ]
+      },
+      {
+        "start": "15:45",
+        "thread": "pricing_tier_change",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "Marcus says survey sent, first responses coming in",
+            "min": 5
+          },
+          {
+            "do": "app",
+            "app": "excel",
+            "about": "Start tallying survey responses",
+            "min": 10
+          }
+        ]
+      },
+      {
+        "start": "16:05",
+        "thread": "investor_update_draft",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "notion",
+            "about": "Finish risks section, read through full draft",
+            "min": 15
+          },
+          {
+            "do": "type",
+            "where": "notion",
+            "intent": "Add note: send to Sarah Thursday after final numbers check.",
+            "sent": false
+          }
+        ]
+      },
+      {
+        "start": "16:30",
+        "thread": "side_project_roaster_map",
+        "noise": true,
+        "steps": [
+          {
+            "do": "app",
+            "app": "terminal",
+            "about": "Scraper hit rate limit, switch to manual data entry",
+            "min": 10
+          },
+          {
+            "do": "app",
+            "app": "figma",
+            "about": "Add 3 roasters manually to prototype",
+            "min": 10
+          }
+        ]
+      },
+      {
+        "start": "17:00",
+        "thread": "wholesale_invoice_export",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "Dana asks about postmortem timing",
+            "min": 3
+          },
+          {
+            "do": "type",
+            "where": "slack",
+            "intent": "Message Dana: let's do postmortem Friday, I'll add it to the calendar.",
+            "sent": true,
+            "to": "Dana Whitfield"
+          }
+        ]
+      },
+      {
+        "start": "17:10",
+        "thread": "pricing_tier_change",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "Marcus shares survey responses so far",
+            "min": 5
+          },
+          {
+            "do": "app",
+            "app": "excel",
+            "about": "Update survey tally: 8 would stay, 2 downgrade, 2 cancel",
+            "min": 8
+          }
+        ]
+      },
+      {
+        "start": "17:30",
+        "thread": "moving_apartment",
+        "noise": true,
+        "steps": [
+          {
+            "do": "app",
+            "app": "messages",
+            "about": "Text mom about renewal offer, ask if 7% is reasonable",
+            "min": 5
+          },
+          {
+            "do": "page",
+            "host": "zillow.com",
+            "about": "Compare saved listings vs renewal",
+            "min": 8,
+            "new_tab": true
+          }
+        ]
+      },
+      {
+        "start": "17:50",
+        "thread": "email_with_tom",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "calendar",
+            "about": "Book call with Tom for next Tuesday",
+            "min": 5
+          },
+          {
+            "do": "app",
+            "app": "mail",
+            "about": "Send calendar invite to Tom",
+            "min": 3
+          }
+        ]
+      },
+      {
+        "start": "18:00",
+        "thread": "investor_update_draft",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "notion",
+            "about": "Re-read investor update draft, make small edits",
+            "min": 10
+          },
+          {
+            "do": "type",
+            "where": "notion",
+            "intent": "Leave comment: 'Ask Dana about security scare details before sending.'",
+            "sent": false
+          }
+        ]
+      },
+      {
+        "start": "18:20",
+        "thread": "side_project_roaster_map",
+        "noise": true,
+        "steps": [
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "Share prototype link with Dana",
+            "min": 5
+          },
+          {
+            "do": "type",
+            "where": "slack",
+            "intent": "Message Dana: check out the roaster map prototype, feedback welcome.",
+            "sent": true,
+            "to": "Dana Whitfield"
+          }
+        ]
+      },
+      {
+        "start": "18:30",
+        "thread": "moving_apartment",
+        "noise": true,
+        "steps": [
+          {
+            "do": "app",
+            "app": "mail",
+            "about": "Send negotiation reply to landlord asking for 7%",
+            "min": 5
+          },
+          {
+            "do": "type",
+            "where": "mail",
+            "intent": "Send email to landlord: ask to reduce increase to 7%, mention long-term tenant.",
+            "sent": true,
+            "to": "Landlord"
+          }
+        ]
+      }
+    ],
+    "summary": "Tuesday was a mix of shipping the invoice hotfix, drafting the investor update, and starting the pricing survey. Maya also juggled Tom's feature requests, hit a rate limit on her roaster map scraper, and negotiated her lease renewal."
+  }
+}

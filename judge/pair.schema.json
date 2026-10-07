@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Lost Thread pairwise verdict",
+  "type": "object",
+  "properties": {
+    "pair_id": {
+      "type": "string"
+    },
+    "item_id": {
+      "type": "string"
+    },
+    "judge": {
+      "type": "string"
+    },
+    "winner": {
+      "type": "string",
+      "enum": [
+        "1",
+        "2",
+        "tie"
+      ]
+    },
+    "reason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "pair_id",
+    "winner",
+    "reason"
+  ]
+}

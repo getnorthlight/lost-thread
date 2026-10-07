@@ -1,0 +1,564 @@
+{
+  "step": "plan-d2",
+  "model": "deepseek/deepseek-v4-flash-0731",
+  "requested_model": "deepseek/deepseek-v4-flash-0731",
+  "base_url": "<local OpenRouter proxy>",
+  "temperature": 0.8,
+  "seconds": 28.0,
+  "usage": {
+    "prompt_tokens": 1888,
+    "completion_tokens": 3527,
+    "total_tokens": 5415,
+    "cost": 0.00125188,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00125188,
+      "upstream_inference_prompt_cost": 0.00026432,
+      "upstream_inference_completions_cost": 0.00098756
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "attempt": 1,
+  "system": "You generate realistic synthetic test data for a research benchmark about personal memory. Everything you write is fiction: invent every person, company, client and product name (never use real people you know of, and avoid famous companies as employers). Write like real life, not like a tidy diary: people get interrupted, leave things half done, revisit things, procrastinate, and type casually. Reply with JSON only.",
+  "user": "Person and threads:\n{\"persona\": {\"name\": \"Maya Chen\", \"role\": \"Senior Software Engineer\", \"company\": \"Lumenary Systems\", \"summary\": \"Backend-focused developer on the integrations team, currently migrating a legacy event pipeline to Kafka. She works from home in Austin, uses a MacBook Pro, and tends to start late after a slow morning.\", \"workday\": {\"start\": \"09:45\", \"end\": \"18:30\", \"lunch\": \"13:00\"}}, \"people\": [{\"key\": \"dana\", \"name\": \"Dana Whitfield\", \"role\": \"Engineering Manager\", \"channel\": \"slack\"}, {\"key\": \"priya\", \"name\": \"Priya Raghavan\", \"role\": \"Staff Engineer, Integrations\", \"channel\": \"slack\"}, {\"key\": \"marcus\", \"name\": \"Marcus Bell\", \"role\": \"Product Manager\", \"channel\": \"slack\"}, {\"key\": \"tom\", \"name\": \"Tom Okafor\", \"role\": \"DevOps Engineer\", \"channel\": \"slack\"}, {\"key\": \"jules\", \"name\": \"Jules Fontaine\", \"role\": \"Data Analyst (client side)\", \"channel\": \"email\"}, {\"key\": \"lena\", \"name\": \"Lena Park\", \"role\": \"Friend from college\", \"channel\": \"messages\"}, {\"key\": \"grandma\", \"name\": \"Grandma Ruth\", \"role\": \"Family\", \"channel\": \"messages\"}], \"threads\": [{\"key\": \"kafka_migration\", \"title\": \"Kafka migration for event pipeline\", \"kind\": \"main\", \"arc\": \"Monday: Maya picks up ticket EV-482 to move the order-events topic from the old RabbitMQ bridge. Tuesday: she hits a serialization issue with the Avro schema and posts in #integrations; Priya suggests reusing the existing schema registry subject. Wednesday: she writes a migration script and runs it against staging, but the consumer lag spikes. Thursday: she fixes the consumer group offset reset and coordinates with Tom to deploy the new bridge. Friday: PR #1187 is approved and merged; she updates the runbook and closes EV-482.\"}, {\"key\": \"consumer_group\", \"title\": \"Consumer group naming decision\", \"kind\": \"decision\", \"arc\": \"Monday: Maya proposes naming consumer groups by service and environment (e.g. `order-sync-prod`). Tuesday: Marcus pushes back, wanting a version suffix. Wednesday: she creates a short comparison doc and polls the team in Slack. Thursday: the team votes 4-2 for `order-sync-prod-v2` style. Friday: she updates the migration script and the runbook to use the new convention.\"}, {\"key\": \"invoice_question\", \"title\": \"Invoice question from Jules at Northwind Analytics\", \"kind\": \"correspondence\", \"arc\": \"Tuesday: Jules emails Maya asking why invoice #INV-22904 is missing from the exported dataset. Wednesday: Maya checks the pipeline logs and finds the event was dropped due to a malformed timestamp. Thursday: she sends Jules a corrected CSV and explains the fix. Friday: Jules confirms the invoice now appears and asks for a small schema change; Maya adds it to the backlog.\"}, {\"key\": \"weekend_plans\", \"title\": \"Weekend trip to Fredericksburg\", \"kind\": \"personal\", \"arc\": \"Monday: Lena texts Maya about booking a cabin for the weekend. Tuesday: Maya checks Airbnb and sends Lena two options. Wednesday: they book the cabin (reservation #HB-88231) and split the cost. Thursday: Maya texts Grandma Ruth to ask if she wants to join for Saturday wine tasting. Friday: Grandma says yes, and Maya adds a stop at the wildflower farm to the itinerary.\"}, {\"key\": \"side_project\", \"title\": \"Side project: recipe scraper\", \"kind\": \"side_project\", \"arc\": \"Maya tinkers with a small Python script to scrape recipes from a cooking site. Monday: she refactors the parser to use BeautifulSoup. Wednesday: she gets blocked by a Cloudflare challenge and tries using Playwright. Friday: she gets it working for a few test URLs and commits it to a private GitHub repo.\"}], \"apps\": [\"slack\", \"vscode\", \"terminal\", \"zoom\", \"messages\", \"mail\", \"notes\", \"chatgpt\", \"spotify\", \"finder\", \"calendar\", \"preview\", \"notion\"], \"sites\": [\"github.com\", \"docs.google.com\", \"mail.google.com\", \"grafana.example.com\", \"confluence.lumenary.dev\", \"airbnb.com\", \"openai.com\"], \"noise\": {\"slack_titles\": [\"#integrations\", \"#incidents\", \"#random\", \"Dana Whitfield (direct message)\", \"Priya Raghavan (direct message)\"], \"pages\": [{\"host\": \"github.com\", \"title\": \"lumenary/event-bridge · Pull Request #1187\", \"path\": \"/lumenary/event-bridge/pull/1187\"}, {\"host\": \"docs.google.com\", \"title\": \"Consumer Group Naming - Lumenary\", \"path\": \"/document/d/1abc123/edit\"}, {\"host\": \"mail.google.com\", \"title\": \"Invoice #INV-22904 missing from export - Jules Fontaine\", \"path\": \"/mail/u/0/#inbox\"}, {\"host\": \"airbnb.com\", \"title\": \"Cabin in Fredericksburg, TX - reservation #HB-88231\", \"path\": \"/rooms/99887766\"}, {\"host\": \"confluence.lumenary.dev\", \"title\": \"Runbook: Kafka Event Bridge\", \"path\": \"/display/ENG/Runbook+Kafka+Event+Bridge\"}]}}\n\nPlan workday 2 (Wednesday) as JSON {\"blocks\": [...], \"summary\": \"2-3 sentences of what happened\"}.\nWhat happened on earlier days: [\"Day 1: Tuesday was a mixed day: Maya dug into the Kafka migration and hit a consumer lag spike after running the staging script, which she worked through with Tom. She also handled Jules's invoice question by finding the malformed timestamp and sending a corrected CSV, while the consumer group naming debate moved toward a team vote. In between, she booked the Fredericksburg cabin with Lena, got Grandma Ruth on board for wine tasting, and made progress on the recipe scraper with a Playwright workaround.\"]\n\nEach block: {\"start\": \"HH:MM\", \"thread\": one of ['consumer_group', 'invoice_question', 'kafka_migration', 'side_project', 'weekend_plans'], \"noise\": true|false, \"steps\": [...]}.\nSteps (in order):\n- {\"do\": \"app\", \"app\": <key from slack, vscode, terminal, xcode, zoom, messages, mail, notes, chatgpt, claude, spotify, finder, figma, calendar, preview, excel, keynote, notion>, \"about\": \"what window/document\", \"min\": minutes}\n- {\"do\": \"page\", \"host\": \"<site>\", \"about\": \"what page\", \"min\": minutes, \"new_tab\": optional bool}\n- {\"do\": \"search\", \"about\": \"what they googled\"}\n- {\"do\": \"type\", \"where\": <app key or \"web:<host>\">, \"intent\": \"what they write, to whom, and whether they send it\",\n   \"sent\": true|false, \"to\": \"<person name if a message/email>\"}\n- {\"do\": \"idle\", \"min\": minutes, \"about\": \"lunch / walk / away\"}\nMake it a real day: 9-16 blocks, threads interleaved, meetings (zoom/calendar), messages that interrupt, distraction\nbrowsing, something left unfinished, something read but not answered, an abandoned tab. Keep each thread's arc moving.\nTyping happens wherever it really would: Slack, email in the browser, Google Docs, notes, terminals, AI chat apps.",
+  "raw": "{\n  \"blocks\": [\n    {\n      \"start\": \"09:52\",\n      \"thread\": \"kafka_migration\",\n      \"noise\": false,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"slack\", \"about\": \"Check #integrations for overnight messages from Tom about the staging consumer lag\", \"min\": 4},\n        {\"do\": \"app\", \"app\": \"terminal\", \"about\": \"SSH into staging and check consumer group lag for order-sync-staging\", \"min\": 8},\n        {\"do\": \"app\", \"app\": \"vscode\", \"about\": \"Open event-bridge repo, look at the migration script that caused the lag spike\", \"min\": 6},\n        {\"do\": \"app\", \"app\": \"slack\", \"about\": \"Reply to Tom in #integrations that lag is back to normal after offset reset, ask if he wants to deploy bridge today\", \"min\": 3, \"type\": \"type\", \"where\": \"slack\", \"intent\": \"Message to Tom in #integrations: lag looks normal now, can we deploy the new bridge this afternoon?\", \"sent\": true, \"to\": \"Tom Okafor\"}\n      ]\n    },\n    {\n      \"start\": \"10:15\",\n      \"thread\": \"consumer_group\",\n      \"noise\": true,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"slack\", \"about\": \"See Dana's message asking for the consumer group naming doc link\", \"min\": 2},\n        {\"do\": \"page\", \"host\": \"docs.google.com\", \"about\": \"Open the Consumer Group Naming comparison doc to add the team vote results\", \"min\": 5},\n        {\"do\": \"type\", \"where\": \"web:docs.google.com\", \"intent\": \"Add a note that the team voted 4-2 for order-sync-prod-v2 style, then share the doc link in #integrations\", \"sent\": true, \"to\": \"Dana Whitfield\"}\n      ]\n    },\n    {\n      \"start\": \"10:32\",\n      \"thread\": \"side_project\",\n      \"noise\": true,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"vscode\", \"about\": \"Recipe scraper repo - open scraper.py to test the Playwright fix on a few more URLs\", \"min\": 10},\n        {\"do\": \"app\", \"app\": \"terminal\", \"about\": \"Run the scraper against two test URLs, see one fails on a cookie consent modal\", \"min\": 7},\n        {\"do\": \"app\", \"app\": \"chatgpt\", \"about\": \"Ask ChatGPT how to handle cookie consent popups in Playwright\", \"min\": 5},\n        {\"do\": \"app\", \"app\": \"vscode\", \"about\": \"Add a quick cookie-dismiss step to the scraper, but leave it untested\", \"min\": 4}\n      ]\n    },\n    {\n      \"start\": \"11:00\",\n      \"thread\": \"kafka_migration\",\n      \"noise\": false,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"slack\", \"about\": \"Tom replied: can deploy after 2pm. Check #incidents for any blockers\", \"min\": 3},\n        {\"do\": \"app\", \"app\": \"terminal\", \"about\": \"Inspect the Avro schema registry subject for order-events to confirm the serialization fix\", \"min\": 6},\n        {\"do\": \"app\", \"app\": \"vscode\", \"about\": \"Edit the migration script to use the new consumer group naming convention\", \"min\": 8},\n        {\"do\": \"app\", \"app\": \"slack\", \"about\": \"Post in #integrations that the script now uses order-sync-prod-v2 style, mention deploy after 2pm\", \"min\": 3}\n      ]\n    },\n    {\n      \"start\": \"11:30\",\n      \"thread\": \"weekend_plans\",\n      \"noise\": true,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"messages\", \"about\": \"Lena texts a photo of the Fredericksburg cabin and asks about Saturday itinerary\", \"min\": 3},\n        {\"do\": \"type\", \"where\": \"messages\", \"intent\": \"Reply to Lena: cabin looks great, Grandma is in for wine tasting, I'll add the wildflower farm stop\", \"sent\": true, \"to\": \"Lena Park\"},\n        {\"do\": \"app\", \"app\": \"calendar\", \"about\": \"Block Saturday 10am-4pm for Fredericksburg trip\", \"min\": 2}\n      ]\n    },\n    {\n      \"start\": \"11:45\",\n      \"thread\": \"invoice_question\",\n      \"noise\": false,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"mail\", \"about\": \"Jules replied to the corrected CSV: invoice appears now, asks if we can add a 'source' field to the export schema\", \"min\": 4},\n        {\"do\": \"app\", \"app\": \"slack\", \"about\": \"Ask Priya if adding a source field to the export schema is feasible this sprint\", \"min\": 3},\n        {\"do\": \"app\", \"app\": \"mail\", \"about\": \"Draft reply to Jules saying we'll add it to the backlog, but don't send yet\", \"min\": 4}\n      ]\n    },\n    {\n      \"start\": \"12:05\",\n      \"thread\": \"consumer_group\",\n      \"noise\": true,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"slack\", \"about\": \"Marcus reacts to the doc with a thumbs-up but adds a comment about wanting version suffix in the runbook\", \"min\": 2},\n        {\"do\": \"page\", \"host\": \"confluence.lumenary.dev\", \"about\": \"Open the Kafka Event Bridge runbook to update the consumer group naming section\", \"min\": 6},\n        {\"do\": \"type\", \"where\": \"web:confluence.lumenary.dev\", \"intent\": \"Update the runbook with the new consumer group convention and save\", \"sent\": true}\n      ]\n    },\n    {\n      \"start\": \"12:25\",\n      \"thread\": \"kafka_migration\",\n      \"noise\": true,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"slack\", \"about\": \"Priya pings directly: can you review my PR for the schema registry cleanup?\", \"min\": 2},\n        {\"do\": \"page\", \"host\": \"github.com\", \"about\": \"Open Priya's PR #1192, skim the diff, leave a comment about test coverage\", \"min\": 8},\n        {\"do\": \"app\", \"app\": \"slack\", \"about\": \"Reply to Priya that the PR looks good, one comment on tests\", \"min\": 2}\n      ]\n    },\n    {\n      \"start\": \"12:45\",\n      \"thread\": \"side_project\",\n      \"noise\": true,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"finder\", \"about\": \"Look for a downloaded recipe image to use as a test fixture\", \"min\": 2},\n        {\"do\": \"app\", \"app\": \"vscode\", \"about\": \"Open scraper.py again, notice the cookie fix is still untested, decide to leave it for later\", \"min\": 3}\n      ]\n    },\n    {\n      \"start\": \"13:00\",\n      \"thread\": \"kafka_migration\",\n      \"noise\": false,\n      \"steps\": [\n        {\"do\": \"idle\", \"min\": 45, \"about\": \"Lunch - walk to the kitchen, eat leftover pad thai, scroll phone\"}\n      ]\n    },\n    {\n      \"start\": \"13:50\",\n      \"thread\": \"kafka_migration\",\n      \"noise\": false,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"terminal\", \"about\": \"Run the updated migration script against staging with the new consumer group name\", \"min\": 10},\n        {\"do\": \"page\", \"host\": \"grafana.example.com\", \"about\": \"Check consumer lag and throughput for order-sync-prod-v2 in staging\", \"min\": 6},\n        {\"do\": \"app\", \"app\": \"slack\", \"about\": \"Tell Tom staging looks clean, ready to deploy the bridge after 2pm\", \"min\": 2}\n      ]\n    },\n    {\n      \"start\": \"14:15\",\n      \"thread\": \"kafka_migration\",\n      \"noise\": false,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"zoom\", \"about\": \"Deploy sync call with Tom and Dana - walk through the bridge deployment steps\", \"min\": 20},\n        {\"do\": \"app\", \"app\": \"terminal\", \"about\": \"After the call, tail the deploy logs and confirm the new bridge is healthy\", \"min\": 8}\n      ]\n    },\n    {\n      \"start\": \"14:50\",\n      \"thread\": \"invoice_question\",\n      \"noise\": true,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"mail\", \"about\": \"Finish and send the reply to Jules about the source field being added to the backlog\", \"min\": 3},\n        {\"do\": \"app\", \"app\": \"notion\", \"about\": \"Add 'Add source field to export schema' to the integrations backlog\", \"min\": 3}\n      ]\n    },\n    {\n      \"start\": \"15:05\",\n      \"thread\": \"weekend_plans\",\n      \"noise\": true,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"messages\", \"about\": \"Grandma texts: 'What time should I be ready Saturday?'\", \"min\": 2},\n        {\"do\": \"type\", \"where\": \"messages\", \"intent\": \"Reply to Grandma: pickup at 9:30, we'll stop for coffee on the way\", \"sent\": true, \"to\": \"Grandma Ruth\"},\n        {\"do\": \"page\", \"host\": \"airbnb.com\", \"about\": \"Check the cabin reservation details for the check-in time\", \"min\": 3}\n      ]\n    },\n    {\n      \"start\": \"15:20\",\n      \"thread\": \"consumer_group\",\n      \"noise\": true,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"slack\", \"about\": \"Dana asks in #integrations if the naming decision is final; Marcus still wants a version suffix\", \"min\": 3},\n        {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Reply in #integrations: the vote was 4-2 for order-sync-prod-v2, so that's what we're going with\", \"sent\": true, \"to\": \"Dana Whitfield\"}\n      ]\n    },\n    {\n      \"start\": \"15:40\",\n      \"thread\": \"side_project\",\n      \"noise\": true,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"terminal\", \"about\": \"Run the scraper with the cookie fix on one URL, it works, but the image download fails\", \"min\": 8},\n        {\"do\": \"app\", \"app\": \"vscode\", \"about\": \"Look at the image download code, get distracted by a formatting issue, leave it open\", \"min\": 5}\n      ]\n    },\n    {\n      \"start\": \"16:05\",\n      \"thread\": \"kafka_migration\",\n      \"noise\": false,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"slack\", \"about\": \"Tom confirms the bridge is deployed to prod and the old RabbitMQ bridge is drained\", \"min\": 3},\n        {\"do\": \"page\", \"host\": \"grafana.example.com\", \"about\": \"Check prod consumer lag for order-sync-prod-v2, looks stable\", \"min\": 5},\n        {\"do\": \"app\", \"app\": \"vscode\", \"about\": \"Update the migration script comments and prepare PR #1187 for final review\", \"min\": 7}\n      ]\n    },\n    {\n      \"start\": \"16:30\",\n      \"thread\": \"kafka_migration\",\n      \"noise\": false,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"slack\", \"about\": \"Post in #integrations that the bridge is live in prod, ask for a final review of PR #1187\", \"min\": 3},\n        {\"do\": \"page\", \"host\": \"github.com\", \"about\": \"Open PR #1187, add a note about the consumer group naming change, request review from Priya\", \"min\": 5}\n      ]\n    },\n    {\n      \"start\": \"16:50\",\n      \"thread\": \"invoice_question\",\n      \"noise\": true,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"mail\", \"about\": \"Jules replies 'Thanks! That works.' - read and archive\", \"min\": 2}\n      ]\n    },\n    {\n      \"start\": \"17:00\",\n      \"thread\": \"weekend_plans\",\n      \"noise\": true,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"messages\", \"about\": \"Lena asks if we should book a dinner reservation in Fredericksburg\", \"min\": 2},\n        {\"do\": \"type\", \"where\": \"messages\", \"intent\": \"Reply to Lena: yes, let's do the German place on Main Street, I'll call tomorrow\", \"sent\": true, \"to\": \"Lena Park\"}\n      ]\n    },\n    {\n      \"start\": \"17:15\",\n      \"thread\": \"side_project\",\n      \"noise\": true,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"vscode\", \"about\": \"Close the image download issue for now, commit the cookie fix to the recipe scraper repo\", \"min\": 6},\n        {\"do\": \"app\", \"app\": \"terminal\", \"about\": \"Git commit and push the cookie fix, note the image download as a TODO\", \"min\": 4}\n      ]\n    },\n    {\n      \"start\": \"17:35\",\n      \"thread\": \"kafka_migration\",\n      \"noise\": false,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"slack\", \"about\": \"Priya approves PR #1187 with a small nitpick; fix the nitpick in vscode\", \"min\": 5},\n        {\"do\": \"app\", \"app\": \"vscode\", \"about\": \"Fix the nitpick (rename a variable), commit and push\", \"min\": 5},\n        {\"do\": \"page\", \"host\": \"github.com\", \"about\": \"Merge PR #1187 and close ticket EV-482\", \"min\": 4}\n      ]\n    },\n    {\n      \"start\": \"18:00\",\n      \"thread\": \"consumer_group\",\n      \"noise\": true,\n      \"steps\": [\n        {\"do\": \"app\", \"app\": \"slack\", \"about\": \"See a message from Marcus: 'Fine, but I still think we should include the date.' Read but don't reply.\", \"min\": 2},\n        {\"do\": \"app\", \"app\": \"calendar\", \"about\": \"Check tomorrow's meetings and log off\", \"min\": 3}\n      ]\n    }\n  ],\n  \"summary\": \"Wednesday was the day the Kafka migration finally went live: Maya coordinated with Tom on the staging lag, deployed the new bridge to prod after a quick Zoom call, and merged PR #1187. She also locked in the consumer group naming convention in the runbook, replied to Jules about the schema change, and made a small breakthrough on the recipe scraper with a cookie fix. The Fredericksburg trip got more concrete with Grandma's pickup time and a dinner plan, though the scraper's image download is still a loose end.\"\n}",
+  "parsed": {
+    "blocks": [
+      {
+        "start": "09:52",
+        "thread": "kafka_migration",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "Check #integrations for overnight messages from Tom about the staging consumer lag",
+            "min": 4
+          },
+          {
+            "do": "app",
+            "app": "terminal",
+            "about": "SSH into staging and check consumer group lag for order-sync-staging",
+            "min": 8
+          },
+          {
+            "do": "app",
+            "app": "vscode",
+            "about": "Open event-bridge repo, look at the migration script that caused the lag spike",
+            "min": 6
+          },
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "Reply to Tom in #integrations that lag is back to normal after offset reset, ask if he wants to deploy bridge today",
+            "min": 3,
+            "type": "type",
+            "where": "slack",
+            "intent": "Message to Tom in #integrations: lag looks normal now, can we deploy the new bridge this afternoon?",
+            "sent": true,
+            "to": "Tom Okafor"
+          }
+        ]
+      },
+      {
+        "start": "10:15",
+        "thread": "consumer_group",
+        "noise": true,
+        "steps": [
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "See Dana's message asking for the consumer group naming doc link",
+            "min": 2
+          },
+          {
+            "do": "page",
+            "host": "docs.google.com",
+            "about": "Open the Consumer Group Naming comparison doc to add the team vote results",
+            "min": 5
+          },
+          {
+            "do": "type",
+            "where": "web:docs.google.com",
+            "intent": "Add a note that the team voted 4-2 for order-sync-prod-v2 style, then share the doc link in #integrations",
+            "sent": true,
+            "to": "Dana Whitfield"
+          }
+        ]
+      },
+      {
+        "start": "10:32",
+        "thread": "side_project",
+        "noise": true,
+        "steps": [
+          {
+            "do": "app",
+            "app": "vscode",
+            "about": "Recipe scraper repo - open scraper.py to test the Playwright fix on a few more URLs",
+            "min": 10
+          },
+          {
+            "do": "app",
+            "app": "terminal",
+            "about": "Run the scraper against two test URLs, see one fails on a cookie consent modal",
+            "min": 7
+          },
+          {
+            "do": "app",
+            "app": "chatgpt",
+            "about": "Ask ChatGPT how to handle cookie consent popups in Playwright",
+            "min": 5
+          },
+          {
+            "do": "app",
+            "app": "vscode",
+            "about": "Add a quick cookie-dismiss step to the scraper, but leave it untested",
+            "min": 4
+          }
+        ]
+      },
+      {
+        "start": "11:00",
+        "thread": "kafka_migration",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "Tom replied: can deploy after 2pm. Check #incidents for any blockers",
+            "min": 3
+          },
+          {
+            "do": "app",
+            "app": "terminal",
+            "about": "Inspect the Avro schema registry subject for order-events to confirm the serialization fix",
+            "min": 6
+          },
+          {
+            "do": "app",
+            "app": "vscode",
+            "about": "Edit the migration script to use the new consumer group naming convention",
+            "min": 8
+          },
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "Post in #integrations that the script now uses order-sync-prod-v2 style, mention deploy after 2pm",
+            "min": 3
+          }
+        ]
+      },
+      {
+        "start": "11:30",
+        "thread": "weekend_plans",
+        "noise": true,
+        "steps": [
+          {
+            "do": "app",
+            "app": "messages",
+            "about": "Lena texts a photo of the Fredericksburg cabin and asks about Saturday itinerary",
+            "min": 3
+          },
+          {
+            "do": "type",
+            "where": "messages",
+            "intent": "Reply to Lena: cabin looks great, Grandma is in for wine tasting, I'll add the wildflower farm stop",
+            "sent": true,
+            "to": "Lena Park"
+          },
+          {
+            "do": "app",
+            "app": "calendar",
+            "about": "Block Saturday 10am-4pm for Fredericksburg trip",
+            "min": 2
+          }
+        ]
+      },
+      {
+        "start": "11:45",
+        "thread": "invoice_question",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "mail",
+            "about": "Jules replied to the corrected CSV: invoice appears now, asks if we can add a 'source' field to the export schema",
+            "min": 4
+          },
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "Ask Priya if adding a source field to the export schema is feasible this sprint",
+            "min": 3
+          },
+          {
+            "do": "app",
+            "app": "mail",
+            "about": "Draft reply to Jules saying we'll add it to the backlog, but don't send yet",
+            "min": 4
+          }
+        ]
+      },
+      {
+        "start": "12:05",
+        "thread": "consumer_group",
+        "noise": true,
+        "steps": [
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "Marcus reacts to the doc with a thumbs-up but adds a comment about wanting version suffix in the runbook",
+            "min": 2
+          },
+          {
+            "do": "page",
+            "host": "confluence.lumenary.dev",
+            "about": "Open the Kafka Event Bridge runbook to update the consumer group naming section",
+            "min": 6
+          },
+          {
+            "do": "type",
+            "where": "web:confluence.lumenary.dev",
+            "intent": "Update the runbook with the new consumer group convention and save",
+            "sent": true
+          }
+        ]
+      },
+      {
+        "start": "12:25",
+        "thread": "kafka_migration",
+        "noise": true,
+        "steps": [
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "Priya pings directly: can you review my PR for the schema registry cleanup?",
+            "min": 2
+          },
+          {
+            "do": "page",
+            "host": "github.com",
+            "about": "Open Priya's PR #1192, skim the diff, leave a comment about test coverage",
+            "min": 8
+          },
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "Reply to Priya that the PR looks good, one comment on tests",
+            "min": 2
+          }
+        ]
+      },
+      {
+        "start": "12:45",
+        "thread": "side_project",
+        "noise": true,
+        "steps": [
+          {
+            "do": "app",
+            "app": "finder",
+            "about": "Look for a downloaded recipe image to use as a test fixture",
+            "min": 2
+          },
+          {
+            "do": "app",
+            "app": "vscode",
+            "about": "Open scraper.py again, notice the cookie fix is still untested, decide to leave it for later",
+            "min": 3
+          }
+        ]
+      },
+      {
+        "start": "13:00",
+        "thread": "kafka_migration",
+        "noise": false,
+        "steps": [
+          {
+            "do": "idle",
+            "min": 45,
+            "about": "Lunch - walk to the kitchen, eat leftover pad thai, scroll phone"
+          }
+        ]
+      },
+      {
+        "start": "13:50",
+        "thread": "kafka_migration",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "terminal",
+            "about": "Run the updated migration script against staging with the new consumer group name",
+            "min": 10
+          },
+          {
+            "do": "page",
+            "host": "grafana.example.com",
+            "about": "Check consumer lag and throughput for order-sync-prod-v2 in staging",
+            "min": 6
+          },
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "Tell Tom staging looks clean, ready to deploy the bridge after 2pm",
+            "min": 2
+          }
+        ]
+      },
+      {
+        "start": "14:15",
+        "thread": "kafka_migration",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "zoom",
+            "about": "Deploy sync call with Tom and Dana - walk through the bridge deployment steps",
+            "min": 20
+          },
+          {
+            "do": "app",
+            "app": "terminal",
+            "about": "After the call, tail the deploy logs and confirm the new bridge is healthy",
+            "min": 8
+          }
+        ]
+      },
+      {
+        "start": "14:50",
+        "thread": "invoice_question",
+        "noise": true,
+        "steps": [
+          {
+            "do": "app",
+            "app": "mail",
+            "about": "Finish and send the reply to Jules about the source field being added to the backlog",
+            "min": 3
+          },
+          {
+            "do": "app",
+            "app": "notion",
+            "about": "Add 'Add source field to export schema' to the integrations backlog",
+            "min": 3
+          }
+        ]
+      },
+      {
+        "start": "15:05",
+        "thread": "weekend_plans",
+        "noise": true,
+        "steps": [
+          {
+            "do": "app",
+            "app": "messages",
+            "about": "Grandma texts: 'What time should I be ready Saturday?'",
+            "min": 2
+          },
+          {
+            "do": "type",
+            "where": "messages",
+            "intent": "Reply to Grandma: pickup at 9:30, we'll stop for coffee on the way",
+            "sent": true,
+            "to": "Grandma Ruth"
+          },
+          {
+            "do": "page",
+            "host": "airbnb.com",
+            "about": "Check the cabin reservation details for the check-in time",
+            "min": 3
+          }
+        ]
+      },
+      {
+        "start": "15:20",
+        "thread": "consumer_group",
+        "noise": true,
+        "steps": [
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "Dana asks in #integrations if the naming decision is final; Marcus still wants a version suffix",
+            "min": 3
+          },
+          {
+            "do": "type",
+            "where": "slack",
+            "intent": "Reply in #integrations: the vote was 4-2 for order-sync-prod-v2, so that's what we're going with",
+            "sent": true,
+            "to": "Dana Whitfield"
+          }
+        ]
+      },
+      {
+        "start": "15:40",
+        "thread": "side_project",
+        "noise": true,
+        "steps": [
+          {
+            "do": "app",
+            "app": "terminal",
+            "about": "Run the scraper with the cookie fix on one URL, it works, but the image download fails",
+            "min": 8
+          },
+          {
+            "do": "app",
+            "app": "vscode",
+            "about": "Look at the image download code, get distracted by a formatting issue, leave it open",
+            "min": 5
+          }
+        ]
+      },
+      {
+        "start": "16:05",
+        "thread": "kafka_migration",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "Tom confirms the bridge is deployed to prod and the old RabbitMQ bridge is drained",
+            "min": 3
+          },
+          {
+            "do": "page",
+            "host": "grafana.example.com",
+            "about": "Check prod consumer lag for order-sync-prod-v2, looks stable",
+            "min": 5
+          },
+          {
+            "do": "app",
+            "app": "vscode",
+            "about": "Update the migration script comments and prepare PR #1187 for final review",
+            "min": 7
+          }
+        ]
+      },
+      {
+        "start": "16:30",
+        "thread": "kafka_migration",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "Post in #integrations that the bridge is live in prod, ask for a final review of PR #1187",
+            "min": 3
+          },
+          {
+            "do": "page",
+            "host": "github.com",
+            "about": "Open PR #1187, add a note about the consumer group naming change, request review from Priya",
+            "min": 5
+          }
+        ]
+      },
+      {
+        "start": "16:50",
+        "thread": "invoice_question",
+        "noise": true,
+        "steps": [
+          {
+            "do": "app",
+            "app": "mail",
+            "about": "Jules replies 'Thanks! That works.' - read and archive",
+            "min": 2
+          }
+        ]
+      },
+      {
+        "start": "17:00",
+        "thread": "weekend_plans",
+        "noise": true,
+        "steps": [
+          {
+            "do": "app",
+            "app": "messages",
+            "about": "Lena asks if we should book a dinner reservation in Fredericksburg",
+            "min": 2
+          },
+          {
+            "do": "type",
+            "where": "messages",
+            "intent": "Reply to Lena: yes, let's do the German place on Main Street, I'll call tomorrow",
+            "sent": true,
+            "to": "Lena Park"
+          }
+        ]
+      },
+      {
+        "start": "17:15",
+        "thread": "side_project",
+        "noise": true,
+        "steps": [
+          {
+            "do": "app",
+            "app": "vscode",
+            "about": "Close the image download issue for now, commit the cookie fix to the recipe scraper repo",
+            "min": 6
+          },
+          {
+            "do": "app",
+            "app": "terminal",
+            "about": "Git commit and push the cookie fix, note the image download as a TODO",
+            "min": 4
+          }
+        ]
+      },
+      {
+        "start": "17:35",
+        "thread": "kafka_migration",
+        "noise": false,
+        "steps": [
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "Priya approves PR #1187 with a small nitpick; fix the nitpick in vscode",
+            "min": 5
+          },
+          {
+            "do": "app",
+            "app": "vscode",
+            "about": "Fix the nitpick (rename a variable), commit and push",
+            "min": 5
+          },
+          {
+            "do": "page",
+            "host": "github.com",
+            "about": "Merge PR #1187 and close ticket EV-482",
+            "min": 4
+          }
+        ]
+      },
+      {
+        "start": "18:00",
+        "thread": "consumer_group",
+        "noise": true,
+        "steps": [
+          {
+            "do": "app",
+            "app": "slack",
+            "about": "See a message from Marcus: 'Fine, but I still think we should include the date.' Read but don't reply.",
+            "min": 2
+          },
+          {
+            "do": "app",
+            "app": "calendar",
+            "about": "Check tomorrow's meetings and log off",
+            "min": 3
+          }
+        ]
+      }
+    ],
+    "summary": "Wednesday was the day the Kafka migration finally went live: Maya coordinated with Tom on the staging lag, deployed the new bridge to prod after a quick Zoom call, and merged PR #1187. She also locked in the consumer group naming convention in the runbook, replied to Jules about the schema change, and made a small breakthrough on the recipe scraper with a cookie fix. The Fredericksburg trip got more concrete with Grandma's pickup time and a dinner plan, though the scraper's image download is still a loose end."
+  }
+}

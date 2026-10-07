@@ -1,0 +1,60 @@
+{
+  "_provenance": "Drafted by deepseek/deepseek-v4-flash-0731 @ <local OpenRouter proxy> from bench/annotate.py CAPABILITIES (0.1.6 code); reviewed by the harness author against ledger.json before the freeze. edited=true marks hand edits. Reviewed 2026-10-06T15:34:16.965838-05:00: every line checked against the recorded rows (events.jsonl) and ledger.json; DeepSeek's founder drafts claimed recorded typing that wasn't recorded (q05, q06, q09), those were rewritten.",
+  "items": {
+    "q01": {
+      "can_know": "Can know: the typed text in the Gmail compose window on 2026-09-29 includes 'Invoice #2024-0317 is attached', so the invoice number 2024-0317 is visible in DayDream's recorded typed words. Cannot know: whether the email was actually sent or whether Lila received it.",
+      "drafted": "Can know: the typed text in the Gmail compose window on 2026-09-29 includes 'Invoice #2024-0317 is attached', so the invoice number 2024-0317 is visible in DayDream's recorded typed words. Cannot know: whether the email was actually sent or whether Lila received it.",
+      "reviewed": true,
+      "edited": false
+    },
+    "q02": {
+      "can_know": "Can know: the windows and pages in front on Monday, October 5 and before (e.g. Keynote 'HCI Group Presentation', the methods doc's Google Docs tab titles), with times. Cannot know: what was written in the Google Doc or posted in Slack desktop (typing there isn't recorded), so not that the methods section was finished or posted.",
+      "drafted": "Can know: that on 2026-10-05 Maya worked in Keynote on 'HCI Group Presentation' and earlier in the week opened 'HCI Methods Draft - Google Docs' and typed methods-related text; DayDream can show the last recorded app/tab switches. Cannot know: the actual final state of the methods section document, that it was finalized and posted to Slack, or the content of Slack messages, because those Slack messages were not visible to DayDream.",
+      "reviewed": true,
+      "edited": true
+    },
+    "q03": {
+      "can_know": "Can know: that on 2026-10-02 Maya opened 'Firebase Console - Open Streets Collective' in Chrome, and that on 2026-10-02 she typed in Gmail 'No problem! Happy to wait for the board. Let me know if they have any questions.' in a reply about the Open Streets invoice. Cannot know: that the Firebase check was specifically to see volunteer signups, or that the Gmail reply was actually sent.",
+      "drafted": "Can know: that on 2026-10-02 Maya opened 'Firebase Console - Open Streets Collective' in Chrome, and that on 2026-10-02 she typed in Gmail 'No problem! Happy to wait for the board. Let me know if they have any questions.' in a reply about the Open Streets invoice. Cannot know: that the Firebase check was specifically to see volunteer signups, or that the Gmail reply was actually sent.",
+      "reviewed": true,
+      "edited": false
+    },
+    "q04": {
+      "can_know": "Can know: that on 2026-09-29 Chrome tabs titled 'r/ADHD - How do you stop procrastinating? - Reddit' and 'r/ADHD - How do you stop procrastinating?' were in front at switch/click/type times. Cannot know: how long Maya spent on Reddit, because DayDream only records switch times and idle time leaves gaps; duration can only be estimated as a lower/upper bound, not measured.",
+      "drafted": "Can know: that on 2026-09-29 Chrome tabs titled 'r/ADHD - How do you stop procrastinating? - Reddit' and 'r/ADHD - How do you stop procrastinating?' were in front at switch/click/type times. Cannot know: how long Maya spent on Reddit, because DayDream only records switch times and idle time leaves gaps; duration can only be estimated as a lower/upper bound, not measured.",
+      "reviewed": true,
+      "edited": false
+    },
+    "q05": {
+      "can_know": "Can know: that on 2026-10-02 Chrome showed 'Registration - University of Minnesota - Canvas' with the typed text 'Confirm registration for INFO 6502 and drop INFO 6501', and that Maya repeatedly looked at 'INFO 6502 - Critical AI Ethics' pages. Cannot know: the waitlist position (3), because that number was not typed by Maya and is not in any recorded title or typed text.",
+      "drafted": "Can know: that on 2026-10-02 Chrome showed 'Registration - University of Minnesota - Canvas' with the typed text 'Confirm registration for INFO 6502 and drop INFO 6501', and that Maya repeatedly looked at 'INFO 6502 - Critical AI Ethics' pages. Cannot know: the waitlist position (3), because that number was not typed by Maya and is not in any recorded title or typed text.",
+      "reviewed": true,
+      "edited": false
+    },
+    "q06": {
+      "can_know": "Can know: the Reddit thread title from Chrome tab titles: 'r/ADHD - How do you stop procrastinating?' appeared multiple times. Cannot know: the content of the thread or what Maya read in it.",
+      "drafted": "Can know: the Reddit thread title from Chrome tab titles: 'r/ADHD - How do you stop procrastinating?' appeared multiple times. Cannot know: the content of the thread or what Maya read in it.",
+      "reviewed": true,
+      "edited": false
+    },
+    "q07": {
+      "can_know": "Can know: the NYT article title from Chrome tab titles: 'The Sunday Read: The Lost Art of Doing Nothing' (or 'The Lost Art of Doing Nothing - The New York Times') appeared repeatedly. Cannot know: whether Maya actually read it or how long she looked at it.",
+      "drafted": "Can know: the NYT article title from Chrome tab titles: 'The Sunday Read: The Lost Art of Doing Nothing' (or 'The Lost Art of Doing Nothing - The New York Times') appeared repeatedly. Cannot know: whether Maya actually read it or how long she looked at it.",
+      "reviewed": true,
+      "edited": false
+    },
+    "q08": {
+      "can_know": "Can know: that on 2026-09-29 the Slack channel '#hci-group-project - University of Minnesota - Slack' was in front, but DayDream did not record the typed text 'i can do 1pm if needed but i have lab work after, lmk' (it is not in the recorded rows). Cannot know: whether that reply was sent, because DayDream cannot see sent/unsent status and the typed words were not captured.",
+      "drafted": "Can know: that on 2026-09-29 the Slack channel '#hci-group-project - University of Minnesota - Slack' was in front, but DayDream did not record the typed text 'i can do 1pm if needed but i have lab work after, lmk' (it is not in the recorded rows). Cannot know: whether that reply was sent, because DayDream cannot see sent/unsent status and the typed words were not captured.",
+      "reviewed": true,
+      "edited": false
+    },
+    "q09": {
+      "can_know": "Can know: that Maya browsed 'Personalized Tackle Box - Fishing Gift for Dad - Etsy' and typed messages about ordering a tackle box for Dad. Cannot know: any gift suggestions the assistant made in past chats, because DayDream only records this week's typed words on this Mac and the assistant's past suggestions are not in the recorded rows.",
+      "drafted": "Can know: that Maya browsed 'Personalized Tackle Box - Fishing Gift for Dad - Etsy' and typed messages about ordering a tackle box for Dad. Cannot know: any gift suggestions the assistant made in past chats, because DayDream only records this week's typed words on this Mac and the assistant's past suggestions are not in the recorded rows.",
+      "reviewed": true,
+      "edited": false
+    }
+  },
+  "reviewed_at": "2026-10-06T15:34:16.965838-05:00"
+}

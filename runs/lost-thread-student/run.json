@@ -1,0 +1,39 @@
+{
+  "run_id": "lost-thread-student",
+  "persona": "student",
+  "started": "2026-10-06T15:34:39.936987-05:00",
+  "config": {
+    "codex_model": "gpt-6.1-sol",
+    "codex_effort": "medium",
+    "claude_model": "opus",
+    "claude_effort": null,
+    "system_variant": "symmetric-v1",
+    "timeout": 180
+  },
+  "arms": [
+    "native",
+    "native+dd",
+    "dd"
+  ],
+  "contestants": [
+    "codex",
+    "claude"
+  ],
+  "items": [
+    "student-q01",
+    "student-q02",
+    "student-q03",
+    "student-q04",
+    "student-q05",
+    "student-q06",
+    "student-q07",
+    "student-q08",
+    "student-q09"
+  ],
+  "ask_at": "2026-10-06T15:34:22.497481-05:00",
+  "store_sha256": "9acb7ce1e368c018ff7096ead6bc2dc28439c01584d2f57a2c5446f3887f9516",
+  "mac_mem": "/Applications/DayDream.app/Contents/MacOS/mac-mem",
+  "generator": "deepseek/deepseek-v4-flash-0731 @ <local OpenRouter proxy>",
+  "lock_sha256": "204b00dd8a3963b35c4ef7ad2b5aecd5fad95fe8653eaeb6fd21dc49a113f33c",
+  "finished": "2026-10-06T15:44:58.100997-05:00"
+}

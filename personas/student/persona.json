@@ -1,0 +1,15 @@
+{
+  "id": "student",
+  "key": "student",
+  "archetype": "student",
+  "name": "Maya Chen",
+  "role": "Graduate student (MS in Information Science)",
+  "company": "University of Minnesota",
+  "summary": "Maya is a second-year master's student juggling a part-time research assistantship, a group project for her human-computer interaction seminar, and a side project building a small web app for a local nonprofit. She tends to start her day late, get distracted by social media and music, and then work in bursts. She is trying to be better about using her calendar and Notion to track tasks, but often falls back on sticky notes and her own memory.",
+  "workday": {
+    "start": "09:45",
+    "end": "18:30",
+    "lunch": "13:00"
+  },
+  "source": "generated"
+}

@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a112ed-3d5d-7011-b396-458056e9bf20"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"I don’t have the invoice number in our chat history—just that you discussed charging $400 for the nonprofit web app. If you paste the invoice or email you sent Lila, I can find it."}}
+{"type":"turn.completed","usage":{"input_tokens":5199,"cached_input_tokens":2688,"cache_write_input_tokens":0,"output_tokens":68,"reasoning_output_tokens":20}}

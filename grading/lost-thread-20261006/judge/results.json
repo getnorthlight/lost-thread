@@ -1,0 +1,76 @@
+{
+ "table": {
+  "claude|dd": {
+   "model": "claude-opus-5-5",
+   "n": 27,
+   "helpful_mean": 2.85,
+   "helpful_3plus": 18,
+   "correct_mean": 1.48,
+   "answers_with_fabrication": 2,
+   "answers_overclaiming": 2
+  },
+  "claude|native": {
+   "model": "claude-opus-5-5",
+   "n": 27,
+   "helpful_mean": 1.19,
+   "helpful_3plus": 1,
+   "correct_mean": 0.26,
+   "answers_with_fabrication": 0,
+   "answers_overclaiming": 0
+  },
+  "claude|native+dd": {
+   "model": "claude-opus-5-5",
+   "n": 27,
+   "helpful_mean": 2.93,
+   "helpful_3plus": 18,
+   "correct_mean": 1.48,
+   "answers_with_fabrication": 2,
+   "answers_overclaiming": 1
+  },
+  "codex|dd": {
+   "model": "gpt-6.1-sol",
+   "n": 27,
+   "helpful_mean": 2.78,
+   "helpful_3plus": 17,
+   "correct_mean": 1.44,
+   "answers_with_fabrication": 2,
+   "answers_overclaiming": 3
+  },
+  "codex|native": {
+   "model": "gpt-6.1-sol",
+   "n": 27,
+   "helpful_mean": 1.48,
+   "helpful_3plus": 5,
+   "correct_mean": 0.56,
+   "answers_with_fabrication": 1,
+   "answers_overclaiming": 0
+  },
+  "codex|native+dd": {
+   "model": "gpt-6.1-sol",
+   "n": 27,
+   "helpful_mean": 2.41,
+   "helpful_3plus": 14,
+   "correct_mean": 1.22,
+   "answers_with_fabrication": 2,
+   "answers_overclaiming": 2
+  }
+ },
+ "pairwise": {
+  "codex": {
+   "head": 16,
+   "base": 4,
+   "tie": 7
+  },
+  "claude": {
+   "head": 24,
+   "base": 3,
+   "tie": 0
+  }
+ },
+ "length_helpful_corr": -0.08,
+ "judge_disagreement_helpful_ge2": 4,
+ "answers_graded": 162,
+ "answers_total": 162,
+ "pairs_judged": 108,
+ "pairs_total": 108
+}

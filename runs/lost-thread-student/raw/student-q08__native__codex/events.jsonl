@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a112ed-2666-7142-91d0-f28b40a65d68"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"I can’t confirm—I don’t see a reply to Raj in the history I have, and I can’t access your sent messages. Try searching your chat or email with Raj for “pilot” or “1pm.”"}}
+{"type":"turn.completed","usage":{"input_tokens":5201,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":109,"reasoning_output_tokens":59}}

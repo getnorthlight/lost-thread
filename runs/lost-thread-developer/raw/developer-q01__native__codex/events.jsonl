@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a112ed-3985-7de3-8d53-dabf0a74779f"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"I don’t have the PR number in our conversation history. Share the repo link or merged PR list, and I can help identify the Kafka bridge migration PR."}}
+{"type":"turn.completed","usage":{"input_tokens":5491,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":57,"reasoning_output_tokens":19}}

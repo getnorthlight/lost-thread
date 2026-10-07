@@ -1,0 +1,578 @@
+{
+  "step": "fill-d4",
+  "model": "deepseek/deepseek-v4-flash-0731",
+  "requested_model": "deepseek/deepseek-v4-flash-0731",
+  "base_url": "<local OpenRouter proxy>",
+  "temperature": 0.7,
+  "seconds": 27.62,
+  "usage": {
+    "prompt_tokens": 6984,
+    "completion_tokens": 5018,
+    "total_tokens": 12002,
+    "cost": 0.0023828,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0023828,
+      "upstream_inference_prompt_cost": 0.00097776,
+      "upstream_inference_completions_cost": 0.00140504
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "attempt": 1,
+  "system": "You generate realistic synthetic test data for a research benchmark about personal memory. Everything you write is fiction: invent every person, company, client and product name (never use real people you know of, and avoid famous companies as employers). Write like real life, not like a tidy diary: people get interrupted, leave things half done, revisit things, procrastinate, and type casually. Reply with JSON only.",
+  "user": "Person: {\"name\": \"Maya Chen\", \"role\": \"Graduate student (MS in Information Science)\", \"company\": \"University of Minnesota\", \"summary\": \"Maya is a second-year master's student juggling a part-time research assistantship, a group project for her human-computer interaction seminar, and a side project building a small web app for a local nonprofit. She tends to start her day late, get distracted by social media and music, and then work in bursts. She is trying to be better about using her calendar and Notion to track tasks, but often falls back on sticky notes and her own memory.\", \"workday\": {\"start\": \"09:45\", \"end\": \"18:30\", \"lunch\": \"13:00\"}}\nPeople: [{\"key\": \"prof_abrams\", \"name\": \"Dr. Ellen Abrams\", \"role\": \"Advisor / HCI professor\", \"channel\": \"email\"}, {\"key\": \"raj\", \"name\": \"Raj Patel\", \"role\": \"Teammate in HCI group project\", \"channel\": \"slack\"}, {\"key\": \"sophia\", \"name\": \"Sophia Nguyen\", \"role\": \"Teammate in HCI group project\", \"channel\": \"slack\"}, {\"key\": \"marcus\", \"name\": \"Marcus Webb\", \"role\": \"Teammate in HCI group project\", \"channel\": \"slack\"}, {\"key\": \"lila\", \"name\": \"Lila Thompson\", \"role\": \"Nonprofit contact at Open Streets Collective\", \"channel\": \"email\"}, {\"key\": \"dad\", \"name\": \"Dad\", \"role\": \"Family\", \"channel\": \"messages\"}, {\"key\": \"priya\", \"name\": \"Priya Shah\", \"role\": \"Friend from undergrad\", \"channel\": \"messages\"}, {\"key\": \"lab_pi\", \"name\": \"Dr. Tom Okafor\", \"role\": \"Research lab PI\", \"channel\": \"email\"}]\nDay 4 plan: {\"blocks\": [{\"start\": \"09:52\", \"thread\": \"hci_group_project\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"mail\", \"about\": \"Gmail inbox - checking for replies from group and Dr. Abrams\", \"min\": 3}, {\"do\": \"app\", \"app\": \"slack\", \"about\": \"#hci-group-project - reading Raj's overnight messages about the results section\", \"min\": 4}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Reply to Raj in #hci-group-project: 'ugh you're right, I still need to plug in the numbers. doing that now.'\", \"sent\": true, \"to\": \"Raj Patel\"}, {\"do\": \"app\", \"app\": \"notes\", \"about\": \"HCI methods draft - open the draft to add results numbers\", \"min\": 2}]}, {\"start\": \"10:05\", \"thread\": \"hci_group_project\", \"noise\": true, \"steps\": [{\"do\": \"page\", \"host\": \"www.reddit.com\", \"about\": \"r/ADHD - 'How do you stop procrastinating?'\", \"min\": 6, \"new_tab\": true}, {\"do\": \"app\", \"app\": \"spotify\", \"about\": \"lofi playlist - start playing\", \"min\": 1}, {\"do\": \"app\", \"app\": \"notes\", \"about\": \"HCI methods draft - stare at the results section, type a few numbers\", \"min\": 8}]}, {\"start\": \"10:20\", \"thread\": \"ra_position\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"mail\", \"about\": \"Inbox - see Dr. Okafor's reply about 'community trust' code with examples\", \"min\": 3}, {\"do\": \"app\", \"app\": \"vscode\", \"about\": \"NVivo export - open the transcript coding file to apply the clarified code\", \"min\": 5}, {\"do\": \"type\", \"where\": \"vscode\", \"intent\": \"Add a comment in the coding file: 'community trust = explicit mentions of neighbors relying on each other, not just org trust'\", \"sent\": false}, {\"do\": \"app\", \"app\": \"terminal\", \"about\": \"Run a quick grep to find all 'community trust' codes in the transcript files\", \"min\": 3}]}, {\"start\": \"10:35\", \"thread\": \"ra_position\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"vscode\", \"about\": \"Transcript 3 - recode the 'community trust' sections with the clarified definition\", \"min\": 15}, {\"do\": \"app\", \"app\": \"notes\", \"about\": \"Lab summary notes - jot down what still needs to be done\", \"min\": 2}]}, {\"start\": \"10:55\", \"thread\": \"course_registration\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"calendar\", \"about\": \"Check next semester schedule - see if INFO 6502 conflicts with lab hours\", \"min\": 3}, {\"do\": \"page\", \"host\": \"canvas.umn.edu\", \"about\": \"Registration portal - check waitlist position for INFO 6502\", \"min\": 4}, {\"do\": \"type\", \"where\": \"web:canvas.umn.edu\", \"intent\": \"Confirm registration for INFO 6502 and drop INFO 6501\", \"sent\": true}]}, {\"start\": \"11:05\", \"thread\": \"hci_group_project\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"#hci-group-project - Sophia asks if the results numbers are in yet\", \"min\": 2}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Reply to Sophia: 'working on it! just need to finish the task success rates and then I'll send the doc.'\", \"sent\": true, \"to\": \"Sophia Nguyen\"}, {\"do\": \"page\", \"host\": \"www.youtube.com\", \"about\": \"lofi hip hop radio - keep playing in background\", \"min\": 1, \"new_tab\": true}]}, {\"start\": \"11:15\", \"thread\": \"hci_group_project\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"notes\", \"about\": \"HCI methods draft - add task success rates and time-on-task numbers from the unmoderated sessions\", \"min\": 20}, {\"do\": \"app\", \"app\": \"slack\", \"about\": \"#hci-group-project - post a link to the updated methods section\", \"min\": 2}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Post in #hci-group-project: 'ok methods section is updated with the numbers. can someone double-check the participant section?'\", \"sent\": true, \"to\": \"Raj Patel, Sophia Nguyen, Marcus Webb\"}]}, {\"start\": \"11:45\", \"thread\": \"open_streets_webapp\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"mail\", \"about\": \"Inbox - see Lila's reply about the invoice needing board approval\", \"min\": 2}, {\"do\": \"type\", \"where\": \"mail\", \"intent\": \"Reply to Lila: 'No problem! Happy to wait for the board. Let me know if they have any questions.'\", \"sent\": true, \"to\": \"Lila Thompson\"}, {\"do\": \"app\", \"app\": \"vscode\", \"about\": \"Open Streets app - check the admin page for any last issues\", \"min\": 5}]}, {\"start\": \"12:00\", \"thread\": \"open_streets_webapp\", \"noise\": true, \"steps\": [{\"do\": \"page\", \"host\": \"console.firebase.google.com\", \"about\": \"Firebase console - check if the volunteer signups are coming through\", \"min\": 4}, {\"do\": \"app\", \"app\": \"terminal\", \"about\": \"Run the build and deploy the latest changes to Netlify\", \"min\": 6}]}, {\"start\": \"12:15\", \"thread\": \"dad_birthday\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"messages\", \"about\": \"Text from Dad: 'Did you get my voicemail? Just checking in.'\", \"min\": 2}, {\"do\": \"type\", \"where\": \"messages\", \"intent\": \"Reply to Dad: 'Hey! Sorry, been swamped. I did get it. Will call you this weekend!'\", \"sent\": true, \"to\": \"Dad\"}, {\"do\": \"page\", \"host\": \"www.etsy.com\", \"about\": \"Check the tracking for the personalized tackle box\", \"min\": 3}]}, {\"start\": \"12:30\", \"thread\": \"hci_group_project\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"#hci-group-project - Marcus says the participant section looks good, but asks about the screening criteria\", \"min\": 2}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Reply to Marcus: 'Good catch, I'll add the screening criteria sentence now.'\", \"sent\": true, \"to\": \"Marcus Webb\"}, {\"do\": \"app\", \"app\": \"notes\", \"about\": \"HCI methods draft - add screening criteria sentence\", \"min\": 5}]}, {\"start\": \"12:45\", \"thread\": \"hci_group_project\", \"noise\": false, \"steps\": [{\"do\": \"idle\", \"min\": 30, \"about\": \"Lunch - leftover pad thai and scrolling through Instagram\"}]}, {\"start\": \"13:20\", \"thread\": \"ra_position\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"vscode\", \"about\": \"Transcript 4 - finish coding the remaining sections\", \"min\": 25}, {\"do\": \"app\", \"app\": \"terminal\", \"about\": \"Run a quick script to count codes per transcript\", \"min\": 3}]}, {\"start\": \"13:50\", \"thread\": \"ra_position\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"mail\", \"about\": \"Draft email to Dr. Okafor with the coding summary\", \"min\": 5}, {\"do\": \"type\", \"where\": \"mail\", \"intent\": \"Send email to Dr. Okafor: 'Hi Dr. Okafor, I've finished coding all 5 transcripts and uploaded the summary to the shared drive. Let me know if you want any changes.'\", \"sent\": true, \"to\": \"Dr. Tom Okafor\"}, {\"do\": \"app\", \"app\": \"finder\", \"about\": \"Upload the coding summary file to the lab's shared drive\", \"min\": 3}]}, {\"start\": \"14:05\", \"thread\": \"hci_group_project\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"#hci-group-project - Raj asks if we should do a quick sync before Monday's presentation\", \"min\": 2}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Reply to Raj: 'Yeah, let's do a 15-min call at 4? I have to run an errand before that.'\", \"sent\": true, \"to\": \"Raj Patel\"}, {\"do\": \"page\", \"host\": \"www.reddit.com\", \"about\": \"r/ADHD - 'How do you stop procrastinating?' - scroll comments\", \"min\": 5, \"new_tab\": true}]}, {\"start\": \"14:20\", \"thread\": \"open_streets_webapp\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"vscode\", \"about\": \"Open Streets app - fix a small CSS issue on the volunteer form\", \"min\": 10}, {\"do\": \"app\", \"app\": \"terminal\", \"about\": \"Deploy the CSS fix to Netlify\", \"min\": 3}]}, {\"start\": \"14:40\", \"thread\": \"course_registration\", \"noise\": false, \"steps\": [{\"do\": \"page\", \"host\": \"www.ratemyprofessors.com\", \"about\": \"Check professor ratings for INFO 6502 one more time\", \"min\": 4}, {\"do\": \"app\", \"app\": \"calendar\", \"about\": \"Add INFO 6502 to the calendar for next semester\", \"min\": 2}]}, {\"start\": \"14:50\", \"thread\": \"dad_birthday\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"messages\", \"about\": \"Text from Priya: 'Did you order the tackle box??'\", \"min\": 1}, {\"do\": \"type\", \"where\": \"messages\", \"intent\": \"Reply to Priya: 'Yes! It's supposed to arrive Tuesday. Fingers crossed he likes it.'\", \"sent\": true, \"to\": \"Priya Shah\"}, {\"do\": \"app\", \"app\": \"mail\", \"about\": \"Check Etsy order confirmation and tracking\", \"min\": 2}]}, {\"start\": \"15:00\", \"thread\": \"hci_group_project\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"zoom\", \"about\": \"Quick sync call with Raj, Sophia, and Marcus to review the presentation outline\", \"min\": 20}]}, {\"start\": \"15:25\", \"thread\": \"hci_group_project\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"notes\", \"about\": \"HCI presentation outline - add notes from the sync call\", \"min\": 5}, {\"do\": \"app\", \"app\": \"slack\", \"about\": \"#hci-group-project - post the updated presentation outline\", \"min\": 2}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Post in #hci-group-project: 'Here's the updated outline. I'll make the slides tonight and share by 9.'\", \"sent\": true, \"to\": \"Raj Patel, Sophia Nguyen, Marcus Webb\"}]}, {\"start\": \"15:40\", \"thread\": \"open_streets_webapp\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"mail\", \"about\": \"Inbox - see a newsletter from Netlify about new features, mark as read\", \"min\": 1}, {\"do\": \"page\", \"host\": \"www.nytimes.com\", \"about\": \"The Sunday Read: 'The Lost Art of Doing Nothing' - open in a new tab but don't read\", \"min\": 2, \"new_tab\": true}, {\"do\": \"app\", \"app\": \"vscode\", \"about\": \"Open Streets app - check if the admin page needs any final tweaks\", \"min\": 5}]}, {\"start\": \"16:00\", \"thread\": \"hci_group_project\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"notes\", \"about\": \"HCI methods draft - read through the whole section one more time\", \"min\": 10}, {\"do\": \"app\", \"app\": \"slack\", \"about\": \"#hci-group-project - send the final methods section to the group\", \"min\": 2}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Post in #hci-group-project: 'Final methods section is in the doc. Let me know if anything looks off.'\", \"sent\": true, \"to\": \"Raj Patel, Sophia Nguyen, Marcus Webb\"}]}, {\"start\": \"16:20\", \"thread\": \"ra_position\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"mail\", \"about\": \"Inbox - see Dr. Okafor's reply: 'Thanks, Maya. Looks good.'\", \"min\": 2}, {\"do\": \"app\", \"app\": \"notion\", \"about\": \"Update the lab task tracker - mark all 5 transcripts as done\", \"min\": 3}]}, {\"start\": \"16:30\", \"thread\": \"dad_birthday\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"messages\", \"about\": \"Text from Dad: 'No worries, just wanted to hear your voice. Love you.'\", \"min\": 2}, {\"do\": \"type\", \"where\": \"messages\", \"intent\": \"Reply to Dad: 'Love you too! Talk soon.'\", \"sent\": true, \"to\": \"Dad\"}]}, {\"start\": \"16:40\", \"thread\": \"course_registration\", \"noise\": true, \"steps\": [{\"do\": \"page\", \"host\": \"www.reddit.com\", \"about\": \"r/GradSchool - 'Is it normal to feel like you're behind?'\", \"min\": 6, \"new_tab\": true}, {\"do\": \"app\", \"app\": \"calendar\", \"about\": \"Look at next week's schedule - see the HCI presentation on Monday\", \"min\": 2}]}, {\"start\": \"17:00\", \"thread\": \"hci_group_project\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"keynote\", \"about\": \"Start building the presentation slides for Monday\", \"min\": 30}]}, {\"start\": \"17:35\", \"thread\": \"hci_group_project\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"#hci-group-project - Sophia asks if we should add a slide about limitations\", \"min\": 2}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Reply to Sophia: 'Good idea, I'll add a limitations slide at the end.'\", \"sent\": true, \"to\": \"Sophia Nguyen\"}, {\"do\": \"page\", \"host\": \"www.youtube.com\", \"about\": \"lofi hip hop radio - still playing in background\", \"min\": 1, \"new_tab\": true}]}, {\"start\": \"17:45\", \"thread\": \"hci_group_project\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"keynote\", \"about\": \"Add limitations slide and finish the presentation draft\", \"min\": 20}]}, {\"start\": \"18:10\", \"thread\": \"open_streets_webapp\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"mail\", \"about\": \"Inbox - see Lila's email: 'The board approved the invoice! We'll send the payment next week.'\", \"min\": 2}, {\"do\": \"type\", \"where\": \"mail\", \"intent\": \"Reply to Lila: 'Amazing, thank you! Let me know if you need anything else.'\", \"sent\": true, \"to\": \"Lila Thompson\"}]}, {\"start\": \"18:20\", \"thread\": \"hci_group_project\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"#hci-group-project - post the final presentation file\", \"min\": 2}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Post in #hci-group-project: 'Here's the deck. I'll do a final pass tomorrow morning before class.'\", \"sent\": true, \"to\": \"Raj Patel, Sophia Nguyen, Marcus Webb\"}]}, {\"start\": \"18:30\", \"thread\": \"hci_group_project\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"spotify\", \"about\": \"Switch to a different playlist - 'focus' playlist\", \"min\": 1}, {\"do\": \"page\", \"host\": \"www.reddit.com\", \"about\": \"r/ADHD - 'How do you stop procrastinating?' - close the tab\", \"min\": 1}]}], \"summary\": \"Friday was a grind: Maya finally finished the HCI methods section with the results numbers, coded the last transcripts for Dr. Okafor's lab, and deployed a CSS fix for the Open Streets app. She also confirmed her INFO 6502 registration, checked on her dad's gift, and got the good news that Lila's board approved the invoice. She ended the day by building the presentation slides for Monday's class, though she still needs to do a final pass in the morning.\"}\n\nFill in exact content as JSON {\"steps\": {\"b<block>s<step>\": {...}}} for every app/page/search/type step:\n- app: {\"title\": exact macOS window title, e.g. \"budget_v3.xlsx\", \"retry_worker.go — fern-api\", \"#design (Channel) - Acme - Slack\",\n         \"titles\": optional list of window titles they rotate through}\n- page: {\"title\": the tab title exactly as the site shows it (\"... - Google Docs\", \"... - YouTube\", Gmail: the email subject,\n         \"Inbox\" for the inbox), \"path\": a plausible URL path}\n- search: {\"query\": the words typed into Google}\n- type: {\"text\": the exact words typed (casual where casual, typos allowed in chats), \"title\": window title for apps,\n         \"place\": the page/subject it was typed in for web:<host>, \"field\": \"message\"|\"body\"|\"textArea\"|\"oneLine\",\n         \"seal\": \"submit\" (Return/send) | \"idle\" (stopped typing) | \"submitChord\" (Cmd-Return in email)}\nKeep identifiers and numbers consistent with the thread arcs and earlier days.\nReturn exactly these keys (block and step numbers start at 0), each a flat object with the fields above:\nb0s0: app mail: Gmail inbox - checking for replies from group and Dr. Abrams\nb0s1: app slack: #hci-group-project - reading Raj's overnight messages about the results section\nb0s2: type in slack: Reply to Raj in #hci-group-project: 'ugh you're right, I still need to plug in the numbers. doing that now.'\nb0s3: app notes: HCI methods draft - open the draft to add results numbers\nb1s0: page www.reddit.com: r/ADHD - 'How do you stop procrastinating?'\nb1s1: app spotify: lofi playlist - start playing\nb1s2: app notes: HCI methods draft - stare at the results section, type a few numbers\nb2s0: app mail: Inbox - see Dr. Okafor's reply about 'community trust' code with examples\nb2s1: app vscode: NVivo export - open the transcript coding file to apply the clarified code\nb2s2: type in vscode: Add a comment in the coding file: 'community trust = explicit mentions of neighbors relying on each other, not just org trust'\nb2s3: app terminal: Run a quick grep to find all 'community trust' codes in the transcript files\nb3s0: app vscode: Transcript 3 - recode the 'community trust' sections with the clarified definition\nb3s1: app notes: Lab summary notes - jot down what still needs to be done\nb4s0: app calendar: Check next semester schedule - see if INFO 6502 conflicts with lab hours\nb4s1: page canvas.umn.edu: Registration portal - check waitlist position for INFO 6502\nb4s2: type in web:canvas.umn.edu: Confirm registration for INFO 6502 and drop INFO 6501\nb5s0: app slack: #hci-group-project - Sophia asks if the results numbers are in yet\nb5s1: type in slack: Reply to Sophia: 'working on it! just need to finish the task success rates and then I'll send the doc.'\nb5s2: page www.youtube.com: lofi hip hop radio - keep playing in background\nb6s0: app notes: HCI methods draft - add task success rates and time-on-task numbers from the unmoderated sessions\nb6s1: app slack: #hci-group-project - post a link to the updated methods section\nb6s2: type in slack: Post in #hci-group-project: 'ok methods section is updated with the numbers. can someone double-check the participant section?'\nb7s0: app mail: Inbox - see Lila's reply about the invoice needing board approval\nb7s1: type in mail: Reply to Lila: 'No problem! Happy to wait for the board. Let me know if they have any questions.'\nb7s2: app vscode: Open Streets app - check the admin page for any last issues\nb8s0: page console.firebase.google.com: Firebase console - check if the volunteer signups are coming through\nb8s1: app terminal: Run the build and deploy the latest changes to Netlify\nb9s0: app messages: Text from Dad: 'Did you get my voicemail? Just checking in.'\nb9s1: type in messages: Reply to Dad: 'Hey! Sorry, been swamped. I did get it. Will call you this weekend!'\nb9s2: page www.etsy.com: Check the tracking for the personalized tackle box\nb10s0: app slack: #hci-group-project - Marcus says the participant section looks good, but asks about the screening criteria\nb10s1: type in slack: Reply to Marcus: 'Good catch, I'll add the screening criteria sentence now.'\nb10s2: app notes: HCI methods draft - add screening criteria sentence\nb12s0: app vscode: Transcript 4 - finish coding the remaining sections\nb12s1: app terminal: Run a quick script to count codes per transcript\nb13s0: app mail: Draft email to Dr. Okafor with the coding summary\nb13s1: type in mail: Send email to Dr. Okafor: 'Hi Dr. Okafor, I've finished coding all 5 transcripts and uploaded the summary to the shared drive. Let me know if you want any changes.'\nb13s2: app finder: Upload the coding summary file to the lab's shared drive\nb14s0: app slack: #hci-group-project - Raj asks if we should do a quick sync before Monday's presentation\nb14s1: type in slack: Reply to Raj: 'Yeah, let's do a 15-min call at 4? I have to run an errand before that.'\nb14s2: page www.reddit.com: r/ADHD - 'How do you stop procrastinating?' - scroll comments\nb15s0: app vscode: Open Streets app - fix a small CSS issue on the volunteer form\nb15s1: app terminal: Deploy the CSS fix to Netlify\nb16s0: page www.ratemyprofessors.com: Check professor ratings for INFO 6502 one more time\nb16s1: app calendar: Add INFO 6502 to the calendar for next semester\nb17s0: app messages: Text from Priya: 'Did you order the tackle box??'\nb17s1: type in messages: Reply to Priya: 'Yes! It's supposed to arrive Tuesday. Fingers crossed he likes it.'\nb17s2: app mail: Check Etsy order confirmation and tracking\nb18s0: app zoom: Quick sync call with Raj, Sophia, and Marcus to review the presentation outline\nb19s0: app notes: HCI presentation outline - add notes from the sync call\nb19s1: app slack: #hci-group-project - post the updated presentation outline\nb19s2: type in slack: Post in #hci-group-project: 'Here's the updated outline. I'll make the slides tonight and share by 9.'\nb20s0: app mail: Inbox - see a newsletter from Netlify about new features, mark as read\nb20s1: page www.nytimes.com: The Sunday Read: 'The Lost Art of Doing Nothing' - open in a new tab but don't read\nb20s2: app vscode: Open Streets app - check if the admin page needs any final tweaks\nb21s0: app notes: HCI methods draft - read through the whole section one more time\nb21s1: app slack: #hci-group-project - send the final methods section to the group\nb21s2: type in slack: Post in #hci-group-project: 'Final methods section is in the doc. Let me know if anything looks off.'\nb22s0: app mail: Inbox - see Dr. Okafor's reply: 'Thanks, Maya. Looks good.'\nb22s1: app notion: Update the lab task tracker - mark all 5 transcripts as done\nb23s0: app messages: Text from Dad: 'No worries, just wanted to hear your voice. Love you.'\nb23s1: type in messages: Reply to Dad: 'Love you too! Talk soon.'\nb24s0: page www.reddit.com: r/GradSchool - 'Is it normal to feel like you're behind?'\nb24s1: app calendar: Look at next week's schedule - see the HCI presentation on Monday\nb25s0: app keynote: Start building the presentation slides for Monday\nb26s0: app slack: #hci-group-project - Sophia asks if we should add a slide about limitations\nb26s1: type in slack: Reply to Sophia: 'Good idea, I'll add a limitations slide at the end.'\nb26s2: page www.youtube.com: lofi hip hop radio - still playing in background\nb27s0: app keynote: Add limitations slide and finish the presentation draft\nb28s0: app mail: Inbox - see Lila's email: 'The board approved the invoice! We'll send the payment next week.'\nb28s1: type in mail: Reply to Lila: 'Amazing, thank you! Let me know if you need anything else.'\nb29s0: app slack: #hci-group-project - post the final presentation file\nb29s1: type in slack: Post in #hci-group-project: 'Here's the deck. I'll do a final pass tomorrow morning before class.'\nb30s0: app spotify: Switch to a different playlist - 'focus' playlist\nb30s1: page www.reddit.com: r/ADHD - 'How do you stop procrastinating?' - close the tab",
+  "raw": "{\n  \"steps\": {\n    \"b0s0\": {\n      \"app\": \"mail\",\n      \"title\": \"Inbox (3) - maya.chen@umn.edu - Gmail\",\n      \"titles\": [\n        \"Inbox (3) - maya.chen@umn.edu - Gmail\",\n        \"Inbox - maya.chen@umn.edu - Gmail\"\n      ]\n    },\n    \"b0s1\": {\n      \"app\": \"slack\",\n      \"title\": \"#hci-group-project - HCI 6501 - Slack\",\n      \"titles\": [\n        \"#hci-group-project - HCI 6501 - Slack\",\n        \"#hci-group-project - Slack\"\n      ]\n    },\n    \"b0s2\": {\n      \"type\": {\n        \"text\": \"ugh you're right, I still need to plug in the numbers. doing that now.\",\n        \"title\": \"#hci-group-project - HCI 6501 - Slack\",\n        \"place\": \"#hci-group-project\",\n        \"field\": \"message\",\n        \"seal\": \"submit\"\n      }\n    },\n    \"b0s3\": {\n      \"app\": \"notes\",\n      \"title\": \"HCI methods draft - Notes\",\n      \"titles\": [\n        \"HCI methods draft - Notes\",\n        \"HCI methods draft\"\n      ]\n    },\n    \"b1s0\": {\n      \"page\": {\n        \"title\": \"How do you stop procrastinating? : r/ADHD - Reddit\",\n        \"path\": \"/r/ADHD/comments/xyz123/how_do_you_stop_procrastinating/\"\n      }\n    },\n    \"b1s1\": {\n      \"app\": \"spotify\",\n      \"title\": \"lofi hip hop beats - Spotify\",\n      \"titles\": [\n        \"lofi hip hop beats - Spotify\",\n        \"lofi hip hop radio - Spotify\"\n      ]\n    },\n    \"b1s2\": {\n      \"app\": \"notes\",\n      \"title\": \"HCI methods draft - Notes\",\n      \"titles\": [\n        \"HCI methods draft - Notes\",\n        \"HCI methods draft\"\n      ]\n    },\n    \"b2s0\": {\n      \"app\": \"mail\",\n      \"title\": \"Re: community trust code - Dr. Tom Okafor - Gmail\",\n      \"titles\": [\n        \"Re: community trust code - Dr. Tom Okafor - Gmail\",\n        \"Inbox - maya.chen@umn.edu - Gmail\"\n      ]\n    },\n    \"b2s1\": {\n      \"app\": \"vscode\",\n      \"title\": \"transcripts_coding.nvpx - Visual Studio Code\",\n      \"titles\": [\n        \"transcripts_coding.nvpx - Visual Studio Code\",\n        \"transcripts_coding.nvpx — Visual Studio Code\"\n      ]\n    },\n    \"b2s2\": {\n      \"type\": {\n        \"text\": \"community trust = explicit mentions of neighbors relying on each other, not just org trust\",\n        \"title\": \"transcripts_coding.nvpx - Visual Studio Code\",\n        \"place\": \"transcripts_coding.nvpx\",\n        \"field\": \"textArea\",\n        \"seal\": \"idle\"\n      }\n    },\n    \"b2s3\": {\n      \"app\": \"terminal\",\n      \"title\": \"maya@macbook: ~/lab/transcripts - zsh\",\n      \"titles\": [\n        \"maya@macbook: ~/lab/transcripts - zsh\",\n        \"maya@macbook — -zsh\"\n      ]\n    },\n    \"b3s0\": {\n      \"app\": \"vscode\",\n      \"title\": \"transcript_03.docx - Visual Studio Code\",\n      \"titles\": [\n        \"transcript_03.docx - Visual Studio Code\",\n        \"transcripts_coding.nvpx - Visual Studio Code\"\n      ]\n    },\n    \"b3s1\": {\n      \"app\": \"notes\",\n      \"title\": \"Lab summary notes - Notes\",\n      \"titles\": [\n        \"Lab summary notes - Notes\",\n        \"Lab summary notes\"\n      ]\n    },\n    \"b4s0\": {\n      \"app\": \"calendar\",\n      \"title\": \"Calendar - Week of May 5 - Google Calendar\",\n      \"titles\": [\n        \"Calendar - Week of May 5 - Google Calendar\",\n        \"Calendar - Next semester - Google Calendar\"\n      ]\n    },\n    \"b4s1\": {\n      \"page\": {\n        \"title\": \"Registration - University of Minnesota - Canvas\",\n        \"path\": \"/courses/registration\"\n      }\n    },\n    \"b4s2\": {\n      \"type\": {\n        \"text\": \"Confirm registration for INFO 6502 and drop INFO 6501\",\n        \"title\": \"Registration - University of Minnesota - Canvas\",\n        \"place\": \"canvas.umn.edu\",\n        \"field\": \"oneLine\",\n        \"seal\": \"submit\"\n      }\n    },\n    \"b5s0\": {\n      \"app\": \"slack\",\n      \"title\": \"#hci-group-project - HCI 6501 - Slack\",\n      \"titles\": [\n        \"#hci-group-project - HCI 6501 - Slack\",\n        \"#hci-group-project - Slack\"\n      ]\n    },\n    \"b5s1\": {\n      \"type\": {\n        \"text\": \"working on it! just need to finish the task success rates and then I'll send the doc.\",\n        \"title\": \"#hci-group-project - HCI 6501 - Slack\",\n        \"place\": \"#hci-group-project\",\n        \"field\": \"message\",\n        \"seal\": \"submit\"\n      }\n    },\n    \"b5s2\": {\n      \"page\": {\n        \"title\": \"lofi hip hop radio - beats to relax/study to - YouTube\",\n        \"path\": \"/watch?v=jfKfPfyJRdk\"\n      }\n    },\n    \"b6s0\": {\n      \"app\": \"notes\",\n      \"title\": \"HCI methods draft - Notes\",\n      \"titles\": [\n        \"HCI methods draft - Notes\",\n        \"HCI methods draft\"\n      ]\n    },\n    \"b6s1\": {\n      \"app\": \"slack\",\n      \"title\": \"#hci-group-project - HCI 6501 - Slack\",\n      \"titles\": [\n        \"#hci-group-project - HCI 6501 - Slack\",\n        \"#hci-group-project - Slack\"\n      ]\n    },\n    \"b6s2\": {\n      \"type\": {\n        \"text\": \"ok methods section is updated with the numbers. can someone double-check the participant section?\",\n        \"title\": \"#hci-group-project - HCI 6501 - Slack\",\n        \"place\": \"#hci-group-project\",\n        \"field\": \"message\",\n        \"seal\": \"submit\"\n      }\n    },\n    \"b7s0\": {\n      \"app\": \"mail\",\n      \"title\": \"Re: Invoice for Open Streets web app - Lila Thompson - Gmail\",\n      \"titles\": [\n        \"Re: Invoice for Open Streets web app - Lila Thompson - Gmail\",\n        \"Inbox - maya.chen@umn.edu - Gmail\"\n      ]\n    },\n    \"b7s1\": {\n      \"type\": {\n        \"text\": \"No problem! Happy to wait for the board. Let me know if they have any questions.\",\n        \"title\": \"Re: Invoice for Open Streets web app - Lila Thompson - Gmail\",\n        \"place\": \"Gmail\",\n        \"field\": \"body\",\n        \"seal\": \"submitChord\"\n      }\n    },\n    \"b7s2\": {\n      \"app\": \"vscode\",\n      \"title\": \"open-streets-app - admin.html - Visual Studio Code\",\n      \"titles\": [\n        \"open-streets-app - admin.html - Visual Studio Code\",\n        \"open-streets-app - Visual Studio Code\"\n      ]\n    },\n    \"b8s0\": {\n      \"page\": {\n        \"title\": \"Firebase Console - Open Streets Collective\",\n        \"path\": \"/project/open-streets-collective/overview\"\n      }\n    },\n    \"b8s1\": {\n      \"app\": \"terminal\",\n      \"title\": \"maya@macbook: ~/open-streets-app - zsh\",\n      \"titles\": [\n        \"maya@macbook: ~/open-streets-app - zsh\",\n        \"maya@macbook — -zsh\"\n      ]\n    },\n    \"b9s0\": {\n      \"app\": \"messages\",\n      \"title\": \"Dad - Messages\",\n      \"titles\": [\n        \"Dad - Messages\",\n        \"Messages\"\n      ]\n    },\n    \"b9s1\": {\n      \"type\": {\n        \"text\": \"Hey! Sorry, been swamped. I did get it. Will call you this weekend!\",\n        \"title\": \"Dad - Messages\",\n        \"place\": \"Dad\",\n        \"field\": \"message\",\n        \"seal\": \"submit\"\n      }\n    },\n    \"b9s2\": {\n      \"page\": {\n        \"title\": \"Personalized Tackle Box - Etsy\",\n        \"path\": \"/listing/123456789/personalized-tackle-box\"\n      }\n    },\n    \"b10s0\": {\n      \"app\": \"slack\",\n      \"title\": \"#hci-group-project - HCI 6501 - Slack\",\n      \"titles\": [\n        \"#hci-group-project - HCI 6501 - Slack\",\n        \"#hci-group-project - Slack\"\n      ]\n    },\n    \"b10s1\": {\n      \"type\": {\n        \"text\": \"Good catch, I'll add the screening criteria sentence now.\",\n        \"title\": \"#hci-group-project - HCI 6501 - Slack\",\n        \"place\": \"#hci-group-project\",\n        \"field\": \"message\",\n        \"seal\": \"submit\"\n      }\n    },\n    \"b10s2\": {\n      \"app\": \"notes\",\n      \"title\": \"HCI methods draft - Notes\",\n      \"titles\": [\n        \"HCI methods draft - Notes\",\n        \"HCI methods draft\"\n      ]\n    },\n    \"b12s0\": {\n      \"app\": \"vscode\",\n      \"title\": \"transcript_04.docx - Visual Studio Code\",\n      \"titles\": [\n        \"transcript_04.docx - Visual Studio Code\",\n        \"transcripts_coding.nvpx - Visual Studio Code\"\n      ]\n    },\n    \"b12s1\": {\n      \"app\": \"terminal\",\n      \"title\": \"maya@macbook: ~/lab/transcripts - zsh\",\n      \"titles\": [\n        \"maya@macbook: ~/lab/transcripts - zsh\",\n        \"maya@macbook — -zsh\"\n      ]\n    },\n    \"b13s0\": {\n      \"app\": \"mail\",\n      \"title\": \"Coding summary - Dr. Tom Okafor - Gmail\",\n      \"titles\": [\n        \"Coding summary - Dr. Tom Okafor - Gmail\",\n        \"Compose - maya.chen@umn.edu - Gmail\"\n      ]\n    },\n    \"b13s1\": {\n      \"type\": {\n        \"text\": \"Hi Dr. Okafor, I've finished coding all 5 transcripts and uploaded the summary to the shared drive. Let me know if you want any changes.\",\n        \"title\": \"Coding summary - Dr. Tom Okafor - Gmail\",\n        \"place\": \"Gmail\",\n        \"field\": \"body\",\n        \"seal\": \"submitChord\"\n      }\n    },\n    \"b13s2\": {\n      \"app\": \"finder\",\n      \"title\": \"Lab Shared Drive - Finder\",\n      \"titles\": [\n        \"Lab Shared Drive - Finder\",\n        \"coding_summary.docx - Finder\"\n      ]\n    },\n    \"b14s0\": {\n      \"app\": \"slack\",\n      \"title\": \"#hci-group-project - HCI 6501 - Slack\",\n      \"titles\": [\n        \"#hci-group-project - HCI 6501 - Slack\",\n        \"#hci-group-project - Slack\"\n      ]\n    },\n    \"b14s1\": {\n      \"type\": {\n        \"text\": \"Yeah, let's do a 15-min call at 4? I have to run an errand before that.\",\n        \"title\": \"#hci-group-project - HCI 6501 - Slack\",\n        \"place\": \"#hci-group-project\",\n        \"field\": \"message\",\n        \"seal\": \"submit\"\n      }\n    },\n    \"b14s2\": {\n      \"page\": {\n        \"title\": \"How do you stop procrastinating? : r/ADHD - Reddit\",\n        \"path\": \"/r/ADHD/comments/xyz123/how_do_you_stop_procrastinating/\"\n      }\n    },\n    \"b15s0\": {\n      \"app\": \"vscode\",\n      \"title\": \"open-streets-app - volunteer_form.css - Visual Studio Code\",\n      \"titles\": [\n        \"open-streets-app - volunteer_form.css - Visual Studio Code\",\n        \"open-streets-app - Visual Studio Code\"\n      ]\n    },\n    \"b15s1\": {\n      \"app\": \"terminal\",\n      \"title\": \"maya@macbook: ~/open-streets-app - zsh\",\n      \"titles\": [\n        \"maya@macbook: ~/open-streets-app - zsh\",\n        \"maya@macbook — -zsh\"\n      ]\n    },\n    \"b16s0\": {\n      \"page\": {\n        \"title\": \"Rate My Professors - INFO 6502\",\n        \"path\": \"/professor/12345\"\n      }\n    },\n    \"b16s1\": {\n      \"app\": \"calendar\",\n      \"title\": \"Calendar - Next semester - Google Calendar\",\n      \"titles\": [\n        \"Calendar - Next semester - Google Calendar\",\n        \"Calendar - Week of May 5 - Google Calendar\"\n      ]\n    },\n    \"b17s0\": {\n      \"app\": \"messages\",\n      \"title\": \"Priya - Messages\",\n      \"titles\": [\n        \"Priya - Messages\",\n        \"Messages\"\n      ]\n    },\n    \"b17s1\": {\n      \"type\": {\n        \"text\": \"Yes! It's supposed to arrive Tuesday. Fingers crossed he likes it.\",\n        \"title\": \"Priya - Messages\",\n        \"place\": \"Priya\",\n        \"field\": \"message\",\n        \"seal\": \"submit\"\n      }\n    },\n    \"b17s2\": {\n      \"app\": \"mail\",\n      \"title\": \"Your Etsy order has shipped! - Etsy - Gmail\",\n      \"titles\": [\n        \"Your Etsy order has shipped! - Etsy - Gmail\",\n        \"Inbox - maya.chen@umn.edu - Gmail\"\n      ]\n    },\n    \"b18s0\": {\n      \"app\": \"zoom\",\n      \"title\": \"HCI Group Sync - Zoom Meeting\",\n      \"titles\": [\n        \"HCI Group Sync - Zoom Meeting\",\n        \"Zoom Meeting\"\n      ]\n    },\n    \"b19s0\": {\n      \"app\": \"notes\",\n      \"title\": \"HCI presentation outline - Notes\",\n      \"titles\": [\n        \"HCI presentation outline - Notes\",\n        \"HCI presentation outline\"\n      ]\n    },\n    \"b19s1\": {\n      \"app\": \"slack\",\n      \"title\": \"#hci-group-project - HCI 6501 - Slack\",\n      \"titles\": [\n        \"#hci-group-project - HCI 6501 - Slack\",\n        \"#hci-group-project - Slack\"\n      ]\n    },\n    \"b19s2\": {\n      \"type\": {\n        \"text\": \"Here's the updated outline. I'll make the slides tonight and share by 9.\",\n        \"title\": \"#hci-group-project - HCI 6501 - Slack\",\n        \"place\": \"#hci-group-project\",\n        \"field\": \"message\",\n        \"seal\": \"submit\"\n      }\n    },\n    \"b20s0\": {\n      \"app\": \"mail\",\n      \"title\": \"Netlify News: New features to try - Netlify - Gmail\",\n      \"titles\": [\n        \"Netlify News: New features to try - Netlify - Gmail\",\n        \"Inbox - maya.chen@umn.edu - Gmail\"\n      ]\n    },\n    \"b20s1\": {\n      \"page\": {\n        \"title\": \"The Sunday Read: 'The Lost Art of Doing Nothing' - The New York Times\",\n        \"path\": \"/2025/05/04/podcasts/the-daily/lost-art-doing-nothing.html\"\n      }\n    },\n    \"b20s2\": {\n      \"app\": \"vscode\",\n      \"title\": \"open-streets-app - admin.html - Visual Studio Code\",\n      \"titles\": [\n        \"open-streets-app - admin.html - Visual Studio Code\",\n        \"open-streets-app - Visual Studio Code\"\n      ]\n    },\n    \"b21s0\": {\n      \"app\": \"notes\",\n      \"title\": \"HCI methods draft - Notes\",\n      \"titles\": [\n        \"HCI methods draft - Notes\",\n        \"HCI methods draft\"\n      ]\n    },\n    \"b21s1\": {\n      \"app\": \"slack\",\n      \"title\": \"#hci-group-project - HCI 6501 - Slack\",\n      \"titles\": [\n        \"#hci-group-project - HCI 6501 - Slack\",\n        \"#hci-group-project - Slack\"\n      ]\n    },\n    \"b21s2\": {\n      \"type\": {\n        \"text\": \"Final methods section is in the doc. Let me know if anything looks off.\",\n        \"title\": \"#hci-group-project - HCI 6501 - Slack\",\n        \"place\": \"#hci-group-project\",\n        \"field\": \"message\",\n        \"seal\": \"submit\"\n      }\n    },\n    \"b22s0\": {\n      \"app\": \"mail\",\n      \"title\": \"Re: Coding summary - Dr. Tom Okafor - Gmail\",\n      \"titles\": [\n        \"Re: Coding summary - Dr. Tom Okafor - Gmail\",\n        \"Inbox - maya.chen@umn.edu - Gmail\"\n      ]\n    },\n    \"b22s1\": {\n      \"app\": \"notion\",\n      \"title\": \"Lab Task Tracker - Notion\",\n      \"titles\": [\n        \"Lab Task Tracker - Notion\",\n        \"Notion - Lab Task Tracker\"\n      ]\n    },\n    \"b23s0\": {\n      \"app\": \"messages\",\n      \"title\": \"Dad - Messages\",\n      \"titles\": [\n        \"Dad - Messages\",\n        \"Messages\"\n      ]\n    },\n    \"b23s1\": {\n      \"type\": {\n        \"text\": \"Love you too! Talk soon.\",\n        \"title\": \"Dad - Messages\",\n        \"place\": \"Dad\",\n        \"field\": \"message\",\n        \"seal\": \"submit\"\n      }\n    },\n    \"b24s0\": {\n      \"page\": {\n        \"title\": \"Is it normal to feel like you're behind? : r/GradSchool - Reddit\",\n        \"path\": \"/r/GradSchool/comments/abc456/is_it_normal_to_feel_like_youre_behind/\"\n      }\n    },\n    \"b24s1\": {\n      \"app\": \"calendar\",\n      \"title\": \"Calendar - Week of May 5 - Google Calendar\",\n      \"titles\": [\n        \"Calendar - Week of May 5 - Google Calendar\",\n        \"Calendar - Next week - Google Calendar\"\n      ]\n    },\n    \"b25s0\": {\n      \"app\": \"keynote\",\n      \"title\": \"HCI Presentation - Keynote\",\n      \"titles\": [\n        \"HCI Presentation - Keynote\",\n        \"HCI Presentation\"\n      ]\n    },\n    \"b26s0\": {\n      \"app\": \"slack\",\n      \"title\": \"#hci-group-project - HCI 6501 - Slack\",\n      \"titles\": [\n        \"#hci-group-project - HCI 6501 - Slack\",\n        \"#hci-group-project - Slack\"\n      ]\n    },\n    \"b26s1\": {\n      \"type\": {\n        \"text\": \"Good idea, I'll add a limitations slide at the end.\",\n        \"title\": \"#hci-group-project - HCI 6501 - Slack\",\n        \"place\": \"#hci-group-project\",\n        \"field\": \"message\",\n        \"seal\": \"submit\"\n      }\n    },\n    \"b26s2\": {\n      \"page\": {\n        \"title\": \"lofi hip hop radio - beats to relax/study to - YouTube\",\n        \"path\": \"/watch?v=jfKfPfyJRdk\"\n      }\n    },\n    \"b27s0\": {\n      \"app\": \"keynote\",\n      \"title\": \"HCI Presentation - Keynote\",\n      \"titles\": [\n        \"HCI Presentation - Keynote\",\n        \"HCI Presentation\"\n      ]\n    },\n    \"b28s0\": {\n      \"app\": \"mail\",\n      \"title\": \"Re: Invoice approved! - Lila Thompson - Gmail\",\n      \"titles\": [\n        \"Re: Invoice approved! - Lila Thompson - Gmail\",\n        \"Inbox - maya.chen@umn.edu - Gmail\"\n      ]\n    },\n    \"b28s1\": {\n      \"type\": {\n        \"text\": \"Amazing, thank you! Let me know if you need anything else.\",\n        \"title\": \"Re: Invoice approved! - Lila Thompson - Gmail\",\n        \"place\": \"Gmail\",\n        \"field\": \"body\",\n        \"seal\": \"submitChord\"\n      }\n    },\n    \"b29s0\": {\n      \"app\": \"slack\",\n      \"title\": \"#hci-group-project - HCI 6501 - Slack\",\n      \"titles\": [\n        \"#hci-group-project - HCI 6501 - Slack\",\n        \"#hci-group-project - Slack\"\n      ]\n    },\n    \"b29s1\": {\n      \"type\": {\n        \"text\": \"Here's the deck. I'll do a final pass tomorrow morning before class.\",\n        \"title\": \"#hci-group-project - HCI 6501 - Slack\",\n        \"place\": \"#hci-group-project\",\n        \"field\": \"message\",\n        \"seal\": \"submit\"\n      }\n    },\n    \"b30s0\": {\n      \"app\": \"spotify\",\n      \"title\": \"Deep Focus - Spotify\",\n      \"titles\": [\n        \"Deep Focus - Spotify\",\n        \"Focus - Spotify\"\n      ]\n    },\n    \"b30s1\": {\n      \"page\": {\n        \"title\": \"How do you stop procrastinating? : r/ADHD - Reddit\",\n        \"path\": \"/r/ADHD/comments/xyz123/how_do_you_stop_procrastinating/\"\n      }\n    }\n  }\n}",
+  "parsed": {
+    "steps": {
+      "b0s0": {
+        "app": "mail",
+        "title": "Inbox (3) - maya.chen@umn.edu - Gmail",
+        "titles": [
+          "Inbox (3) - maya.chen@umn.edu - Gmail",
+          "Inbox - maya.chen@umn.edu - Gmail"
+        ]
+      },
+      "b0s1": {
+        "app": "slack",
+        "title": "#hci-group-project - HCI 6501 - Slack",
+        "titles": [
+          "#hci-group-project - HCI 6501 - Slack",
+          "#hci-group-project - Slack"
+        ]
+      },
+      "b0s2": {
+        "text": "ugh you're right, I still need to plug in the numbers. doing that now.",
+        "title": "#hci-group-project - HCI 6501 - Slack",
+        "place": "#hci-group-project",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b0s3": {
+        "app": "notes",
+        "title": "HCI methods draft - Notes",
+        "titles": [
+          "HCI methods draft - Notes",
+          "HCI methods draft"
+        ]
+      },
+      "b1s0": {
+        "title": "How do you stop procrastinating? : r/ADHD - Reddit",
+        "path": "/r/ADHD/comments/xyz123/how_do_you_stop_procrastinating/"
+      },
+      "b1s1": {
+        "app": "spotify",
+        "title": "lofi hip hop beats - Spotify",
+        "titles": [
+          "lofi hip hop beats - Spotify",
+          "lofi hip hop radio - Spotify"
+        ]
+      },
+      "b1s2": {
+        "app": "notes",
+        "title": "HCI methods draft - Notes",
+        "titles": [
+          "HCI methods draft - Notes",
+          "HCI methods draft"
+        ]
+      },
+      "b2s0": {
+        "app": "mail",
+        "title": "Re: community trust code - Dr. Tom Okafor - Gmail",
+        "titles": [
+          "Re: community trust code - Dr. Tom Okafor - Gmail",
+          "Inbox - maya.chen@umn.edu - Gmail"
+        ]
+      },
+      "b2s1": {
+        "app": "vscode",
+        "title": "transcripts_coding.nvpx - Visual Studio Code",
+        "titles": [
+          "transcripts_coding.nvpx - Visual Studio Code",
+          "transcripts_coding.nvpx — Visual Studio Code"
+        ]
+      },
+      "b2s2": {
+        "text": "community trust = explicit mentions of neighbors relying on each other, not just org trust",
+        "title": "transcripts_coding.nvpx - Visual Studio Code",
+        "place": "transcripts_coding.nvpx",
+        "field": "textArea",
+        "seal": "idle"
+      },
+      "b2s3": {
+        "app": "terminal",
+        "title": "maya@macbook: ~/lab/transcripts - zsh",
+        "titles": [
+          "maya@macbook: ~/lab/transcripts - zsh",
+          "maya@macbook — -zsh"
+        ]
+      },
+      "b3s0": {
+        "app": "vscode",
+        "title": "transcript_03.docx - Visual Studio Code",
+        "titles": [
+          "transcript_03.docx - Visual Studio Code",
+          "transcripts_coding.nvpx - Visual Studio Code"
+        ]
+      },
+      "b3s1": {
+        "app": "notes",
+        "title": "Lab summary notes - Notes",
+        "titles": [
+          "Lab summary notes - Notes",
+          "Lab summary notes"
+        ]
+      },
+      "b4s0": {
+        "app": "calendar",
+        "title": "Calendar - Week of May 5 - Google Calendar",
+        "titles": [
+          "Calendar - Week of May 5 - Google Calendar",
+          "Calendar - Next semester - Google Calendar"
+        ]
+      },
+      "b4s1": {
+        "title": "Registration - University of Minnesota - Canvas",
+        "path": "/courses/registration"
+      },
+      "b4s2": {
+        "text": "Confirm registration for INFO 6502 and drop INFO 6501",
+        "title": "Registration - University of Minnesota - Canvas",
+        "place": "canvas.umn.edu",
+        "field": "oneLine",
+        "seal": "submit"
+      },
+      "b5s0": {
+        "app": "slack",
+        "title": "#hci-group-project - HCI 6501 - Slack",
+        "titles": [
+          "#hci-group-project - HCI 6501 - Slack",
+          "#hci-group-project - Slack"
+        ]
+      },
+      "b5s1": {
+        "text": "working on it! just need to finish the task success rates and then I'll send the doc.",
+        "title": "#hci-group-project - HCI 6501 - Slack",
+        "place": "#hci-group-project",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b5s2": {
+        "title": "lofi hip hop radio - beats to relax/study to - YouTube",
+        "path": "/watch?v=jfKfPfyJRdk"
+      },
+      "b6s0": {
+        "app": "notes",
+        "title": "HCI methods draft - Notes",
+        "titles": [
+          "HCI methods draft - Notes",
+          "HCI methods draft"
+        ]
+      },
+      "b6s1": {
+        "app": "slack",
+        "title": "#hci-group-project - HCI 6501 - Slack",
+        "titles": [
+          "#hci-group-project - HCI 6501 - Slack",
+          "#hci-group-project - Slack"
+        ]
+      },
+      "b6s2": {
+        "text": "ok methods section is updated with the numbers. can someone double-check the participant section?",
+        "title": "#hci-group-project - HCI 6501 - Slack",
+        "place": "#hci-group-project",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b7s0": {
+        "app": "mail",
+        "title": "Re: Invoice for Open Streets web app - Lila Thompson - Gmail",
+        "titles": [
+          "Re: Invoice for Open Streets web app - Lila Thompson - Gmail",
+          "Inbox - maya.chen@umn.edu - Gmail"
+        ]
+      },
+      "b7s1": {
+        "text": "No problem! Happy to wait for the board. Let me know if they have any questions.",
+        "title": "Re: Invoice for Open Streets web app - Lila Thompson - Gmail",
+        "place": "Gmail",
+        "field": "body",
+        "seal": "submitChord"
+      },
+      "b7s2": {
+        "app": "vscode",
+        "title": "open-streets-app - admin.html - Visual Studio Code",
+        "titles": [
+          "open-streets-app - admin.html - Visual Studio Code",
+          "open-streets-app - Visual Studio Code"
+        ]
+      },
+      "b8s0": {
+        "title": "Firebase Console - Open Streets Collective",
+        "path": "/project/open-streets-collective/overview"
+      },
+      "b8s1": {
+        "app": "terminal",
+        "title": "maya@macbook: ~/open-streets-app - zsh",
+        "titles": [
+          "maya@macbook: ~/open-streets-app - zsh",
+          "maya@macbook — -zsh"
+        ]
+      },
+      "b9s0": {
+        "app": "messages",
+        "title": "Dad - Messages",
+        "titles": [
+          "Dad - Messages",
+          "Messages"
+        ]
+      },
+      "b9s1": {
+        "text": "Hey! Sorry, been swamped. I did get it. Will call you this weekend!",
+        "title": "Dad - Messages",
+        "place": "Dad",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b9s2": {
+        "title": "Personalized Tackle Box - Etsy",
+        "path": "/listing/123456789/personalized-tackle-box"
+      },
+      "b10s0": {
+        "app": "slack",
+        "title": "#hci-group-project - HCI 6501 - Slack",
+        "titles": [
+          "#hci-group-project - HCI 6501 - Slack",
+          "#hci-group-project - Slack"
+        ]
+      },
+      "b10s1": {
+        "text": "Good catch, I'll add the screening criteria sentence now.",
+        "title": "#hci-group-project - HCI 6501 - Slack",
+        "place": "#hci-group-project",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b10s2": {
+        "app": "notes",
+        "title": "HCI methods draft - Notes",
+        "titles": [
+          "HCI methods draft - Notes",
+          "HCI methods draft"
+        ]
+      },
+      "b12s0": {
+        "app": "vscode",
+        "title": "transcript_04.docx - Visual Studio Code",
+        "titles": [
+          "transcript_04.docx - Visual Studio Code",
+          "transcripts_coding.nvpx - Visual Studio Code"
+        ]
+      },
+      "b12s1": {
+        "app": "terminal",
+        "title": "maya@macbook: ~/lab/transcripts - zsh",
+        "titles": [
+          "maya@macbook: ~/lab/transcripts - zsh",
+          "maya@macbook — -zsh"
+        ]
+      },
+      "b13s0": {
+        "app": "mail",
+        "title": "Coding summary - Dr. Tom Okafor - Gmail",
+        "titles": [
+          "Coding summary - Dr. Tom Okafor - Gmail",
+          "Compose - maya.chen@umn.edu - Gmail"
+        ]
+      },
+      "b13s1": {
+        "text": "Hi Dr. Okafor, I've finished coding all 5 transcripts and uploaded the summary to the shared drive. Let me know if you want any changes.",
+        "title": "Coding summary - Dr. Tom Okafor - Gmail",
+        "place": "Gmail",
+        "field": "body",
+        "seal": "submitChord"
+      },
+      "b13s2": {
+        "app": "finder",
+        "title": "Lab Shared Drive - Finder",
+        "titles": [
+          "Lab Shared Drive - Finder",
+          "coding_summary.docx - Finder"
+        ]
+      },
+      "b14s0": {
+        "app": "slack",
+        "title": "#hci-group-project - HCI 6501 - Slack",
+        "titles": [
+          "#hci-group-project - HCI 6501 - Slack",
+          "#hci-group-project - Slack"
+        ]
+      },
+      "b14s1": {
+        "text": "Yeah, let's do a 15-min call at 4? I have to run an errand before that.",
+        "title": "#hci-group-project - HCI 6501 - Slack",
+        "place": "#hci-group-project",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b14s2": {
+        "title": "How do you stop procrastinating? : r/ADHD - Reddit",
+        "path": "/r/ADHD/comments/xyz123/how_do_you_stop_procrastinating/"
+      },
+      "b15s0": {
+        "app": "vscode",
+        "title": "open-streets-app - volunteer_form.css - Visual Studio Code",
+        "titles": [
+          "open-streets-app - volunteer_form.css - Visual Studio Code",
+          "open-streets-app - Visual Studio Code"
+        ]
+      },
+      "b15s1": {
+        "app": "terminal",
+        "title": "maya@macbook: ~/open-streets-app - zsh",
+        "titles": [
+          "maya@macbook: ~/open-streets-app - zsh",
+          "maya@macbook — -zsh"
+        ]
+      },
+      "b16s0": {
+        "title": "Rate My Professors - INFO 6502",
+        "path": "/professor/12345"
+      },
+      "b16s1": {
+        "app": "calendar",
+        "title": "Calendar - Next semester - Google Calendar",
+        "titles": [
+          "Calendar - Next semester - Google Calendar",
+          "Calendar - Week of May 5 - Google Calendar"
+        ]
+      },
+      "b17s0": {
+        "app": "messages",
+        "title": "Priya - Messages",
+        "titles": [
+          "Priya - Messages",
+          "Messages"
+        ]
+      },
+      "b17s1": {
+        "text": "Yes! It's supposed to arrive Tuesday. Fingers crossed he likes it.",
+        "title": "Priya - Messages",
+        "place": "Priya",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b17s2": {
+        "app": "mail",
+        "title": "Your Etsy order has shipped! - Etsy - Gmail",
+        "titles": [
+          "Your Etsy order has shipped! - Etsy - Gmail",
+          "Inbox - maya.chen@umn.edu - Gmail"
+        ]
+      },
+      "b18s0": {
+        "app": "zoom",
+        "title": "HCI Group Sync - Zoom Meeting",
+        "titles": [
+          "HCI Group Sync - Zoom Meeting",
+          "Zoom Meeting"
+        ]
+      },
+      "b19s0": {
+        "app": "notes",
+        "title": "HCI presentation outline - Notes",
+        "titles": [
+          "HCI presentation outline - Notes",
+          "HCI presentation outline"
+        ]
+      },
+      "b19s1": {
+        "app": "slack",
+        "title": "#hci-group-project - HCI 6501 - Slack",
+        "titles": [
+          "#hci-group-project - HCI 6501 - Slack",
+          "#hci-group-project - Slack"
+        ]
+      },
+      "b19s2": {
+        "text": "Here's the updated outline. I'll make the slides tonight and share by 9.",
+        "title": "#hci-group-project - HCI 6501 - Slack",
+        "place": "#hci-group-project",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b20s0": {
+        "app": "mail",
+        "title": "Netlify News: New features to try - Netlify - Gmail",
+        "titles": [
+          "Netlify News: New features to try - Netlify - Gmail",
+          "Inbox - maya.chen@umn.edu - Gmail"
+        ]
+      },
+      "b20s1": {
+        "title": "The Sunday Read: 'The Lost Art of Doing Nothing' - The New York Times",
+        "path": "/2025/05/04/podcasts/the-daily/lost-art-doing-nothing.html"
+      },
+      "b20s2": {
+        "app": "vscode",
+        "title": "open-streets-app - admin.html - Visual Studio Code",
+        "titles": [
+          "open-streets-app - admin.html - Visual Studio Code",
+          "open-streets-app - Visual Studio Code"
+        ]
+      },
+      "b21s0": {
+        "app": "notes",
+        "title": "HCI methods draft - Notes",
+        "titles": [
+          "HCI methods draft - Notes",
+          "HCI methods draft"
+        ]
+      },
+      "b21s1": {
+        "app": "slack",
+        "title": "#hci-group-project - HCI 6501 - Slack",
+        "titles": [
+          "#hci-group-project - HCI 6501 - Slack",
+          "#hci-group-project - Slack"
+        ]
+      },
+      "b21s2": {
+        "text": "Final methods section is in the doc. Let me know if anything looks off.",
+        "title": "#hci-group-project - HCI 6501 - Slack",
+        "place": "#hci-group-project",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b22s0": {
+        "app": "mail",
+        "title": "Re: Coding summary - Dr. Tom Okafor - Gmail",
+        "titles": [
+          "Re: Coding summary - Dr. Tom Okafor - Gmail",
+          "Inbox - maya.chen@umn.edu - Gmail"
+        ]
+      },
+      "b22s1": {
+        "app": "notion",
+        "title": "Lab Task Tracker - Notion",
+        "titles": [
+          "Lab Task Tracker - Notion",
+          "Notion - Lab Task Tracker"
+        ]
+      },
+      "b23s0": {
+        "app": "messages",
+        "title": "Dad - Messages",
+        "titles": [
+          "Dad - Messages",
+          "Messages"
+        ]
+      },
+      "b23s1": {
+        "text": "Love you too! Talk soon.",
+        "title": "Dad - Messages",
+        "place": "Dad",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b24s0": {
+        "title": "Is it normal to feel like you're behind? : r/GradSchool - Reddit",
+        "path": "/r/GradSchool/comments/abc456/is_it_normal_to_feel_like_youre_behind/"
+      },
+      "b24s1": {
+        "app": "calendar",
+        "title": "Calendar - Week of May 5 - Google Calendar",
+        "titles": [
+          "Calendar - Week of May 5 - Google Calendar",
+          "Calendar - Next week - Google Calendar"
+        ]
+      },
+      "b25s0": {
+        "app": "keynote",
+        "title": "HCI Presentation - Keynote",
+        "titles": [
+          "HCI Presentation - Keynote",
+          "HCI Presentation"
+        ]
+      },
+      "b26s0": {
+        "app": "slack",
+        "title": "#hci-group-project - HCI 6501 - Slack",
+        "titles": [
+          "#hci-group-project - HCI 6501 - Slack",
+          "#hci-group-project - Slack"
+        ]
+      },
+      "b26s1": {
+        "text": "Good idea, I'll add a limitations slide at the end.",
+        "title": "#hci-group-project - HCI 6501 - Slack",
+        "place": "#hci-group-project",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b26s2": {
+        "title": "lofi hip hop radio - beats to relax/study to - YouTube",
+        "path": "/watch?v=jfKfPfyJRdk"
+      },
+      "b27s0": {
+        "app": "keynote",
+        "title": "HCI Presentation - Keynote",
+        "titles": [
+          "HCI Presentation - Keynote",
+          "HCI Presentation"
+        ]
+      },
+      "b28s0": {
+        "app": "mail",
+        "title": "Re: Invoice approved! - Lila Thompson - Gmail",
+        "titles": [
+          "Re: Invoice approved! - Lila Thompson - Gmail",
+          "Inbox - maya.chen@umn.edu - Gmail"
+        ]
+      },
+      "b28s1": {
+        "text": "Amazing, thank you! Let me know if you need anything else.",
+        "title": "Re: Invoice approved! - Lila Thompson - Gmail",
+        "place": "Gmail",
+        "field": "body",
+        "seal": "submitChord"
+      },
+      "b29s0": {
+        "app": "slack",
+        "title": "#hci-group-project - HCI 6501 - Slack",
+        "titles": [
+          "#hci-group-project - HCI 6501 - Slack",
+          "#hci-group-project - Slack"
+        ]
+      },
+      "b29s1": {
+        "text": "Here's the deck. I'll do a final pass tomorrow morning before class.",
+        "title": "#hci-group-project - HCI 6501 - Slack",
+        "place": "#hci-group-project",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b30s0": {
+        "app": "spotify",
+        "title": "Deep Focus - Spotify",
+        "titles": [
+          "Deep Focus - Spotify",
+          "Focus - Spotify"
+        ]
+      },
+      "b30s1": {
+        "title": "How do you stop procrastinating? : r/ADHD - Reddit",
+        "path": "/r/ADHD/comments/xyz123/how_do_you_stop_procrastinating/"
+      }
+    }
+  }
+}

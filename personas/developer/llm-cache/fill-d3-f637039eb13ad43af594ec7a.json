@@ -1,0 +1,368 @@
+{
+  "step": "fill-d3",
+  "model": "deepseek/deepseek-v4-flash-0731",
+  "requested_model": "deepseek/deepseek-v4-flash-0731",
+  "base_url": "<local OpenRouter proxy>",
+  "temperature": 0.7,
+  "seconds": 48.96,
+  "usage": {
+    "prompt_tokens": 5771,
+    "completion_tokens": 3289,
+    "total_tokens": 9060,
+    "cost": 0.00172886,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00172886,
+      "upstream_inference_prompt_cost": 0.00080794,
+      "upstream_inference_completions_cost": 0.00092092
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "attempt": 2,
+  "system": "You generate realistic synthetic test data for a research benchmark about personal memory. Everything you write is fiction: invent every person, company, client and product name (never use real people you know of, and avoid famous companies as employers). Write like real life, not like a tidy diary: people get interrupted, leave things half done, revisit things, procrastinate, and type casually. Reply with JSON only.",
+  "user": "Person: {\"name\": \"Maya Chen\", \"role\": \"Senior Software Engineer\", \"company\": \"Lumenary Systems\", \"summary\": \"Backend-focused developer on the integrations team, currently migrating a legacy event pipeline to Kafka. She works from home in Austin, uses a MacBook Pro, and tends to start late after a slow morning.\", \"workday\": {\"start\": \"09:45\", \"end\": \"18:30\", \"lunch\": \"13:00\"}}\nPeople: [{\"key\": \"dana\", \"name\": \"Dana Whitfield\", \"role\": \"Engineering Manager\", \"channel\": \"slack\"}, {\"key\": \"priya\", \"name\": \"Priya Raghavan\", \"role\": \"Staff Engineer, Integrations\", \"channel\": \"slack\"}, {\"key\": \"marcus\", \"name\": \"Marcus Bell\", \"role\": \"Product Manager\", \"channel\": \"slack\"}, {\"key\": \"tom\", \"name\": \"Tom Okafor\", \"role\": \"DevOps Engineer\", \"channel\": \"slack\"}, {\"key\": \"jules\", \"name\": \"Jules Fontaine\", \"role\": \"Data Analyst (client side)\", \"channel\": \"email\"}, {\"key\": \"lena\", \"name\": \"Lena Park\", \"role\": \"Friend from college\", \"channel\": \"messages\"}, {\"key\": \"grandma\", \"name\": \"Grandma Ruth\", \"role\": \"Family\", \"channel\": \"messages\"}]\nDay 3 plan: {\"blocks\": [{\"start\": \"09:48\", \"thread\": \"kafka_migration\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"Check #integrations for overnight messages about the new bridge\", \"min\": 4}, {\"do\": \"app\", \"app\": \"terminal\", \"about\": \"Check kubectl pods for event-bridge and consumer lag via grafana\", \"min\": 8}, {\"do\": \"page\", \"host\": \"grafana.example.com\", \"about\": \"Consumer lag dashboard for order-sync-prod-v2\", \"min\": 6}, {\"do\": \"app\", \"app\": \"slack\", \"about\": \"Reply to Tom's question about the bridge deploy\", \"min\": 3}]}, {\"start\": \"10:12\", \"thread\": \"invoice_question\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"mail\", \"about\": \"Inbox: Jules's follow-up about schema change\", \"min\": 3}, {\"do\": \"app\", \"app\": \"notes\", \"about\": \"Jot down schema change request for backlog\", \"min\": 2}, {\"do\": \"type\", \"where\": \"mail\", \"intent\": \"Reply to Jules saying the schema change is logged and will be picked up next sprint\", \"sent\": true, \"to\": \"Jules Fontaine\"}]}, {\"start\": \"10:22\", \"thread\": \"consumer_group\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"Check #integrations thread on consumer group naming vote results\", \"min\": 3}, {\"do\": \"page\", \"host\": \"docs.google.com\", \"about\": \"Consumer Group Naming comparison doc - add final decision note\", \"min\": 5}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Post in #integrations that the doc is updated and the runbook will reflect the convention\", \"sent\": true, \"to\": \"Priya Raghavan\"}]}, {\"start\": \"10:38\", \"thread\": \"side_project\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"vscode\", \"about\": \"recipe_scraper repo - look at image download code\", \"min\": 10}, {\"do\": \"search\", \"about\": \"python requests download image with cookies\"}, {\"do\": \"app\", \"app\": \"chatgpt\", \"about\": \"Ask how to pass session cookies to requests for image download\", \"min\": 5}, {\"do\": \"app\", \"app\": \"vscode\", \"about\": \"Try a quick fix in scraper.py but leave it broken\", \"min\": 7}]}, {\"start\": \"11:08\", \"thread\": \"weekend_plans\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"messages\", \"about\": \"Text thread with Lena about Saturday itinerary\", \"min\": 4}, {\"do\": \"type\", \"where\": \"messages\", \"intent\": \"Send Lena the wildflower farm address and ask if 10am works\", \"sent\": true, \"to\": \"Lena Park\"}, {\"do\": \"app\", \"app\": \"messages\", \"about\": \"Text Grandma Ruth to confirm pickup time\", \"min\": 3}, {\"do\": \"type\", \"where\": \"messages\", \"intent\": \"Tell Grandma we'll pick her up at 9:15 on Saturday\", \"sent\": true, \"to\": \"Grandma Ruth\"}]}, {\"start\": \"11:24\", \"thread\": \"kafka_migration\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"terminal\", \"about\": \"Run migration script against staging again to verify offset reset\", \"min\": 12}, {\"do\": \"page\", \"host\": \"grafana.example.com\", \"about\": \"Check consumer lag after staging run\", \"min\": 5}, {\"do\": \"app\", \"app\": \"slack\", \"about\": \"Message Tom about staging results\", \"min\": 3}]}, {\"start\": \"11:52\", \"thread\": \"consumer_group\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"See Marcus's message about version suffix - read but don't reply\", \"min\": 2}, {\"do\": \"app\", \"app\": \"notion\", \"about\": \"Open runbook draft to update consumer group naming section\", \"min\": 6}]}, {\"start\": \"12:08\", \"thread\": \"side_project\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"spotify\", \"about\": \"Put on lo-fi playlist while working\", \"min\": 1}, {\"do\": \"app\", \"app\": \"vscode\", \"about\": \"Stare at scraper.py, try a different cookie approach\", \"min\": 8}, {\"do\": \"app\", \"app\": \"terminal\", \"about\": \"Run scraper on one test URL - still fails on image download\", \"min\": 4}]}, {\"start\": \"12:25\", \"thread\": \"weekend_plans\", \"noise\": false, \"steps\": [{\"do\": \"page\", \"about\": \"Check cabin reservation details for checkout time\", \"min\": 3, \"host\": \"airbnb.com\"}, {\"do\": \"page\", \"host\": \"airbnb.com\", \"about\": \"Cabin in Fredericksburg, TX - reservation #HB-88231\", \"min\": 4}, {\"do\": \"app\", \"app\": \"messages\", \"about\": \"Send Lena the checkout time so they can plan Sunday\", \"min\": 2}]}, {\"start\": \"12:40\", \"thread\": \"kafka_migration\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"Dana asks for a quick status update on the migration\", \"min\": 2}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Reply to Dana that the bridge is stable and the runbook is being updated\", \"sent\": true, \"to\": \"Dana Whitfield\"}]}, {\"start\": \"12:52\", \"thread\": \"invoice_question\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"mail\", \"about\": \"See Jules's reply - skim it, don't respond yet\", \"min\": 2}, {\"do\": \"app\", \"app\": \"calendar\", \"about\": \"Check afternoon meetings\", \"min\": 1}]}, {\"start\": \"13:00\", \"thread\": \"kafka_migration\", \"noise\": false, \"steps\": [{\"do\": \"idle\", \"min\": 45, \"about\": \"Lunch - walk to the kitchen, eat leftover stir-fry, scroll phone\"}]}, {\"start\": \"13:48\", \"thread\": \"kafka_migration\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"Check #incidents - someone mentions a prod alert, not related\", \"min\": 3}, {\"do\": \"app\", \"app\": \"terminal\", \"about\": \"Check bridge logs for any errors since deploy\", \"min\": 6}, {\"do\": \"page\", \"host\": \"grafana.example.com\", \"about\": \"Look at throughput and error rate for event-bridge\", \"min\": 5}]}, {\"start\": \"14:08\", \"thread\": \"consumer_group\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"notion\", \"about\": \"Finish updating runbook with consumer group naming convention\", \"min\": 10}, {\"do\": \"type\", \"where\": \"notion\", \"intent\": \"Add order-sync-prod-v2 convention to the runbook and save\", \"sent\": true, \"to\": \"\"}]}, {\"start\": \"14:28\", \"thread\": \"side_project\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"vscode\", \"about\": \"Try one more thing for image download - use session object\", \"min\": 8}, {\"do\": \"app\", \"app\": \"terminal\", \"about\": \"Test scraper again - images still fail, give up for now\", \"min\": 3}, {\"do\": \"page\", \"about\": \"Open private repo to see if there are any old commits with image code\", \"min\": 4, \"host\": \"github.com\"}]}, {\"start\": \"14:52\", \"thread\": \"weekend_plans\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"messages\", \"about\": \"Lena asks about dinner reservation on Saturday\", \"min\": 2}, {\"do\": \"type\", \"where\": \"messages\", \"intent\": \"Suggest a BBQ place in Fredericksburg and say she'll book it\", \"sent\": true, \"to\": \"Lena Park\"}, {\"do\": \"app\", \"app\": \"calendar\", \"about\": \"Add Saturday itinerary to calendar\", \"min\": 3}]}, {\"start\": \"15:08\", \"thread\": \"kafka_migration\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"zoom\", \"about\": \"Quick sync with Tom about bridge deploy and monitoring\", \"min\": 20}]}, {\"start\": \"15:32\", \"thread\": \"invoice_question\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"mail\", \"about\": \"Reply to Jules's schema change question with a rough timeline\", \"min\": 4}, {\"do\": \"type\", \"where\": \"mail\", \"intent\": \"Tell Jules the schema change is in the backlog and likely next sprint\", \"sent\": true, \"to\": \"Jules Fontaine\"}]}, {\"start\": \"15:45\", \"thread\": \"consumer_group\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"See Priya's comment on the naming doc - read and acknowledge\", \"min\": 3}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Reply to Priya agreeing with her point about environment prefixes\", \"sent\": true, \"to\": \"Priya Raghavan\"}]}, {\"start\": \"16:02\", \"thread\": \"side_project\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"chatgpt\", \"about\": \"Ask about Cloudflare image download workaround\", \"min\": 6}, {\"do\": \"app\", \"app\": \"vscode\", \"about\": \"Implement a quick Playwright-based image download attempt\", \"min\": 10}, {\"do\": \"app\", \"app\": \"terminal\", \"about\": \"Run scraper on one URL - image downloads work now, but slow\", \"min\": 5}]}, {\"start\": \"16:32\", \"thread\": \"weekend_plans\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"messages\", \"about\": \"Grandma texts back about the wildflower farm\", \"min\": 2}, {\"do\": \"type\", \"where\": \"messages\", \"intent\": \"Reply to Grandma confirming the farm stop and saying we're excited\", \"sent\": true, \"to\": \"Grandma Ruth\"}]}, {\"start\": \"16:45\", \"thread\": \"kafka_migration\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"terminal\", \"about\": \"Check final consumer lag numbers for the day\", \"min\": 5}, {\"do\": \"page\", \"host\": \"grafana.example.com\", \"about\": \"Verify lag is near zero and stable\", \"min\": 4}, {\"do\": \"app\", \"app\": \"slack\", \"about\": \"Post a brief update in #integrations about the migration status\", \"min\": 3}]}, {\"start\": \"17:05\", \"thread\": \"consumer_group\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"notion\", \"about\": \"Re-read runbook section on consumer groups - notice a typo\", \"min\": 3}, {\"do\": \"app\", \"app\": \"notion\", \"about\": \"Fix typo and save\", \"min\": 2}]}, {\"start\": \"17:18\", \"thread\": \"side_project\", \"noise\": true, \"steps\": [{\"do\": \"page\", \"about\": \"Commit the Playwright image fix to private repo\", \"min\": 5, \"host\": \"github.com\"}, {\"do\": \"type\", \"where\": \"web:github.com\", \"intent\": \"Commit message: 'fix image download with playwright session'\", \"sent\": true, \"to\": \"\"}]}, {\"start\": \"17:35\", \"thread\": \"weekend_plans\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"messages\", \"about\": \"Lena sends the dinner reservation confirmation\", \"min\": 2}, {\"do\": \"type\", \"where\": \"messages\", \"intent\": \"Reply to Lena with a thumbs up and say she'll bring the camera\", \"sent\": true, \"to\": \"Lena Park\"}]}, {\"start\": \"17:48\", \"thread\": \"invoice_question\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"mail\", \"about\": \"See a new email from Jules - leave it unread for tomorrow\", \"min\": 1}]}, {\"start\": \"18:02\", \"thread\": \"kafka_migration\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"Dana asks if the runbook is ready for review\", \"min\": 2}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Tell Dana the runbook is updated and she can review it\", \"sent\": true, \"to\": \"Dana Whitfield\"}]}, {\"start\": \"18:15\", \"thread\": \"side_project\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"spotify\", \"about\": \"Switch to a different playlist\", \"min\": 1}, {\"do\": \"app\", \"app\": \"vscode\", \"about\": \"Look at scraper output for a few test URLs - mostly working\", \"min\": 6}]}, {\"start\": \"18:30\", \"thread\": \"weekend_plans\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"messages\", \"about\": \"Check if Grandma needs anything else for Saturday\", \"min\": 2}, {\"do\": \"type\", \"where\": \"messages\", \"intent\": \"Ask Grandma if she wants to bring anything to the cabin\", \"sent\": true, \"to\": \"Grandma Ruth\"}]}, {\"start\": \"18:42\", \"thread\": \"kafka_migration\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"Skim #random for a few minutes before logging off\", \"min\": 3}, {\"do\": \"app\", \"app\": \"calendar\", \"about\": \"Look at tomorrow's meetings\", \"min\": 2}]}], \"summary\": \"Thursday was a steady day: Maya verified the Kafka bridge was stable in prod, updated the runbook with the consumer group naming convention, and replied to Jules about the schema change. She also made a real breakthrough on the recipe scraper by getting image downloads working with Playwright, and finalized the Fredericksburg itinerary with Lena and Grandma Ruth.\"}\n\nFill in exact content as JSON {\"steps\": {\"b<block>s<step>\": {...}}} for every app/page/search/type step:\n- app: {\"title\": exact macOS window title, e.g. \"budget_v3.xlsx\", \"retry_worker.go — fern-api\", \"#design (Channel) - Acme - Slack\",\n         \"titles\": optional list of window titles they rotate through}\n- page: {\"title\": the tab title exactly as the site shows it (\"... - Google Docs\", \"... - YouTube\", Gmail: the email subject,\n         \"Inbox\" for the inbox), \"path\": a plausible URL path}\n- search: {\"query\": the words typed into Google}\n- type: {\"text\": the exact words typed (casual where casual, typos allowed in chats), \"title\": window title for apps,\n         \"place\": the page/subject it was typed in for web:<host>, \"field\": \"message\"|\"body\"|\"textArea\"|\"oneLine\",\n         \"seal\": \"submit\" (Return/send) | \"idle\" (stopped typing) | \"submitChord\" (Cmd-Return in email)}\nKeep identifiers and numbers consistent with the thread arcs and earlier days.\nReturn exactly these keys (block and step numbers start at 0), each a flat object with the fields above:\nb0s0: app slack: Check #integrations for overnight messages about the new bridge\nb0s1: app terminal: Check kubectl pods for event-bridge and consumer lag via grafana\nb0s2: page grafana.example.com: Consumer lag dashboard for order-sync-prod-v2\nb0s3: app slack: Reply to Tom's question about the bridge deploy\nb1s0: app mail: Inbox: Jules's follow-up about schema change\nb1s1: app notes: Jot down schema change request for backlog\nb1s2: type in mail: Reply to Jules saying the schema change is logged and will be picked up next sprint\nb2s0: app slack: Check #integrations thread on consumer group naming vote results\nb2s1: page docs.google.com: Consumer Group Naming comparison doc - add final decision note\nb2s2: type in slack: Post in #integrations that the doc is updated and the runbook will reflect the convention\nb3s0: app vscode: recipe_scraper repo - look at image download code\nb3s1: search google: python requests download image with cookies\nb3s2: app chatgpt: Ask how to pass session cookies to requests for image download\nb3s3: app vscode: Try a quick fix in scraper.py but leave it broken\nb4s0: app messages: Text thread with Lena about Saturday itinerary\nb4s1: type in messages: Send Lena the wildflower farm address and ask if 10am works\nb4s2: app messages: Text Grandma Ruth to confirm pickup time\nb4s3: type in messages: Tell Grandma we'll pick her up at 9:15 on Saturday\nb5s0: app terminal: Run migration script against staging again to verify offset reset\nb5s1: page grafana.example.com: Check consumer lag after staging run\nb5s2: app slack: Message Tom about staging results\nb6s0: app slack: See Marcus's message about version suffix - read but don't reply\nb6s1: app notion: Open runbook draft to update consumer group naming section\nb7s0: app spotify: Put on lo-fi playlist while working\nb7s1: app vscode: Stare at scraper.py, try a different cookie approach\nb7s2: app terminal: Run scraper on one test URL - still fails on image download\nb8s0: page airbnb.com: Check cabin reservation details for checkout time\nb8s1: page airbnb.com: Cabin in Fredericksburg, TX - reservation #HB-88231\nb8s2: app messages: Send Lena the checkout time so they can plan Sunday\nb9s0: app slack: Dana asks for a quick status update on the migration\nb9s1: type in slack: Reply to Dana that the bridge is stable and the runbook is being updated\nb10s0: app mail: See Jules's reply - skim it, don't respond yet\nb10s1: app calendar: Check afternoon meetings\nb12s0: app slack: Check #incidents - someone mentions a prod alert, not related\nb12s1: app terminal: Check bridge logs for any errors since deploy\nb12s2: page grafana.example.com: Look at throughput and error rate for event-bridge\nb13s0: app notion: Finish updating runbook with consumer group naming convention\nb13s1: type in notion: Add order-sync-prod-v2 convention to the runbook and save\nb14s0: app vscode: Try one more thing for image download - use session object\nb14s1: app terminal: Test scraper again - images still fail, give up for now\nb14s2: page github.com: Open private repo to see if there are any old commits with image code\nb15s0: app messages: Lena asks about dinner reservation on Saturday\nb15s1: type in messages: Suggest a BBQ place in Fredericksburg and say she'll book it\nb15s2: app calendar: Add Saturday itinerary to calendar\nb16s0: app zoom: Quick sync with Tom about bridge deploy and monitoring\nb17s0: app mail: Reply to Jules's schema change question with a rough timeline\nb17s1: type in mail: Tell Jules the schema change is in the backlog and likely next sprint\nb18s0: app slack: See Priya's comment on the naming doc - read and acknowledge\nb18s1: type in slack: Reply to Priya agreeing with her point about environment prefixes\nb19s0: app chatgpt: Ask about Cloudflare image download workaround\nb19s1: app vscode: Implement a quick Playwright-based image download attempt\nb19s2: app terminal: Run scraper on one URL - image downloads work now, but slow\nb20s0: app messages: Grandma texts back about the wildflower farm\nb20s1: type in messages: Reply to Grandma confirming the farm stop and saying we're excited\nb21s0: app terminal: Check final consumer lag numbers for the day\nb21s1: page grafana.example.com: Verify lag is near zero and stable\nb21s2: app slack: Post a brief update in #integrations about the migration status\nb22s0: app notion: Re-read runbook section on consumer groups - notice a typo\nb22s1: app notion: Fix typo and save\nb23s0: page github.com: Commit the Playwright image fix to private repo\nb23s1: type in web:github.com: Commit message: 'fix image download with playwright session'\nb24s0: app messages: Lena sends the dinner reservation confirmation\nb24s1: type in messages: Reply to Lena with a thumbs up and say she'll bring the camera\nb25s0: app mail: See a new email from Jules - leave it unread for tomorrow\nb26s0: app slack: Dana asks if the runbook is ready for review\nb26s1: type in slack: Tell Dana the runbook is updated and she can review it\nb27s0: app spotify: Switch to a different playlist\nb27s1: app vscode: Look at scraper output for a few test URLs - mostly working\nb28s0: app messages: Check if Grandma needs anything else for Saturday\nb28s1: type in messages: Ask Grandma if she wants to bring anything to the cabin\nb29s0: app slack: Skim #random for a few minutes before logging off\nb29s1: app calendar: Look at tomorrow's meetings\n\nYour previous reply had these problems; fix them and reply with the full JSON again:\n- steps.b2s1: Google Docs titles end with ' - Google Docs'",
+  "raw": "{\n  \"steps\": {\n    \"b0s0\": {\n      \"app\": \"slack\",\n      \"title\": \"#integrations - Lumenary Systems - Slack\"\n    },\n    \"b0s1\": {\n      \"app\": \"terminal\",\n      \"title\": \"maya@mbp — kubectl get pods -n event-bridge\"\n    },\n    \"b0s2\": {\n      \"page\": {\n        \"title\": \"Consumer Lag — order-sync-prod-v2 — Grafana\",\n        \"path\": \"/d/consumer-lag/order-sync-prod-v2\"\n      }\n    },\n    \"b0s3\": {\n      \"app\": \"slack\",\n      \"title\": \"#integrations - Lumenary Systems - Slack\"\n    },\n    \"b1s0\": {\n      \"app\": \"mail\",\n      \"title\": \"Inbox (12) - maya.chen@lumenary.com - Gmail\"\n    },\n    \"b1s1\": {\n      \"app\": \"notes\",\n      \"title\": \"Backlog - schema changes\"\n    },\n    \"b1s2\": {\n      \"type\": {\n        \"text\": \"Hi Jules,\\n\\nThanks for the follow-up. I've logged the schema change in our backlog and we'll pick it up next sprint. I'll keep you posted once we have a timeline.\\n\\nBest,\\nMaya\",\n        \"title\": \"Re: Schema change for order-sync payload\",\n        \"place\": \"Gmail - Compose\",\n        \"field\": \"textArea\",\n        \"seal\": \"submitChord\"\n      }\n    },\n    \"b2s0\": {\n      \"app\": \"slack\",\n      \"title\": \"#integrations - Lumenary Systems - Slack\"\n    },\n    \"b2s1\": {\n      \"page\": {\n        \"title\": \"Consumer Group Naming Comparison - Google Docs\",\n        \"path\": \"/document/d/1xYzConsumerGroupNaming/edit\"\n      }\n    },\n    \"b2s2\": {\n      \"type\": {\n        \"text\": \"Doc updated with the final decision — we're going with <service>-<env>-v<n> (e.g. order-sync-prod-v2). Runbook will reflect the convention shortly.\",\n        \"title\": \"#integrations - Lumenary Systems - Slack\",\n        \"place\": \"#integrations\",\n        \"field\": \"message\",\n        \"seal\": \"submit\"\n      }\n    },\n    \"b3s0\": {\n      \"app\": \"vscode\",\n      \"title\": \"scraper.py — recipe_scraper — Visual Studio Code\"\n    },\n    \"b3s1\": {\n      \"search\": {\n        \"query\": \"python requests download image with cookies\"\n      }\n    },\n    \"b3s2\": {\n      \"app\": \"chatgpt\",\n      \"title\": \"ChatGPT — how to pass session cookies to requests for image download\"\n    },\n    \"b3s3\": {\n      \"app\": \"vscode\",\n      \"title\": \"scraper.py — recipe_scraper — Visual Studio Code\"\n    },\n    \"b4s0\": {\n      \"app\": \"messages\",\n      \"title\": \"Lena — Messages\"\n    },\n    \"b4s1\": {\n      \"type\": {\n        \"text\": \"Wildflower farm is at 123 Bluebonnet Ln, Fredericksburg. Does 10am work?\",\n        \"title\": \"Lena — Messages\",\n        \"place\": \"Lena\",\n        \"field\": \"message\",\n        \"seal\": \"submit\"\n      }\n    },\n    \"b4s2\": {\n      \"app\": \"messages\",\n      \"title\": \"Grandma Ruth — Messages\"\n    },\n    \"b4s3\": {\n      \"type\": {\n        \"text\": \"We'll pick you up at 9:15 on Saturday!\",\n        \"title\": \"Grandma Ruth — Messages\",\n        \"place\": \"Grandma Ruth\",\n        \"field\": \"message\",\n        \"seal\": \"submit\"\n      }\n    },\n    \"b5s0\": {\n      \"app\": \"terminal\",\n      \"title\": \"maya@mbp — ./migrate_offsets.py --env staging\"\n    },\n    \"b5s1\": {\n      \"page\": {\n        \"title\": \"Consumer Lag — staging — Grafana\",\n        \"path\": \"/d/consumer-lag/staging\"\n      }\n    },\n    \"b5s2\": {\n      \"app\": \"slack\",\n      \"title\": \"Tom Okafor - Direct Message - Slack\"\n    },\n    \"b6s0\": {\n      \"app\": \"slack\",\n      \"title\": \"#integrations - Lumenary Systems - Slack\"\n    },\n    \"b6s1\": {\n      \"app\": \"notion\",\n      \"title\": \"Runbook: Event Bridge Migration — Notion\"\n    },\n    \"b7s0\": {\n      \"app\": \"spotify\",\n      \"title\": \"lofi hip hop beats - Spotify\"\n    },\n    \"b7s1\": {\n      \"app\": \"vscode\",\n      \"title\": \"scraper.py — recipe_scraper — Visual Studio Code\"\n    },\n    \"b7s2\": {\n      \"app\": \"terminal\",\n      \"title\": \"maya@mbp — python scraper.py --url https://example-recipe.com/test\"\n    },\n    \"b8s0\": {\n      \"page\": {\n        \"title\": \"Reservation details - Airbnb\",\n        \"path\": \"/reservations/details/HB-88231\"\n      }\n    },\n    \"b8s1\": {\n      \"page\": {\n        \"title\": \"Cabin in Fredericksburg, TX - Airbnb\",\n        \"path\": \"/rooms/12345678\"\n      }\n    },\n    \"b8s2\": {\n      \"app\": \"messages\",\n      \"title\": \"Lena — Messages\"\n    },\n    \"b9s0\": {\n      \"app\": \"slack\",\n      \"title\": \"Dana Whitfield - Direct Message - Slack\"\n    },\n    \"b9s1\": {\n      \"type\": {\n        \"text\": \"Bridge is stable, lag is near zero. Runbook is being updated now, should be ready for review later today.\",\n        \"title\": \"Dana Whitfield - Direct Message - Slack\",\n        \"place\": \"Dana Whitfield DM\",\n        \"field\": \"message\",\n        \"seal\": \"submit\"\n      }\n    },\n    \"b10s0\": {\n      \"app\": \"mail\",\n      \"title\": \"Re: Schema change for order-sync payload - maya.chen@lumenary.com - Gmail\"\n    },\n    \"b10s1\": {\n      \"app\": \"calendar\",\n      \"title\": \"Thursday, June 12 - Google Calendar\"\n    },\n    \"b12s0\": {\n      \"app\": \"slack\",\n      \"title\": \"#incidents - Lumenary Systems - Slack\"\n    },\n    \"b12s1\": {\n      \"app\": \"terminal\",\n      \"title\": \"maya@mbp — kubectl logs -n event-bridge deploy/event-bridge --tail=50\"\n    },\n    \"b12s2\": {\n      \"page\": {\n        \"title\": \"Event Bridge — Throughput & Errors — Grafana\",\n        \"path\": \"/d/event-bridge/throughput-errors\"\n      }\n    },\n    \"b13s0\": {\n      \"app\": \"notion\",\n      \"title\": \"Runbook: Event Bridge Migration — Notion\"\n    },\n    \"b13s1\": {\n      \"type\": {\n        \"text\": \"Consumer group naming convention: <service>-<env>-v<n>. Example: order-sync-prod-v2.\",\n        \"title\": \"Runbook: Event Bridge Migration — Notion\",\n        \"place\": \"Runbook: Event Bridge Migration\",\n        \"field\": \"textArea\",\n        \"seal\": \"submit\"\n      }\n    },\n    \"b14s0\": {\n      \"app\": \"vscode\",\n      \"title\": \"scraper.py — recipe_scraper — Visual Studio Code\"\n    },\n    \"b14s1\": {\n      \"app\": \"terminal\",\n      \"title\": \"maya@mbp — python scraper.py --url https://example-recipe.com/test\"\n    },\n    \"b14s2\": {\n      \"page\": {\n        \"title\": \"recipe_scraper — private repo — GitHub\",\n        \"path\": \"/maya/recipe_scraper/commits/main\"\n      }\n    },\n    \"b15s0\": {\n      \"app\": \"messages\",\n      \"title\": \"Lena — Messages\"\n    },\n    \"b15s1\": {\n      \"type\": {\n        \"text\": \"How about that BBQ place on Main St? I'll book it for 7.\",\n        \"title\": \"Lena — Messages\",\n        \"place\": \"Lena\",\n        \"field\": \"message\",\n        \"seal\": \"submit\"\n      }\n    },\n    \"b15s2\": {\n      \"app\": \"calendar\",\n      \"title\": \"Saturday, June 14 - Google Calendar\"\n    },\n    \"b16s0\": {\n      \"app\": \"zoom\",\n      \"title\": \"Quick sync: bridge deploy & monitoring - Zoom\"\n    },\n    \"b17s0\": {\n      \"app\": \"mail\",\n      \"title\": \"Re: Schema change for order-sync payload - maya.chen@lumenary.com - Gmail\"\n    },\n    \"b17s1\": {\n      \"type\": {\n        \"text\": \"Hi Jules,\\n\\nQuick update: the schema change is in our backlog and we're targeting it for next sprint. I'll let you know when we start.\\n\\nMaya\",\n        \"title\": \"Re: Schema change for order-sync payload\",\n        \"place\": \"Gmail - Compose\",\n        \"field\": \"textArea\",\n        \"seal\": \"submitChord\"\n      }\n    },\n    \"b18s0\": {\n      \"app\": \"slack\",\n      \"title\": \"#integrations - Lumenary Systems - Slack\"\n    },\n    \"b18s1\": {\n      \"type\": {\n        \"text\": \"Good point — env prefix should come before service. I'll update the doc.\",\n        \"title\": \"#integrations - Lumenary Systems - Slack\",\n        \"place\": \"#integrations\",\n        \"field\": \"message\",\n        \"seal\": \"submit\"\n      }\n    },\n    \"b19s0\": {\n      \"app\": \"chatgpt\",\n      \"title\": \"ChatGPT — Cloudflare image download workaround\"\n    },\n    \"b19s1\": {\n      \"app\": \"vscode\",\n      \"title\": \"scraper.py — recipe_scraper — Visual Studio Code\"\n    },\n    \"b19s2\": {\n      \"app\": \"terminal\",\n      \"title\": \"maya@mbp — python scraper.py --url https://example-recipe.com/test\"\n    },\n    \"b20s0\": {\n      \"app\": \"messages\",\n      \"title\": \"Grandma Ruth — Messages\"\n    },\n    \"b20s1\": {\n      \"type\": {\n        \"text\": \"Yes! Can't wait to see the bluebonnets with you both 🌸\",\n        \"title\": \"Grandma Ruth — Messages\",\n        \"place\": \"Grandma Ruth\",\n        \"field\": \"message\",\n        \"seal\": \"submit\"\n      }\n    },\n    \"b21s0\": {\n      \"app\": \"terminal\",\n      \"title\": \"maya@mbp — kafka-consumer-groups.sh --describe --group order-sync-prod-v2\"\n    },\n    \"b21s1\": {\n      \"page\": {\n        \"title\": \"Consumer Lag — order-sync-prod-v2 — Grafana\",\n        \"path\": \"/d/consumer-lag/order-sync-prod-v2\"\n      }\n    },\n    \"b21s2\": {\n      \"app\": \"slack\",\n      \"title\": \"#integrations - Lumenary Systems - Slack\"\n    },\n    \"b22s0\": {\n      \"app\": \"notion\",\n      \"title\": \"Runbook: Event Bridge Migration — Notion\"\n    },\n    \"b22s1\": {\n      \"app\": \"notion\",\n      \"title\": \"Runbook: Event Bridge Migration — Notion\"\n    },\n    \"b23s0\": {\n      \"page\": {\n        \"title\": \"recipe_scraper — private repo — GitHub\",\n        \"path\": \"/maya/recipe_scraper\"\n      }\n    },\n    \"b23s1\": {\n      \"type\": {\n        \"text\": \"fix image download with playwright session\",\n        \"title\": \"recipe_scraper — private repo — GitHub\",\n        \"place\": \"Commit message\",\n        \"field\": \"oneLine\",\n        \"seal\": \"submit\"\n      }\n    },\n    \"b24s0\": {\n      \"app\": \"messages\",\n      \"title\": \"Lena — Messages\"\n    },\n    \"b24s1\": {\n      \"type\": {\n        \"text\": \"👍 I'll bring the camera!\",\n        \"title\": \"Lena — Messages\",\n        \"place\": \"Lena\",\n        \"field\": \"message\",\n        \"seal\": \"submit\"\n      }\n    },\n    \"b25s0\": {\n      \"app\": \"mail\",\n      \"title\": \"Re: Schema change for order-sync payload - maya.chen@lumenary.com - Gmail\"\n    },\n    \"b26s0\": {\n      \"app\": \"slack\",\n      \"title\": \"Dana Whitfield - Direct Message - Slack\"\n    },\n    \"b26s1\": {\n      \"type\": {\n        \"text\": \"Runbook is updated — ready for your review whenever you get a chance.\",\n        \"title\": \"Dana Whitfield - Direct Message - Slack\",\n        \"place\": \"Dana Whitfield DM\",\n        \"field\": \"message\",\n        \"seal\": \"submit\"\n      }\n    },\n    \"b27s0\": {\n      \"app\": \"spotify\",\n      \"title\": \"Focus Flow - Spotify\"\n    },\n    \"b27s1\": {\n      \"app\": \"vscode\",\n      \"title\": \"scraper.py — recipe_scraper — Visual Studio Code\"\n    },\n    \"b28s0\": {\n      \"app\": \"messages\",\n      \"title\": \"Grandma Ruth — Messages\"\n    },\n    \"b28s1\": {\n      \"type\": {\n        \"text\": \"Do you want to bring anything to the cabin? We've got the basics covered.\",\n        \"title\": \"Grandma Ruth — Messages\",\n        \"place\": \"Grandma Ruth\",\n        \"field\": \"message\",\n        \"seal\": \"submit\"\n      }\n    },\n    \"b29s0\": {\n      \"app\": \"slack\",\n      \"title\": \"#random - Lumenary Systems - Slack\"\n    },\n    \"b29s1\": {\n      \"app\": \"calendar\",\n      \"title\": \"Friday, June 13 - Google Calendar\"\n    }\n  }\n}",
+  "parsed": {
+    "steps": {
+      "b0s0": {
+        "app": "slack",
+        "title": "#integrations - Lumenary Systems - Slack"
+      },
+      "b0s1": {
+        "app": "terminal",
+        "title": "maya@mbp — kubectl get pods -n event-bridge"
+      },
+      "b0s2": {
+        "title": "Consumer Lag — order-sync-prod-v2 — Grafana",
+        "path": "/d/consumer-lag/order-sync-prod-v2"
+      },
+      "b0s3": {
+        "app": "slack",
+        "title": "#integrations - Lumenary Systems - Slack"
+      },
+      "b1s0": {
+        "app": "mail",
+        "title": "Inbox (12) - maya.chen@lumenary.com - Gmail"
+      },
+      "b1s1": {
+        "app": "notes",
+        "title": "Backlog - schema changes"
+      },
+      "b1s2": {
+        "text": "Hi Jules,\n\nThanks for the follow-up. I've logged the schema change in our backlog and we'll pick it up next sprint. I'll keep you posted once we have a timeline.\n\nBest,\nMaya",
+        "title": "Re: Schema change for order-sync payload",
+        "place": "Gmail - Compose",
+        "field": "textArea",
+        "seal": "submitChord"
+      },
+      "b2s0": {
+        "app": "slack",
+        "title": "#integrations - Lumenary Systems - Slack"
+      },
+      "b2s1": {
+        "title": "Consumer Group Naming Comparison - Google Docs",
+        "path": "/document/d/1xYzConsumerGroupNaming/edit"
+      },
+      "b2s2": {
+        "text": "Doc updated with the final decision — we're going with <service>-<env>-v<n> (e.g. order-sync-prod-v2). Runbook will reflect the convention shortly.",
+        "title": "#integrations - Lumenary Systems - Slack",
+        "place": "#integrations",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b3s0": {
+        "app": "vscode",
+        "title": "scraper.py — recipe_scraper — Visual Studio Code"
+      },
+      "b3s1": {
+        "query": "python requests download image with cookies"
+      },
+      "b3s2": {
+        "app": "chatgpt",
+        "title": "ChatGPT — how to pass session cookies to requests for image download"
+      },
+      "b3s3": {
+        "app": "vscode",
+        "title": "scraper.py — recipe_scraper — Visual Studio Code"
+      },
+      "b4s0": {
+        "app": "messages",
+        "title": "Lena — Messages"
+      },
+      "b4s1": {
+        "text": "Wildflower farm is at 123 Bluebonnet Ln, Fredericksburg. Does 10am work?",
+        "title": "Lena — Messages",
+        "place": "Lena",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b4s2": {
+        "app": "messages",
+        "title": "Grandma Ruth — Messages"
+      },
+      "b4s3": {
+        "text": "We'll pick you up at 9:15 on Saturday!",
+        "title": "Grandma Ruth — Messages",
+        "place": "Grandma Ruth",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b5s0": {
+        "app": "terminal",
+        "title": "maya@mbp — ./migrate_offsets.py --env staging"
+      },
+      "b5s1": {
+        "title": "Consumer Lag — staging — Grafana",
+        "path": "/d/consumer-lag/staging"
+      },
+      "b5s2": {
+        "app": "slack",
+        "title": "Tom Okafor - Direct Message - Slack"
+      },
+      "b6s0": {
+        "app": "slack",
+        "title": "#integrations - Lumenary Systems - Slack"
+      },
+      "b6s1": {
+        "app": "notion",
+        "title": "Runbook: Event Bridge Migration — Notion"
+      },
+      "b7s0": {
+        "app": "spotify",
+        "title": "lofi hip hop beats - Spotify"
+      },
+      "b7s1": {
+        "app": "vscode",
+        "title": "scraper.py — recipe_scraper — Visual Studio Code"
+      },
+      "b7s2": {
+        "app": "terminal",
+        "title": "maya@mbp — python scraper.py --url https://example-recipe.com/test"
+      },
+      "b8s0": {
+        "title": "Reservation details - Airbnb",
+        "path": "/reservations/details/HB-88231"
+      },
+      "b8s1": {
+        "title": "Cabin in Fredericksburg, TX - Airbnb",
+        "path": "/rooms/12345678"
+      },
+      "b8s2": {
+        "app": "messages",
+        "title": "Lena — Messages"
+      },
+      "b9s0": {
+        "app": "slack",
+        "title": "Dana Whitfield - Direct Message - Slack"
+      },
+      "b9s1": {
+        "text": "Bridge is stable, lag is near zero. Runbook is being updated now, should be ready for review later today.",
+        "title": "Dana Whitfield - Direct Message - Slack",
+        "place": "Dana Whitfield DM",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b10s0": {
+        "app": "mail",
+        "title": "Re: Schema change for order-sync payload - maya.chen@lumenary.com - Gmail"
+      },
+      "b10s1": {
+        "app": "calendar",
+        "title": "Thursday, June 12 - Google Calendar"
+      },
+      "b12s0": {
+        "app": "slack",
+        "title": "#incidents - Lumenary Systems - Slack"
+      },
+      "b12s1": {
+        "app": "terminal",
+        "title": "maya@mbp — kubectl logs -n event-bridge deploy/event-bridge --tail=50"
+      },
+      "b12s2": {
+        "title": "Event Bridge — Throughput & Errors — Grafana",
+        "path": "/d/event-bridge/throughput-errors"
+      },
+      "b13s0": {
+        "app": "notion",
+        "title": "Runbook: Event Bridge Migration — Notion"
+      },
+      "b13s1": {
+        "text": "Consumer group naming convention: <service>-<env>-v<n>. Example: order-sync-prod-v2.",
+        "title": "Runbook: Event Bridge Migration — Notion",
+        "place": "Runbook: Event Bridge Migration",
+        "field": "textArea",
+        "seal": "submit"
+      },
+      "b14s0": {
+        "app": "vscode",
+        "title": "scraper.py — recipe_scraper — Visual Studio Code"
+      },
+      "b14s1": {
+        "app": "terminal",
+        "title": "maya@mbp — python scraper.py --url https://example-recipe.com/test"
+      },
+      "b14s2": {
+        "title": "recipe_scraper — private repo — GitHub",
+        "path": "/maya/recipe_scraper/commits/main"
+      },
+      "b15s0": {
+        "app": "messages",
+        "title": "Lena — Messages"
+      },
+      "b15s1": {
+        "text": "How about that BBQ place on Main St? I'll book it for 7.",
+        "title": "Lena — Messages",
+        "place": "Lena",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b15s2": {
+        "app": "calendar",
+        "title": "Saturday, June 14 - Google Calendar"
+      },
+      "b16s0": {
+        "app": "zoom",
+        "title": "Quick sync: bridge deploy & monitoring - Zoom"
+      },
+      "b17s0": {
+        "app": "mail",
+        "title": "Re: Schema change for order-sync payload - maya.chen@lumenary.com - Gmail"
+      },
+      "b17s1": {
+        "text": "Hi Jules,\n\nQuick update: the schema change is in our backlog and we're targeting it for next sprint. I'll let you know when we start.\n\nMaya",
+        "title": "Re: Schema change for order-sync payload",
+        "place": "Gmail - Compose",
+        "field": "textArea",
+        "seal": "submitChord"
+      },
+      "b18s0": {
+        "app": "slack",
+        "title": "#integrations - Lumenary Systems - Slack"
+      },
+      "b18s1": {
+        "text": "Good point — env prefix should come before service. I'll update the doc.",
+        "title": "#integrations - Lumenary Systems - Slack",
+        "place": "#integrations",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b19s0": {
+        "app": "chatgpt",
+        "title": "ChatGPT — Cloudflare image download workaround"
+      },
+      "b19s1": {
+        "app": "vscode",
+        "title": "scraper.py — recipe_scraper — Visual Studio Code"
+      },
+      "b19s2": {
+        "app": "terminal",
+        "title": "maya@mbp — python scraper.py --url https://example-recipe.com/test"
+      },
+      "b20s0": {
+        "app": "messages",
+        "title": "Grandma Ruth — Messages"
+      },
+      "b20s1": {
+        "text": "Yes! Can't wait to see the bluebonnets with you both 🌸",
+        "title": "Grandma Ruth — Messages",
+        "place": "Grandma Ruth",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b21s0": {
+        "app": "terminal",
+        "title": "maya@mbp — kafka-consumer-groups.sh --describe --group order-sync-prod-v2"
+      },
+      "b21s1": {
+        "title": "Consumer Lag — order-sync-prod-v2 — Grafana",
+        "path": "/d/consumer-lag/order-sync-prod-v2"
+      },
+      "b21s2": {
+        "app": "slack",
+        "title": "#integrations - Lumenary Systems - Slack"
+      },
+      "b22s0": {
+        "app": "notion",
+        "title": "Runbook: Event Bridge Migration — Notion"
+      },
+      "b22s1": {
+        "app": "notion",
+        "title": "Runbook: Event Bridge Migration — Notion"
+      },
+      "b23s0": {
+        "title": "recipe_scraper — private repo — GitHub",
+        "path": "/maya/recipe_scraper"
+      },
+      "b23s1": {
+        "text": "fix image download with playwright session",
+        "title": "recipe_scraper — private repo — GitHub",
+        "place": "Commit message",
+        "field": "oneLine",
+        "seal": "submit"
+      },
+      "b24s0": {
+        "app": "messages",
+        "title": "Lena — Messages"
+      },
+      "b24s1": {
+        "text": "👍 I'll bring the camera!",
+        "title": "Lena — Messages",
+        "place": "Lena",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b25s0": {
+        "app": "mail",
+        "title": "Re: Schema change for order-sync payload - maya.chen@lumenary.com - Gmail"
+      },
+      "b26s0": {
+        "app": "slack",
+        "title": "Dana Whitfield - Direct Message - Slack"
+      },
+      "b26s1": {
+        "text": "Runbook is updated — ready for your review whenever you get a chance.",
+        "title": "Dana Whitfield - Direct Message - Slack",
+        "place": "Dana Whitfield DM",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b27s0": {
+        "app": "spotify",
+        "title": "Focus Flow - Spotify"
+      },
+      "b27s1": {
+        "app": "vscode",
+        "title": "scraper.py — recipe_scraper — Visual Studio Code"
+      },
+      "b28s0": {
+        "app": "messages",
+        "title": "Grandma Ruth — Messages"
+      },
+      "b28s1": {
+        "text": "Do you want to bring anything to the cabin? We've got the basics covered.",
+        "title": "Grandma Ruth — Messages",
+        "place": "Grandma Ruth",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b29s0": {
+        "app": "slack",
+        "title": "#random - Lumenary Systems - Slack"
+      },
+      "b29s1": {
+        "app": "calendar",
+        "title": "Friday, June 13 - Google Calendar"
+      }
+    }
+  }
+}

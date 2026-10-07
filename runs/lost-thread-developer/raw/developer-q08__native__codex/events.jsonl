@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a112ed-239d-71a1-8873-89571399ad74"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"I don’t have any record of you calling or booking it. We discussed your Fredericksburg trip, but you never mentioned confirming a Saturday dinner reservation. That doesn’t mean you didn’t call—just that you haven’t told me."}}
+{"type":"turn.completed","usage":{"input_tokens":5496,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":95,"reasoning_output_tokens":41}}

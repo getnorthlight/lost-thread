@@ -1,0 +1,651 @@
+{
+  "step": "fill-d4",
+  "model": "deepseek/deepseek-v4-flash-0731",
+  "requested_model": "deepseek/deepseek-v4-flash-0731",
+  "base_url": "<local OpenRouter proxy>",
+  "temperature": 0.7,
+  "seconds": 70.57,
+  "usage": {
+    "prompt_tokens": 7128,
+    "completion_tokens": 5610,
+    "total_tokens": 12738,
+    "cost": 0.00256872,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00256872,
+      "upstream_inference_prompt_cost": 0.00099792,
+      "upstream_inference_completions_cost": 0.0015708
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "attempt": 1,
+  "system": "You generate realistic synthetic test data for a research benchmark about personal memory. Everything you write is fiction: invent every person, company, client and product name (never use real people you know of, and avoid famous companies as employers). Write like real life, not like a tidy diary: people get interrupted, leave things half done, revisit things, procrastinate, and type casually. Reply with JSON only.",
+  "user": "Person: {\"name\": \"Maya Chen\", \"role\": \"Senior Software Engineer\", \"company\": \"Lumenary Systems\", \"summary\": \"Backend-focused developer on the integrations team, currently migrating a legacy event pipeline to Kafka. She works from home in Austin, uses a MacBook Pro, and tends to start late after a slow morning.\", \"workday\": {\"start\": \"09:45\", \"end\": \"18:30\", \"lunch\": \"13:00\"}}\nPeople: [{\"key\": \"dana\", \"name\": \"Dana Whitfield\", \"role\": \"Engineering Manager\", \"channel\": \"slack\"}, {\"key\": \"priya\", \"name\": \"Priya Raghavan\", \"role\": \"Staff Engineer, Integrations\", \"channel\": \"slack\"}, {\"key\": \"marcus\", \"name\": \"Marcus Bell\", \"role\": \"Product Manager\", \"channel\": \"slack\"}, {\"key\": \"tom\", \"name\": \"Tom Okafor\", \"role\": \"DevOps Engineer\", \"channel\": \"slack\"}, {\"key\": \"jules\", \"name\": \"Jules Fontaine\", \"role\": \"Data Analyst (client side)\", \"channel\": \"email\"}, {\"key\": \"lena\", \"name\": \"Lena Park\", \"role\": \"Friend from college\", \"channel\": \"messages\"}, {\"key\": \"grandma\", \"name\": \"Grandma Ruth\", \"role\": \"Family\", \"channel\": \"messages\"}]\nDay 4 plan: {\"blocks\": [{\"start\": \"09:47\", \"thread\": \"kafka_migration\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"Check #integrations for overnight alerts on the new Kafka bridge\", \"min\": 4}, {\"do\": \"app\", \"app\": \"terminal\", \"about\": \"SSH to staging and check consumer lag for order-sync-prod-v2\", \"min\": 6}, {\"do\": \"page\", \"host\": \"grafana.example.com\", \"about\": \"Kafka consumer lag dashboard for order-sync-prod-v2\", \"min\": 5}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Post to #integrations that lag looks normal after the deploy, no action needed\", \"sent\": true, \"to\": \"#integrations\"}]}, {\"start\": \"10:05\", \"thread\": \"weekend_plans\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"messages\", \"about\": \"Text thread with Lena and Grandma Ruth about Saturday pickup time\", \"min\": 3}, {\"do\": \"type\", \"where\": \"messages\", \"intent\": \"Reply to Lena confirming 9:15 pickup at Grandma's and that she'll bring the cooler\", \"sent\": true, \"to\": \"Lena Park\"}, {\"do\": \"app\", \"app\": \"calendar\", \"about\": \"Check Saturday morning calendar and add 'Pick up Grandma 9:15'\", \"min\": 2}]}, {\"start\": \"10:12\", \"thread\": \"invoice_question\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"mail\", \"about\": \"Inbox - new email from Jules about the schema change request\", \"min\": 3}, {\"do\": \"page\", \"host\": \"mail.google.com\", \"about\": \"Read Jules's email asking if the schema change can be done this sprint\", \"min\": 4}, {\"do\": \"type\", \"where\": \"web:mail.google.com\", \"intent\": \"Draft reply to Jules saying the schema change is in the backlog but not this sprint, will update when it's scheduled\", \"sent\": false, \"to\": \"Jules Fontaine\"}]}, {\"start\": \"10:25\", \"thread\": \"side_project\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"vscode\", \"about\": \"recipe-scraper repo - look at the image download code that was working yesterday\", \"min\": 8}, {\"do\": \"app\", \"app\": \"terminal\", \"about\": \"Run the scraper on a new test URL to see if images still download\", \"min\": 5}, {\"do\": \"app\", \"app\": \"finder\", \"about\": \"Check the downloaded images folder for the test recipe\", \"min\": 2}]}, {\"start\": \"10:45\", \"thread\": \"consumer_group\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"DM from Marcus asking if the consumer group doc is ready for the team review\", \"min\": 2}, {\"do\": \"page\", \"host\": \"docs.google.com\", \"about\": \"Open the Consumer Group Naming doc to review comments\", \"min\": 6}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Reply to Marcus that the doc is updated with the v2 convention and ready for review\", \"sent\": true, \"to\": \"Marcus Bell\"}]}, {\"start\": \"11:02\", \"thread\": \"kafka_migration\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"Check #incidents - someone posted about a topic retention issue\", \"min\": 3}, {\"do\": \"page\", \"host\": \"confluence.lumenary.dev\", \"about\": \"Look at the Kafka Event Bridge runbook to see if retention is documented\", \"min\": 5}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Reply in #incidents that the retention setting is in the runbook and looks correct\", \"sent\": true, \"to\": \"#incidents\"}]}, {\"start\": \"11:20\", \"thread\": \"side_project\", \"noise\": false, \"steps\": [{\"do\": \"search\", \"about\": \"playwright python wait for image load\"}, {\"do\": \"app\", \"app\": \"chatgpt\", \"about\": \"Ask how to wait for all images to load in Playwright before screenshotting\", \"min\": 5}, {\"do\": \"app\", \"app\": \"vscode\", \"about\": \"Try adding wait_for_selector to the scraper image download loop\", \"min\": 7}]}, {\"start\": \"11:40\", \"thread\": \"weekend_plans\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"messages\", \"about\": \"Grandma Ruth texted asking if the winery has a gift shop\", \"min\": 2}, {\"do\": \"search\", \"about\": \"fredericksburg texas winery gift shop\"}, {\"do\": \"type\", \"where\": \"messages\", \"intent\": \"Reply to Grandma that the winery has a gift shop and we can stop there before the wildflower farm\", \"sent\": true, \"to\": \"Grandma Ruth\"}]}, {\"start\": \"12:05\", \"thread\": \"invoice_question\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"DM from Priya about the schema registry subject for the new field\", \"min\": 3}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Reply to Priya that the schema change is tracked in the backlog and she can use the existing subject\", \"sent\": true, \"to\": \"Priya Raghavan\"}, {\"do\": \"app\", \"app\": \"notes\", \"about\": \"Jot down the schema change details from Jules to add to the backlog ticket\", \"min\": 3}]}, {\"start\": \"12:20\", \"thread\": \"kafka_migration\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"terminal\", \"about\": \"Check if the new bridge pod restarted overnight\", \"min\": 4}, {\"do\": \"page\", \"host\": \"grafana.example.com\", \"about\": \"Look at the bridge error rate for the last 12 hours\", \"min\": 5}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Post to #integrations that the bridge is stable, no restarts since deploy\", \"sent\": true, \"to\": \"#integrations\"}]}, {\"start\": \"12:35\", \"thread\": \"side_project\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"terminal\", \"about\": \"Run the scraper again with the wait_for_selector fix\", \"min\": 6}, {\"do\": \"app\", \"app\": \"finder\", \"about\": \"Check if images downloaded for the new test URL\", \"min\": 2}, {\"do\": \"type\", \"where\": \"vscode\", \"intent\": \"Add a comment in the scraper code noting the Playwright wait fix\", \"sent\": false}]}, {\"start\": \"12:50\", \"thread\": \"weekend_plans\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"messages\", \"about\": \"Lena sent the cabin address and check-in instructions\", \"min\": 2}, {\"do\": \"type\", \"where\": \"messages\", \"intent\": \"Reply to Lena with the planned arrival time and ask if she wants to bring breakfast stuff\", \"sent\": true, \"to\": \"Lena Park\"}]}, {\"start\": \"13:00\", \"thread\": \"kafka_migration\", \"noise\": false, \"steps\": [{\"do\": \"idle\", \"min\": 45, \"about\": \"Lunch - leftover pad thai and a walk around the block\"}]}, {\"start\": \"13:50\", \"thread\": \"consumer_group\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"Check the #integrations thread where the team voted on consumer group naming\", \"min\": 3}, {\"do\": \"page\", \"host\": \"docs.google.com\", \"about\": \"Update the Consumer Group Naming doc with the final decision and examples\", \"min\": 8}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Post the final naming convention in #integrations and link the doc\", \"sent\": true, \"to\": \"#integrations\"}]}, {\"start\": \"14:10\", \"thread\": \"invoice_question\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"mail\", \"about\": \"Jules replied asking if the schema change could at least be scoped\", \"min\": 2}, {\"do\": \"page\", \"host\": \"mail.google.com\", \"about\": \"Read Jules's reply and check the backlog ticket for the schema change\", \"min\": 4}, {\"do\": \"type\", \"where\": \"web:mail.google.com\", \"intent\": \"Reply to Jules that the schema change is scoped and will be picked up next sprint\", \"sent\": true, \"to\": \"Jules Fontaine\"}]}, {\"start\": \"14:30\", \"thread\": \"side_project\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"vscode\", \"about\": \"Refactor the scraper to use a config file for test URLs\", \"min\": 10}, {\"do\": \"app\", \"app\": \"terminal\", \"about\": \"Run the scraper with the config file on three test URLs\", \"min\": 6}, {\"do\": \"app\", \"app\": \"finder\", \"about\": \"Check the output folder for all three recipes' images\", \"min\": 3}]}, {\"start\": \"15:00\", \"thread\": \"kafka_migration\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"DM from Tom asking about the consumer group offset reset for the new bridge\", \"min\": 2}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Reply to Tom that the offset reset is in the runbook and the new group is using latest\", \"sent\": true, \"to\": \"Tom Okafor\"}, {\"do\": \"page\", \"host\": \"confluence.lumenary.dev\", \"about\": \"Double-check the runbook section on consumer group offsets\", \"min\": 4}]}, {\"start\": \"15:15\", \"thread\": \"weekend_plans\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"messages\", \"about\": \"Grandma Ruth asked if we need to bring chairs to the wildflower farm\", \"min\": 2}, {\"do\": \"search\", \"about\": \"wildflower farm fredericksburg seating\"}, {\"do\": \"type\", \"where\": \"messages\", \"intent\": \"Reply to Grandma that the farm has benches and we don't need chairs\", \"sent\": true, \"to\": \"Grandma Ruth\"}]}, {\"start\": \"15:30\", \"thread\": \"consumer_group\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"Check if anyone commented on the naming convention post\", \"min\": 2}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Reply to Marcus's comment about the version suffix with a clarification\", \"sent\": true, \"to\": \"Marcus Bell\"}]}, {\"start\": \"15:40\", \"thread\": \"side_project\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"vscode\", \"about\": \"Look at the scraper's error handling for Cloudflare challenges\", \"min\": 5}, {\"do\": \"app\", \"app\": \"chatgpt\", \"about\": \"Ask about handling Cloudflare challenges with Playwright stealth\", \"min\": 4}, {\"do\": \"app\", \"app\": \"terminal\", \"about\": \"Test the scraper on a site that previously had a Cloudflare challenge\", \"min\": 5}]}, {\"start\": \"16:00\", \"thread\": \"kafka_migration\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"Check #integrations for any final questions about the migration\", \"min\": 2}, {\"do\": \"page\", \"host\": \"github.com\", \"about\": \"Look at the merged PR #1187 and check if the runbook link is in the description\", \"min\": 4}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Post in #integrations that the migration is complete and link the runbook for reference\", \"sent\": true, \"to\": \"#integrations\"}]}, {\"start\": \"16:15\", \"thread\": \"invoice_question\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"mail\", \"about\": \"Check if Jules sent the updated export spec\", \"min\": 2}, {\"do\": \"page\", \"host\": \"mail.google.com\", \"about\": \"Read the spec attachment and note the new field name\", \"min\": 4}, {\"do\": \"app\", \"app\": \"notes\", \"about\": \"Add the new field name to the backlog ticket notes\", \"min\": 2}]}, {\"start\": \"16:30\", \"thread\": \"weekend_plans\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"messages\", \"about\": \"Lena asked if we should book a dinner reservation in Fredericksburg\", \"min\": 2}, {\"do\": \"search\", \"about\": \"fredericksburg texas dinner reservations saturday\"}, {\"do\": \"type\", \"where\": \"messages\", \"intent\": \"Reply to Lena suggesting we book a table at the German place and asking if 6:30 works\", \"sent\": true, \"to\": \"Lena Park\"}]}, {\"start\": \"16:45\", \"thread\": \"side_project\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"vscode\", \"about\": \"Commit the scraper changes to the private repo\", \"min\": 5}, {\"do\": \"app\", \"app\": \"terminal\", \"about\": \"Git add, commit, and push the recipe scraper changes\", \"min\": 3}, {\"do\": \"type\", \"where\": \"terminal\", \"intent\": \"Commit message: 'Add config file and Playwright wait for image downloads'\", \"sent\": false}]}, {\"start\": \"17:00\", \"thread\": \"kafka_migration\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"DM from Dana asking for a quick status update on the migration\", \"min\": 2}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Reply to Dana that the migration is done, the bridge is stable, and the runbook is updated\", \"sent\": true, \"to\": \"Dana Whitfield\"}]}, {\"start\": \"17:10\", \"thread\": \"consumer_group\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"Check the #integrations thread for any last comments on the naming doc\", \"min\": 2}, {\"do\": \"page\", \"host\": \"docs.google.com\", \"about\": \"Resolve the last comment in the Consumer Group Naming doc\", \"min\": 3}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Post in #integrations that the doc is finalized and the convention is locked in\", \"sent\": true, \"to\": \"#integrations\"}]}, {\"start\": \"17:20\", \"thread\": \"weekend_plans\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"messages\", \"about\": \"Grandma Ruth confirmed she's excited for the wine tasting\", \"min\": 2}, {\"do\": \"type\", \"where\": \"messages\", \"intent\": \"Reply to Grandma with the full Saturday itinerary and pickup time\", \"sent\": true, \"to\": \"Grandma Ruth\"}]}, {\"start\": \"17:30\", \"thread\": \"side_project\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"vscode\", \"about\": \"Open the scraper README and add a note about the Cloudflare workaround\", \"min\": 4}, {\"do\": \"app\", \"app\": \"terminal\", \"about\": \"Run the scraper one more time on a random recipe URL to confirm it works\", \"min\": 4}, {\"do\": \"app\", \"app\": \"finder\", \"about\": \"Check the final output folder and rename the test images\", \"min\": 3}]}, {\"start\": \"17:45\", \"thread\": \"invoice_question\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"mail\", \"about\": \"Jules sent a thank-you and confirmed the invoice is now in the export\", \"min\": 2}, {\"do\": \"type\", \"where\": \"web:mail.google.com\", \"intent\": \"Reply to Jules saying glad it's resolved and the schema change is in the backlog\", \"sent\": true, \"to\": \"Jules Fontaine\"}]}, {\"start\": \"18:00\", \"thread\": \"kafka_migration\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"Check #incidents one last time before logging off\", \"min\": 2}, {\"do\": \"app\", \"app\": \"calendar\", \"about\": \"Look at Monday's calendar and add a reminder to check the bridge after the weekend\", \"min\": 2}]}, {\"start\": \"18:10\", \"thread\": \"weekend_plans\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"messages\", \"about\": \"Lena sent the dinner reservation confirmation for 6:30\", \"min\": 2}, {\"do\": \"type\", \"where\": \"messages\", \"intent\": \"Reply to Lena with a thumbs up and say she'll bring the wine\", \"sent\": true, \"to\": \"Lena Park\"}]}, {\"start\": \"18:20\", \"thread\": \"side_project\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"vscode\", \"about\": \"Close the recipe scraper project and note the next improvement idea\", \"min\": 3}, {\"do\": \"app\", \"app\": \"notes\", \"about\": \"Write a quick note about adding a CLI flag for the scraper next week\", \"min\": 2}]}], \"summary\": \"Friday was a wrap-up day: Maya confirmed the Kafka bridge was stable in prod, finalized the consumer group naming doc, and closed out the invoice thread with Jules. She also made solid progress on the recipe scraper with a Playwright image-wait fix and committed it, while the Fredericksburg trip got its final details locked in with Lena and Grandma Ruth.\"}\n\nFill in exact content as JSON {\"steps\": {\"b<block>s<step>\": {...}}} for every app/page/search/type step:\n- app: {\"title\": exact macOS window title, e.g. \"budget_v3.xlsx\", \"retry_worker.go — fern-api\", \"#design (Channel) - Acme - Slack\",\n         \"titles\": optional list of window titles they rotate through}\n- page: {\"title\": the tab title exactly as the site shows it (\"... - Google Docs\", \"... - YouTube\", Gmail: the email subject,\n         \"Inbox\" for the inbox), \"path\": a plausible URL path}\n- search: {\"query\": the words typed into Google}\n- type: {\"text\": the exact words typed (casual where casual, typos allowed in chats), \"title\": window title for apps,\n         \"place\": the page/subject it was typed in for web:<host>, \"field\": \"message\"|\"body\"|\"textArea\"|\"oneLine\",\n         \"seal\": \"submit\" (Return/send) | \"idle\" (stopped typing) | \"submitChord\" (Cmd-Return in email)}\nKeep identifiers and numbers consistent with the thread arcs and earlier days.\nReturn exactly these keys (block and step numbers start at 0), each a flat object with the fields above:\nb0s0: app slack: Check #integrations for overnight alerts on the new Kafka bridge\nb0s1: app terminal: SSH to staging and check consumer lag for order-sync-prod-v2\nb0s2: page grafana.example.com: Kafka consumer lag dashboard for order-sync-prod-v2\nb0s3: type in slack: Post to #integrations that lag looks normal after the deploy, no action needed\nb1s0: app messages: Text thread with Lena and Grandma Ruth about Saturday pickup time\nb1s1: type in messages: Reply to Lena confirming 9:15 pickup at Grandma's and that she'll bring the cooler\nb1s2: app calendar: Check Saturday morning calendar and add 'Pick up Grandma 9:15'\nb2s0: app mail: Inbox - new email from Jules about the schema change request\nb2s1: page mail.google.com: Read Jules's email asking if the schema change can be done this sprint\nb2s2: type in web:mail.google.com: Draft reply to Jules saying the schema change is in the backlog but not this sprint, will update when it's scheduled\nb3s0: app vscode: recipe-scraper repo - look at the image download code that was working yesterday\nb3s1: app terminal: Run the scraper on a new test URL to see if images still download\nb3s2: app finder: Check the downloaded images folder for the test recipe\nb4s0: app slack: DM from Marcus asking if the consumer group doc is ready for the team review\nb4s1: page docs.google.com: Open the Consumer Group Naming doc to review comments\nb4s2: type in slack: Reply to Marcus that the doc is updated with the v2 convention and ready for review\nb5s0: app slack: Check #incidents - someone posted about a topic retention issue\nb5s1: page confluence.lumenary.dev: Look at the Kafka Event Bridge runbook to see if retention is documented\nb5s2: type in slack: Reply in #incidents that the retention setting is in the runbook and looks correct\nb6s0: search google: playwright python wait for image load\nb6s1: app chatgpt: Ask how to wait for all images to load in Playwright before screenshotting\nb6s2: app vscode: Try adding wait_for_selector to the scraper image download loop\nb7s0: app messages: Grandma Ruth texted asking if the winery has a gift shop\nb7s1: search google: fredericksburg texas winery gift shop\nb7s2: type in messages: Reply to Grandma that the winery has a gift shop and we can stop there before the wildflower farm\nb8s0: app slack: DM from Priya about the schema registry subject for the new field\nb8s1: type in slack: Reply to Priya that the schema change is tracked in the backlog and she can use the existing subject\nb8s2: app notes: Jot down the schema change details from Jules to add to the backlog ticket\nb9s0: app terminal: Check if the new bridge pod restarted overnight\nb9s1: page grafana.example.com: Look at the bridge error rate for the last 12 hours\nb9s2: type in slack: Post to #integrations that the bridge is stable, no restarts since deploy\nb10s0: app terminal: Run the scraper again with the wait_for_selector fix\nb10s1: app finder: Check if images downloaded for the new test URL\nb10s2: type in vscode: Add a comment in the scraper code noting the Playwright wait fix\nb11s0: app messages: Lena sent the cabin address and check-in instructions\nb11s1: type in messages: Reply to Lena with the planned arrival time and ask if she wants to bring breakfast stuff\nb13s0: app slack: Check the #integrations thread where the team voted on consumer group naming\nb13s1: page docs.google.com: Update the Consumer Group Naming doc with the final decision and examples\nb13s2: type in slack: Post the final naming convention in #integrations and link the doc\nb14s0: app mail: Jules replied asking if the schema change could at least be scoped\nb14s1: page mail.google.com: Read Jules's reply and check the backlog ticket for the schema change\nb14s2: type in web:mail.google.com: Reply to Jules that the schema change is scoped and will be picked up next sprint\nb15s0: app vscode: Refactor the scraper to use a config file for test URLs\nb15s1: app terminal: Run the scraper with the config file on three test URLs\nb15s2: app finder: Check the output folder for all three recipes' images\nb16s0: app slack: DM from Tom asking about the consumer group offset reset for the new bridge\nb16s1: type in slack: Reply to Tom that the offset reset is in the runbook and the new group is using latest\nb16s2: page confluence.lumenary.dev: Double-check the runbook section on consumer group offsets\nb17s0: app messages: Grandma Ruth asked if we need to bring chairs to the wildflower farm\nb17s1: search google: wildflower farm fredericksburg seating\nb17s2: type in messages: Reply to Grandma that the farm has benches and we don't need chairs\nb18s0: app slack: Check if anyone commented on the naming convention post\nb18s1: type in slack: Reply to Marcus's comment about the version suffix with a clarification\nb19s0: app vscode: Look at the scraper's error handling for Cloudflare challenges\nb19s1: app chatgpt: Ask about handling Cloudflare challenges with Playwright stealth\nb19s2: app terminal: Test the scraper on a site that previously had a Cloudflare challenge\nb20s0: app slack: Check #integrations for any final questions about the migration\nb20s1: page github.com: Look at the merged PR #1187 and check if the runbook link is in the description\nb20s2: type in slack: Post in #integrations that the migration is complete and link the runbook for reference\nb21s0: app mail: Check if Jules sent the updated export spec\nb21s1: page mail.google.com: Read the spec attachment and note the new field name\nb21s2: app notes: Add the new field name to the backlog ticket notes\nb22s0: app messages: Lena asked if we should book a dinner reservation in Fredericksburg\nb22s1: search google: fredericksburg texas dinner reservations saturday\nb22s2: type in messages: Reply to Lena suggesting we book a table at the German place and asking if 6:30 works\nb23s0: app vscode: Commit the scraper changes to the private repo\nb23s1: app terminal: Git add, commit, and push the recipe scraper changes\nb23s2: type in terminal: Commit message: 'Add config file and Playwright wait for image downloads'\nb24s0: app slack: DM from Dana asking for a quick status update on the migration\nb24s1: type in slack: Reply to Dana that the migration is done, the bridge is stable, and the runbook is updated\nb25s0: app slack: Check the #integrations thread for any last comments on the naming doc\nb25s1: page docs.google.com: Resolve the last comment in the Consumer Group Naming doc\nb25s2: type in slack: Post in #integrations that the doc is finalized and the convention is locked in\nb26s0: app messages: Grandma Ruth confirmed she's excited for the wine tasting\nb26s1: type in messages: Reply to Grandma with the full Saturday itinerary and pickup time\nb27s0: app vscode: Open the scraper README and add a note about the Cloudflare workaround\nb27s1: app terminal: Run the scraper one more time on a random recipe URL to confirm it works\nb27s2: app finder: Check the final output folder and rename the test images\nb28s0: app mail: Jules sent a thank-you and confirmed the invoice is now in the export\nb28s1: type in web:mail.google.com: Reply to Jules saying glad it's resolved and the schema change is in the backlog\nb29s0: app slack: Check #incidents one last time before logging off\nb29s1: app calendar: Look at Monday's calendar and add a reminder to check the bridge after the weekend\nb30s0: app messages: Lena sent the dinner reservation confirmation for 6:30\nb30s1: type in messages: Reply to Lena with a thumbs up and say she'll bring the wine\nb31s0: app vscode: Close the recipe scraper project and note the next improvement idea\nb31s1: app notes: Write a quick note about adding a CLI flag for the scraper next week",
+  "raw": "{\n  \"steps\": {\n    \"b0s0\": {\n      \"app\": \"slack\",\n      \"title\": \"#integrations - Lumenary Systems - Slack\",\n      \"titles\": [\n        \"#integrations - Lumenary Systems - Slack\",\n        \"#incidents - Lumenary Systems - Slack\"\n      ]\n    },\n    \"b0s1\": {\n      \"app\": \"terminal\",\n      \"title\": \"maya@mbp: ~/dev/lumenary/kafka-bridge\",\n      \"titles\": [\n        \"maya@mbp: ~/dev/lumenary/kafka-bridge\",\n        \"maya@mbp: ~/dev/recipe-scraper\"\n      ]\n    },\n    \"b0s2\": {\n      \"app\": \"page\",\n      \"title\": \"Kafka Consumer Lag - order-sync-prod-v2 - Grafana\",\n      \"path\": \"/d/consumer-lag/order-sync-prod-v2?orgId=1&from=now-6h&to=now\"\n    },\n    \"b0s3\": {\n      \"app\": \"type\",\n      \"where\": \"slack\",\n      \"text\": \"lag looks normal after the deploy, no action needed\",\n      \"title\": \"#integrations - Lumenary Systems - Slack\",\n      \"field\": \"message\",\n      \"seal\": \"submit\"\n    },\n    \"b1s0\": {\n      \"app\": \"messages\",\n      \"title\": \"Lena Park, Grandma Ruth\",\n      \"titles\": [\n        \"Lena Park, Grandma Ruth\",\n        \"Lena Park\",\n        \"Grandma Ruth\"\n      ]\n    },\n    \"b1s1\": {\n      \"app\": \"type\",\n      \"where\": \"messages\",\n      \"text\": \"9:15 pickup at Grandma's works, I'll bring the cooler!\",\n      \"title\": \"Lena Park\",\n      \"field\": \"message\",\n      \"seal\": \"submit\"\n    },\n    \"b1s2\": {\n      \"app\": \"calendar\",\n      \"title\": \"Saturday, June 8 - Calendar\",\n      \"path\": \"/calendar/week?view=agenda\"\n    },\n    \"b2s0\": {\n      \"app\": \"mail\",\n      \"title\": \"Inbox - maya.chen@lumenary.com - Gmail\",\n      \"titles\": [\n        \"Inbox - maya.chen@lumenary.com - Gmail\",\n        \"Re: Schema change request - maya.chen@lumenary.com - Gmail\"\n      ]\n    },\n    \"b2s1\": {\n      \"app\": \"page\",\n      \"title\": \"Re: Schema change request - maya.chen@lumenary.com - Gmail\",\n      \"path\": \"/mail/u/0/#inbox/1234567890\"\n    },\n    \"b2s2\": {\n      \"app\": \"type\",\n      \"where\": \"web:mail.google.com\",\n      \"text\": \"Hi Jules,\\n\\nThe schema change is in our backlog but not this sprint. I'll update you when it's scheduled.\\n\\nBest,\\nMaya\",\n      \"title\": \"Re: Schema change request - maya.chen@lumenary.com - Gmail\",\n      \"place\": \"Re: Schema change request\",\n      \"field\": \"body\",\n      \"seal\": \"idle\"\n    },\n    \"b3s0\": {\n      \"app\": \"vscode\",\n      \"title\": \"scraper.py - recipe-scraper - Visual Studio Code\",\n      \"titles\": [\n        \"scraper.py - recipe-scraper - Visual Studio Code\",\n        \"README.md - recipe-scraper - Visual Studio Code\"\n      ]\n    },\n    \"b3s1\": {\n      \"app\": \"terminal\",\n      \"title\": \"maya@mbp: ~/dev/recipe-scraper\",\n      \"titles\": [\n        \"maya@mbp: ~/dev/recipe-scraper\",\n        \"maya@mbp: ~/dev/lumenary/kafka-bridge\"\n      ]\n    },\n    \"b3s2\": {\n      \"app\": \"finder\",\n      \"title\": \"test_recipe_images\",\n      \"path\": \"/Users/maya/dev/recipe-scraper/output/test_recipe_images\"\n    },\n    \"b4s0\": {\n      \"app\": \"slack\",\n      \"title\": \"Marcus Bell - Lumenary Systems - Slack\",\n      \"titles\": [\n        \"Marcus Bell - Lumenary Systems - Slack\",\n        \"Priya Raghavan - Lumenary Systems - Slack\",\n        \"Tom Okafor - Lumenary Systems - Slack\",\n        \"Dana Whitfield - Lumenary Systems - Slack\"\n      ]\n    },\n    \"b4s1\": {\n      \"app\": \"page\",\n      \"title\": \"Consumer Group Naming - Google Docs\",\n      \"path\": \"/document/d/1abc123def456/edit\"\n    },\n    \"b4s2\": {\n      \"app\": \"type\",\n      \"where\": \"slack\",\n      \"text\": \"doc is updated with the v2 convention, ready for review!\",\n      \"title\": \"Marcus Bell - Lumenary Systems - Slack\",\n      \"field\": \"message\",\n      \"seal\": \"submit\"\n    },\n    \"b5s0\": {\n      \"app\": \"slack\",\n      \"title\": \"#incidents - Lumenary Systems - Slack\",\n      \"titles\": [\n        \"#incidents - Lumenary Systems - Slack\",\n        \"#integrations - Lumenary Systems - Slack\"\n      ]\n    },\n    \"b5s1\": {\n      \"app\": \"page\",\n      \"title\": \"Kafka Event Bridge Runbook - Confluence\",\n      \"path\": \"/display/ENG/Kafka+Event+Bridge+Runbook\"\n    },\n    \"b5s2\": {\n      \"app\": \"type\",\n      \"where\": \"slack\",\n      \"text\": \"retention setting is in the runbook and looks correct\",\n      \"title\": \"#incidents - Lumenary Systems - Slack\",\n      \"field\": \"message\",\n      \"seal\": \"submit\"\n    },\n    \"b6s0\": {\n      \"app\": \"search\",\n      \"query\": \"playwright python wait for image load\"\n    },\n    \"b6s1\": {\n      \"app\": \"chatgpt\",\n      \"title\": \"ChatGPT - Playwright image load\",\n      \"path\": \"/chat/abc123\"\n    },\n    \"b6s2\": {\n      \"app\": \"vscode\",\n      \"title\": \"scraper.py - recipe-scraper - Visual Studio Code\",\n      \"titles\": [\n        \"scraper.py - recipe-scraper - Visual Studio Code\",\n        \"README.md - recipe-scraper - Visual Studio Code\"\n      ]\n    },\n    \"b7s0\": {\n      \"app\": \"messages\",\n      \"title\": \"Grandma Ruth\",\n      \"titles\": [\n        \"Grandma Ruth\",\n        \"Lena Park, Grandma Ruth\"\n      ]\n    },\n    \"b7s1\": {\n      \"app\": \"search\",\n      \"query\": \"fredericksburg texas winery gift shop\"\n    },\n    \"b7s2\": {\n      \"app\": \"type\",\n      \"where\": \"messages\",\n      \"text\": \"yes they have a gift shop! we can stop there before the wildflower farm\",\n      \"title\": \"Grandma Ruth\",\n      \"field\": \"message\",\n      \"seal\": \"submit\"\n    },\n    \"b8s0\": {\n      \"app\": \"slack\",\n      \"title\": \"Priya Raghavan - Lumenary Systems - Slack\",\n      \"titles\": [\n        \"Priya Raghavan - Lumenary Systems - Slack\",\n        \"Marcus Bell - Lumenary Systems - Slack\"\n      ]\n    },\n    \"b8s1\": {\n      \"app\": \"type\",\n      \"where\": \"slack\",\n      \"text\": \"schema change is tracked in the backlog, you can use the existing subject for now\",\n      \"title\": \"Priya Raghavan - Lumenary Systems - Slack\",\n      \"field\": \"message\",\n      \"seal\": \"submit\"\n    },\n    \"b8s2\": {\n      \"app\": \"notes\",\n      \"title\": \"Notes - Schema change backlog\",\n      \"path\": \"/notes/schema-change\"\n    },\n    \"b9s0\": {\n      \"app\": \"terminal\",\n      \"title\": \"maya@mbp: ~/dev/lumenary/kafka-bridge\",\n      \"titles\": [\n        \"maya@mbp: ~/dev/lumenary/kafka-bridge\",\n        \"maya@mbp: ~/dev/recipe-scraper\"\n      ]\n    },\n    \"b9s1\": {\n      \"app\": \"page\",\n      \"title\": \"Kafka Bridge Error Rate - Grafana\",\n      \"path\": \"/d/bridge-error-rate/bridge-error-rate?orgId=1&from=now-12h&to=now\"\n    },\n    \"b9s2\": {\n      \"app\": \"type\",\n      \"where\": \"slack\",\n      \"text\": \"bridge is stable, no restarts since deploy\",\n      \"title\": \"#integrations - Lumenary Systems - Slack\",\n      \"field\": \"message\",\n      \"seal\": \"submit\"\n    },\n    \"b10s0\": {\n      \"app\": \"terminal\",\n      \"title\": \"maya@mbp: ~/dev/recipe-scraper\",\n      \"titles\": [\n        \"maya@mbp: ~/dev/recipe-scraper\",\n        \"maya@mbp: ~/dev/lumenary/kafka-bridge\"\n      ]\n    },\n    \"b10s1\": {\n      \"app\": \"finder\",\n      \"title\": \"test_recipe_images\",\n      \"path\": \"/Users/maya/dev/recipe-scraper/output/test_recipe_images\"\n    },\n    \"b10s2\": {\n      \"app\": \"type\",\n      \"where\": \"vscode\",\n      \"text\": \"# Playwright wait fix: wait_for_selector ensures images are loaded before screenshot\",\n      \"title\": \"scraper.py - recipe-scraper - Visual Studio Code\",\n      \"field\": \"textArea\",\n      \"seal\": \"idle\"\n    },\n    \"b11s0\": {\n      \"app\": \"messages\",\n      \"title\": \"Lena Park\",\n      \"titles\": [\n        \"Lena Park\",\n        \"Lena Park, Grandma Ruth\"\n      ]\n    },\n    \"b11s1\": {\n      \"app\": \"type\",\n      \"where\": \"messages\",\n      \"text\": \"we'll aim to arrive around 11. should we bring breakfast stuff?\",\n      \"title\": \"Lena Park\",\n      \"field\": \"message\",\n      \"seal\": \"submit\"\n    },\n    \"b13s0\": {\n      \"app\": \"slack\",\n      \"title\": \"#integrations - Lumenary Systems - Slack\",\n      \"titles\": [\n        \"#integrations - Lumenary Systems - Slack\",\n        \"#incidents - Lumenary Systems - Slack\"\n      ]\n    },\n    \"b13s1\": {\n      \"app\": \"page\",\n      \"title\": \"Consumer Group Naming - Google Docs\",\n      \"path\": \"/document/d/1abc123def456/edit\"\n    },\n    \"b13s2\": {\n      \"app\": \"type\",\n      \"where\": \"slack\",\n      \"text\": \"Final naming convention is in the doc: <link>\",\n      \"title\": \"#integrations - Lumenary Systems - Slack\",\n      \"field\": \"message\",\n      \"seal\": \"submit\"\n    },\n    \"b14s0\": {\n      \"app\": \"mail\",\n      \"title\": \"Re: Schema change request - maya.chen@lumenary.com - Gmail\",\n      \"titles\": [\n        \"Re: Schema change request - maya.chen@lumenary.com - Gmail\",\n        \"Inbox - maya.chen@lumenary.com - Gmail\"\n      ]\n    },\n    \"b14s1\": {\n      \"app\": \"page\",\n      \"title\": \"Re: Schema change request - maya.chen@lumenary.com - Gmail\",\n      \"path\": \"/mail/u/0/#inbox/1234567891\"\n    },\n    \"b14s2\": {\n      \"app\": \"type\",\n      \"where\": \"web:mail.google.com\",\n      \"text\": \"Hi Jules,\\n\\nGood news - the schema change is now scoped and will be picked up next sprint.\\n\\nBest,\\nMaya\",\n      \"title\": \"Re: Schema change request - maya.chen@lumenary.com - Gmail\",\n      \"place\": \"Re: Schema change request\",\n      \"field\": \"body\",\n      \"seal\": \"submit\"\n    },\n    \"b15s0\": {\n      \"app\": \"vscode\",\n      \"title\": \"config.yaml - recipe-scraper - Visual Studio Code\",\n      \"titles\": [\n        \"config.yaml - recipe-scraper - Visual Studio Code\",\n        \"scraper.py - recipe-scraper - Visual Studio Code\"\n      ]\n    },\n    \"b15s1\": {\n      \"app\": \"terminal\",\n      \"title\": \"maya@mbp: ~/dev/recipe-scraper\",\n      \"titles\": [\n        \"maya@mbp: ~/dev/recipe-scraper\",\n        \"maya@mbp: ~/dev/lumenary/kafka-bridge\"\n      ]\n    },\n    \"b15s2\": {\n      \"app\": \"finder\",\n      \"title\": \"output\",\n      \"path\": \"/Users/maya/dev/recipe-scraper/output\"\n    },\n    \"b16s0\": {\n      \"app\": \"slack\",\n      \"title\": \"Tom Okafor - Lumenary Systems - Slack\",\n      \"titles\": [\n        \"Tom Okafor - Lumenary Systems - Slack\",\n        \"Dana Whitfield - Lumenary Systems - Slack\"\n      ]\n    },\n    \"b16s1\": {\n      \"app\": \"type\",\n      \"where\": \"slack\",\n      \"text\": \"offset reset is in the runbook, new group is using latest\",\n      \"title\": \"Tom Okafor - Lumenary Systems - Slack\",\n      \"field\": \"message\",\n      \"seal\": \"submit\"\n    },\n    \"b16s2\": {\n      \"app\": \"page\",\n      \"title\": \"Kafka Event Bridge Runbook - Confluence\",\n      \"path\": \"/display/ENG/Kafka+Event+Bridge+Runbook\"\n    },\n    \"b17s0\": {\n      \"app\": \"messages\",\n      \"title\": \"Grandma Ruth\",\n      \"titles\": [\n        \"Grandma Ruth\",\n        \"Lena Park, Grandma Ruth\"\n      ]\n    },\n    \"b17s1\": {\n      \"app\": \"search\",\n      \"query\": \"wildflower farm fredericksburg seating\"\n    },\n    \"b17s2\": {\n      \"app\": \"type\",\n      \"where\": \"messages\",\n      \"text\": \"the farm has benches, no need to bring chairs!\",\n      \"title\": \"Grandma Ruth\",\n      \"field\": \"message\",\n      \"seal\": \"submit\"\n    },\n    \"b18s0\": {\n      \"app\": \"slack\",\n      \"title\": \"#integrations - Lumenary Systems - Slack\",\n      \"titles\": [\n        \"#integrations - Lumenary Systems - Slack\",\n        \"#incidents - Lumenary Systems - Slack\"\n      ]\n    },\n    \"b18s1\": {\n      \"app\": \"type\",\n      \"where\": \"slack\",\n      \"text\": \"re: version suffix - we're using -v2 for the new bridge, old groups stay as-is\",\n      \"title\": \"Marcus Bell - Lumenary Systems - Slack\",\n      \"field\": \"message\",\n      \"seal\": \"submit\"\n    },\n    \"b19s0\": {\n      \"app\": \"vscode\",\n      \"title\": \"scraper.py - recipe-scraper - Visual Studio Code\",\n      \"titles\": [\n        \"scraper.py - recipe-scraper - Visual Studio Code\",\n        \"README.md - recipe-scraper - Visual Studio Code\"\n      ]\n    },\n    \"b19s1\": {\n      \"app\": \"chatgpt\",\n      \"title\": \"ChatGPT - Cloudflare Playwright stealth\",\n      \"path\": \"/chat/abc124\"\n    },\n    \"b19s2\": {\n      \"app\": \"terminal\",\n      \"title\": \"maya@mbp: ~/dev/recipe-scraper\",\n      \"titles\": [\n        \"maya@mbp: ~/dev/recipe-scraper\",\n        \"maya@mbp: ~/dev/lumenary/kafka-bridge\"\n      ]\n    },\n    \"b20s0\": {\n      \"app\": \"slack\",\n      \"title\": \"#integrations - Lumenary Systems - Slack\",\n      \"titles\": [\n        \"#integrations - Lumenary Systems - Slack\",\n        \"#incidents - Lumenary Systems - Slack\"\n      ]\n    },\n    \"b20s1\": {\n      \"app\": \"page\",\n      \"title\": \"Merge pull request #1187 - Lumenary Systems - GitHub\",\n      \"path\": \"/lumenary/kafka-bridge/pull/1187\"\n    },\n    \"b20s2\": {\n      \"app\": \"type\",\n      \"where\": \"slack\",\n      \"text\": \"migration is complete! runbook for reference: <link>\",\n      \"title\": \"#integrations - Lumenary Systems - Slack\",\n      \"field\": \"message\",\n      \"seal\": \"submit\"\n    },\n    \"b21s0\": {\n      \"app\": \"mail\",\n      \"title\": \"Inbox - maya.chen@lumenary.com - Gmail\",\n      \"titles\": [\n        \"Inbox - maya.chen@lumenary.com - Gmail\",\n        \"Updated export spec - maya.chen@lumenary.com - Gmail\"\n      ]\n    },\n    \"b21s1\": {\n      \"app\": \"page\",\n      \"title\": \"Updated export spec - maya.chen@lumenary.com - Gmail\",\n      \"path\": \"/mail/u/0/#inbox/1234567892\"\n    },\n    \"b21s2\": {\n      \"app\": \"notes\",\n      \"title\": \"Notes - Schema change backlog\",\n      \"path\": \"/notes/schema-change\"\n    },\n    \"b22s0\": {\n      \"app\": \"messages\",\n      \"title\": \"Lena Park\",\n      \"titles\": [\n        \"Lena Park\",\n        \"Lena Park, Grandma Ruth\"\n      ]\n    },\n    \"b22s1\": {\n      \"app\": \"search\",\n      \"query\": \"fredericksburg texas dinner reservations saturday\"\n    },\n    \"b22s2\": {\n      \"app\": \"type\",\n      \"where\": \"messages\",\n      \"text\": \"let's book the German place, does 6:30 work?\",\n      \"title\": \"Lena Park\",\n      \"field\": \"message\",\n      \"seal\": \"submit\"\n    },\n    \"b23s0\": {\n      \"app\": \"vscode\",\n      \"title\": \"recipe-scraper - Visual Studio Code\",\n      \"titles\": [\n        \"recipe-scraper - Visual Studio Code\",\n        \"scraper.py - recipe-scraper - Visual Studio Code\"\n      ]\n    },\n    \"b23s1\": {\n      \"app\": \"terminal\",\n      \"title\": \"maya@mbp: ~/dev/recipe-scraper\",\n      \"titles\": [\n        \"maya@mbp: ~/dev/recipe-scraper\",\n        \"maya@mbp: ~/dev/lumenary/kafka-bridge\"\n      ]\n    },\n    \"b23s2\": {\n      \"app\": \"type\",\n      \"where\": \"terminal\",\n      \"text\": \"git commit -m 'Add config file and Playwright wait for image downloads'\",\n      \"title\": \"maya@mbp: ~/dev/recipe-scraper\",\n      \"field\": \"oneLine\",\n      \"seal\": \"submit\"\n    },\n    \"b24s0\": {\n      \"app\": \"slack\",\n      \"title\": \"Dana Whitfield - Lumenary Systems - Slack\",\n      \"titles\": [\n        \"Dana Whitfield - Lumenary Systems - Slack\",\n        \"Marcus Bell - Lumenary Systems - Slack\"\n      ]\n    },\n    \"b24s1\": {\n      \"app\": \"type\",\n      \"where\": \"slack\",\n      \"text\": \"migration is done, bridge is stable, runbook is updated\",\n      \"title\": \"Dana Whitfield - Lumenary Systems - Slack\",\n      \"field\": \"message\",\n      \"seal\": \"submit\"\n    },\n    \"b25s0\": {\n      \"app\": \"slack\",\n      \"title\": \"#integrations - Lumenary Systems - Slack\",\n      \"titles\": [\n        \"#integrations - Lumenary Systems - Slack\",\n        \"#incidents - Lumenary Systems - Slack\"\n      ]\n    },\n    \"b25s1\": {\n      \"app\": \"page\",\n      \"title\": \"Consumer Group Naming - Google Docs\",\n      \"path\": \"/document/d/1abc123def456/edit\"\n    },\n    \"b25s2\": {\n      \"app\": \"type\",\n      \"where\": \"slack\",\n      \"text\": \"doc is finalized, convention is locked in\",\n      \"title\": \"#integrations - Lumenary Systems - Slack\",\n      \"field\": \"message\",\n      \"seal\": \"submit\"\n    },\n    \"b26s0\": {\n      \"app\": \"messages\",\n      \"title\": \"Grandma Ruth\",\n      \"titles\": [\n        \"Grandma Ruth\",\n        \"Lena Park, Grandma Ruth\"\n      ]\n    },\n    \"b26s1\": {\n      \"app\": \"type\",\n      \"where\": \"messages\",\n      \"text\": \"Saturday: pickup 9:15, winery 11, wildflower farm 2, dinner 6:30!\",\n      \"title\": \"Grandma Ruth\",\n      \"field\": \"message\",\n      \"seal\": \"submit\"\n    },\n    \"b27s0\": {\n      \"app\": \"vscode\",\n      \"title\": \"README.md - recipe-scraper - Visual Studio Code\",\n      \"titles\": [\n        \"README.md - recipe-scraper - Visual Studio Code\",\n        \"scraper.py - recipe-scraper - Visual Studio Code\"\n      ]\n    },\n    \"b27s1\": {\n      \"app\": \"terminal\",\n      \"title\": \"maya@mbp: ~/dev/recipe-scraper\",\n      \"titles\": [\n        \"maya@mbp: ~/dev/recipe-scraper\",\n        \"maya@mbp: ~/dev/lumenary/kafka-bridge\"\n      ]\n    },\n    \"b27s2\": {\n      \"app\": \"finder\",\n      \"title\": \"output\",\n      \"path\": \"/Users/maya/dev/recipe-scraper/output\"\n    },\n    \"b28s0\": {\n      \"app\": \"mail\",\n      \"title\": \"Re: Schema change request - maya.chen@lumenary.com - Gmail\",\n      \"titles\": [\n        \"Re: Schema change request - maya.chen@lumenary.com - Gmail\",\n        \"Inbox - maya.chen@lumenary.com - Gmail\"\n      ]\n    },\n    \"b28s1\": {\n      \"app\": \"type\",\n      \"where\": \"web:mail.google.com\",\n      \"text\": \"glad it's resolved! schema change is in the backlog\",\n      \"title\": \"Re: Schema change request - maya.chen@lumenary.com - Gmail\",\n      \"place\": \"Re: Schema change request\",\n      \"field\": \"body\",\n      \"seal\": \"submit\"\n    },\n    \"b29s0\": {\n      \"app\": \"slack\",\n      \"title\": \"#incidents - Lumenary Systems - Slack\",\n      \"titles\": [\n        \"#incidents - Lumenary Systems - Slack\",\n        \"#integrations - Lumenary Systems - Slack\"\n      ]\n    },\n    \"b29s1\": {\n      \"app\": \"calendar\",\n      \"title\": \"Monday, June 10 - Calendar\",\n      \"path\": \"/calendar/week?view=agenda\"\n    },\n    \"b30s0\": {\n      \"app\": \"messages\",\n      \"title\": \"Lena Park\",\n      \"titles\": [\n        \"Lena Park\",\n        \"Lena Park, Grandma Ruth\"\n      ]\n    },\n    \"b30s1\": {\n      \"app\": \"type\",\n      \"where\": \"messages\",\n      \"text\": \"👍 I'll bring the wine!\",\n      \"title\": \"Lena Park\",\n      \"field\": \"message\",\n      \"seal\": \"submit\"\n    },\n    \"b31s0\": {\n      \"app\": \"vscode\",\n      \"title\": \"recipe-scraper - Visual Studio Code\",\n      \"titles\": [\n        \"recipe-scraper - Visual Studio Code\",\n        \"scraper.py - recipe-scraper - Visual Studio Code\"\n      ]\n    },\n    \"b31s1\": {\n      \"app\": \"notes\",\n      \"title\": \"Notes - Recipe scraper ideas\",\n      \"path\": \"/notes/recipe-scraper\"\n    }\n  }\n}",
+  "parsed": {
+    "steps": {
+      "b0s0": {
+        "app": "slack",
+        "title": "#integrations - Lumenary Systems - Slack",
+        "titles": [
+          "#integrations - Lumenary Systems - Slack",
+          "#incidents - Lumenary Systems - Slack"
+        ]
+      },
+      "b0s1": {
+        "app": "terminal",
+        "title": "maya@mbp: ~/dev/lumenary/kafka-bridge",
+        "titles": [
+          "maya@mbp: ~/dev/lumenary/kafka-bridge",
+          "maya@mbp: ~/dev/recipe-scraper"
+        ]
+      },
+      "b0s2": {
+        "app": "page",
+        "title": "Kafka Consumer Lag - order-sync-prod-v2 - Grafana",
+        "path": "/d/consumer-lag/order-sync-prod-v2?orgId=1&from=now-6h&to=now"
+      },
+      "b0s3": {
+        "app": "type",
+        "where": "slack",
+        "text": "lag looks normal after the deploy, no action needed",
+        "title": "#integrations - Lumenary Systems - Slack",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b1s0": {
+        "app": "messages",
+        "title": "Lena Park, Grandma Ruth",
+        "titles": [
+          "Lena Park, Grandma Ruth",
+          "Lena Park",
+          "Grandma Ruth"
+        ]
+      },
+      "b1s1": {
+        "app": "type",
+        "where": "messages",
+        "text": "9:15 pickup at Grandma's works, I'll bring the cooler!",
+        "title": "Lena Park",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b1s2": {
+        "app": "calendar",
+        "title": "Saturday, June 8 - Calendar",
+        "path": "/calendar/week?view=agenda"
+      },
+      "b2s0": {
+        "app": "mail",
+        "title": "Inbox - maya.chen@lumenary.com - Gmail",
+        "titles": [
+          "Inbox - maya.chen@lumenary.com - Gmail",
+          "Re: Schema change request - maya.chen@lumenary.com - Gmail"
+        ]
+      },
+      "b2s1": {
+        "app": "page",
+        "title": "Re: Schema change request - maya.chen@lumenary.com - Gmail",
+        "path": "/mail/u/0/#inbox/1234567890"
+      },
+      "b2s2": {
+        "app": "type",
+        "where": "web:mail.google.com",
+        "text": "Hi Jules,\n\nThe schema change is in our backlog but not this sprint. I'll update you when it's scheduled.\n\nBest,\nMaya",
+        "title": "Re: Schema change request - maya.chen@lumenary.com - Gmail",
+        "place": "Re: Schema change request",
+        "field": "body",
+        "seal": "idle"
+      },
+      "b3s0": {
+        "app": "vscode",
+        "title": "scraper.py - recipe-scraper - Visual Studio Code",
+        "titles": [
+          "scraper.py - recipe-scraper - Visual Studio Code",
+          "README.md - recipe-scraper - Visual Studio Code"
+        ]
+      },
+      "b3s1": {
+        "app": "terminal",
+        "title": "maya@mbp: ~/dev/recipe-scraper",
+        "titles": [
+          "maya@mbp: ~/dev/recipe-scraper",
+          "maya@mbp: ~/dev/lumenary/kafka-bridge"
+        ]
+      },
+      "b3s2": {
+        "app": "finder",
+        "title": "test_recipe_images",
+        "path": "/Users/maya/dev/recipe-scraper/output/test_recipe_images"
+      },
+      "b4s0": {
+        "app": "slack",
+        "title": "Marcus Bell - Lumenary Systems - Slack",
+        "titles": [
+          "Marcus Bell - Lumenary Systems - Slack",
+          "Priya Raghavan - Lumenary Systems - Slack",
+          "Tom Okafor - Lumenary Systems - Slack",
+          "Dana Whitfield - Lumenary Systems - Slack"
+        ]
+      },
+      "b4s1": {
+        "app": "page",
+        "title": "Consumer Group Naming - Google Docs",
+        "path": "/document/d/1abc123def456/edit"
+      },
+      "b4s2": {
+        "app": "type",
+        "where": "slack",
+        "text": "doc is updated with the v2 convention, ready for review!",
+        "title": "Marcus Bell - Lumenary Systems - Slack",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b5s0": {
+        "app": "slack",
+        "title": "#incidents - Lumenary Systems - Slack",
+        "titles": [
+          "#incidents - Lumenary Systems - Slack",
+          "#integrations - Lumenary Systems - Slack"
+        ]
+      },
+      "b5s1": {
+        "app": "page",
+        "title": "Kafka Event Bridge Runbook - Confluence",
+        "path": "/display/ENG/Kafka+Event+Bridge+Runbook"
+      },
+      "b5s2": {
+        "app": "type",
+        "where": "slack",
+        "text": "retention setting is in the runbook and looks correct",
+        "title": "#incidents - Lumenary Systems - Slack",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b6s0": {
+        "app": "search",
+        "query": "playwright python wait for image load"
+      },
+      "b6s1": {
+        "app": "chatgpt",
+        "title": "ChatGPT - Playwright image load",
+        "path": "/chat/abc123"
+      },
+      "b6s2": {
+        "app": "vscode",
+        "title": "scraper.py - recipe-scraper - Visual Studio Code",
+        "titles": [
+          "scraper.py - recipe-scraper - Visual Studio Code",
+          "README.md - recipe-scraper - Visual Studio Code"
+        ]
+      },
+      "b7s0": {
+        "app": "messages",
+        "title": "Grandma Ruth",
+        "titles": [
+          "Grandma Ruth",
+          "Lena Park, Grandma Ruth"
+        ]
+      },
+      "b7s1": {
+        "app": "search",
+        "query": "fredericksburg texas winery gift shop"
+      },
+      "b7s2": {
+        "app": "type",
+        "where": "messages",
+        "text": "yes they have a gift shop! we can stop there before the wildflower farm",
+        "title": "Grandma Ruth",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b8s0": {
+        "app": "slack",
+        "title": "Priya Raghavan - Lumenary Systems - Slack",
+        "titles": [
+          "Priya Raghavan - Lumenary Systems - Slack",
+          "Marcus Bell - Lumenary Systems - Slack"
+        ]
+      },
+      "b8s1": {
+        "app": "type",
+        "where": "slack",
+        "text": "schema change is tracked in the backlog, you can use the existing subject for now",
+        "title": "Priya Raghavan - Lumenary Systems - Slack",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b8s2": {
+        "app": "notes",
+        "title": "Notes - Schema change backlog",
+        "path": "/notes/schema-change"
+      },
+      "b9s0": {
+        "app": "terminal",
+        "title": "maya@mbp: ~/dev/lumenary/kafka-bridge",
+        "titles": [
+          "maya@mbp: ~/dev/lumenary/kafka-bridge",
+          "maya@mbp: ~/dev/recipe-scraper"
+        ]
+      },
+      "b9s1": {
+        "app": "page",
+        "title": "Kafka Bridge Error Rate - Grafana",
+        "path": "/d/bridge-error-rate/bridge-error-rate?orgId=1&from=now-12h&to=now"
+      },
+      "b9s2": {
+        "app": "type",
+        "where": "slack",
+        "text": "bridge is stable, no restarts since deploy",
+        "title": "#integrations - Lumenary Systems - Slack",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b10s0": {
+        "app": "terminal",
+        "title": "maya@mbp: ~/dev/recipe-scraper",
+        "titles": [
+          "maya@mbp: ~/dev/recipe-scraper",
+          "maya@mbp: ~/dev/lumenary/kafka-bridge"
+        ]
+      },
+      "b10s1": {
+        "app": "finder",
+        "title": "test_recipe_images",
+        "path": "/Users/maya/dev/recipe-scraper/output/test_recipe_images"
+      },
+      "b10s2": {
+        "app": "type",
+        "where": "vscode",
+        "text": "# Playwright wait fix: wait_for_selector ensures images are loaded before screenshot",
+        "title": "scraper.py - recipe-scraper - Visual Studio Code",
+        "field": "textArea",
+        "seal": "idle"
+      },
+      "b11s0": {
+        "app": "messages",
+        "title": "Lena Park",
+        "titles": [
+          "Lena Park",
+          "Lena Park, Grandma Ruth"
+        ]
+      },
+      "b11s1": {
+        "app": "type",
+        "where": "messages",
+        "text": "we'll aim to arrive around 11. should we bring breakfast stuff?",
+        "title": "Lena Park",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b13s0": {
+        "app": "slack",
+        "title": "#integrations - Lumenary Systems - Slack",
+        "titles": [
+          "#integrations - Lumenary Systems - Slack",
+          "#incidents - Lumenary Systems - Slack"
+        ]
+      },
+      "b13s1": {
+        "app": "page",
+        "title": "Consumer Group Naming - Google Docs",
+        "path": "/document/d/1abc123def456/edit"
+      },
+      "b13s2": {
+        "app": "type",
+        "where": "slack",
+        "text": "Final naming convention is in the doc: <link>",
+        "title": "#integrations - Lumenary Systems - Slack",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b14s0": {
+        "app": "mail",
+        "title": "Re: Schema change request - maya.chen@lumenary.com - Gmail",
+        "titles": [
+          "Re: Schema change request - maya.chen@lumenary.com - Gmail",
+          "Inbox - maya.chen@lumenary.com - Gmail"
+        ]
+      },
+      "b14s1": {
+        "app": "page",
+        "title": "Re: Schema change request - maya.chen@lumenary.com - Gmail",
+        "path": "/mail/u/0/#inbox/1234567891"
+      },
+      "b14s2": {
+        "app": "type",
+        "where": "web:mail.google.com",
+        "text": "Hi Jules,\n\nGood news - the schema change is now scoped and will be picked up next sprint.\n\nBest,\nMaya",
+        "title": "Re: Schema change request - maya.chen@lumenary.com - Gmail",
+        "place": "Re: Schema change request",
+        "field": "body",
+        "seal": "submit"
+      },
+      "b15s0": {
+        "app": "vscode",
+        "title": "config.yaml - recipe-scraper - Visual Studio Code",
+        "titles": [
+          "config.yaml - recipe-scraper - Visual Studio Code",
+          "scraper.py - recipe-scraper - Visual Studio Code"
+        ]
+      },
+      "b15s1": {
+        "app": "terminal",
+        "title": "maya@mbp: ~/dev/recipe-scraper",
+        "titles": [
+          "maya@mbp: ~/dev/recipe-scraper",
+          "maya@mbp: ~/dev/lumenary/kafka-bridge"
+        ]
+      },
+      "b15s2": {
+        "app": "finder",
+        "title": "output",
+        "path": "/Users/maya/dev/recipe-scraper/output"
+      },
+      "b16s0": {
+        "app": "slack",
+        "title": "Tom Okafor - Lumenary Systems - Slack",
+        "titles": [
+          "Tom Okafor - Lumenary Systems - Slack",
+          "Dana Whitfield - Lumenary Systems - Slack"
+        ]
+      },
+      "b16s1": {
+        "app": "type",
+        "where": "slack",
+        "text": "offset reset is in the runbook, new group is using latest",
+        "title": "Tom Okafor - Lumenary Systems - Slack",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b16s2": {
+        "app": "page",
+        "title": "Kafka Event Bridge Runbook - Confluence",
+        "path": "/display/ENG/Kafka+Event+Bridge+Runbook"
+      },
+      "b17s0": {
+        "app": "messages",
+        "title": "Grandma Ruth",
+        "titles": [
+          "Grandma Ruth",
+          "Lena Park, Grandma Ruth"
+        ]
+      },
+      "b17s1": {
+        "app": "search",
+        "query": "wildflower farm fredericksburg seating"
+      },
+      "b17s2": {
+        "app": "type",
+        "where": "messages",
+        "text": "the farm has benches, no need to bring chairs!",
+        "title": "Grandma Ruth",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b18s0": {
+        "app": "slack",
+        "title": "#integrations - Lumenary Systems - Slack",
+        "titles": [
+          "#integrations - Lumenary Systems - Slack",
+          "#incidents - Lumenary Systems - Slack"
+        ]
+      },
+      "b18s1": {
+        "app": "type",
+        "where": "slack",
+        "text": "re: version suffix - we're using -v2 for the new bridge, old groups stay as-is",
+        "title": "Marcus Bell - Lumenary Systems - Slack",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b19s0": {
+        "app": "vscode",
+        "title": "scraper.py - recipe-scraper - Visual Studio Code",
+        "titles": [
+          "scraper.py - recipe-scraper - Visual Studio Code",
+          "README.md - recipe-scraper - Visual Studio Code"
+        ]
+      },
+      "b19s1": {
+        "app": "chatgpt",
+        "title": "ChatGPT - Cloudflare Playwright stealth",
+        "path": "/chat/abc124"
+      },
+      "b19s2": {
+        "app": "terminal",
+        "title": "maya@mbp: ~/dev/recipe-scraper",
+        "titles": [
+          "maya@mbp: ~/dev/recipe-scraper",
+          "maya@mbp: ~/dev/lumenary/kafka-bridge"
+        ]
+      },
+      "b20s0": {
+        "app": "slack",
+        "title": "#integrations - Lumenary Systems - Slack",
+        "titles": [
+          "#integrations - Lumenary Systems - Slack",
+          "#incidents - Lumenary Systems - Slack"
+        ]
+      },
+      "b20s1": {
+        "app": "page",
+        "title": "Merge pull request #1187 - Lumenary Systems - GitHub",
+        "path": "/lumenary/kafka-bridge/pull/1187"
+      },
+      "b20s2": {
+        "app": "type",
+        "where": "slack",
+        "text": "migration is complete! runbook for reference: <link>",
+        "title": "#integrations - Lumenary Systems - Slack",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b21s0": {
+        "app": "mail",
+        "title": "Inbox - maya.chen@lumenary.com - Gmail",
+        "titles": [
+          "Inbox - maya.chen@lumenary.com - Gmail",
+          "Updated export spec - maya.chen@lumenary.com - Gmail"
+        ]
+      },
+      "b21s1": {
+        "app": "page",
+        "title": "Updated export spec - maya.chen@lumenary.com - Gmail",
+        "path": "/mail/u/0/#inbox/1234567892"
+      },
+      "b21s2": {
+        "app": "notes",
+        "title": "Notes - Schema change backlog",
+        "path": "/notes/schema-change"
+      },
+      "b22s0": {
+        "app": "messages",
+        "title": "Lena Park",
+        "titles": [
+          "Lena Park",
+          "Lena Park, Grandma Ruth"
+        ]
+      },
+      "b22s1": {
+        "app": "search",
+        "query": "fredericksburg texas dinner reservations saturday"
+      },
+      "b22s2": {
+        "app": "type",
+        "where": "messages",
+        "text": "let's book the German place, does 6:30 work?",
+        "title": "Lena Park",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b23s0": {
+        "app": "vscode",
+        "title": "recipe-scraper - Visual Studio Code",
+        "titles": [
+          "recipe-scraper - Visual Studio Code",
+          "scraper.py - recipe-scraper - Visual Studio Code"
+        ]
+      },
+      "b23s1": {
+        "app": "terminal",
+        "title": "maya@mbp: ~/dev/recipe-scraper",
+        "titles": [
+          "maya@mbp: ~/dev/recipe-scraper",
+          "maya@mbp: ~/dev/lumenary/kafka-bridge"
+        ]
+      },
+      "b23s2": {
+        "app": "type",
+        "where": "terminal",
+        "text": "git commit -m 'Add config file and Playwright wait for image downloads'",
+        "title": "maya@mbp: ~/dev/recipe-scraper",
+        "field": "oneLine",
+        "seal": "submit"
+      },
+      "b24s0": {
+        "app": "slack",
+        "title": "Dana Whitfield - Lumenary Systems - Slack",
+        "titles": [
+          "Dana Whitfield - Lumenary Systems - Slack",
+          "Marcus Bell - Lumenary Systems - Slack"
+        ]
+      },
+      "b24s1": {
+        "app": "type",
+        "where": "slack",
+        "text": "migration is done, bridge is stable, runbook is updated",
+        "title": "Dana Whitfield - Lumenary Systems - Slack",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b25s0": {
+        "app": "slack",
+        "title": "#integrations - Lumenary Systems - Slack",
+        "titles": [
+          "#integrations - Lumenary Systems - Slack",
+          "#incidents - Lumenary Systems - Slack"
+        ]
+      },
+      "b25s1": {
+        "app": "page",
+        "title": "Consumer Group Naming - Google Docs",
+        "path": "/document/d/1abc123def456/edit"
+      },
+      "b25s2": {
+        "app": "type",
+        "where": "slack",
+        "text": "doc is finalized, convention is locked in",
+        "title": "#integrations - Lumenary Systems - Slack",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b26s0": {
+        "app": "messages",
+        "title": "Grandma Ruth",
+        "titles": [
+          "Grandma Ruth",
+          "Lena Park, Grandma Ruth"
+        ]
+      },
+      "b26s1": {
+        "app": "type",
+        "where": "messages",
+        "text": "Saturday: pickup 9:15, winery 11, wildflower farm 2, dinner 6:30!",
+        "title": "Grandma Ruth",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b27s0": {
+        "app": "vscode",
+        "title": "README.md - recipe-scraper - Visual Studio Code",
+        "titles": [
+          "README.md - recipe-scraper - Visual Studio Code",
+          "scraper.py - recipe-scraper - Visual Studio Code"
+        ]
+      },
+      "b27s1": {
+        "app": "terminal",
+        "title": "maya@mbp: ~/dev/recipe-scraper",
+        "titles": [
+          "maya@mbp: ~/dev/recipe-scraper",
+          "maya@mbp: ~/dev/lumenary/kafka-bridge"
+        ]
+      },
+      "b27s2": {
+        "app": "finder",
+        "title": "output",
+        "path": "/Users/maya/dev/recipe-scraper/output"
+      },
+      "b28s0": {
+        "app": "mail",
+        "title": "Re: Schema change request - maya.chen@lumenary.com - Gmail",
+        "titles": [
+          "Re: Schema change request - maya.chen@lumenary.com - Gmail",
+          "Inbox - maya.chen@lumenary.com - Gmail"
+        ]
+      },
+      "b28s1": {
+        "app": "type",
+        "where": "web:mail.google.com",
+        "text": "glad it's resolved! schema change is in the backlog",
+        "title": "Re: Schema change request - maya.chen@lumenary.com - Gmail",
+        "place": "Re: Schema change request",
+        "field": "body",
+        "seal": "submit"
+      },
+      "b29s0": {
+        "app": "slack",
+        "title": "#incidents - Lumenary Systems - Slack",
+        "titles": [
+          "#incidents - Lumenary Systems - Slack",
+          "#integrations - Lumenary Systems - Slack"
+        ]
+      },
+      "b29s1": {
+        "app": "calendar",
+        "title": "Monday, June 10 - Calendar",
+        "path": "/calendar/week?view=agenda"
+      },
+      "b30s0": {
+        "app": "messages",
+        "title": "Lena Park",
+        "titles": [
+          "Lena Park",
+          "Lena Park, Grandma Ruth"
+        ]
+      },
+      "b30s1": {
+        "app": "type",
+        "where": "messages",
+        "text": "👍 I'll bring the wine!",
+        "title": "Lena Park",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b31s0": {
+        "app": "vscode",
+        "title": "recipe-scraper - Visual Studio Code",
+        "titles": [
+          "recipe-scraper - Visual Studio Code",
+          "scraper.py - recipe-scraper - Visual Studio Code"
+        ]
+      },
+      "b31s1": {
+        "app": "notes",
+        "title": "Notes - Recipe scraper ideas",
+        "path": "/notes/recipe-scraper"
+      }
+    }
+  }
+}

@@ -1,0 +1,253 @@
+{
+  "items": [
+    {
+      "id": "q01",
+      "type": "exact_recall",
+      "question": "What was the PR number for the Kafka bridge migration PR that got merged?",
+      "need": "wants to reference the merged PR in a status update or retro without hunting through GitHub",
+      "reference": "PR #1187",
+      "facts": [
+        {
+          "id": "f01",
+          "text": "The migration PR was #1187",
+          "check": {
+            "kind": "regex",
+            "pattern": "1187"
+          },
+          "ev": "Pull Request #1187",
+          "nm": null,
+          "optional": false
+        }
+      ],
+      "negative": false,
+      "hallucination": "A made-up answer would claim a different PR number like #1192 or #482",
+      "target_ev": "Pull Request #1187",
+      "allow_overlap": []
+    },
+    {
+      "id": "q02",
+      "type": "exact_recall",
+      "question": "What was the Airbnb reservation number for the Fredericksburg cabin?",
+      "need": "wants to double-check the reservation details before the weekend trip",
+      "reference": "Reservation #HB-88231",
+      "facts": [
+        {
+          "id": "f02",
+          "text": "The Airbnb reservation number was HB-88231",
+          "check": {
+            "kind": "regex",
+            "pattern": "HB-88231"
+          },
+          "ev": "HB-88231",
+          "nm": null,
+          "optional": false
+        }
+      ],
+      "negative": false,
+      "hallucination": "A made-up answer would claim a different reservation number",
+      "target_ev": "HB-88231",
+      "allow_overlap": []
+    },
+    {
+      "id": "q03",
+      "type": "where_left_off",
+      "question": "Where did I leave off with the recipe scraper at the end of {d5}?",
+      "need": "wants to pick up the side project without re-reading the code to remember the last state",
+      "reference": "On {date:d5} you left the recipe scraper with a TODO comment about recipe title extraction in scraper.py and an unread DM from Priya about the schema registry; the image download fix was committed and pushed to the private repo.",
+      "facts": [
+        {
+          "id": "f03",
+          "text": "The last thing you did was leave a TODO comment about title extraction in scraper.py",
+          "check": {
+            "kind": "regex",
+            "pattern": "TODO comment about the title extraction"
+          },
+          "ev": "leave a TODO comment about the title extraction and close the file",
+          "nm": null,
+          "optional": false
+        },
+        {
+          "id": "f04",
+          "text": "The image download fix was committed and pushed to the private repo",
+          "check": {
+            "kind": "regex",
+            "pattern": "git push origin main"
+          },
+          "ev": "git push origin main",
+          "nm": null,
+          "optional": false
+        }
+      ],
+      "negative": false,
+      "hallucination": "A made-up answer would claim the scraper was fully working or that you were stuck on the Cloudflare challenge",
+      "target_ev": "scraper.py — recipe_scraper — Visual Studio Code",
+      "allow_overlap": []
+    },
+    {
+      "id": "q04",
+      "type": "cross_app",
+      "question": "What did I tell Jules about the schema change after checking the backlog?",
+      "need": "wants to recall the exact commitment made to the client so they don't contradict it in a follow-up",
+      "reference": "You told Jules the schema change was in the backlog and would be picked up next sprint, and later that it was scoped and would be picked up next sprint.",
+      "facts": [
+        {
+          "id": "f05",
+          "text": "You emailed Jules that the schema change is in the backlog and will be picked up next sprint",
+          "check": {
+            "kind": "regex",
+            "pattern": "backlog.*next sprint"
+          },
+          "ev": "logged the schema change in our backlog and we'll pick it up next sprint",
+          "nm": null,
+          "optional": false
+        },
+        {
+          "id": "f06",
+          "text": "You added the schema change to the Notion backlog",
+          "check": {
+            "kind": "regex",
+            "pattern": "Integrations Backlog"
+          },
+          "ev": "Integrations Backlog",
+          "nm": null,
+          "optional": false
+        }
+      ],
+      "negative": false,
+      "hallucination": "A made-up answer would claim you promised Jules it would be done this sprint or gave a specific date",
+      "target_ev": "Re: Schema change for order-sync payload",
+      "allow_overlap": []
+    },
+    {
+      "id": "q05",
+      "type": "time_spent",
+      "question": "How much time did I spend in Slack on {d1}?",
+      "need": "wants to see how much of the day went to Slack for a time-tracking or focus retrospective",
+      "reference": "You spent about {min:app:1:slack} minutes in Slack on {date:d1}.",
+      "facts": [
+        {
+          "id": "f07",
+          "text": "Time spent in Slack on day 1",
+          "check": {
+            "kind": "number",
+            "value": "{min:app:1:slack}",
+            "unit": "minutes",
+            "full": 0.25,
+            "half": 0.5
+          },
+          "ev": null,
+          "nm": null,
+          "optional": false
+        }
+      ],
+      "negative": false,
+      "hallucination": "A made-up answer would claim a round number like 30 minutes or an hour without basis",
+      "target_ev": "Slack",
+      "allow_overlap": []
+    },
+    {
+      "id": "q06",
+      "type": "decision",
+      "question": "What did we end up deciding for the consumer group naming convention?",
+      "need": "wants to confirm the final convention before updating more scripts or docs",
+      "reference": "The team voted 4-2 for the version-suffix style, so the convention is <service>-<env>-v<n>, e.g. order-sync-prod-v2. You updated the runbook and migration script to use it.",
+      "facts": [
+        {
+          "id": "f08",
+          "text": "The final convention is order-sync-prod-v2 style",
+          "check": {
+            "kind": "regex",
+            "pattern": "order-sync-prod-v2"
+          },
+          "ev": "order-sync-prod-v2",
+          "nm": null,
+          "optional": false
+        },
+        {
+          "id": "f09",
+          "text": "The team voted 4-2 for the version suffix style",
+          "check": {
+            "kind": "regex",
+            "pattern": "4-2"
+          },
+          "ev": "4-2",
+          "nm": null,
+          "optional": false
+        }
+      ],
+      "negative": false,
+      "hallucination": "A made-up answer would claim the team chose plain service-env or that Marcus's date-suffix idea won",
+      "target_ev": "Consumer Group Naming",
+      "allow_overlap": []
+    },
+    {
+      "id": "q07",
+      "type": "vague",
+      "question": "What was that page I looked at to check how far behind the new pipeline was?",
+      "need": "wants to find the Grafana dashboard again without remembering its exact name",
+      "reference": "You looked at the Kafka Consumer Lag dashboard in Grafana, specifically for order-sync-prod-v2.",
+      "facts": [
+        {
+          "id": "f10",
+          "text": "The dashboard was the Kafka Consumer Lag dashboard",
+          "check": {
+            "kind": "regex",
+            "pattern": "Kafka Consumer Lag"
+          },
+          "ev": "Kafka Consumer Lag",
+          "nm": null,
+          "optional": false
+        }
+      ],
+      "negative": false,
+      "hallucination": "A made-up answer would claim it was a throughput dashboard or an error-rate dashboard",
+      "target_ev": "Kafka Consumer Lag - order-sync-prod-v2 - Grafana",
+      "allow_overlap": []
+    },
+    {
+      "id": "q08",
+      "type": "negative",
+      "question": "Did I ever call the German restaurant on Main Street in Fredericksburg to book dinner for Saturday?",
+      "need": "wants to know whether the dinner reservation was actually made or if Lena is still waiting on it",
+      "reference": "No sign of a call: on {date:d2} you texted Lena that you'd call the German place on Main Street the next day, but there's no record of you booking it (a phone call wouldn't show up on the Mac either). On {date:d4} you searched for Fredericksburg dinner reservations and texted Lena about booking the German place for 6:30, and Lena then sent the reservation confirmation.",
+      "facts": [
+        {
+          "id": "f11",
+          "text": "There is no trace of calling or booking the German restaurant on Main Street",
+          "check": null,
+          "ev": null,
+          "nm": null,
+          "optional": false
+        }
+      ],
+      "negative": true,
+      "hallucination": "A made-up answer would claim you called the restaurant and booked the table yourself.",
+      "target_ev": "Messages — Lena Park",
+      "allow_overlap": []
+    },
+    {
+      "id": "q09",
+      "type": "control",
+      "question": "What's the name of the friend I'm going to Fredericksburg with?",
+      "need": "wants to confirm the name for a calendar invite or message",
+      "reference": "Lena Park",
+      "facts": [
+        {
+          "id": "f12",
+          "text": "The friend is Lena Park",
+          "check": {
+            "kind": "regex",
+            "pattern": "Lena"
+          },
+          "ev": null,
+          "nm": "Lena",
+          "optional": false
+        }
+      ],
+      "negative": false,
+      "hallucination": "A made-up answer would claim a different friend's name",
+      "target_ev": "Lena",
+      "allow_overlap": []
+    }
+  ]
+}

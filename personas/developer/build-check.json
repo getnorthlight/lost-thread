@@ -1,0 +1,8 @@
+{
+  "errors": [],
+  "warnings": [
+    "q03/f03: happened but DayDream didn't record it ('leave a TODO comment about the title extraction and close the file'): coverage gap",
+    "q07/f10: answer pattern also appears in native memory ['codex'] (possible lucky guess)"
+  ],
+  "refused_by_daydream": []
+}

@@ -1,0 +1,11 @@
+{
+  "_note": "Lost Thread generator settings. The original weeks were generated with DeepSeek V4 Flash through OpenRouter (zero data retention). Every generator reply is cached in personas/<p>/llm-cache/, keyed by model and prompt (not endpoint), so rebuilding the same personas replays the cache and makes no calls. Override with LT_GENERATOR_BASE_URL / LT_GENERATOR_MODEL; the key is read from the environment variable named in api_key_env.",
+  "generator": {
+    "backend": "openai",
+    "base_url": "https://openrouter.ai/api/v1",
+    "model": "deepseek/deepseek-v4-flash-0731",
+    "api_key_env": "OPENROUTER_API_KEY",
+    "json_mode": true,
+    "timeout": 600
+  }
+}

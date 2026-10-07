@@ -1,0 +1,338 @@
+{
+  "step": "fill-d3",
+  "model": "deepseek/deepseek-v4-flash-0731",
+  "requested_model": "deepseek/deepseek-v4-flash-0731",
+  "base_url": "<local OpenRouter proxy>",
+  "temperature": 0.7,
+  "seconds": 52.04,
+  "usage": {
+    "prompt_tokens": 6187,
+    "completion_tokens": 3353,
+    "total_tokens": 9540,
+    "cost": 0.00113974,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 6048,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00113974,
+      "upstream_inference_prompt_cost": 0.0002009,
+      "upstream_inference_completions_cost": 0.00093884
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "attempt": 2,
+  "system": "You generate realistic synthetic test data for a research benchmark about personal memory. Everything you write is fiction: invent every person, company, client and product name (never use real people you know of, and avoid famous companies as employers). Write like real life, not like a tidy diary: people get interrupted, leave things half done, revisit things, procrastinate, and type casually. Reply with JSON only.",
+  "user": "Person: {\"name\": \"Maya Chen\", \"role\": \"Founder & CEO\", \"company\": \"Loomly Labs\", \"summary\": \"Maya runs a small B2B SaaS startup that helps independent coffee roasters manage wholesale orders. She spends her days switching between customer calls, product decisions, and the occasional fire drill. She is pragmatic, slightly overwhelmed, and tries to keep Fridays for deep work.\", \"workday\": {\"start\": \"08:15\", \"end\": \"18:30\", \"lunch\": \"12:45\"}}\nPeople: [{\"key\": \"dana\", \"name\": \"Dana Whitfield\", \"role\": \"Co-founder & CTO\", \"channel\": \"slack\"}, {\"key\": \"marcus\", \"name\": \"Marcus Reid\", \"role\": \"Head of Sales\", \"channel\": \"slack\"}, {\"key\": \"priya\", \"name\": \"Priya Natarajan\", \"role\": \"Customer Success Lead\", \"channel\": \"slack\"}, {\"key\": \"leo\", \"name\": \"Leo Park\", \"role\": \"Freelance Designer\", \"channel\": \"email\"}, {\"key\": \"sarah\", \"name\": \"Sarah Kim\", \"role\": \"Investor (Seed)\", \"channel\": \"email\"}, {\"key\": \"tom\", \"name\": \"Tom Alvarez\", \"role\": \"Coffee Roaster (Customer)\", \"channel\": \"email\"}, {\"key\": \"jordan\", \"name\": \"Jordan Lee\", \"role\": \"Accountant\", \"channel\": \"email\"}]\nDay 3 plan: {\"blocks\": [{\"start\": \"08:15\", \"thread\": \"investor_update_draft\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"mail\", \"about\": \"Inbox - checking for Sarah's reply on runway question\", \"min\": 5}, {\"do\": \"type\", \"where\": \"mail\", \"intent\": \"Reply to Sarah Kim's email about runway, propose a call Monday at 10am, send it\", \"sent\": true, \"to\": \"Sarah Kim\"}, {\"do\": \"app\", \"app\": \"calendar\", \"about\": \"Scheduling Monday 10am call with Sarah\", \"min\": 3}]}, {\"start\": \"08:35\", \"thread\": \"pricing_tier_change\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"DMs with Marcus - reading his latest churn risk concerns\", \"min\": 4}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Message Marcus: agree to keep $29 but add usage cap, ask him to draft a quick FAQ for sales\", \"sent\": true, \"to\": \"Marcus Reid\"}, {\"do\": \"app\", \"app\": \"notion\", \"about\": \"Pricing decision doc - updating with final decision and rollout notes\", \"min\": 8}]}, {\"start\": \"08:55\", \"thread\": \"wholesale_invoice_export\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"#eng - checking if regression test passed\", \"min\": 3}, {\"do\": \"app\", \"app\": \"vscode\", \"about\": \"invoice_export_spec.rb - reviewing the new regression test\", \"min\": 10}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Message Dana: regression test looks good, close the ticket\", \"sent\": true, \"to\": \"Dana Whitfield\"}, {\"do\": \"app\", \"app\": \"notion\", \"about\": \"Closing the invoice export ticket and adding postmortem link\", \"min\": 4}]}, {\"start\": \"09:20\", \"thread\": \"email_with_tom\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"mail\", \"about\": \"Tom's thread - checking if he confirmed Tuesday's call\", \"min\": 3}, {\"do\": \"type\", \"where\": \"mail\", \"intent\": \"Email Tom: confirm Tuesday 2pm walkthrough, attach API quickstart doc\", \"sent\": true, \"to\": \"Tom Alvarez\"}]}, {\"start\": \"09:35\", \"thread\": \"side_project_roaster_map\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"figma\", \"about\": \"Roaster map prototype - tweaking the pin hover state\", \"min\": 12}, {\"do\": \"page\", \"host\": \"reddit.com\", \"about\": \"r/coffee - checking a thread about roaster maps for inspiration\", \"min\": 6, \"new_tab\": true}, {\"do\": \"app\", \"app\": \"vscode\", \"about\": \"scraper.py - trying a different user agent to avoid rate limit\", \"min\": 8}]}, {\"start\": \"10:00\", \"thread\": \"pricing_tier_change\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"zoom\", \"about\": \"Quick sync with Marcus on pricing FAQ and customer messaging\", \"min\": 20}]}, {\"start\": \"10:25\", \"thread\": \"investor_update_draft\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"excel\", \"about\": \"MRR metrics - double-checking churn number for Sarah's follow-up\", \"min\": 6}, {\"do\": \"app\", \"app\": \"mail\", \"about\": \"Drafting follow-up email to Sarah with updated runway projection\", \"min\": 5}]}, {\"start\": \"10:45\", \"thread\": \"moving_apartment\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"messages\", \"about\": \"Texting mom a photo of the packing boxes\", \"min\": 3}, {\"do\": \"page\", \"host\": \"zillow.com\", \"about\": \"Checking if the 2 saved listings are still available\", \"min\": 7, \"new_tab\": true}, {\"do\": \"app\", \"app\": \"notes\", \"about\": \"Moving checklist - adding 'buy boxes' and 'schedule movers'\", \"min\": 2}]}, {\"start\": \"11:00\", \"thread\": \"email_with_tom\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"#sales - checking if Marcus has context on Tom's account\", \"min\": 3}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Message Marcus: ask if Tom mentioned API access during sales calls\", \"sent\": true, \"to\": \"Marcus Reid\"}, {\"do\": \"app\", \"app\": \"mail\", \"about\": \"Tom's feature request list - re-reading the 4 items to prep for Tuesday\", \"min\": 5}]}, {\"start\": \"11:20\", \"thread\": \"side_project_roaster_map\", \"noise\": true, \"steps\": [{\"do\": \"search\", \"about\": \"how to scrape google maps without api key\"}, {\"do\": \"page\", \"host\": \"news.ycombinator.com\", \"about\": \"Show HN: tiny tool for coffee roasters - reading comments\", \"min\": 8, \"new_tab\": true}, {\"do\": \"app\", \"app\": \"terminal\", \"about\": \"Running scraper with new user agent - still getting 429\", \"min\": 5}]}, {\"start\": \"11:45\", \"thread\": \"wholesale_invoice_export\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"#eng - Dana posted a link to the postmortem doc\", \"min\": 2}, {\"do\": \"app\", \"app\": \"notion\", \"about\": \"Postmortem doc - adding a note about the missing regression test\", \"min\": 6}]}, {\"start\": \"12:00\", \"thread\": \"pricing_tier_change\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"#sales - Marcus posted the FAQ draft\", \"min\": 3}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Reply in #sales: looks good, one tweak to the usage cap wording, then approve\", \"sent\": true, \"to\": \"Marcus Reid\"}, {\"do\": \"app\", \"app\": \"notion\", \"about\": \"Pricing rollout checklist - marking FAQ as done\", \"min\": 3}]}, {\"start\": \"12:20\", \"thread\": \"moving_apartment\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"messages\", \"about\": \"Texting mom about the lease renewal and packing progress\", \"min\": 4}, {\"do\": \"app\", \"app\": \"notes\", \"about\": \"Apartment move - jotting down a reminder to change address with USPS\", \"min\": 2}]}, {\"start\": \"12:45\", \"thread\": \"investor_update_draft\", \"noise\": false, \"steps\": [{\"do\": \"idle\", \"min\": 35, \"about\": \"Lunch - salad at desk while reading HN\"}]}, {\"start\": \"13:25\", \"thread\": \"email_with_tom\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"mail\", \"about\": \"Tom replied - he asked about the 'not possible' feature\", \"min\": 3}, {\"do\": \"type\", \"where\": \"mail\", \"intent\": \"Reply to Tom: explain why the feature isn't feasible, offer a workaround, send it\", \"sent\": true, \"to\": \"Tom Alvarez\"}]}, {\"start\": \"13:45\", \"thread\": \"side_project_roaster_map\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"figma\", \"about\": \"Roaster map - adding a filter for 'has wholesale'\", \"min\": 10}, {\"do\": \"app\", \"app\": \"vscode\", \"about\": \"map_data.json - manually adding 3 roasters from Austin\", \"min\": 8}]}, {\"start\": \"14:10\", \"thread\": \"pricing_tier_change\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"DMs with Marcus - he sent the final FAQ\", \"min\": 2}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Message Marcus: approve, schedule the rollout for next sprint\", \"sent\": true, \"to\": \"Marcus Reid\"}, {\"do\": \"app\", \"app\": \"calendar\", \"about\": \"Adding pricing rollout task to next sprint\", \"min\": 3}]}, {\"start\": \"14:30\", \"thread\": \"wholesale_invoice_export\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"#eng - checking if anyone has questions on the postmortem\", \"min\": 2}, {\"do\": \"app\", \"app\": \"notion\", \"about\": \"Marking postmortem as complete\", \"min\": 2}]}, {\"start\": \"14:45\", \"thread\": \"investor_update_draft\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"mail\", \"about\": \"Sarah replied - she wants a quick call today instead of Monday\", \"min\": 3}, {\"do\": \"app\", \"app\": \"calendar\", \"about\": \"Rescheduling Monday call to today 3pm\", \"min\": 2}, {\"do\": \"type\", \"where\": \"mail\", \"intent\": \"Email Sarah: confirm 3pm call today, send it\", \"sent\": true, \"to\": \"Sarah Kim\"}]}, {\"start\": \"15:00\", \"thread\": \"investor_update_draft\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"zoom\", \"about\": \"Call with Sarah - runway, pricing decision, and next milestones\", \"min\": 30}]}, {\"start\": \"15:35\", \"thread\": \"moving_apartment\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"messages\", \"about\": \"Mom replied with a heart emoji and a question about movers\", \"min\": 2}, {\"do\": \"search\", \"about\": \"cheap movers austin tx\"}, {\"do\": \"page\", \"host\": \"zillow.com\", \"about\": \"One saved listing went pending - removing it from the list\", \"min\": 4, \"new_tab\": true}]}, {\"start\": \"16:00\", \"thread\": \"side_project_roaster_map\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"figma\", \"about\": \"Sharing the prototype link with Dana\", \"min\": 3}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Message Dana: here's the roaster map prototype, curious what you think\", \"sent\": true, \"to\": \"Dana Whitfield\"}, {\"do\": \"app\", \"app\": \"vscode\", \"about\": \"map_data.json - adding 2 more roasters from Portland\", \"min\": 6}]}, {\"start\": \"16:20\", \"thread\": \"email_with_tom\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"mail\", \"about\": \"Tom's thread - checking if he got the workaround email\", \"min\": 2}, {\"do\": \"app\", \"app\": \"notion\", \"about\": \"Tom's account notes - adding the workaround and Tuesday call prep\", \"min\": 4}]}, {\"start\": \"16:40\", \"thread\": \"pricing_tier_change\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"#general - Priya asked about the pricing change\", \"min\": 2}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Reply in #general: explain the usage cap plan, ask Priya to share with CS team\", \"sent\": true, \"to\": \"Priya Natarajan\"}, {\"do\": \"app\", \"app\": \"notion\", \"about\": \"Pricing decision doc - adding CS communication notes\", \"min\": 3}]}, {\"start\": \"17:00\", \"thread\": \"wholesale_invoice_export\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"#eng - Dana posted a summary of the postmortem\", \"min\": 2}, {\"do\": \"app\", \"app\": \"vscode\", \"about\": \"invoice_export.rb - glancing at the code one more time\", \"min\": 5}]}, {\"start\": \"17:15\", \"thread\": \"moving_apartment\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"messages\", \"about\": \"Texting mom about movers - will call two tomorrow\", \"min\": 3}, {\"do\": \"app\", \"app\": \"notes\", \"about\": \"Moving checklist - adding 'call movers' for tomorrow\", \"min\": 1}]}, {\"start\": \"17:30\", \"thread\": \"side_project_roaster_map\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"Dana replied to the prototype - she likes it but suggests a filter\", \"min\": 2}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Reply to Dana: good idea, will add the filter this weekend\", \"sent\": true, \"to\": \"Dana Whitfield\"}, {\"do\": \"app\", \"app\": \"figma\", \"about\": \"Adding a note about the filter suggestion\", \"min\": 3}]}, {\"start\": \"17:45\", \"thread\": \"investor_update_draft\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"mail\", \"about\": \"Sending Sarah a thank-you note and the updated runway doc\", \"min\": 3}, {\"do\": \"app\", \"app\": \"notion\", \"about\": \"Investor update - marking Sarah's call as done\", \"min\": 2}]}, {\"start\": \"18:00\", \"thread\": \"email_with_tom\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"mail\", \"about\": \"Tom confirmed Tuesday's call - replying with a calendar invite\", \"min\": 3}, {\"do\": \"app\", \"app\": \"calendar\", \"about\": \"Creating Tuesday 2pm call with Tom\", \"min\": 2}]}, {\"start\": \"18:15\", \"thread\": \"pricing_tier_change\", \"noise\": false, \"steps\": [{\"do\": \"app\", \"app\": \"slack\", \"about\": \"#sales - Marcus posted the final rollout plan\", \"min\": 2}, {\"do\": \"type\", \"where\": \"slack\", \"intent\": \"Reply in #sales: looks good, let's ship it next sprint\", \"sent\": true, \"to\": \"Marcus Reid\"}]}, {\"start\": \"18:30\", \"thread\": \"side_project_roaster_map\", \"noise\": true, \"steps\": [{\"do\": \"app\", \"app\": \"spotify\", \"about\": \"Playing lofi to wind down\", \"min\": 5}, {\"do\": \"app\", \"app\": \"vscode\", \"about\": \"map_data.json - adding one more roaster, then closing laptop\", \"min\": 5}]}], \"summary\": \"Thursday was a mix of closing out the invoice export ticket, finalizing the pricing decision with Marcus, and handling Sarah's investor call. Maya also kept Tom's onboarding moving, made progress on the roaster map, and squeezed in some apartment move planning. The day ended with everything mostly wrapped up except the roaster map filter and the movers call.\"}\n\nFill in exact content as JSON {\"steps\": {\"b<block>s<step>\": {...}}} for every app/page/search/type step:\n- app: {\"title\": exact macOS window title, e.g. \"budget_v3.xlsx\", \"retry_worker.go — fern-api\", \"#design (Channel) - Acme - Slack\",\n         \"titles\": optional list of window titles they rotate through}\n- page: {\"title\": the tab title exactly as the site shows it (\"... - Google Docs\", \"... - YouTube\", Gmail: the email subject,\n         \"Inbox\" for the inbox), \"path\": a plausible URL path}\n- search: {\"query\": the words typed into Google}\n- type: {\"text\": the exact words typed (casual where casual, typos allowed in chats), \"title\": window title for apps,\n         \"place\": the page/subject it was typed in for web:<host>, \"field\": \"message\"|\"body\"|\"textArea\"|\"oneLine\",\n         \"seal\": \"submit\" (Return/send) | \"idle\" (stopped typing) | \"submitChord\" (Cmd-Return in email)}\nKeep identifiers and numbers consistent with the thread arcs and earlier days.\nReturn exactly these keys (block and step numbers start at 0), each a flat object with the fields above:\nb0s0: app mail: Inbox - checking for Sarah's reply on runway question\nb0s1: type in mail: Reply to Sarah Kim's email about runway, propose a call Monday at 10am, send it\nb0s2: app calendar: Scheduling Monday 10am call with Sarah\nb1s0: app slack: DMs with Marcus - reading his latest churn risk concerns\nb1s1: type in slack: Message Marcus: agree to keep $29 but add usage cap, ask him to draft a quick FAQ for sales\nb1s2: app notion: Pricing decision doc - updating with final decision and rollout notes\nb2s0: app slack: #eng - checking if regression test passed\nb2s1: app vscode: invoice_export_spec.rb - reviewing the new regression test\nb2s2: type in slack: Message Dana: regression test looks good, close the ticket\nb2s3: app notion: Closing the invoice export ticket and adding postmortem link\nb3s0: app mail: Tom's thread - checking if he confirmed Tuesday's call\nb3s1: type in mail: Email Tom: confirm Tuesday 2pm walkthrough, attach API quickstart doc\nb4s0: app figma: Roaster map prototype - tweaking the pin hover state\nb4s1: page reddit.com: r/coffee - checking a thread about roaster maps for inspiration\nb4s2: app vscode: scraper.py - trying a different user agent to avoid rate limit\nb5s0: app zoom: Quick sync with Marcus on pricing FAQ and customer messaging\nb6s0: app excel: MRR metrics - double-checking churn number for Sarah's follow-up\nb6s1: app mail: Drafting follow-up email to Sarah with updated runway projection\nb7s0: app messages: Texting mom a photo of the packing boxes\nb7s1: page zillow.com: Checking if the 2 saved listings are still available\nb7s2: app notes: Moving checklist - adding 'buy boxes' and 'schedule movers'\nb8s0: app slack: #sales - checking if Marcus has context on Tom's account\nb8s1: type in slack: Message Marcus: ask if Tom mentioned API access during sales calls\nb8s2: app mail: Tom's feature request list - re-reading the 4 items to prep for Tuesday\nb9s0: search google: how to scrape google maps without api key\nb9s1: page news.ycombinator.com: Show HN: tiny tool for coffee roasters - reading comments\nb9s2: app terminal: Running scraper with new user agent - still getting 429\nb10s0: app slack: #eng - Dana posted a link to the postmortem doc\nb10s1: app notion: Postmortem doc - adding a note about the missing regression test\nb11s0: app slack: #sales - Marcus posted the FAQ draft\nb11s1: type in slack: Reply in #sales: looks good, one tweak to the usage cap wording, then approve\nb11s2: app notion: Pricing rollout checklist - marking FAQ as done\nb12s0: app messages: Texting mom about the lease renewal and packing progress\nb12s1: app notes: Apartment move - jotting down a reminder to change address with USPS\nb14s0: app mail: Tom replied - he asked about the 'not possible' feature\nb14s1: type in mail: Reply to Tom: explain why the feature isn't feasible, offer a workaround, send it\nb15s0: app figma: Roaster map - adding a filter for 'has wholesale'\nb15s1: app vscode: map_data.json - manually adding 3 roasters from Austin\nb16s0: app slack: DMs with Marcus - he sent the final FAQ\nb16s1: type in slack: Message Marcus: approve, schedule the rollout for next sprint\nb16s2: app calendar: Adding pricing rollout task to next sprint\nb17s0: app slack: #eng - checking if anyone has questions on the postmortem\nb17s1: app notion: Marking postmortem as complete\nb18s0: app mail: Sarah replied - she wants a quick call today instead of Monday\nb18s1: app calendar: Rescheduling Monday call to today 3pm\nb18s2: type in mail: Email Sarah: confirm 3pm call today, send it\nb19s0: app zoom: Call with Sarah - runway, pricing decision, and next milestones\nb20s0: app messages: Mom replied with a heart emoji and a question about movers\nb20s1: search google: cheap movers austin tx\nb20s2: page zillow.com: One saved listing went pending - removing it from the list\nb21s0: app figma: Sharing the prototype link with Dana\nb21s1: type in slack: Message Dana: here's the roaster map prototype, curious what you think\nb21s2: app vscode: map_data.json - adding 2 more roasters from Portland\nb22s0: app mail: Tom's thread - checking if he got the workaround email\nb22s1: app notion: Tom's account notes - adding the workaround and Tuesday call prep\nb23s0: app slack: #general - Priya asked about the pricing change\nb23s1: type in slack: Reply in #general: explain the usage cap plan, ask Priya to share with CS team\nb23s2: app notion: Pricing decision doc - adding CS communication notes\nb24s0: app slack: #eng - Dana posted a summary of the postmortem\nb24s1: app vscode: invoice_export.rb - glancing at the code one more time\nb25s0: app messages: Texting mom about movers - will call two tomorrow\nb25s1: app notes: Moving checklist - adding 'call movers' for tomorrow\nb26s0: app slack: Dana replied to the prototype - she likes it but suggests a filter\nb26s1: type in slack: Reply to Dana: good idea, will add the filter this weekend\nb26s2: app figma: Adding a note about the filter suggestion\nb27s0: app mail: Sending Sarah a thank-you note and the updated runway doc\nb27s1: app notion: Investor update - marking Sarah's call as done\nb28s0: app mail: Tom confirmed Tuesday's call - replying with a calendar invite\nb28s1: app calendar: Creating Tuesday 2pm call with Tom\nb29s0: app slack: #sales - Marcus posted the final rollout plan\nb29s1: type in slack: Reply in #sales: looks good, let's ship it next sprint\nb30s0: app spotify: Playing lofi to wind down\nb30s1: app vscode: map_data.json - adding one more roaster, then closing laptop\n\nYour previous reply had these problems; fix them and reply with the full JSON again:\n- missing steps.b0s0\n- missing steps.b0s1\n- missing steps.b0s2\n- missing steps.b1s0\n- missing steps.b1s1\n- missing steps.b1s2\n- missing steps.b2s0\n- missing steps.b2s1\n- missing steps.b2s2\n- missing steps.b2s3\n- missing steps.b3s0\n- missing steps.b3s1\n- missing steps.b4s0\n- missing steps.b4s1\n- missing steps.b4s2",
+  "raw": "{\n  \"steps\": {\n    \"b0s0\": {\n      \"app\": {\n        \"title\": \"Inbox - maya@loomlylabs.com - Gmail\"\n      }\n    },\n    \"b0s1\": {\n      \"type\": {\n        \"text\": \"Hi Sarah,\\n\\nThanks for the note on runway. We're at 14 months and the pricing change should push that to ~17. I'd love to walk you through the updated projection. Can we do a quick call Monday at 10am?\\n\\nBest,\\nMaya\",\n        \"title\": \"Re: runway question - maya@loomlylabs.com - Gmail\",\n        \"place\": \"mail\",\n        \"field\": \"body\",\n        \"seal\": \"submitChord\"\n      }\n    },\n    \"b0s2\": {\n      \"app\": {\n        \"title\": \"Monday, March 11 - Calendar - Google Calendar\",\n        \"titles\": [\n          \"Monday, March 11 - Calendar - Google Calendar\",\n          \"March 2024 - Calendar - Google Calendar\"\n        ]\n      }\n    },\n    \"b1s0\": {\n      \"app\": {\n        \"title\": \"Marcus Reid - Slack\",\n        \"titles\": [\n          \"Marcus Reid - Slack\",\n          \"Loomly Labs - Slack\"\n        ]\n      }\n    },\n    \"b1s1\": {\n      \"type\": {\n        \"text\": \"ok let's keep $29 but add a usage cap. can you draft a quick FAQ for sales? just the top 5 questions prob\",\n        \"title\": \"Marcus Reid - Slack\",\n        \"place\": \"slack\",\n        \"field\": \"message\",\n        \"seal\": \"submit\"\n      }\n    },\n    \"b1s2\": {\n      \"app\": {\n        \"title\": \"Pricing Decision - Notion\",\n        \"titles\": [\n          \"Pricing Decision - Notion\",\n          \"Pricing rollout checklist - Notion\"\n        ]\n      }\n    },\n    \"b2s0\": {\n      \"app\": {\n        \"title\": \"#eng - Loomly Labs - Slack\"\n      }\n    },\n    \"b2s1\": {\n      \"app\": {\n        \"title\": \"invoice_export_spec.rb - loomly - Visual Studio Code\"\n      }\n    },\n    \"b2s2\": {\n      \"type\": {\n        \"text\": \"regression test looks good, close the ticket 👍\",\n        \"title\": \"#eng - Loomly Labs - Slack\",\n        \"place\": \"slack\",\n        \"field\": \"message\",\n        \"seal\": \"submit\"\n      }\n    },\n    \"b2s3\": {\n      \"app\": {\n        \"title\": \"Invoice Export Postmortem - Notion\",\n        \"titles\": [\n          \"Invoice Export Postmortem - Notion\",\n          \"Invoice export ticket - Notion\"\n        ]\n      }\n    },\n    \"b3s0\": {\n      \"app\": {\n        \"title\": \"Re: API access and Tuesday walkthrough - maya@loomlylabs.com - Gmail\"\n      }\n    },\n    \"b3s1\": {\n      \"type\": {\n        \"text\": \"Hi Tom,\\n\\nGreat, Tuesday at 2pm works. Attaching the API quickstart doc so you can poke around before the call.\\n\\nBest,\\nMaya\",\n        \"title\": \"Re: API access and Tuesday walkthrough - maya@loomlylabs.com - Gmail\",\n        \"place\": \"mail\",\n        \"field\": \"body\",\n        \"seal\": \"submitChord\"\n      }\n    },\n    \"b4s0\": {\n      \"app\": {\n        \"title\": \"Roaster Map - Prototype - Figma\",\n        \"titles\": [\n          \"Roaster Map - Prototype - Figma\",\n          \"Roaster Map - Figma\"\n        ]\n      }\n    },\n    \"b4s1\": {\n      \"page\": {\n        \"title\": \"r/coffee - What do you look for in a roaster map? - Reddit\",\n        \"path\": \"/r/coffee/comments/roaster_map_inspiration/\"\n      }\n    },\n    \"b4s2\": {\n      \"app\": {\n        \"title\": \"scraper.py - roaster-map - Visual Studio Code\"\n      }\n    },\n    \"b5s0\": {\n      \"app\": {\n        \"title\": \"Zoom Meeting - Quick sync with Marcus\"\n      }\n    },\n    \"b6s0\": {\n      \"app\": {\n        \"title\": \"MRR metrics - March 2024.xlsx - Excel\"\n      }\n    },\n    \"b6s1\": {\n      \"app\": {\n        \"title\": \"Re: runway question - maya@loomlylabs.com - Gmail\"\n      }\n    },\n    \"b7s0\": {\n      \"app\": {\n        \"title\": \"Mom - Messages\"\n      }\n    },\n    \"b7s1\": {\n      \"page\": {\n        \"title\": \"Zillow - Homes for Sale in Austin, TX\",\n        \"path\": \"/austin-tx/\"\n      }\n    },\n    \"b7s2\": {\n      \"app\": {\n        \"title\": \"Moving Checklist - Notes\"\n      }\n    },\n    \"b8s0\": {\n      \"app\": {\n        \"title\": \"#sales - Loomly Labs - Slack\"\n      }\n    },\n    \"b8s1\": {\n      \"type\": {\n        \"text\": \"hey did Tom ever mention API access during sales calls? trying to prep for tuesday\",\n        \"title\": \"Marcus Reid - Slack\",\n        \"place\": \"slack\",\n        \"field\": \"message\",\n        \"seal\": \"submit\"\n      }\n    },\n    \"b8s2\": {\n      \"app\": {\n        \"title\": \"Tom Alvarez - Feature Requests - maya@loomlylabs.com - Gmail\"\n      }\n    },\n    \"b9s0\": {\n      \"search\": {\n        \"query\": \"how to scrape google maps without api key\"\n      }\n    },\n    \"b9s1\": {\n      \"page\": {\n        \"title\": \"Show HN: Tiny tool for coffee roasters - Hacker News\",\n        \"path\": \"/item?id=12345678\"\n      }\n    },\n    \"b9s2\": {\n      \"app\": {\n        \"title\": \"Terminal - scraper.py — -zsh — 80×24\"\n      }\n    },\n    \"b10s0\": {\n      \"app\": {\n        \"title\": \"#eng - Loomly Labs - Slack\"\n      }\n    },\n    \"b10s1\": {\n      \"app\": {\n        \"title\": \"Invoice Export Postmortem - Notion\"\n      }\n    },\n    \"b11s0\": {\n      \"app\": {\n        \"title\": \"#sales - Loomly Labs - Slack\"\n      }\n    },\n    \"b11s1\": {\n      \"type\": {\n        \"text\": \"looks good, one tweak: the usage cap wording should say 'per month' not 'per billing cycle'. otherwise approve 👍\",\n        \"title\": \"#sales - Loomly Labs - Slack\",\n        \"place\": \"slack\",\n        \"field\": \"message\",\n        \"seal\": \"submit\"\n      }\n    },\n    \"b11s2\": {\n      \"app\": {\n        \"title\": \"Pricing rollout checklist - Notion\"\n      }\n    },\n    \"b12s0\": {\n      \"app\": {\n        \"title\": \"Mom - Messages\"\n      }\n    },\n    \"b12s1\": {\n      \"app\": {\n        \"title\": \"Moving Checklist - Notes\"\n      }\n    },\n    \"b14s0\": {\n      \"app\": {\n        \"title\": \"Re: API access and Tuesday walkthrough - maya@loomlylabs.com - Gmail\"\n      }\n    },\n    \"b14s1\": {\n      \"type\": {\n        \"text\": \"Hi Tom,\\n\\nGood question. That feature isn't feasible with the current data model because wholesale orders don't carry a per-item roast date. A workaround: use the batch number on the invoice and we can add a lookup endpoint. Happy to walk through it Tuesday.\\n\\nBest,\\nMaya\",\n        \"title\": \"Re: API access and Tuesday walkthrough - maya@loomlylabs.com - Gmail\",\n        \"place\": \"mail\",\n        \"field\": \"body\",\n        \"seal\": \"submitChord\"\n      }\n    },\n    \"b15s0\": {\n      \"app\": {\n        \"title\": \"Roaster Map - Prototype - Figma\"\n      }\n    },\n    \"b15s1\": {\n      \"app\": {\n        \"title\": \"map_data.json - roaster-map - Visual Studio Code\"\n      }\n    },\n    \"b16s0\": {\n      \"app\": {\n        \"title\": \"Marcus Reid - Slack\"\n      }\n    },\n    \"b16s1\": {\n      \"type\": {\n        \"text\": \"approved. let's schedule the rollout for next sprint\",\n        \"title\": \"Marcus Reid - Slack\",\n        \"place\": \"slack\",\n        \"field\": \"message\",\n        \"seal\": \"submit\"\n      }\n    },\n    \"b16s2\": {\n      \"app\": {\n        \"title\": \"Sprint 12 - Linear\",\n        \"titles\": [\n          \"Sprint 12 - Linear\",\n          \"Calendar - Google Calendar\"\n        ]\n      }\n    },\n    \"b17s0\": {\n      \"app\": {\n        \"title\": \"#eng - Loomly Labs - Slack\"\n      }\n    },\n    \"b17s1\": {\n      \"app\": {\n        \"title\": \"Invoice Export Postmortem - Notion\"\n      }\n    },\n    \"b18s0\": {\n      \"app\": {\n        \"title\": \"Re: runway question - maya@loomlylabs.com - Gmail\"\n      }\n    },\n    \"b18s1\": {\n      \"app\": {\n        \"title\": \"Thursday, March 7 - Calendar - Google Calendar\"\n      }\n    },\n    \"b18s2\": {\n      \"type\": {\n        \"text\": \"Hi Sarah,\\n\\n3pm today works. See you then.\\n\\nBest,\\nMaya\",\n        \"title\": \"Re: runway question - maya@loomlylabs.com - Gmail\",\n        \"place\": \"mail\",\n        \"field\": \"body\",\n        \"seal\": \"submitChord\"\n      }\n    },\n    \"b19s0\": {\n      \"app\": {\n        \"title\": \"Zoom Meeting - Maya Chen / Sarah Kim\"\n      }\n    },\n    \"b20s0\": {\n      \"app\": {\n        \"title\": \"Mom - Messages\"\n      }\n    },\n    \"b20s1\": {\n      \"search\": {\n        \"query\": \"cheap movers austin tx\"\n      }\n    },\n    \"b20s2\": {\n      \"page\": {\n        \"title\": \"Zillow - Homes for Sale in Austin, TX\",\n        \"path\": \"/austin-tx/\"\n      }\n    },\n    \"b21s0\": {\n      \"app\": {\n        \"title\": \"Roaster Map - Prototype - Figma\"\n      }\n    },\n    \"b21s1\": {\n      \"type\": {\n        \"text\": \"here's the roaster map prototype, curious what you think https://figma.com/proto/roaster-map\",\n        \"title\": \"Dana Whitfield - Slack\",\n        \"place\": \"slack\",\n        \"field\": \"message\",\n        \"seal\": \"submit\"\n      }\n    },\n    \"b21s2\": {\n      \"app\": {\n        \"title\": \"map_data.json - roaster-map - Visual Studio Code\"\n      }\n    },\n    \"b22s0\": {\n      \"app\": {\n        \"title\": \"Re: API access and Tuesday walkthrough - maya@loomlylabs.com - Gmail\"\n      }\n    },\n    \"b22s1\": {\n      \"app\": {\n        \"title\": \"Tom Alvarez - Account Notes - Notion\"\n      }\n    },\n    \"b23s0\": {\n      \"app\": {\n        \"title\": \"#general - Loomly Labs - Slack\"\n      }\n    },\n    \"b23s1\": {\n      \"type\": {\n        \"text\": \"we're keeping $29 but adding a usage cap (10k orders/mo). can you share with the CS team? they'll get questions\",\n        \"title\": \"#general - Loomly Labs - Slack\",\n        \"place\": \"slack\",\n        \"field\": \"message\",\n        \"seal\": \"submit\"\n      }\n    },\n    \"b23s2\": {\n      \"app\": {\n        \"title\": \"Pricing Decision - Notion\"\n      }\n    },\n    \"b24s0\": {\n      \"app\": {\n        \"title\": \"#eng - Loomly Labs - Slack\"\n      }\n    },\n    \"b24s1\": {\n      \"app\": {\n        \"title\": \"invoice_export.rb - loomly - Visual Studio Code\"\n      }\n    },\n    \"b25s0\": {\n      \"app\": {\n        \"title\": \"Mom - Messages\"\n      }\n    },\n    \"b25s1\": {\n      \"app\": {\n        \"title\": \"Moving Checklist - Notes\"\n      }\n    },\n    \"b26s0\": {\n      \"app\": {\n        \"title\": \"Dana Whitfield - Slack\"\n      }\n    },\n    \"b26s1\": {\n      \"type\": {\n        \"text\": \"good idea, will add the filter this weekend\",\n        \"title\": \"Dana Whitfield - Slack\",\n        \"place\": \"slack\",\n        \"field\": \"message\",\n        \"seal\": \"submit\"\n      }\n    },\n    \"b26s2\": {\n      \"app\": {\n        \"title\": \"Roaster Map - Prototype - Figma\"\n      }\n    },\n    \"b27s0\": {\n      \"app\": {\n        \"title\": \"Re: runway question - maya@loomlylabs.com - Gmail\"\n      }\n    },\n    \"b27s1\": {\n      \"app\": {\n        \"title\": \"Investor Update - Notion\"\n      }\n    },\n    \"b28s0\": {\n      \"app\": {\n        \"title\": \"Re: API access and Tuesday walkthrough - maya@loomlylabs.com - Gmail\"\n      }\n    },\n    \"b28s1\": {\n      \"app\": {\n        \"title\": \"Tuesday, March 12 - Calendar - Google Calendar\"\n      }\n    },\n    \"b29s0\": {\n      \"app\": {\n        \"title\": \"#sales - Loomly Labs - Slack\"\n      }\n    },\n    \"b29s1\": {\n      \"type\": {\n        \"text\": \"looks good, let's ship it next sprint 🚀\",\n        \"title\": \"#sales - Loomly Labs - Slack\",\n        \"place\": \"slack\",\n        \"field\": \"message\",\n        \"seal\": \"submit\"\n      }\n    },\n    \"b30s0\": {\n      \"app\": {\n        \"title\": \"lofi hip hop radio - beats to relax/study to - Spotify\"\n      }\n    },\n    \"b30s1\": {\n      \"app\": {\n        \"title\": \"map_data.json - roaster-map - Visual Studio Code\"\n      }\n    }\n  }\n}",
+  "parsed": {
+    "steps": {
+      "b0s0": {
+        "title": "Inbox - maya@loomlylabs.com - Gmail"
+      },
+      "b0s1": {
+        "text": "Hi Sarah,\n\nThanks for the note on runway. We're at 14 months and the pricing change should push that to ~17. I'd love to walk you through the updated projection. Can we do a quick call Monday at 10am?\n\nBest,\nMaya",
+        "title": "Re: runway question - maya@loomlylabs.com - Gmail",
+        "place": "mail",
+        "field": "body",
+        "seal": "submitChord"
+      },
+      "b0s2": {
+        "title": "Monday, March 11 - Calendar - Google Calendar",
+        "titles": [
+          "Monday, March 11 - Calendar - Google Calendar",
+          "March 2024 - Calendar - Google Calendar"
+        ]
+      },
+      "b1s0": {
+        "title": "Marcus Reid - Slack",
+        "titles": [
+          "Marcus Reid - Slack",
+          "Loomly Labs - Slack"
+        ]
+      },
+      "b1s1": {
+        "text": "ok let's keep $29 but add a usage cap. can you draft a quick FAQ for sales? just the top 5 questions prob",
+        "title": "Marcus Reid - Slack",
+        "place": "slack",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b1s2": {
+        "title": "Pricing Decision - Notion",
+        "titles": [
+          "Pricing Decision - Notion",
+          "Pricing rollout checklist - Notion"
+        ]
+      },
+      "b2s0": {
+        "title": "#eng - Loomly Labs - Slack"
+      },
+      "b2s1": {
+        "title": "invoice_export_spec.rb - loomly - Visual Studio Code"
+      },
+      "b2s2": {
+        "text": "regression test looks good, close the ticket 👍",
+        "title": "#eng - Loomly Labs - Slack",
+        "place": "slack",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b2s3": {
+        "title": "Invoice Export Postmortem - Notion",
+        "titles": [
+          "Invoice Export Postmortem - Notion",
+          "Invoice export ticket - Notion"
+        ]
+      },
+      "b3s0": {
+        "title": "Re: API access and Tuesday walkthrough - maya@loomlylabs.com - Gmail"
+      },
+      "b3s1": {
+        "text": "Hi Tom,\n\nGreat, Tuesday at 2pm works. Attaching the API quickstart doc so you can poke around before the call.\n\nBest,\nMaya",
+        "title": "Re: API access and Tuesday walkthrough - maya@loomlylabs.com - Gmail",
+        "place": "mail",
+        "field": "body",
+        "seal": "submitChord"
+      },
+      "b4s0": {
+        "title": "Roaster Map - Prototype - Figma",
+        "titles": [
+          "Roaster Map - Prototype - Figma",
+          "Roaster Map - Figma"
+        ]
+      },
+      "b4s1": {
+        "title": "r/coffee - What do you look for in a roaster map? - Reddit",
+        "path": "/r/coffee/comments/roaster_map_inspiration/"
+      },
+      "b4s2": {
+        "title": "scraper.py - roaster-map - Visual Studio Code"
+      },
+      "b5s0": {
+        "title": "Zoom Meeting - Quick sync with Marcus"
+      },
+      "b6s0": {
+        "title": "MRR metrics - March 2024.xlsx - Excel"
+      },
+      "b6s1": {
+        "title": "Re: runway question - maya@loomlylabs.com - Gmail"
+      },
+      "b7s0": {
+        "title": "Mom - Messages"
+      },
+      "b7s1": {
+        "title": "Zillow - Homes for Sale in Austin, TX",
+        "path": "/austin-tx/"
+      },
+      "b7s2": {
+        "title": "Moving Checklist - Notes"
+      },
+      "b8s0": {
+        "title": "#sales - Loomly Labs - Slack"
+      },
+      "b8s1": {
+        "text": "hey did Tom ever mention API access during sales calls? trying to prep for tuesday",
+        "title": "Marcus Reid - Slack",
+        "place": "slack",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b8s2": {
+        "title": "Tom Alvarez - Feature Requests - maya@loomlylabs.com - Gmail"
+      },
+      "b9s0": {
+        "query": "how to scrape google maps without api key"
+      },
+      "b9s1": {
+        "title": "Show HN: Tiny tool for coffee roasters - Hacker News",
+        "path": "/item?id=12345678"
+      },
+      "b9s2": {
+        "title": "Terminal - scraper.py — -zsh — 80×24"
+      },
+      "b10s0": {
+        "title": "#eng - Loomly Labs - Slack"
+      },
+      "b10s1": {
+        "title": "Invoice Export Postmortem - Notion"
+      },
+      "b11s0": {
+        "title": "#sales - Loomly Labs - Slack"
+      },
+      "b11s1": {
+        "text": "looks good, one tweak: the usage cap wording should say 'per month' not 'per billing cycle'. otherwise approve 👍",
+        "title": "#sales - Loomly Labs - Slack",
+        "place": "slack",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b11s2": {
+        "title": "Pricing rollout checklist - Notion"
+      },
+      "b12s0": {
+        "title": "Mom - Messages"
+      },
+      "b12s1": {
+        "title": "Moving Checklist - Notes"
+      },
+      "b14s0": {
+        "title": "Re: API access and Tuesday walkthrough - maya@loomlylabs.com - Gmail"
+      },
+      "b14s1": {
+        "text": "Hi Tom,\n\nGood question. That feature isn't feasible with the current data model because wholesale orders don't carry a per-item roast date. A workaround: use the batch number on the invoice and we can add a lookup endpoint. Happy to walk through it Tuesday.\n\nBest,\nMaya",
+        "title": "Re: API access and Tuesday walkthrough - maya@loomlylabs.com - Gmail",
+        "place": "mail",
+        "field": "body",
+        "seal": "submitChord"
+      },
+      "b15s0": {
+        "title": "Roaster Map - Prototype - Figma"
+      },
+      "b15s1": {
+        "title": "map_data.json - roaster-map - Visual Studio Code"
+      },
+      "b16s0": {
+        "title": "Marcus Reid - Slack"
+      },
+      "b16s1": {
+        "text": "approved. let's schedule the rollout for next sprint",
+        "title": "Marcus Reid - Slack",
+        "place": "slack",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b16s2": {
+        "title": "Sprint 12 - Linear",
+        "titles": [
+          "Sprint 12 - Linear",
+          "Calendar - Google Calendar"
+        ]
+      },
+      "b17s0": {
+        "title": "#eng - Loomly Labs - Slack"
+      },
+      "b17s1": {
+        "title": "Invoice Export Postmortem - Notion"
+      },
+      "b18s0": {
+        "title": "Re: runway question - maya@loomlylabs.com - Gmail"
+      },
+      "b18s1": {
+        "title": "Thursday, March 7 - Calendar - Google Calendar"
+      },
+      "b18s2": {
+        "text": "Hi Sarah,\n\n3pm today works. See you then.\n\nBest,\nMaya",
+        "title": "Re: runway question - maya@loomlylabs.com - Gmail",
+        "place": "mail",
+        "field": "body",
+        "seal": "submitChord"
+      },
+      "b19s0": {
+        "title": "Zoom Meeting - Maya Chen / Sarah Kim"
+      },
+      "b20s0": {
+        "title": "Mom - Messages"
+      },
+      "b20s1": {
+        "query": "cheap movers austin tx"
+      },
+      "b20s2": {
+        "title": "Zillow - Homes for Sale in Austin, TX",
+        "path": "/austin-tx/"
+      },
+      "b21s0": {
+        "title": "Roaster Map - Prototype - Figma"
+      },
+      "b21s1": {
+        "text": "here's the roaster map prototype, curious what you think https://figma.com/proto/roaster-map",
+        "title": "Dana Whitfield - Slack",
+        "place": "slack",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b21s2": {
+        "title": "map_data.json - roaster-map - Visual Studio Code"
+      },
+      "b22s0": {
+        "title": "Re: API access and Tuesday walkthrough - maya@loomlylabs.com - Gmail"
+      },
+      "b22s1": {
+        "title": "Tom Alvarez - Account Notes - Notion"
+      },
+      "b23s0": {
+        "title": "#general - Loomly Labs - Slack"
+      },
+      "b23s1": {
+        "text": "we're keeping $29 but adding a usage cap (10k orders/mo). can you share with the CS team? they'll get questions",
+        "title": "#general - Loomly Labs - Slack",
+        "place": "slack",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b23s2": {
+        "title": "Pricing Decision - Notion"
+      },
+      "b24s0": {
+        "title": "#eng - Loomly Labs - Slack"
+      },
+      "b24s1": {
+        "title": "invoice_export.rb - loomly - Visual Studio Code"
+      },
+      "b25s0": {
+        "title": "Mom - Messages"
+      },
+      "b25s1": {
+        "title": "Moving Checklist - Notes"
+      },
+      "b26s0": {
+        "title": "Dana Whitfield - Slack"
+      },
+      "b26s1": {
+        "text": "good idea, will add the filter this weekend",
+        "title": "Dana Whitfield - Slack",
+        "place": "slack",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b26s2": {
+        "title": "Roaster Map - Prototype - Figma"
+      },
+      "b27s0": {
+        "title": "Re: runway question - maya@loomlylabs.com - Gmail"
+      },
+      "b27s1": {
+        "title": "Investor Update - Notion"
+      },
+      "b28s0": {
+        "title": "Re: API access and Tuesday walkthrough - maya@loomlylabs.com - Gmail"
+      },
+      "b28s1": {
+        "title": "Tuesday, March 12 - Calendar - Google Calendar"
+      },
+      "b29s0": {
+        "title": "#sales - Loomly Labs - Slack"
+      },
+      "b29s1": {
+        "text": "looks good, let's ship it next sprint 🚀",
+        "title": "#sales - Loomly Labs - Slack",
+        "place": "slack",
+        "field": "message",
+        "seal": "submit"
+      },
+      "b30s0": {
+        "title": "lofi hip hop radio - beats to relax/study to - Spotify"
+      },
+      "b30s1": {
+        "title": "map_data.json - roaster-map - Visual Studio Code"
+      }
+    }
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "step": "chats",
+  "model": "deepseek/deepseek-v4-flash-0731",
+  "requested_model": "deepseek/deepseek-v4-flash-0731",
+  "base_url": "<local OpenRouter proxy>",
+  "temperature": 0.8,
+  "seconds": 72.33,
+  "usage": {
+    "prompt_tokens": 1520,
+    "completion_tokens": 2262,
+    "total_tokens": 3782,
+    "cost": 0.00084616,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00084616,
+      "upstream_inference_prompt_cost": 0.0002128,
+      "upstream_inference_completions_cost": 0.00063336
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "attempt": 1,
+  "system": "You generate realistic synthetic test data for a research benchmark about personal memory. Everything you write is fiction: invent every person, company, client and product name (never use real people you know of, and avoid famous companies as employers). Write like real life, not like a tidy diary: people get interrupted, leave things half done, revisit things, procrastinate, and type casually. Reply with JSON only.",
+  "user": "Person: {\"persona\": {\"name\": \"Maya Chen\", \"role\": \"Senior Software Engineer\", \"company\": \"Lumenary Systems\", \"summary\": \"Backend-focused developer on the integrations team, currently migrating a legacy event pipeline to Kafka. She works from home in Austin, uses a MacBook Pro, and tends to start late after a slow morning.\", \"workday\": {\"start\": \"09:45\", \"end\": \"18:30\", \"lunch\": \"13:00\"}}, \"people\": [{\"key\": \"dana\", \"name\": \"Dana Whitfield\", \"role\": \"Engineering Manager\", \"channel\": \"slack\"}, {\"key\": \"priya\", \"name\": \"Priya Raghavan\", \"role\": \"Staff Engineer, Integrations\", \"channel\": \"slack\"}, {\"key\": \"marcus\", \"name\": \"Marcus Bell\", \"role\": \"Product Manager\", \"channel\": \"slack\"}, {\"key\": \"tom\", \"name\": \"Tom Okafor\", \"role\": \"DevOps Engineer\", \"channel\": \"slack\"}, {\"key\": \"jules\", \"name\": \"Jules Fontaine\", \"role\": \"Data Analyst (client side)\", \"channel\": \"email\"}, {\"key\": \"lena\", \"name\": \"Lena Park\", \"role\": \"Friend from college\", \"channel\": \"messages\"}, {\"key\": \"grandma\", \"name\": \"Grandma Ruth\", \"role\": \"Family\", \"channel\": \"messages\"}], \"threads\": [{\"key\": \"kafka_migration\", \"title\": \"Kafka migration for event pipeline\", \"kind\": \"main\", \"arc\": \"Monday: Maya picks up ticket EV-482 to move the order-events topic from the old RabbitMQ bridge. Tuesday: she hits a serialization issue with the Avro schema and posts in #integrations; Priya suggests reusing the existing schema registry subject. Wednesday: she writes a migration script and runs it against staging, but the consumer lag spikes. Thursday: she fixes the consumer group offset reset and coordinates with Tom to deploy the new bridge. Friday: PR #1187 is approved and merged; she updates the runbook and closes EV-482.\"}, {\"key\": \"consumer_group\", \"title\": \"Consumer group naming decision\", \"kind\": \"decision\", \"arc\": \"Monday: Maya proposes naming consumer groups by service and environment (e.g. `order-sync-prod`). Tuesday: Marcus pushes back, wanting a version suffix. Wednesday: she creates a short comparison doc and polls the team in Slack. Thursday: the team votes 4-2 for `order-sync-prod-v2` style. Friday: she updates the migration script and the runbook to use the new convention.\"}, {\"key\": \"invoice_question\", \"title\": \"Invoice question from Jules at Northwind Analytics\", \"kind\": \"correspondence\", \"arc\": \"Tuesday: Jules emails Maya asking why invoice #INV-22904 is missing from the exported dataset. Wednesday: Maya checks the pipeline logs and finds the event was dropped due to a malformed timestamp. Thursday: she sends Jules a corrected CSV and explains the fix. Friday: Jules confirms the invoice now appears and asks for a small schema change; Maya adds it to the backlog.\"}, {\"key\": \"weekend_plans\", \"title\": \"Weekend trip to Fredericksburg\", \"kind\": \"personal\", \"arc\": \"Monday: Lena texts Maya about booking a cabin for the weekend. Tuesday: Maya checks Airbnb and sends Lena two options. Wednesday: they book the cabin (reservation #HB-88231) and split the cost. Thursday: Maya texts Grandma Ruth to ask if she wants to join for Saturday wine tasting. Friday: Grandma says yes, and Maya adds a stop at the wildflower farm to the itinerary.\"}, {\"key\": \"side_project\", \"title\": \"Side project: recipe scraper\", \"kind\": \"side_project\", \"arc\": \"Maya tinkers with a small Python script to scrape recipes from a cooking site. Monday: she refactors the parser to use BeautifulSoup. Wednesday: she gets blocked by a Cloudflare challenge and tries using Playwright. Friday: she gets it working for a few test URLs and commits it to a private GitHub repo.\"}], \"apps\": [\"slack\", \"vscode\", \"terminal\", \"zoom\", \"messages\", \"mail\", \"notes\", \"chatgpt\", \"spotify\", \"finder\", \"calendar\", \"preview\", \"notion\"], \"sites\": [\"github.com\", \"docs.google.com\", \"mail.google.com\", \"grafana.example.com\", \"confluence.lumenary.dev\", \"airbnb.com\", \"openai.com\"], \"noise\": {\"slack_titles\": [\"#integrations\", \"#incidents\", \"#random\", \"Dana Whitfield (direct message)\", \"Priya Raghavan (direct message)\"], \"pages\": [{\"host\": \"github.com\", \"title\": \"lumenary/event-bridge · Pull Request #1187\", \"path\": \"/lumenary/event-bridge/pull/1187\"}, {\"host\": \"docs.google.com\", \"title\": \"Consumer Group Naming - Lumenary\", \"path\": \"/document/d/1abc123/edit\"}, {\"host\": \"mail.google.com\", \"title\": \"Invoice #INV-22904 missing from export - Jules Fontaine\", \"path\": \"/mail/u/0/#inbox\"}, {\"host\": \"airbnb.com\", \"title\": \"Cabin in Fredericksburg, TX - reservation #HB-88231\", \"path\": \"/rooms/99887766\"}, {\"host\": \"confluence.lumenary.dev\", \"title\": \"Runbook: Kafka Event Bridge\", \"path\": \"/display/ENG/Runbook+Kafka+Event+Bridge\"}]}}\nWrite 12-22 short past chats this person had with an AI assistant in the 75 days BEFORE the week, as JSON\n{\"chats\": [{\"id\": \"c01\", \"day\": -60 (days before the week, -75..-1), \"title\", \"user\": their first message, \"gist\": one\nline of what the assistant answered}]}. Mix work, the side project and personal life; mention names of a few people\nand plans the way people do; some chats should touch the threads' background (not the week's outcomes).",
+  "raw": "{\n  \"chats\": [\n    {\n      \"id\": \"c01\",\n      \"day\": -60,\n      \"title\": \"Kafka consumer lag basics\",\n      \"user\": \"hey, can you explain kafka consumer lag like i'm five? we're about to migrate our event pipeline and i keep seeing the term in grafana\",\n      \"gist\": \"Explained consumer lag as the gap between messages produced and messages processed, with a simple analogy and tips to monitor it.\"\n    },\n    {\n      \"id\": \"c02\",\n      \"day\": -58,\n      \"title\": \"Avro schema registry setup\",\n      \"user\": \"we're moving to avro for our kafka events. do i need a schema registry if we only have like 3 topics?\",\n      \"gist\": \"Recommended using a schema registry even for small setups to enforce compatibility and avoid breaking consumers.\"\n    },\n    {\n      \"id\": \"c03\",\n      \"day\": -55,\n      \"title\": \"Recipe scraper BeautifulSoup help\",\n      \"user\": \"my recipe scraper keeps failing on pages where the ingredients are in a <ul> instead of a <div>. any way to make the parser more forgiving?\",\n      \"gist\": \"Suggested using a generic selector that matches both structures and falling back to a second parser if the first returns nothing.\"\n    },\n    {\n      \"id\": \"c04\",\n      \"day\": -52,\n      \"title\": \"Airbnb Fredericksburg cabin search\",\n      \"user\": \"lena and i are thinking about a weekend trip to fredericksburg in a few months. what's a good area to look for cabins?\",\n      \"gist\": \"Recommended looking near the main strip for walkability or outside town for quiet, and mentioned the wildflower farm as a spring highlight.\"\n    },\n    {\n      \"id\": \"c05\",\n      \"day\": -50,\n      \"title\": \"RabbitMQ to Kafka migration gotchas\",\n      \"user\": \"we're migrating from rabbitmq to kafka and i'm trying to write a list of gotchas for the team. what should i include?\",\n      \"gist\": \"Listed key gotchas: consumer groups vs queues, offset management, replayability, ordering guarantees, and schema evolution.\"\n    },\n    {\n      \"id\": \"c06\",\n      \"day\": -47,\n      \"title\": \"Playwright vs Selenium for Cloudflare\",\n      \"user\": \"my scraper is getting blocked by cloudflare. would playwright actually help or is it the same as selenium?\",\n      \"gist\": \"Explained that Playwright can look more like a real browser and handle some challenges better, but it's not a guaranteed bypass.\"\n    },\n    {\n      \"id\": \"c07\",\n      \"day\": -45,\n      \"title\": \"Invoice timestamp parsing in Python\",\n      \"user\": \"jules from northwind sent me a csv where some timestamps are like '2024-03-01 12:34' and others have 'T' and timezone. how do i parse both in pandas?\",\n      \"gist\": \"Showed using pd.to_datetime with format='mixed' or a custom parser to handle both timestamp styles.\"\n    },\n    {\n      \"id\": \"c08\",\n      \"day\": -42,\n      \"title\": \"Kafka consumer group naming conventions\",\n      \"user\": \"we're about to name a bunch of consumer groups and i want to propose something sane. what do people usually do?\",\n      \"gist\": \"Suggested service-environment-purpose style like order-sync-prod and warned against putting version numbers in the group name.\"\n    },\n    {\n      \"id\": \"c09\",\n      \"day\": -40,\n      \"title\": \"Wine tasting in Fredericksburg\",\n      \"user\": \"if my grandma comes with us to fredericksburg, any wineries that are chill and not too crowded?\",\n      \"gist\": \"Recommended a few quieter wineries and suggested going early on Saturday to avoid crowds.\"\n    },\n    {\n      \"id\": \"c10\",\n      \"day\": -38,\n      \"title\": \"Kafka offset reset when reprocessing\",\n      \"user\": \"if i need to reprocess a kafka topic from the beginning, what's the safest way to do it without messing up other consumers?\",\n      \"gist\": \"Explained using a new consumer group or setting 'auto.offset.reset' carefully, and warned about reprocessing side effects.\"\n    },\n    {\n      \"id\": \"c11\",\n      \"day\": -35,\n      \"title\": \"Side project repo organization\",\n      \"user\": \"my recipe scraper is getting messy. should i split it into modules or just keep it as one script?\",\n      \"gist\": \"Suggested a simple package layout with separate modules for fetching, parsing, and storing recipes.\"\n    },\n    {\n      \"id\": \"c12\",\n      \"day\": -33,\n      \"title\": \"Grafana dashboard for Kafka\",\n      \"user\": \"tom wants me to add a grafana dashboard for the new kafka pipeline. what metrics should i put on it?\",\n      \"gist\": \"Recommended consumer lag, throughput, error rates, and broker health as the core metrics.\"\n    },\n    {\n      \"id\": \"c13\",\n      \"day\": -30,\n      \"title\": \"How to write a runbook\",\n      \"user\": \"dana asked me to write a runbook for the event bridge. any template or structure you like?\",\n      \"gist\": \"Suggested sections for overview, architecture, common tasks, troubleshooting, and on-call procedures.\"\n    },\n    {\n      \"id\": \"c14\",\n      \"day\": -28,\n      \"title\": \"BeautifulSoup vs lxml speed\",\n      \"user\": \"my scraper is slow because it's parsing huge html files. would lxml be faster than beautifulsoup?\",\n      \"gist\": \"Explained that lxml is faster and can be used as the parser backend for BeautifulSoup with a simple change.\"\n    },\n    {\n      \"id\": \"c15\",\n      \"day\": -25,\n      \"title\": \"Kafka exactly-once semantics\",\n      \"user\": \"priya mentioned we might need exactly-once processing for order events. is that overkill?\",\n      \"gist\": \"Discussed the tradeoffs of exactly-once vs at-least-once and when it's worth the performance cost.\"\n    },\n    {\n      \"id\": \"c16\",\n      \"day\": -22,\n      \"title\": \"Weekend trip packing list\",\n      \"user\": \"lena and i are going to fredericksburg for a weekend. what should we pack for spring?\",\n      \"gist\": \"Gave a short packing list including layers, comfortable shoes for walking, and a hat for the wildflower farm.\"\n    },\n    {\n      \"id\": \"c17\",\n      \"day\": -20,\n      \"title\": \"Python script to convert CSV encoding\",\n      \"user\": \"jules sent me a csv that's in some weird encoding and pandas is choking on it. how do i detect the encoding?\",\n      \"gist\": \"Suggested using chardet or trying utf-8-sig, latin-1, and cp1252 as common fallbacks.\"\n    },\n    {\n      \"id\": \"c18\",\n      \"day\": -18,\n      \"title\": \"Kafka connect vs custom bridge\",\n      \"user\": \"we're debating whether to use kafka connect or write our own bridge from rabbitmq. thoughts?\",\n      \"gist\": \"Compared Kafka Connect's built-in connectors with a custom bridge, noting that a custom bridge gives more control for legacy quirks.\"\n    },\n    {\n      \"id\": \"c19\",\n      \"day\": -15,\n      \"title\": \"Recipe scraper storing recipes\",\n      \"user\": \"what's a good way to store scraped recipes? json files, sqlite, or something else?\",\n      \"gist\": \"Recommended SQLite for querying and deduplication, with JSON as a simple alternative for a small project.\"\n    },\n    {\n      \"id\": \"c20\",\n      \"day\": -12,\n      \"title\": \"How to explain Kafka to a PM\",\n      \"user\": \"marcus asked me to explain why the migration is taking longer than expected. how do i explain kafka to a non-technical pm?\",\n      \"gist\": \"Suggested an analogy of a post office with sorting rules and explained that changing the delivery system takes time to test.\"\n    },\n    {\n      \"id\": \"c21\",\n      \"day\": -10,\n      \"title\": \"Consumer lag alert threshold\",\n      \"user\": \"what's a reasonable alert threshold for consumer lag in grafana? i don't want to get paged at 3am for nothing\",\n      \"gist\": \"Suggested setting a relative threshold based on throughput and a time-based alert for sustained lag rather than a fixed number.\"\n    },\n    {\n      \"id\": \"c22\",\n      \"day\": -8,\n      \"title\": \"GitHub private repo for side project\",\n      \"user\": \"i want to put my recipe scraper on github but keep it private. any tips on the readme?\",\n      \"gist\": \"Suggested a short readme with a description, setup instructions, and a disclaimer that it's for personal use.\"\n    },\n    {\n      \"id\": \"c23\",\n      \"day\": -6,\n      \"title\": \"Kafka schema evolution best practices\",\n      \"user\": \"we're about to add a field to our avro schema. what's the safest way to do it without breaking consumers?\",\n      \"gist\": \"Explained adding fields with defaults, using backward compatibility, and testing with the schema registry.\"\n    },\n    {\n      \"id\": \"c24\",\n      \"day\": -4,\n      \"title\": \"Last minute Fredericksburg itinerary\",\n      \"user\": \"ok we're officially going to fredericksburg next week. any can't-miss spots?\",\n      \"gist\": \"Recommended the wildflower farm, a couple of wineries, and a good BBQ place for lunch.\"\n    },\n    {\n      \"id\": \"c25\",\n      \"day\": -2,\n      \"title\": \"Pre-migration checklist for Kafka\",\n      \"user\": \"we're starting the kafka migration on monday. what should i put on a pre-migration checklist?\",\n      \"gist\": \"Listed items like verifying schema compatibility, checking consumer group offsets, and having a rollback plan.\"\n    }\n  ]\n}",
+  "parsed": {
+    "chats": [
+      {
+        "id": "c01",
+        "day": -60,
+        "title": "Kafka consumer lag basics",
+        "user": "hey, can you explain kafka consumer lag like i'm five? we're about to migrate our event pipeline and i keep seeing the term in grafana",
+        "gist": "Explained consumer lag as the gap between messages produced and messages processed, with a simple analogy and tips to monitor it."
+      },
+      {
+        "id": "c02",
+        "day": -58,
+        "title": "Avro schema registry setup",
+        "user": "we're moving to avro for our kafka events. do i need a schema registry if we only have like 3 topics?",
+        "gist": "Recommended using a schema registry even for small setups to enforce compatibility and avoid breaking consumers."
+      },
+      {
+        "id": "c03",
+        "day": -55,
+        "title": "Recipe scraper BeautifulSoup help",
+        "user": "my recipe scraper keeps failing on pages where the ingredients are in a <ul> instead of a <div>. any way to make the parser more forgiving?",
+        "gist": "Suggested using a generic selector that matches both structures and falling back to a second parser if the first returns nothing."
+      },
+      {
+        "id": "c04",
+        "day": -52,
+        "title": "Airbnb Fredericksburg cabin search",
+        "user": "lena and i are thinking about a weekend trip to fredericksburg in a few months. what's a good area to look for cabins?",
+        "gist": "Recommended looking near the main strip for walkability or outside town for quiet, and mentioned the wildflower farm as a spring highlight."
+      },
+      {
+        "id": "c05",
+        "day": -50,
+        "title": "RabbitMQ to Kafka migration gotchas",
+        "user": "we're migrating from rabbitmq to kafka and i'm trying to write a list of gotchas for the team. what should i include?",
+        "gist": "Listed key gotchas: consumer groups vs queues, offset management, replayability, ordering guarantees, and schema evolution."
+      },
+      {
+        "id": "c06",
+        "day": -47,
+        "title": "Playwright vs Selenium for Cloudflare",
+        "user": "my scraper is getting blocked by cloudflare. would playwright actually help or is it the same as selenium?",
+        "gist": "Explained that Playwright can look more like a real browser and handle some challenges better, but it's not a guaranteed bypass."
+      },
+      {
+        "id": "c07",
+        "day": -45,
+        "title": "Invoice timestamp parsing in Python",
+        "user": "jules from northwind sent me a csv where some timestamps are like '2024-03-01 12:34' and others have 'T' and timezone. how do i parse both in pandas?",
+        "gist": "Showed using pd.to_datetime with format='mixed' or a custom parser to handle both timestamp styles."
+      },
+      {
+        "id": "c08",
+        "day": -42,
+        "title": "Kafka consumer group naming conventions",
+        "user": "we're about to name a bunch of consumer groups and i want to propose something sane. what do people usually do?",
+        "gist": "Suggested service-environment-purpose style like order-sync-prod and warned against putting version numbers in the group name."
+      },
+      {
+        "id": "c09",
+        "day": -40,
+        "title": "Wine tasting in Fredericksburg",
+        "user": "if my grandma comes with us to fredericksburg, any wineries that are chill and not too crowded?",
+        "gist": "Recommended a few quieter wineries and suggested going early on Saturday to avoid crowds."
+      },
+      {
+        "id": "c10",
+        "day": -38,
+        "title": "Kafka offset reset when reprocessing",
+        "user": "if i need to reprocess a kafka topic from the beginning, what's the safest way to do it without messing up other consumers?",
+        "gist": "Explained using a new consumer group or setting 'auto.offset.reset' carefully, and warned about reprocessing side effects."
+      },
+      {
+        "id": "c11",
+        "day": -35,
+        "title": "Side project repo organization",
+        "user": "my recipe scraper is getting messy. should i split it into modules or just keep it as one script?",
+        "gist": "Suggested a simple package layout with separate modules for fetching, parsing, and storing recipes."
+      },
+      {
+        "id": "c12",
+        "day": -33,
+        "title": "Grafana dashboard for Kafka",
+        "user": "tom wants me to add a grafana dashboard for the new kafka pipeline. what metrics should i put on it?",
+        "gist": "Recommended consumer lag, throughput, error rates, and broker health as the core metrics."
+      },
+      {
+        "id": "c13",
+        "day": -30,
+        "title": "How to write a runbook",
+        "user": "dana asked me to write a runbook for the event bridge. any template or structure you like?",
+        "gist": "Suggested sections for overview, architecture, common tasks, troubleshooting, and on-call procedures."
+      },
+      {
+        "id": "c14",
+        "day": -28,
+        "title": "BeautifulSoup vs lxml speed",
+        "user": "my scraper is slow because it's parsing huge html files. would lxml be faster than beautifulsoup?",
+        "gist": "Explained that lxml is faster and can be used as the parser backend for BeautifulSoup with a simple change."
+      },
+      {
+        "id": "c15",
+        "day": -25,
+        "title": "Kafka exactly-once semantics",
+        "user": "priya mentioned we might need exactly-once processing for order events. is that overkill?",
+        "gist": "Discussed the tradeoffs of exactly-once vs at-least-once and when it's worth the performance cost."
+      },
+      {
+        "id": "c16",
+        "day": -22,
+        "title": "Weekend trip packing list",
+        "user": "lena and i are going to fredericksburg for a weekend. what should we pack for spring?",
+        "gist": "Gave a short packing list including layers, comfortable shoes for walking, and a hat for the wildflower farm."
+      },
+      {
+        "id": "c17",
+        "day": -20,
+        "title": "Python script to convert CSV encoding",
+        "user": "jules sent me a csv that's in some weird encoding and pandas is choking on it. how do i detect the encoding?",
+        "gist": "Suggested using chardet or trying utf-8-sig, latin-1, and cp1252 as common fallbacks."
+      },
+      {
+        "id": "c18",
+        "day": -18,
+        "title": "Kafka connect vs custom bridge",
+        "user": "we're debating whether to use kafka connect or write our own bridge from rabbitmq. thoughts?",
+        "gist": "Compared Kafka Connect's built-in connectors with a custom bridge, noting that a custom bridge gives more control for legacy quirks."
+      },
+      {
+        "id": "c19",
+        "day": -15,
+        "title": "Recipe scraper storing recipes",
+        "user": "what's a good way to store scraped recipes? json files, sqlite, or something else?",
+        "gist": "Recommended SQLite for querying and deduplication, with JSON as a simple alternative for a small project."
+      },
+      {
+        "id": "c20",
+        "day": -12,
+        "title": "How to explain Kafka to a PM",
+        "user": "marcus asked me to explain why the migration is taking longer than expected. how do i explain kafka to a non-technical pm?",
+        "gist": "Suggested an analogy of a post office with sorting rules and explained that changing the delivery system takes time to test."
+      },
+      {
+        "id": "c21",
+        "day": -10,
+        "title": "Consumer lag alert threshold",
+        "user": "what's a reasonable alert threshold for consumer lag in grafana? i don't want to get paged at 3am for nothing",
+        "gist": "Suggested setting a relative threshold based on throughput and a time-based alert for sustained lag rather than a fixed number."
+      },
+      {
+        "id": "c22",
+        "day": -8,
+        "title": "GitHub private repo for side project",
+        "user": "i want to put my recipe scraper on github but keep it private. any tips on the readme?",
+        "gist": "Suggested a short readme with a description, setup instructions, and a disclaimer that it's for personal use."
+      },
+      {
+        "id": "c23",
+        "day": -6,
+        "title": "Kafka schema evolution best practices",
+        "user": "we're about to add a field to our avro schema. what's the safest way to do it without breaking consumers?",
+        "gist": "Explained adding fields with defaults, using backward compatibility, and testing with the schema registry."
+      },
+      {
+        "id": "c24",
+        "day": -4,
+        "title": "Last minute Fredericksburg itinerary",
+        "user": "ok we're officially going to fredericksburg next week. any can't-miss spots?",
+        "gist": "Recommended the wildflower farm, a couple of wineries, and a good BBQ place for lunch."
+      },
+      {
+        "id": "c25",
+        "day": -2,
+        "title": "Pre-migration checklist for Kafka",
+        "user": "we're starting the kafka migration on monday. what should i put on a pre-migration checklist?",
+        "gist": "Listed items like verifying schema compatibility, checking consumer group offsets, and having a rollback plan."
+      }
+    ]
+  }
+}

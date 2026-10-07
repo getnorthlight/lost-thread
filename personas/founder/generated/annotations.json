@@ -1,0 +1,60 @@
+{
+  "_provenance": "Drafted by deepseek/deepseek-v4-flash-0731 @ <local OpenRouter proxy> from bench/annotate.py CAPABILITIES (0.1.6 code); reviewed by the harness author against ledger.json before the freeze. edited=true marks hand edits. Reviewed 2026-10-06T15:34:16.965838-05:00: every line checked against the recorded rows (events.jsonl) and ledger.json; DeepSeek's founder drafts claimed recorded typing that wasn't recorded (q05, q06, q09), those were rewritten.",
+  "items": {
+    "q01": {
+      "can_know": "Can know: the invoice number 2841 appears in the typed email to Tom in the Mail window 'Re: Invoice #2841 export issue' and in the typed text 'Sorry about the invoice #2841 issue'. Cannot know: whether Tom actually received or read the email, or any details beyond what was typed.",
+      "drafted": "Can know: the invoice number 2841 appears in the typed email to Tom in the Mail window 'Re: Invoice #2841 export issue' and in the typed text 'Sorry about the invoice #2841 issue'. Cannot know: whether Tom actually received or read the email, or any details beyond what was typed.",
+      "reviewed": true,
+      "edited": false
+    },
+    "q02": {
+      "can_know": "Can know: that on Friday, October 2 the roaster-map windows included roasters.json in the editor and 'roaster-map — git commit' and 'roaster-map — git push' in the terminal, with times. Cannot know: what the commit contained or its message, whether the push succeeded, or what was done off this Mac.",
+      "drafted": "Can know: the last recorded roaster-map activity on day 5 includes terminal 'roaster-map — git push' and code/terminal entries for roaster-map, plus a commit to roasters.json. Cannot know: the exact commit message or whether the push succeeded, or any work done off this Mac.",
+      "reviewed": true,
+      "edited": true
+    },
+    "q03": {
+      "can_know": "Can know: the typed email to Tom on day 3 at 13:31 says the feature isn't feasible with the current data model because wholesale orders don't carry a per-item roast date, and offers a workaround. Cannot know: whether the email was actually sent or received, or Tom's reaction.",
+      "drafted": "Can know: the typed email to Tom on day 3 at 13:31 says the feature isn't feasible with the current data model because wholesale orders don't carry a per-item roast date, and offers a workaround. Cannot know: whether the email was actually sent or received, or Tom's reaction.",
+      "reviewed": true,
+      "edited": false
+    },
+    "q04": {
+      "can_know": "Can know: the recorded roaster-map app/window/terminal events on day 5 with timestamps, from which an estimate of active time can be inferred. Cannot know: exactly how long was spent, because DayDream only records switches and idle time leaves gaps; the reference 78 minutes is not directly recorded.",
+      "drafted": "Can know: the recorded roaster-map app/window/terminal events on day 5 with timestamps, from which an estimate of active time can be inferred. Cannot know: exactly how long was spent, because DayDream only records switches and idle time leaves gaps; the reference 78 minutes is not directly recorded.",
+      "reviewed": true,
+      "edited": false
+    },
+    "q05": {
+      "can_know": "Can know: the pricing windows this week with times (Excel 'pricing_model_usage_cap.xlsx' and 'pricing_decision_matrix.xlsx', Notion 'Pricing Decision' and 'Pricing rollout checklist'). Cannot know: the decision itself or the rollout timing, which were written in Notion/Google Docs and Slack desktop, where typing isn't recorded.",
+      "drafted": "Can know: typed Slack messages on days 2-3 saying 'leaning toward keeping $29 but adding a usage cap' and 'ok let's keep $29 but add a usage cap', plus a Notion 'Pricing Decision' page. Cannot know: the final decision as a fact, whether the rollout was scheduled, or anything not typed on this Mac.",
+      "reviewed": true,
+      "edited": true
+    },
+    "q06": {
+      "can_know": "Can know: the Figma windows 'Roaster Map — Figma' and 'Roaster Map — Prototype — Figma' with times across the week. Cannot know: what was changed in the design (the pin hover state, the filter dropdown): Figma typing and canvas contents aren't recorded.",
+      "drafted": "Can know: the Figma window titles 'Roaster Map — Prototype — Figma' and 'Roaster Map — Figma' appear on days 1-5, and typed text in Figma includes 'Roast Style Filter'. Cannot know: the actual design contents, pin hover state, or what was looked at.",
+      "reviewed": true,
+      "edited": true
+    },
+    "q07": {
+      "can_know": "Can know: there is no recorded email to Leo in the DayDream rows; no Mail window or typed text mentions Leo. Cannot know: emails sent from other devices, in-person messages, or anything off this Mac.",
+      "drafted": "Can know: there is no recorded email to Leo in the DayDream rows; no Mail window or typed text mentions Leo. Cannot know: emails sent from other devices, in-person messages, or anything off this Mac.",
+      "reviewed": true,
+      "edited": false
+    },
+    "q08": {
+      "can_know": "Can know: there is no recorded reply to Jordan about Q3 taxes in the DayDream rows; no Mail window or typed text mentions Jordan. Cannot know: whether an email was sent from another device or in person, or the content of Jordan's incoming email.",
+      "drafted": "Can know: there is no recorded reply to Jordan about Q3 taxes in the DayDream rows; no Mail window or typed text mentions Jordan. Cannot know: whether an email was sent from another device or in person, or the content of Jordan's incoming email.",
+      "reviewed": true,
+      "edited": false
+    },
+    "q09": {
+      "can_know": "Can know: nothing about the customers' median order volume; it was never typed or shown in a title this week (the usage cap typed in Slack desktop wasn't recorded either). Cannot know: anything from the person's past chats with the assistant.",
+      "drafted": "Can know: the Notion page 'Investor Update — May — Notion' was open and the typed text includes 'MRR: $41,200' and 'Churn: 2.1%', but DayDream does not record the page contents beyond titles and the person's own typing. Cannot know: the current MRR and churn as a fact, or anything from past chats before this week.",
+      "reviewed": true,
+      "edited": true
+    }
+  },
+  "reviewed_at": "2026-10-06T15:34:16.965838-05:00"
+}

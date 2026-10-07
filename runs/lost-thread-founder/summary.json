@@ -1,0 +1,161 @@
+{
+  "title": "Lost Thread: raw counts (not scores)",
+  "run": "lost-thread-founder",
+  "traces": 54,
+  "trace_lines_incl_superseded": 54,
+  "superseded_with_errors": 0,
+  "lock_sha256": "204b00dd8a3963b35c4ef7ad2b5aecd5fad95fe8653eaeb6fd21dc49a113f33c",
+  "first_start": "2026-10-06T15:34:39.966121-05:00",
+  "last_start": "2026-10-06T15:44:25.698101-05:00",
+  "finished": "2026-10-06T15:44:35.383931-05:00",
+  "attempts_total": 54,
+  "system_variants": [
+    "symmetric-v1"
+  ],
+  "cells": {
+    "dd | claude": {
+      "runs": 9,
+      "errors": 0,
+      "timeouts": 0,
+      "isolation_flags": 0,
+      "mean_seconds": 14.5,
+      "runs_using_daydream": 9,
+      "mean_tool_calls": 5.67,
+      "checkable_hits": "6/9",
+      "cost_usd_api_equiv": 0.472,
+      "tokens_in_out": [
+        173852,
+        7426
+      ],
+      "answered": 9
+    },
+    "dd | codex": {
+      "runs": 9,
+      "errors": 0,
+      "timeouts": 0,
+      "isolation_flags": 0,
+      "mean_seconds": 18.2,
+      "runs_using_daydream": 9,
+      "mean_tool_calls": 5.33,
+      "checkable_hits": "5/9",
+      "cost_usd_api_equiv": null,
+      "tokens_in_out": [
+        362944,
+        2232
+      ],
+      "answered": 9
+    },
+    "native | claude": {
+      "runs": 9,
+      "errors": 0,
+      "timeouts": 0,
+      "isolation_flags": 0,
+      "mean_seconds": 5.9,
+      "runs_using_daydream": 0,
+      "mean_tool_calls": 0.0,
+      "checkable_hits": "1/9",
+      "cost_usd_api_equiv": 0.119,
+      "tokens_in_out": [
+        8790,
+        3425
+      ],
+      "answered": 9
+    },
+    "native | codex": {
+      "runs": 9,
+      "errors": 0,
+      "timeouts": 0,
+      "isolation_flags": 0,
+      "mean_seconds": 5.2,
+      "runs_using_daydream": 0,
+      "mean_tool_calls": 0.0,
+      "checkable_hits": "2/9",
+      "cost_usd_api_equiv": null,
+      "tokens_in_out": [
+        49583,
+        682
+      ],
+      "answered": 9
+    },
+    "native+dd | claude": {
+      "runs": 9,
+      "errors": 0,
+      "timeouts": 0,
+      "isolation_flags": 0,
+      "mean_seconds": 12.8,
+      "runs_using_daydream": 9,
+      "mean_tool_calls": 4.89,
+      "checkable_hits": "7/9",
+      "cost_usd_api_equiv": 0.441,
+      "tokens_in_out": [
+        166939,
+        7005
+      ],
+      "answered": 9
+    },
+    "native+dd | codex": {
+      "runs": 9,
+      "errors": 0,
+      "timeouts": 0,
+      "isolation_flags": 0,
+      "mean_seconds": 9.4,
+      "runs_using_daydream": 4,
+      "mean_tool_calls": 2.0,
+      "checkable_hits": "4/9",
+      "cost_usd_api_equiv": null,
+      "tokens_in_out": [
+        201718,
+        1462
+      ],
+      "answered": 9
+    }
+  },
+  "by_type": {
+    "dd | claude | control": "0/1",
+    "dd | claude | cross_app": "2/2",
+    "dd | claude | decision": "0/1",
+    "dd | claude | exact_recall": "1/1",
+    "dd | claude | time_spent": "1/1",
+    "dd | claude | vague": "1/1",
+    "dd | claude | where_left_off": "1/2",
+    "dd | codex | control": "0/1",
+    "dd | codex | cross_app": "1/2",
+    "dd | codex | decision": "0/1",
+    "dd | codex | exact_recall": "1/1",
+    "dd | codex | time_spent": "1/1",
+    "dd | codex | vague": "1/1",
+    "dd | codex | where_left_off": "1/2",
+    "native | claude | control": "0/1",
+    "native | claude | cross_app": "0/2",
+    "native | claude | decision": "1/1",
+    "native | claude | exact_recall": "0/1",
+    "native | claude | time_spent": "0/1",
+    "native | claude | vague": "0/1",
+    "native | claude | where_left_off": "0/2",
+    "native | codex | control": "1/1",
+    "native | codex | cross_app": "0/2",
+    "native | codex | decision": "1/1",
+    "native | codex | exact_recall": "0/1",
+    "native | codex | time_spent": "0/1",
+    "native | codex | vague": "0/1",
+    "native | codex | where_left_off": "0/2",
+    "native+dd | claude | control": "0/1",
+    "native+dd | claude | cross_app": "2/2",
+    "native+dd | claude | decision": "1/1",
+    "native+dd | claude | exact_recall": "1/1",
+    "native+dd | claude | time_spent": "1/1",
+    "native+dd | claude | vague": "1/1",
+    "native+dd | claude | where_left_off": "1/2",
+    "native+dd | codex | control": "1/1",
+    "native+dd | codex | cross_app": "0/2",
+    "native+dd | codex | decision": "1/1",
+    "native+dd | codex | exact_recall": "0/1",
+    "native+dd | codex | time_spent": "1/1",
+    "native+dd | codex | vague": "0/1",
+    "native+dd | codex | where_left_off": "1/2"
+  },
+  "models": [
+    "claude: claude-opus-5-5 / claude-code 2.1.289",
+    "codex: gpt-6.1-sol / codex-cli 0.159.2"
+  ]
+}

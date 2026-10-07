@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a112f3-541a-7b23-bee5-76872c9c453f"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"Your median customer has **50 orders per month**, based on the figure you shared September 14 when we discussed a usage cap for the $29 Starter plan."}}
+{"type":"turn.completed","usage":{"input_tokens":5514,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":36,"reasoning_output_tokens":0}}

@@ -1,0 +1,36 @@
+{"blind_id": "A0130", "item_id": "developer-q04", "judge": "j3", "correct": 2, "helpful": 3, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Gives the backlog/next sprint email quote; omits second email and Notion."}
+{"blind_id": "A0027", "item_id": "developer-q04", "judge": "j3", "correct": 2, "helpful": 3, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Same correct quote, concise."}
+{"blind_id": "A0081", "item_id": "developer-q04", "judge": "j3", "correct": 2, "helpful": 3, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Correct and flags unknown send, but long with many alternates."}
+{"blind_id": "A0117", "item_id": "developer-q04", "judge": "j3", "correct": 2, "helpful": 3, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Correct with hedging on sent; somewhat long."}
+{"blind_id": "A0107", "item_id": "developer-q04", "judge": "j3", "correct": 0, "helpful": 1, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Non-answer."}
+{"blind_id": "A0106", "item_id": "developer-q04", "judge": "j3", "correct": 0, "helpful": 1, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Non-answer."}
+{"blind_id": "A0112", "item_id": "developer-q08", "judge": "j3", "correct": 1, "helpful": 3, "fabrications": 0, "overclaim": 1, "negative_verdict": "unsure", "note": "Lays out timeline well but says it still wasn't booked as of Friday."}
+{"blind_id": "A0140", "item_id": "developer-q08", "judge": "j3", "correct": 1, "helpful": 1, "fabrications": 0, "overclaim": 0, "negative_verdict": "correct", "note": "Generic no-record from chats, not activity history."}
+{"blind_id": "A0134", "item_id": "developer-q08", "judge": "j3", "correct": 1, "helpful": 1, "fabrications": 0, "overclaim": 0, "negative_verdict": "unsure", "note": "Generic can't tell, no activity evidence."}
+{"blind_id": "A0034", "item_id": "developer-q08", "judge": "j3", "correct": 1, "helpful": 2, "fabrications": 0, "overclaim": 1, "negative_verdict": "unsure", "note": "Good timeline but infers probably not booked."}
+{"blind_id": "A0104", "item_id": "developer-q08", "judge": "j3", "correct": 2, "helpful": 3, "fabrications": 0, "overclaim": 0, "negative_verdict": "correct", "note": "Concise: plans only, no completed booking record, calls not recorded."}
+{"blind_id": "A0129", "item_id": "developer-q08", "judge": "j3", "correct": 2, "helpful": 3, "fabrications": 0, "overclaim": 0, "negative_verdict": "correct", "note": "Concise and correct framing."}
+{"blind_id": "A0156", "item_id": "founder-q03", "judge": "j3", "correct": 2, "helpful": 4, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Exact email with reason and workaround; hedges on sent."}
+{"blind_id": "A0158", "item_id": "founder-q03", "judge": "j3", "correct": 0, "helpful": 1, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Non-answer."}
+{"blind_id": "A0035", "item_id": "founder-q03", "judge": "j3", "correct": 0, "helpful": 1, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Non-answer."}
+{"blind_id": "A0162", "item_id": "founder-q03", "judge": "j3", "correct": 2, "helpful": 4, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Exact email plus useful contradiction flag."}
+{"blind_id": "A0116", "item_id": "founder-q03", "judge": "j3", "correct": 2, "helpful": 4, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Concise and correct."}
+{"blind_id": "A0017", "item_id": "founder-q03", "judge": "j3", "correct": 0, "helpful": 1, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Non-answer from old chat."}
+{"blind_id": "A0075", "item_id": "founder-q07", "judge": "j3", "correct": 2, "helpful": 3, "fabrications": 0, "overclaim": 0, "negative_verdict": "correct", "note": "No Leo trace, notes limits; some extra Tom detail."}
+{"blind_id": "A0098", "item_id": "founder-q07", "judge": "j3", "correct": 0, "helpful": 1, "fabrications": 0, "overclaim": 0, "negative_verdict": "unsure", "note": "No access; generic."}
+{"blind_id": "A0105", "item_id": "founder-q07", "judge": "j3", "correct": 2, "helpful": 3, "fabrications": 0, "overclaim": 0, "negative_verdict": "correct", "note": "No record of Leo email."}
+{"blind_id": "A0020", "item_id": "founder-q07", "judge": "j3", "correct": 2, "helpful": 3, "fabrications": 0, "overclaim": 0, "negative_verdict": "correct", "note": "No record of Leo email."}
+{"blind_id": "A0025", "item_id": "founder-q07", "judge": "j3", "correct": 2, "helpful": 3, "fabrications": 0, "overclaim": 0, "negative_verdict": "correct", "note": "No Leo trace, caveats; slightly padded."}
+{"blind_id": "A0084", "item_id": "founder-q07", "judge": "j3", "correct": 1, "helpful": 1, "fabrications": 0, "overclaim": 0, "negative_verdict": "unsure", "note": "Can't confirm; only past chats."}
+{"blind_id": "A0046", "item_id": "student-q02", "judge": "j3", "correct": 1, "helpful": 2, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Says no methods work Monday, shows Keynote; misses finalized/posted."}
+{"blind_id": "A0062", "item_id": "student-q02", "judge": "j3", "correct": 0, "helpful": 1, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Generic non-answer."}
+{"blind_id": "A0148", "item_id": "student-q02", "judge": "j3", "correct": 1, "helpful": 2, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Keynote and Slack noted; can't say where left off."}
+{"blind_id": "A0004", "item_id": "student-q02", "judge": "j3", "correct": 0, "helpful": 1, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Stale September memory."}
+{"blind_id": "A0092", "item_id": "student-q02", "judge": "j3", "correct": 1, "helpful": 2, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Keynote/Slack noted, honest about no text."}
+{"blind_id": "A0038", "item_id": "student-q02", "judge": "j3", "correct": 1, "helpful": 2, "fabrications": 1, "overclaim": 0, "negative_verdict": null, "note": "Claims last methods work Sep 30, apparently wrong; includes Keynote."}
+{"blind_id": "A0113", "item_id": "student-q06", "judge": "j3", "correct": 2, "helpful": 3, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Correct thread; extra visit breakdown."}
+{"blind_id": "A0082", "item_id": "student-q06", "judge": "j3", "correct": 2, "helpful": 3, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Correct thread concisely."}
+{"blind_id": "A0059", "item_id": "student-q06", "judge": "j3", "correct": 2, "helpful": 3, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Correct thread with caveat on titles."}
+{"blind_id": "A0108", "item_id": "student-q06", "judge": "j3", "correct": 0, "helpful": 1, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Non-answer."}
+{"blind_id": "A0070", "item_id": "student-q06", "judge": "j3", "correct": 0, "helpful": 0, "fabrications": 1, "overclaim": 0, "negative_verdict": null, "note": "Confidently wrong August chat."}
+{"blind_id": "A0074", "item_id": "student-q06", "judge": "j3", "correct": 0, "helpful": 0, "fabrications": 1, "overclaim": 0, "negative_verdict": null, "note": "Confidently wrong August chat."}

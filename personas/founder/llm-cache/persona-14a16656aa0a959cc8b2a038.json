@@ -1,0 +1,190 @@
+{
+  "step": "persona",
+  "model": "deepseek/deepseek-v4-flash-0731",
+  "requested_model": "deepseek/deepseek-v4-flash-0731",
+  "base_url": "<local OpenRouter proxy>",
+  "temperature": 0.9,
+  "seconds": 24.18,
+  "usage": {
+    "prompt_tokens": 633,
+    "completion_tokens": 1272,
+    "total_tokens": 1905,
+    "cost": 0.00037691,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 617,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00037691,
+      "upstream_inference_prompt_cost": 2.075e-05,
+      "upstream_inference_completions_cost": 0.00035616
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "attempt": 2,
+  "system": "You generate realistic synthetic test data for a research benchmark about personal memory. Everything you write is fiction: invent every person, company, client and product name (never use real people you know of, and avoid famous companies as employers). Write like real life, not like a tidy diary: people get interrupted, leave things half done, revisit things, procrastinate, and type casually. Reply with JSON only.",
+  "user": "Invent one person for a 5-workday slice of their life. Archetype: founder. Variety seed: founder.\nThey live in the US Central time zone and use a Mac.\n\nReturn JSON:\n{\"persona\": {\"name\", \"role\", \"company\" (invented), \"summary\", \"workday\": {\"start\": \"HH:MM\", \"end\": \"HH:MM\", \"lunch\": \"HH:MM\"}},\n \"people\": [{\"key\", \"name\" (invented, first+last unless family), \"role\", \"channel\"}],   // 5-9\n \"threads\": [{\"key\" (snake_case), \"title\", \"kind\": one of \"main\"|\"decision\"|\"correspondence\"|\"side_project\"|\"personal\",\n              \"arc\": \"how it develops over the 5 days, with concrete numbers/identifiers that change\"}],  // 4-6\n \"apps\": [app keys they use, from: slack (Slack), vscode (Code), terminal (Terminal), xcode (Xcode), zoom (zoom.us), messages (Messages), mail (Mail), notes (Notes), chatgpt (ChatGPT), claude (Claude), spotify (Spotify), finder (Finder), figma (Figma), calendar (Calendar), preview (Preview), excel (Microsoft Excel), keynote (Keynote), notion (Notion)],\n \"sites\": [hosts they use for work and life, e.g. \"docs.google.com\", \"mail.google.com\", \"github.com\", \"canvas.instructure.com\"],\n \"noise\": {\"slack_titles\": [window titles if they use Slack], \"pages\": [{\"host\", \"title\", \"path\"}]}   // distractions\n}\nThreads must include a decision whose number or choice changes across days, a correspondence with someone outside\ntheir team over email, and something personal. Include at least one concrete identifier (ticket, PR, order, invoice,\nroom, course code). Use Google Chrome for all websites.\n\nYour previous reply had these problems; fix them and reply with the full JSON again:\n- noise.pages: at least 4 distraction pages with host and title",
+  "raw": "{ \"persona\": { \"name\": \"Maya Chen\", \"role\": \"Founder & CEO\", \"company\": \"Loomly Labs\", \"summary\": \"Maya runs a small B2B SaaS startup that helps independent coffee roasters manage wholesale orders. She spends her days switching between customer calls, product decisions, and the occasional fire drill. She is pragmatic, slightly overwhelmed, and tries to keep Fridays for deep work.\", \"workday\": { \"start\": \"08:15\", \"end\": \"18:30\", \"lunch\": \"12:45\" } }, \"people\": [ { \"key\": \"dana\", \"name\": \"Dana Whitfield\", \"role\": \"Co-founder & CTO\", \"channel\": \"slack\" }, { \"key\": \"marcus\", \"name\": \"Marcus Reid\", \"role\": \"Head of Sales\", \"channel\": \"slack\" }, { \"key\": \"priya\", \"name\": \"Priya Natarajan\", \"role\": \"Customer Success Lead\", \"channel\": \"slack\" }, { \"key\": \"leo\", \"name\": \"Leo Park\", \"role\": \"Freelance Designer\", \"channel\": \"email\" }, { \"key\": \"sarah\", \"name\": \"Sarah Kim\", \"role\": \"Investor (Seed)\", \"channel\": \"email\" }, { \"key\": \"tom\", \"name\": \"Tom Alvarez\", \"role\": \"Coffee Roaster (Customer)\", \"channel\": \"email\" }, { \"key\": \"jordan\", \"name\": \"Jordan Lee\", \"role\": \"Accountant\", \"channel\": \"email\" } ], \"threads\": [ { \"key\": \"wholesale_invoice_export\", \"title\": \"Wholesale invoice export bug\", \"kind\": \"main\", \"arc\": \"On Monday, a customer reports that invoice #2841 is missing line items. Maya and Dana reproduce the bug in staging. Tuesday they identify the root cause in the export service. Wednesday they ship a hotfix and email the customer. Thursday they add a regression test. Friday they close the ticket and plan a postmortem.\" }, { \"key\": \"pricing_tier_change\", \"title\": \"Should we change the Starter plan price?\", \"kind\": \"decision\", \"arc\": \"Maya starts the week leaning toward raising the Starter plan from $29 to $39. Marcus pushes back, citing 3 churn risks. By Wednesday, they run a quick survey of 12 customers. Thursday the numbers show 8 would stay, 2 would downgrade, 2 would cancel. Friday Maya decides to keep $29 but add a usage cap, and schedules a rollout for the next sprint.\" }, { \"key\": \"email_with_tom\", \"title\": \"Tom Alvarez onboarding follow-up\", \"kind\": \"correspondence\", \"arc\": \"Tom, a roaster in Austin, emails Monday asking about API access. Maya replies with docs and offers a 15-min walkthrough. Tuesday Tom sends a list of 4 feature requests. Wednesday Maya responds with a timeline: 2 are in the roadmap, 1 is possible, 1 is not. Thursday Tom books a call for next Tuesday. Friday Maya sends a summary and a Loom video.\" }, { \"key\": \"investor_update_draft\", \"title\": \"Investor update for Sarah\", \"kind\": \"correspondence\", \"arc\": \"Maya drafts the monthly investor update on Monday. Tuesday she adds metrics: MRR $41k, churn 2.1%, 14 new customers. Wednesday she rewrites the 'risks' section after a security scare. Thursday she sends it to Sarah. Friday Sarah replies with a question about runway, and Maya schedules a call for Monday.\" }, { \"key\": \"side_project_roaster_map\", \"title\": \"Roaster map side project\", \"kind\": \"side_project\", \"arc\": \"Maya is building a small map of independent roasters for fun. Monday she sketches the layout in Figma. Tuesday she picks a color palette. Wednesday she writes a scraper for roaster locations. Thursday she hits a rate limit and switches to manual data entry. Friday she adds 3 roasters and shares the prototype with Dana.\" }, { \"key\": \"moving_apartment\", \"title\": \"Apartment lease renewal\", \"kind\": \"personal\", \"arc\": \"Maya's lease is up in 60 days. Monday she checks rental listings and saves 2. Tuesday she gets a renewal offer from her landlord with a 12% rent increase. Wednesday she negotiates down to 7%. Thursday she signs the renewal. Friday she texts her mom about it and starts packing.\" } ], \"apps\": [\"slack\", \"vscode\", \"terminal\", \"zoom\", \"messages\", \"mail\", \"notes\", \"chatgpt\", \"claude\", \"spotify\", \"finder\", \"figma\", \"calendar\", \"preview\", \"excel\", \"notion\"], \"sites\": [\"docs.google.com\", \"mail.google.com\", \"github.com\", \"loomlylabs.com\", \"stripe.com\", \"zillow.com\", \"reddit.com\", \"twitter.com\"], \"noise\": { \"slack_titles\": [\"#general\", \"#eng\", \"#sales\", \"#random\", \"DMs with Dana\", \"DMs with Marcus\"], \"pages\": [ { \"host\": \"reddit.com\", \"title\": \"r/coffee - What's your favorite single-origin bean right now?\" }, { \"host\": \"twitter.com\", \"title\": \"Home / X\" }, { \"host\": \"zillow.com\", \"title\": \"Apartments for Rent in Austin, TX\" }, { \"host\": \"youtube.com\", \"title\": \"Lofi hip hop radio - beats to relax/study to\" }, { \"host\": \"news.ycombinator.com\", \"title\": \"Show HN: I built a tiny tool for coffee roasters\" } ] } }",
+  "parsed": {
+    "persona": {
+      "name": "Maya Chen",
+      "role": "Founder & CEO",
+      "company": "Loomly Labs",
+      "summary": "Maya runs a small B2B SaaS startup that helps independent coffee roasters manage wholesale orders. She spends her days switching between customer calls, product decisions, and the occasional fire drill. She is pragmatic, slightly overwhelmed, and tries to keep Fridays for deep work.",
+      "workday": {
+        "start": "08:15",
+        "end": "18:30",
+        "lunch": "12:45"
+      }
+    },
+    "people": [
+      {
+        "key": "dana",
+        "name": "Dana Whitfield",
+        "role": "Co-founder & CTO",
+        "channel": "slack"
+      },
+      {
+        "key": "marcus",
+        "name": "Marcus Reid",
+        "role": "Head of Sales",
+        "channel": "slack"
+      },
+      {
+        "key": "priya",
+        "name": "Priya Natarajan",
+        "role": "Customer Success Lead",
+        "channel": "slack"
+      },
+      {
+        "key": "leo",
+        "name": "Leo Park",
+        "role": "Freelance Designer",
+        "channel": "email"
+      },
+      {
+        "key": "sarah",
+        "name": "Sarah Kim",
+        "role": "Investor (Seed)",
+        "channel": "email"
+      },
+      {
+        "key": "tom",
+        "name": "Tom Alvarez",
+        "role": "Coffee Roaster (Customer)",
+        "channel": "email"
+      },
+      {
+        "key": "jordan",
+        "name": "Jordan Lee",
+        "role": "Accountant",
+        "channel": "email"
+      }
+    ],
+    "threads": [
+      {
+        "key": "wholesale_invoice_export",
+        "title": "Wholesale invoice export bug",
+        "kind": "main",
+        "arc": "On Monday, a customer reports that invoice #2841 is missing line items. Maya and Dana reproduce the bug in staging. Tuesday they identify the root cause in the export service. Wednesday they ship a hotfix and email the customer. Thursday they add a regression test. Friday they close the ticket and plan a postmortem."
+      },
+      {
+        "key": "pricing_tier_change",
+        "title": "Should we change the Starter plan price?",
+        "kind": "decision",
+        "arc": "Maya starts the week leaning toward raising the Starter plan from $29 to $39. Marcus pushes back, citing 3 churn risks. By Wednesday, they run a quick survey of 12 customers. Thursday the numbers show 8 would stay, 2 would downgrade, 2 would cancel. Friday Maya decides to keep $29 but add a usage cap, and schedules a rollout for the next sprint."
+      },
+      {
+        "key": "email_with_tom",
+        "title": "Tom Alvarez onboarding follow-up",
+        "kind": "correspondence",
+        "arc": "Tom, a roaster in Austin, emails Monday asking about API access. Maya replies with docs and offers a 15-min walkthrough. Tuesday Tom sends a list of 4 feature requests. Wednesday Maya responds with a timeline: 2 are in the roadmap, 1 is possible, 1 is not. Thursday Tom books a call for next Tuesday. Friday Maya sends a summary and a Loom video."
+      },
+      {
+        "key": "investor_update_draft",
+        "title": "Investor update for Sarah",
+        "kind": "correspondence",
+        "arc": "Maya drafts the monthly investor update on Monday. Tuesday she adds metrics: MRR $41k, churn 2.1%, 14 new customers. Wednesday she rewrites the 'risks' section after a security scare. Thursday she sends it to Sarah. Friday Sarah replies with a question about runway, and Maya schedules a call for Monday."
+      },
+      {
+        "key": "side_project_roaster_map",
+        "title": "Roaster map side project",
+        "kind": "side_project",
+        "arc": "Maya is building a small map of independent roasters for fun. Monday she sketches the layout in Figma. Tuesday she picks a color palette. Wednesday she writes a scraper for roaster locations. Thursday she hits a rate limit and switches to manual data entry. Friday she adds 3 roasters and shares the prototype with Dana."
+      },
+      {
+        "key": "moving_apartment",
+        "title": "Apartment lease renewal",
+        "kind": "personal",
+        "arc": "Maya's lease is up in 60 days. Monday she checks rental listings and saves 2. Tuesday she gets a renewal offer from her landlord with a 12% rent increase. Wednesday she negotiates down to 7%. Thursday she signs the renewal. Friday she texts her mom about it and starts packing."
+      }
+    ],
+    "apps": [
+      "slack",
+      "vscode",
+      "terminal",
+      "zoom",
+      "messages",
+      "mail",
+      "notes",
+      "chatgpt",
+      "claude",
+      "spotify",
+      "finder",
+      "figma",
+      "calendar",
+      "preview",
+      "excel",
+      "notion"
+    ],
+    "sites": [
+      "docs.google.com",
+      "mail.google.com",
+      "github.com",
+      "loomlylabs.com",
+      "stripe.com",
+      "zillow.com",
+      "reddit.com",
+      "twitter.com"
+    ],
+    "noise": {
+      "slack_titles": [
+        "#general",
+        "#eng",
+        "#sales",
+        "#random",
+        "DMs with Dana",
+        "DMs with Marcus"
+      ],
+      "pages": [
+        {
+          "host": "reddit.com",
+          "title": "r/coffee - What's your favorite single-origin bean right now?"
+        },
+        {
+          "host": "twitter.com",
+          "title": "Home / X"
+        },
+        {
+          "host": "zillow.com",
+          "title": "Apartments for Rent in Austin, TX"
+        },
+        {
+          "host": "youtube.com",
+          "title": "Lofi hip hop radio - beats to relax/study to"
+        },
+        {
+          "host": "news.ycombinator.com",
+          "title": "Show HN: I built a tiny tool for coffee roasters"
+        }
+      ]
+    }
+  }
+}

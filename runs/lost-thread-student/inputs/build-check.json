@@ -1,0 +1,13 @@
+{
+  "errors": [],
+  "warnings": [
+    "q02/f02a: happened but DayDream didn't record it ('Final methods section is in the doc'): coverage gap",
+    "q05/f05a: answer pattern also appears in native memory ['codex', 'claude'] (possible lucky guess)",
+    "q05/f05b: happened but DayDream didn't record it ('waitlist position 3'): coverage gap",
+    "q08/f08a: happened but DayDream didn't record it ('i can do 1pm if needed but i have lab work after, lmk'): coverage gap",
+    "q09/f09b: in the chats but not in memory ['codex', 'claude'] ('vintage radio restoration kit')",
+    "q09/f09c: in the chats but not in memory ['codex', 'claude'] ('woodworking tool set')",
+    "q09/f09d: in the chats but not in memory ['codex', 'claude'] ('fishing magazine')"
+  ],
+  "refused_by_daydream": []
+}

@@ -1,0 +1,42 @@
+{"blind_id": "A0068", "item_id": "developer-q03", "judge": "j3", "correct": 1, "helpful": 2, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Right file and commit history view, no TODO or push; guesses Playwright issue."}
+{"blind_id": "A0012", "item_id": "developer-q03", "judge": "j3", "correct": 0, "helpful": 1, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Non-answer from old chats."}
+{"blind_id": "A0138", "item_id": "developer-q03", "judge": "j3", "correct": 0, "helpful": 1, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Non-answer with generic git advice."}
+{"blind_id": "A0056", "item_id": "developer-q03", "judge": "j3", "correct": 1, "helpful": 2, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Finds scraper.py last use and commit history, no TODO."}
+{"blind_id": "A0151", "item_id": "developer-q03", "judge": "j3", "correct": 1, "helpful": 2, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Same as above, correct date, no TODO or push."}
+{"blind_id": "A0005", "item_id": "developer-q03", "judge": "j3", "correct": 1, "helpful": 2, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Timeline right, no TODO or push."}
+{"blind_id": "A0010", "item_id": "developer-q07", "judge": "j3", "correct": 2, "helpful": 3, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Right Grafana lag dashboard but hedged and unsourced Tom claim."}
+{"blind_id": "A0093", "item_id": "developer-q07", "judge": "j3", "correct": 2, "helpful": 4, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Correct dashboard with when."}
+{"blind_id": "A0095", "item_id": "developer-q07", "judge": "j3", "correct": 1, "helpful": 2, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Hedged guess of Grafana lag, no record."}
+{"blind_id": "A0157", "item_id": "developer-q07", "judge": "j3", "correct": 2, "helpful": 4, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Correct dashboard with visit dates."}
+{"blind_id": "A0030", "item_id": "developer-q07", "judge": "j3", "correct": 2, "helpful": 3, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Right dashboard but hedged and unsourced Tom claim."}
+{"blind_id": "A0136", "item_id": "developer-q07", "judge": "j3", "correct": 2, "helpful": 4, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Correct dashboard with visit times."}
+{"blind_id": "A0076", "item_id": "founder-q02", "judge": "j3", "correct": 0, "helpful": 1, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Stale September state, says no Friday record."}
+{"blind_id": "A0088", "item_id": "founder-q02", "judge": "j3", "correct": 1, "helpful": 2, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "roasters.json then terminal, no commit/push."}
+{"blind_id": "A0152", "item_id": "founder-q02", "judge": "j3", "correct": 0, "helpful": 1, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Non-answer."}
+{"blind_id": "A0146", "item_id": "founder-q02", "judge": "j3", "correct": 1, "helpful": 2, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Timeline right, guess marked, no commit/push."}
+{"blind_id": "A0128", "item_id": "founder-q02", "judge": "j3", "correct": 1, "helpful": 2, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Timeline right, no commit/push."}
+{"blind_id": "A0125", "item_id": "founder-q02", "judge": "j3", "correct": 1, "helpful": 2, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Files and times right, no commit/push."}
+{"blind_id": "A0100", "item_id": "founder-q06", "judge": "j3", "correct": 1, "helpful": 2, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Roaster map right but design detail from August."}
+{"blind_id": "A0127", "item_id": "founder-q06", "judge": "j3", "correct": 1, "helpful": 2, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Roaster map right but from August chat."}
+{"blind_id": "A0132", "item_id": "founder-q06", "judge": "j3", "correct": 2, "helpful": 4, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Roaster Map prototype with dates."}
+{"blind_id": "A0002", "item_id": "founder-q06", "judge": "j3", "correct": 1, "helpful": 1, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Says no Figma record, only a guess at roaster map."}
+{"blind_id": "A0033", "item_id": "founder-q06", "judge": "j3", "correct": 2, "helpful": 3, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Roaster map Figma file named."}
+{"blind_id": "A0102", "item_id": "founder-q06", "judge": "j3", "correct": 2, "helpful": 4, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Roaster map prototype with days and times."}
+{"blind_id": "A0053", "item_id": "student-q01", "judge": "j3", "correct": 2, "helpful": 4, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Correct invoice number, honest on send."}
+{"blind_id": "A0099", "item_id": "student-q01", "judge": "j3", "correct": 2, "helpful": 4, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Correct number, send uncertainty stated."}
+{"blind_id": "A0142", "item_id": "student-q01", "judge": "j3", "correct": 2, "helpful": 4, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Correct number."}
+{"blind_id": "A0050", "item_id": "student-q01", "judge": "j3", "correct": 2, "helpful": 4, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Correct number."}
+{"blind_id": "A0064", "item_id": "student-q01", "judge": "j3", "correct": 0, "helpful": 1, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Non-answer."}
+{"blind_id": "A0057", "item_id": "student-q01", "judge": "j3", "correct": 0, "helpful": 1, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Non-answer."}
+{"blind_id": "A0077", "item_id": "student-q05", "judge": "j3", "correct": 2, "helpful": 4, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Right course, honest on waitlist and registration."}
+{"blind_id": "A0096", "item_id": "student-q05", "judge": "j3", "correct": 2, "helpful": 3, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Right course, no waitlist."}
+{"blind_id": "A0097", "item_id": "student-q05", "judge": "j3", "correct": 2, "helpful": 3, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Right course, no waitlist."}
+{"blind_id": "A0089", "item_id": "student-q05", "judge": "j3", "correct": 2, "helpful": 4, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Right course, honest caveats."}
+{"blind_id": "A0072", "item_id": "student-q05", "judge": "j3", "correct": 2, "helpful": 3, "fabrications": 0, "overclaim": 1, "negative_verdict": null, "note": "Right course but states drop as done."}
+{"blind_id": "A0009", "item_id": "student-q05", "judge": "j3", "correct": 1, "helpful": 2, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Leaning toward right course, no decision."}
+{"blind_id": "A0061", "item_id": "student-q09", "judge": "j3", "correct": 1, "helpful": 3, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Tackle box right, gives interests, not original list."}
+{"blind_id": "A0024", "item_id": "student-q09", "judge": "j3", "correct": 1, "helpful": 2, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Tackle box only from memory."}
+{"blind_id": "A0055", "item_id": "student-q09", "judge": "j3", "correct": 1, "helpful": 2, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Tackle box found but not as suggestion."}
+{"blind_id": "A0054", "item_id": "student-q09", "judge": "j3", "correct": 1, "helpful": 2, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Tackle box as own pick, says no suggestion."}
+{"blind_id": "A0029", "item_id": "student-q09", "judge": "j3", "correct": 1, "helpful": 3, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Tackle box right, gives interests."}
+{"blind_id": "A0080", "item_id": "student-q09", "judge": "j3", "correct": 1, "helpful": 2, "fabrications": 0, "overclaim": 0, "negative_verdict": null, "note": "Tackle box, unconfirmed as suggestion."}

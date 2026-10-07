@@ -1,0 +1,15 @@
+{
+  "id": "founder",
+  "key": "founder",
+  "archetype": "founder",
+  "name": "Maya Chen",
+  "role": "Founder & CEO",
+  "company": "Loomly Labs",
+  "summary": "Maya runs a small B2B SaaS startup that helps independent coffee roasters manage wholesale orders. She spends her days switching between customer calls, product decisions, and the occasional fire drill. She is pragmatic, slightly overwhelmed, and tries to keep Fridays for deep work.",
+  "workday": {
+    "start": "08:15",
+    "end": "18:30",
+    "lunch": "12:45"
+  },
+  "source": "generated"
+}

@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a112f3-652a-7910-b87c-69c8f69ecb94"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"I don’t have a confirmed final decision. The last update I have, from September 14, was that you were considering **keeping Starter at $29 and adding a usage cap**—rather than raising it to $39."}}
+{"type":"turn.completed","usage":{"input_tokens":6286,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":50,"reasoning_output_tokens":0}}

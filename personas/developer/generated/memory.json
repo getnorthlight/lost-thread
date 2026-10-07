@@ -1,0 +1,50 @@
+{
+  "saved_memories": [
+    {
+      "from": "c01",
+      "text": "Works on an event pipeline and uses Kafka"
+    },
+    {
+      "from": "c02",
+      "text": "Is migrating to Avro for Kafka events"
+    },
+    {
+      "from": "c03",
+      "text": "Has a recipe scraper side project using Python and BeautifulSoup"
+    },
+    {
+      "from": "c04",
+      "text": "Is planning a trip to Fredericksburg with Lena"
+    },
+    {
+      "from": "c05",
+      "text": "Is migrating from RabbitMQ to Kafka"
+    },
+    {
+      "from": "c07",
+      "text": "Receives CSVs from Jules at Northwind"
+    },
+    {
+      "from": "c12",
+      "text": "Works with Tom and Dana on the Kafka pipeline"
+    },
+    {
+      "from": "c15",
+      "text": "Works with Priya on order events"
+    },
+    {
+      "from": "c20",
+      "text": "Has a PM named Marcus"
+    },
+    {
+      "from": "c24",
+      "text": "Is going to Fredericksburg next week"
+    }
+  ],
+  "claude_summary": {
+    "Work context": "Engineer working on migrating an event pipeline from RabbitMQ to Kafka, including Avro schemas, consumer groups, monitoring with Grafana, and writing runbooks. Colleagues mentioned include Tom, Dana, Priya, Marcus, and Jules from Northwind.",
+    "Personal context": "Planning a spring trip to Fredericksburg with Lena, possibly with grandma; interested in cabins, wineries, wildflowers, and packing. Also maintains a personal recipe scraper side project in Python.",
+    "Top of mind": "Recent chats focus on the final pre-migration checklist for the Kafka migration starting Monday, last-minute Fredericksburg itinerary for the trip next week, and schema evolution best practices.",
+    "Brief history": "Over the past two months the user has alternated between work on the Kafka/RabbitMQ migration and personal planning. Early chats covered Kafka basics and Avro setup, then shifted to migration gotchas, monitoring, and runbooks. In parallel, they kept improving a recipe scraper and planning a Fredericksburg trip with Lena. The most recent messages are immediate pre-migration and pre-trip preparations."
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Lost Thread per-answer grade",
+  "type": "object",
+  "properties": {
+    "blind_id": {
+      "type": "string"
+    },
+    "item_id": {
+      "type": "string"
+    },
+    "judge": {
+      "type": "string"
+    },
+    "correct": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 2
+    },
+    "helpful": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4
+    },
+    "fabrications": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "overclaim": {
+      "type": "integer",
+      "enum": [
+        0,
+        1
+      ]
+    },
+    "negative_verdict": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "correct",
+        "unsure",
+        "wrong",
+        null
+      ]
+    },
+    "note": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "blind_id",
+    "item_id",
+    "judge",
+    "correct",
+    "helpful",
+    "fabrications",
+    "overclaim",
+    "negative_verdict",
+    "note"
+  ]
+}

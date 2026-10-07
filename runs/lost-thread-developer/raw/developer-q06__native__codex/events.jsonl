@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a112f1-e8eb-7e93-a9a5-743e796d535d"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"We discussed it on August 18, but I don’t have the final convention saved—so I can’t reliably say what we decided.\n\nA reasonable default would be `<env>.<service>.<purpose>`, e.g. `prod.orders.invoice-writer`, with replicas sharing the same group ID. That’s a suggestion, not a confirmed decision."}}
+{"type":"turn.completed","usage":{"input_tokens":5489,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":108,"reasoning_output_tokens":31}}

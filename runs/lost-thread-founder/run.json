@@ -1,0 +1,39 @@
+{
+  "run_id": "lost-thread-founder",
+  "persona": "founder",
+  "started": "2026-10-06T15:34:39.936757-05:00",
+  "config": {
+    "codex_model": "gpt-6.1-sol",
+    "codex_effort": "medium",
+    "claude_model": "opus",
+    "claude_effort": null,
+    "system_variant": "symmetric-v1",
+    "timeout": 180
+  },
+  "arms": [
+    "native",
+    "native+dd",
+    "dd"
+  ],
+  "contestants": [
+    "codex",
+    "claude"
+  ],
+  "items": [
+    "founder-q01",
+    "founder-q02",
+    "founder-q03",
+    "founder-q04",
+    "founder-q05",
+    "founder-q06",
+    "founder-q07",
+    "founder-q08",
+    "founder-q09"
+  ],
+  "ask_at": "2026-10-06T15:34:25.471409-05:00",
+  "store_sha256": "0f391f0e7b92e2002674740ea86387cc8f7cf628ec943dd2a260f0df1bc93b83",
+  "mac_mem": "/Applications/DayDream.app/Contents/MacOS/mac-mem",
+  "generator": "deepseek/deepseek-v4-flash-0731 @ <local OpenRouter proxy>",
+  "lock_sha256": "204b00dd8a3963b35c4ef7ad2b5aecd5fad95fe8653eaeb6fd21dc49a113f33c",
+  "finished": "2026-10-06T15:44:35.383931-05:00"
+}

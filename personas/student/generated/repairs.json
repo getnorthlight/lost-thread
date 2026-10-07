@@ -1,0 +1,308 @@
+[
+  {
+    "at": "2026-10-06T15:19:35.564536-05:00",
+    "fixes": {
+      "q04": "its ev regex matches nothing that happened in the week; time_spent facts need only the {min:...} number check, and the reference must use the same placeholder",
+      "q05": "its facts were typed where DayDream does not record (Google Docs / Slack desktop) and are not in the chats, so nothing can answer it; pick a decision whose final number or choice appears in window/page titles, searches or words typed in recorded apps or sites",
+      "q09": "a control must be answerable from the memory text alone; f09b, f09c and f09d are only in the assistant gist, not in the memory text; use facts that appear in the memory text"
+    },
+    "before": {
+      "q04": {
+        "id": "q04",
+        "type": "time_spent",
+        "question": "How much time did I spend on Reddit on {d1}?",
+        "need": "wants to know how long they were distracted on Reddit on the first day of the week",
+        "reference": "On {date:d1}, Maya spent about {min:host:1:www.reddit.com} minutes on Reddit.",
+        "facts": [
+          {
+            "id": "f04a",
+            "text": "Time spent on Reddit on day 1",
+            "check": {
+              "kind": "number",
+              "value": "{min:host:1:www.reddit.com}",
+              "unit": "minutes",
+              "full": 0.25,
+              "half": 0.5
+            },
+            "ev": "r/ADHD - How do you stop procrastinating? - Reddit",
+            "nm": null,
+            "optional": false
+          }
+        ],
+        "negative": false,
+        "hallucination": "A made-up answer would claim a different amount of time, like 2 minutes or 30 minutes",
+        "target_ev": "r/ADHD - How do you stop procrastinating? - Reddit",
+        "allow_overlap": []
+      },
+      "q05": {
+        "id": "q05",
+        "type": "decision",
+        "question": "Which elective did I end up choosing for next semester, and what was the waitlist position?",
+        "need": "wants to confirm their final course registration decision and waitlist status before the add/drop deadline",
+        "reference": "Maya chose INFO 6502 Critical AI Ethics and dropped INFO 6501 Data Visualization. The waitlist position was 3, but she got in because she registered early.",
+        "facts": [
+          {
+            "id": "f05a",
+            "text": "Maya dropped INFO 6501 and kept INFO 6502",
+            "check": {
+              "kind": "regex",
+              "pattern": "Drop INFO 6501, keep INFO 6502"
+            },
+            "ev": "Drop INFO 6501, keep INFO 6502",
+            "nm": null,
+            "optional": false
+          },
+          {
+            "id": "f05b",
+            "text": "The waitlist position for INFO 6502 was 3",
+            "check": {
+              "kind": "regex",
+              "pattern": "waitlist position 3"
+            },
+            "ev": "waitlist position 3",
+            "nm": null,
+            "optional": false
+          }
+        ],
+        "negative": false,
+        "hallucination": "A made-up answer would claim she chose Data Visualization or that the waitlist position was different",
+        "target_ev": "Shopping Cart - University of Minnesota - Canvas",
+        "allow_overlap": []
+      },
+      "q09": {
+        "id": "q09",
+        "type": "control",
+        "question": "What did you suggest for my dad's birthday gift?",
+        "need": "wants to recall the gift ideas the assistant gave for their dad's birthday",
+        "reference": "The assistant suggested a personalized tackle box, a vintage radio restoration kit, a woodworking tool set, and a subscription to a fishing magazine.",
+        "facts": [
+          {
+            "id": "f09a",
+            "text": "The assistant suggested a personalized tackle box",
+            "check": {
+              "kind": "regex",
+              "pattern": "personalized tackle box"
+            },
+            "ev": null,
+            "nm": "personalized tackle box",
+            "optional": false
+          },
+          {
+            "id": "f09b",
+            "text": "The assistant suggested a vintage radio restoration kit",
+            "check": {
+              "kind": "regex",
+              "pattern": "vintage radio restoration kit"
+            },
+            "ev": null,
+            "nm": "vintage radio restoration kit",
+            "optional": false
+          },
+          {
+            "id": "f09c",
+            "text": "The assistant suggested a woodworking tool set",
+            "check": {
+              "kind": "regex",
+              "pattern": "woodworking tool set"
+            },
+            "ev": null,
+            "nm": "woodworking tool set",
+            "optional": false
+          },
+          {
+            "id": "f09d",
+            "text": "The assistant suggested a fishing magazine subscription",
+            "check": {
+              "kind": "regex",
+              "pattern": "fishing magazine"
+            },
+            "ev": null,
+            "nm": "fishing magazine",
+            "optional": false
+          }
+        ],
+        "negative": false,
+        "hallucination": "A made-up answer would claim the assistant suggested something else, like a new phone or a gift card",
+        "target_ev": "Gift ideas for dad",
+        "allow_overlap": []
+      }
+    },
+    "ok": false
+  },
+  {
+    "at": "2026-10-06T15:20:02.296715-05:00",
+    "by": "harness author (hand, pre-freeze; DeepSeek repair failed 3x)",
+    "fixes": {
+      "q04": "dropped an ev regex that matched nothing (time_spent truth comes from {min:host:1:www.reddit.com})",
+      "q05": "f05a evidence/check pointed at words typed in Google Docs (not recorded); now the recorded Canvas typing 'drop INFO 6501' and a check for 6502/AI Ethics; f05b (waitlist position, never recorded or remembered) made optional",
+      "q09": "control facts f09b-d exist only in the assistant's past answer, not in the memory text; made optional (f09a, in memory, stays required)"
+    },
+    "before": {
+      "q04": {
+        "id": "q04",
+        "type": "time_spent",
+        "question": "How much time did I spend on Reddit on {d1}?",
+        "need": "wants to know how long they were distracted on Reddit on the first day of the week",
+        "reference": "On {date:d1}, Maya spent about {min:host:1:www.reddit.com} minutes on Reddit.",
+        "facts": [
+          {
+            "id": "f04a",
+            "text": "Time spent on Reddit on day 1",
+            "check": {
+              "kind": "number",
+              "value": "{min:host:1:www.reddit.com}",
+              "unit": "minutes",
+              "full": 0.25,
+              "half": 0.5
+            },
+            "ev": "r/ADHD - How do you stop procrastinating? - Reddit",
+            "nm": null,
+            "optional": false
+          }
+        ],
+        "negative": false,
+        "hallucination": "A made-up answer would claim a different amount of time, like 2 minutes or 30 minutes",
+        "target_ev": "r/ADHD - How do you stop procrastinating? - Reddit",
+        "allow_overlap": []
+      },
+      "q05": {
+        "id": "q05",
+        "type": "decision",
+        "question": "Which elective did I end up choosing for next semester, and what was the waitlist position?",
+        "need": "wants to confirm their final course registration decision and waitlist status before the add/drop deadline",
+        "reference": "Maya chose INFO 6502 Critical AI Ethics and dropped INFO 6501 Data Visualization. The waitlist position was 3, but she got in because she registered early.",
+        "facts": [
+          {
+            "id": "f05a",
+            "text": "Maya dropped INFO 6501 and kept INFO 6502",
+            "check": {
+              "kind": "regex",
+              "pattern": "Drop INFO 6501, keep INFO 6502"
+            },
+            "ev": "Drop INFO 6501, keep INFO 6502",
+            "nm": null,
+            "optional": false
+          },
+          {
+            "id": "f05b",
+            "text": "The waitlist position for INFO 6502 was 3",
+            "check": {
+              "kind": "regex",
+              "pattern": "waitlist position 3"
+            },
+            "ev": "waitlist position 3",
+            "nm": null,
+            "optional": false
+          }
+        ],
+        "negative": false,
+        "hallucination": "A made-up answer would claim she chose Data Visualization or that the waitlist position was different",
+        "target_ev": "Shopping Cart - University of Minnesota - Canvas",
+        "allow_overlap": []
+      },
+      "q09": {
+        "id": "q09",
+        "type": "control",
+        "question": "What did you suggest for my dad's birthday gift?",
+        "need": "wants to recall the gift ideas the assistant gave for their dad's birthday",
+        "reference": "The assistant suggested a personalized tackle box, a vintage radio restoration kit, a woodworking tool set, and a subscription to a fishing magazine.",
+        "facts": [
+          {
+            "id": "f09a",
+            "text": "The assistant suggested a personalized tackle box",
+            "check": {
+              "kind": "regex",
+              "pattern": "personalized tackle box"
+            },
+            "ev": null,
+            "nm": "personalized tackle box",
+            "optional": false
+          },
+          {
+            "id": "f09b",
+            "text": "The assistant suggested a vintage radio restoration kit",
+            "check": {
+              "kind": "regex",
+              "pattern": "vintage radio restoration kit"
+            },
+            "ev": null,
+            "nm": "vintage radio restoration kit",
+            "optional": false
+          },
+          {
+            "id": "f09c",
+            "text": "The assistant suggested a woodworking tool set",
+            "check": {
+              "kind": "regex",
+              "pattern": "woodworking tool set"
+            },
+            "ev": null,
+            "nm": "woodworking tool set",
+            "optional": false
+          },
+          {
+            "id": "f09d",
+            "text": "The assistant suggested a fishing magazine subscription",
+            "check": {
+              "kind": "regex",
+              "pattern": "fishing magazine"
+            },
+            "ev": null,
+            "nm": "fishing magazine",
+            "optional": false
+          }
+        ],
+        "negative": false,
+        "hallucination": "A made-up answer would claim the assistant suggested something else, like a new phone or a gift card",
+        "target_ev": "Gift ideas for dad",
+        "allow_overlap": []
+      }
+    },
+    "ok": true
+  },
+  {
+    "at": "2026-10-06T15:34:16.965838-05:00",
+    "by": "harness author (hand, pre-freeze)",
+    "fixes": {
+      "q02": "question said 'at the end of last week' while its reference and facts describe Monday, October 5 (day 5)"
+    },
+    "before": {
+      "q02": {
+        "id": "q02",
+        "type": "where_left_off",
+        "question": "Where did I leave off on the HCI methods section at the end of last week?",
+        "need": "wants to know the last state of the methods section so they can resume without re-reading everything",
+        "reference": "On {date:d5}, Maya finished the methods section draft, added the usability numbers, and posted the final methods section in #hci-group-project, then started building the presentation slides in Keynote and added a limitations slide.",
+        "facts": [
+          {
+            "id": "f02a",
+            "text": "The methods section was finalized and posted to the group Slack",
+            "check": {
+              "kind": "regex",
+              "pattern": "Final methods section is in the doc"
+            },
+            "ev": "Final methods section is in the doc",
+            "nm": null,
+            "optional": false
+          },
+          {
+            "id": "f02b",
+            "text": "Maya then worked on the HCI presentation slides in Keynote",
+            "check": {
+              "kind": "regex",
+              "pattern": "HCI Presentation - Keynote"
+            },
+            "ev": "HCI Presentation - Keynote",
+            "nm": null,
+            "optional": false
+          }
+        ],
+        "negative": false,
+        "hallucination": "A made-up answer would claim she was still writing the participants subsection or hadn't started the slides",
+        "target_ev": "HCI methods draft / HCI Presentation - Keynote",
+        "allow_overlap": []
+      }
+    },
+    "ok": true
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "persona": "founder",
+  "ask_day": "2026-10-06",
+  "built_at": "2026-10-06T15:34:25.471398-05:00",
+  "ask_at": "2026-10-06T15:34:25.471409-05:00",
+  "dates": [
+    "2026-09-29",
+    "2026-09-30",
+    "2026-10-01",
+    "2026-10-02",
+    "2026-10-05"
+  ],
+  "seed": 11,
+  "source": "generated",
+  "generator": "deepseek/deepseek-v4-flash-0731 @ <local OpenRouter proxy>",
+  "store_sha256": "0f391f0e7b92e2002674740ea86387cc8f7cf628ec943dd2a260f0df1bc93b83",
+  "rows": 2109,
+  "kept": {
+    "app.activated": 306,
+    "keyboard.submit": 11,
+    "keyboard.text_input": 27,
+    "mouse.click": 1058,
+    "window.changed": 707
+  },
+  "typed_retention": "30d"
+}

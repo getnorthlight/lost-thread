@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a112f2-2425-7e10-9c7d-cc910c5e66c8"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"You’re probably thinking of the **Grafana dashboard for the new Kafka pipeline**—specifically the **consumer lag** panel, which shows how far behind consumers are. You mentioned Tom wanted that dashboard added."}}
+{"type":"turn.completed","usage":{"input_tokens":6273,"cached_input_tokens":3456,"cache_write_input_tokens":0,"output_tokens":87,"reasoning_output_tokens":39}}

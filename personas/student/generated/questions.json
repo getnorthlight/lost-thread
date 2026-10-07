@@ -1,0 +1,289 @@
+{
+  "items": [
+    {
+      "id": "q01",
+      "type": "exact_recall",
+      "question": "What invoice number did I send to Lila for the Open Streets web app?",
+      "need": "wants to recall the exact invoice number to reference it in a follow-up email or accounting conversation",
+      "reference": "Invoice #2024-0317",
+      "facts": [
+        {
+          "id": "f01a",
+          "text": "The invoice number was 2024-0317",
+          "check": {
+            "kind": "regex",
+            "pattern": "2024-0317"
+          },
+          "ev": "Invoice #2024-0317",
+          "nm": null,
+          "optional": false
+        }
+      ],
+      "negative": false,
+      "hallucination": "A made-up answer would claim a different invoice number like 2024-0318 or 2024-0316",
+      "target_ev": "Invoice #2024-0317",
+      "allow_overlap": []
+    },
+    {
+      "id": "q02",
+      "type": "where_left_off",
+      "question": "Where did I leave off on the HCI methods section at the end of {d5}?",
+      "need": "wants to know the last state of the methods section so they can resume without re-reading everything",
+      "reference": "On {date:d5}, Maya finished the methods section draft, added the usability numbers, and posted the final methods section in #hci-group-project, then started building the presentation slides in Keynote and added a limitations slide.",
+      "facts": [
+        {
+          "id": "f02a",
+          "text": "The methods section was finalized and posted to the group Slack",
+          "check": {
+            "kind": "regex",
+            "pattern": "Final methods section is in the doc"
+          },
+          "ev": "Final methods section is in the doc",
+          "nm": null,
+          "optional": false
+        },
+        {
+          "id": "f02b",
+          "text": "Maya then worked on the HCI presentation slides in Keynote",
+          "check": {
+            "kind": "regex",
+            "pattern": "HCI Presentation - Keynote"
+          },
+          "ev": "HCI Presentation - Keynote",
+          "nm": null,
+          "optional": false
+        }
+      ],
+      "negative": false,
+      "hallucination": "A made-up answer would claim she was still writing the participants subsection or hadn't started the slides",
+      "target_ev": "HCI methods draft / HCI Presentation - Keynote",
+      "allow_overlap": []
+    },
+    {
+      "id": "q03",
+      "type": "cross_app",
+      "question": "What did I tell Lila after I checked the Firebase console to see if volunteer signups were coming through?",
+      "need": "wants to know what they communicated to the client after verifying the app was working, so they can follow up consistently",
+      "reference": "After checking the Firebase console, Maya replied to Lila's invoice email saying 'No problem! Happy to wait for the board. Let me know if they have any questions.'",
+      "facts": [
+        {
+          "id": "f03a",
+          "text": "Maya checked the Firebase console for volunteer signups",
+          "check": {
+            "kind": "regex",
+            "pattern": "Firebase Console - Open Streets Collective"
+          },
+          "ev": "Firebase Console - Open Streets Collective",
+          "nm": null,
+          "optional": false
+        },
+        {
+          "id": "f03b",
+          "text": "Maya replied to Lila saying she was happy to wait for the board",
+          "check": {
+            "kind": "regex",
+            "pattern": "No problem! Happy to wait for the board"
+          },
+          "ev": "No problem! Happy to wait for the board",
+          "nm": null,
+          "optional": false
+        }
+      ],
+      "negative": false,
+      "hallucination": "A made-up answer would claim she told Lila the signups were working or that she was sending a new invoice",
+      "target_ev": "Firebase Console - Open Streets Collective / Re: Invoice for Open Streets web app",
+      "allow_overlap": []
+    },
+    {
+      "id": "q04",
+      "type": "time_spent",
+      "question": "How much time did I spend on Reddit on {d1}?",
+      "need": "wants to know how long they were distracted on Reddit on the first day of the week",
+      "reference": "On {date:d1}, Maya spent about {min:host:1:www.reddit.com} minutes on Reddit.",
+      "facts": [
+        {
+          "id": "f04a",
+          "text": "Time spent on Reddit on day 1",
+          "check": {
+            "kind": "number",
+            "value": "{min:host:1:www.reddit.com}",
+            "unit": "minutes",
+            "full": 0.25,
+            "half": 0.5
+          },
+          "ev": null,
+          "nm": null,
+          "optional": false
+        }
+      ],
+      "negative": false,
+      "hallucination": "A made-up answer would claim a different amount of time, like 2 minutes or 30 minutes",
+      "target_ev": "r/ADHD - How do you stop procrastinating? - Reddit",
+      "allow_overlap": []
+    },
+    {
+      "id": "q05",
+      "type": "decision",
+      "question": "Which elective did I end up choosing for next semester, and what was the waitlist position?",
+      "need": "wants to confirm their final course registration decision and waitlist status before the add/drop deadline",
+      "reference": "Maya chose INFO 6502 Critical AI Ethics and dropped INFO 6501 Data Visualization. The waitlist position was 3, but she got in because she registered early.",
+      "facts": [
+        {
+          "id": "f05a",
+          "text": "Maya dropped INFO 6501 and kept INFO 6502",
+          "check": {
+            "kind": "regex",
+            "pattern": "6502|AI Ethics"
+          },
+          "ev": "drop INFO 6501",
+          "nm": null,
+          "optional": false
+        },
+        {
+          "id": "f05b",
+          "text": "The waitlist position for INFO 6502 was 3",
+          "check": {
+            "kind": "regex",
+            "pattern": "waitlist position 3"
+          },
+          "ev": "waitlist position 3",
+          "nm": null,
+          "optional": true
+        }
+      ],
+      "negative": false,
+      "hallucination": "A made-up answer would claim she chose Data Visualization or that the waitlist position was different",
+      "target_ev": "Shopping Cart - University of Minnesota - Canvas",
+      "allow_overlap": []
+    },
+    {
+      "id": "q06",
+      "type": "vague",
+      "question": "What was that thread I kept opening about not being able to get started on things?",
+      "need": "wants to find the Reddit thread they kept opening when procrastinating, to maybe read the advice or close the tab",
+      "reference": "The thread was 'r/ADHD - How do you stop procrastinating?' on Reddit.",
+      "facts": [
+        {
+          "id": "f06a",
+          "text": "The thread title was 'How do you stop procrastinating?'",
+          "check": {
+            "kind": "regex",
+            "pattern": "How do you stop procrastinating"
+          },
+          "ev": "How do you stop procrastinating",
+          "nm": null,
+          "optional": false
+        }
+      ],
+      "negative": false,
+      "hallucination": "A made-up answer would claim it was a thread about body doubling or focus music",
+      "target_ev": "How do you stop procrastinating?",
+      "allow_overlap": []
+    },
+    {
+      "id": "q07",
+      "type": "vague",
+      "question": "What was that article I kept opening but never actually finished?",
+      "need": "wants to remember the NYT article they kept opening in new tabs but never read, so they can decide whether to read it or close it",
+      "reference": "The article was 'The Sunday Read: The Lost Art of Doing Nothing' from The New York Times.",
+      "facts": [
+        {
+          "id": "f07a",
+          "text": "The article was 'The Sunday Read: The Lost Art of Doing Nothing'",
+          "check": {
+            "kind": "regex",
+            "pattern": "The Lost Art of Doing Nothing"
+          },
+          "ev": "The Lost Art of Doing Nothing",
+          "nm": null,
+          "optional": false
+        }
+      ],
+      "negative": false,
+      "hallucination": "A made-up answer would claim it was a different article, like a productivity piece or a podcast episode",
+      "target_ev": "The Lost Art of Doing Nothing",
+      "allow_overlap": []
+    },
+    {
+      "id": "q08",
+      "type": "negative",
+      "question": "Did I ever send that reply to Raj about doing the pilot test at 1pm?",
+      "need": "wants to know if they actually sent the message offering to do the pilot at 1pm, or if it was left as a draft",
+      "reference": "No, that reply was never sent. Maya typed 'i can do 1pm if needed but i have lab work after, lmk' but got distracted and left it unsent.",
+      "facts": [
+        {
+          "id": "f08a",
+          "text": "The reply was typed but not sent",
+          "check": {
+            "kind": "regex",
+            "pattern": "i can do 1pm if needed but i have lab work after, lmk"
+          },
+          "ev": "i can do 1pm if needed but i have lab work after, lmk",
+          "nm": null,
+          "optional": false
+        }
+      ],
+      "negative": true,
+      "hallucination": "A made-up answer would claim the message was sent and Raj replied",
+      "target_ev": "i can do 1pm if needed but i have lab work after, lmk",
+      "allow_overlap": []
+    },
+    {
+      "id": "q09",
+      "type": "control",
+      "question": "What did you suggest for my dad's birthday gift?",
+      "need": "wants to recall the gift ideas the assistant gave for their dad's birthday",
+      "reference": "The assistant suggested a personalized tackle box, a vintage radio restoration kit, a woodworking tool set, and a subscription to a fishing magazine.",
+      "facts": [
+        {
+          "id": "f09a",
+          "text": "The assistant suggested a personalized tackle box",
+          "check": {
+            "kind": "regex",
+            "pattern": "personalized tackle box"
+          },
+          "ev": null,
+          "nm": "personalized tackle box",
+          "optional": false
+        },
+        {
+          "id": "f09b",
+          "text": "The assistant suggested a vintage radio restoration kit",
+          "check": {
+            "kind": "regex",
+            "pattern": "vintage radio restoration kit"
+          },
+          "ev": null,
+          "nm": "vintage radio restoration kit",
+          "optional": true
+        },
+        {
+          "id": "f09c",
+          "text": "The assistant suggested a woodworking tool set",
+          "check": {
+            "kind": "regex",
+            "pattern": "woodworking tool set"
+          },
+          "ev": null,
+          "nm": "woodworking tool set",
+          "optional": true
+        },
+        {
+          "id": "f09d",
+          "text": "The assistant suggested a fishing magazine subscription",
+          "check": {
+            "kind": "regex",
+            "pattern": "fishing magazine"
+          },
+          "ev": null,
+          "nm": "fishing magazine",
+          "optional": true
+        }
+      ],
+      "negative": false,
+      "hallucination": "A made-up answer would claim the assistant suggested something else, like a new phone or a gift card",
+      "target_ev": "Gift ideas for dad",
+      "allow_overlap": []
+    }
+  ]
+}

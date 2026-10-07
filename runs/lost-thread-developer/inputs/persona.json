@@ -1,0 +1,15 @@
+{
+  "id": "developer",
+  "key": "developer",
+  "archetype": "developer",
+  "name": "Maya Chen",
+  "role": "Senior Software Engineer",
+  "company": "Lumenary Systems",
+  "summary": "Backend-focused developer on the integrations team, currently migrating a legacy event pipeline to Kafka. She works from home in Austin, uses a MacBook Pro, and tends to start late after a slow morning.",
+  "workday": {
+    "start": "09:45",
+    "end": "18:30",
+    "lunch": "13:00"
+  },
+  "source": "generated"
+}

@@ -1,0 +1,102 @@
+[
+  {
+    "at": "2026-10-06T15:09:42.718684-05:00",
+    "fixes": {
+      "q08": "the ground truth contradicts it: on day 5 at 18:19 she re-read the draft to Jules and finally sent it, so it did happen. Write a different negative about something with NO trace at all in the week (nothing typed, no page or window about it)",
+      "q03": "the question asks about {d5} (day 5, Monday October 5, where the scraper events are) but the reference says Friday; references must use {date:d5} for day 5"
+    },
+    "before": {
+      "q08": {
+        "id": "q08",
+        "type": "negative",
+        "question": "Did I ever send that reply to Jules about the schema change timeline on {d5}?",
+        "need": "wants to know whether the client was left hanging or whether the draft was actually sent",
+        "reference": "No — on Friday you drafted a reply to Jules about the schema change timeline but left it unsent; you re-read it at 18:20 but there's no record of sending it.",
+        "facts": [
+          {
+            "id": "f11",
+            "text": "The draft to Jules about the schema change timeline was left unsent on Friday",
+            "check": {
+              "kind": "regex",
+              "pattern": "leave it unsent"
+            },
+            "ev": "leave it unsent",
+            "nm": null,
+            "optional": false
+          }
+        ],
+        "negative": true,
+        "hallucination": "A made-up answer would claim you sent the reply or that Jules confirmed receipt",
+        "target_ev": "Re: Schema change timeline - Gmail",
+        "allow_overlap": []
+      },
+      "q03": {
+        "id": "q03",
+        "type": "where_left_off",
+        "question": "Where did I leave off with the recipe scraper at the end of {d5}?",
+        "need": "wants to pick up the side project without re-reading the code to remember the last state",
+        "reference": "On Friday you left the recipe scraper with a TODO comment about recipe title extraction and an unread DM from Priya about the schema registry; the image download fix was committed and pushed.",
+        "facts": [
+          {
+            "id": "f03",
+            "text": "The last thing you did was leave a TODO comment about title extraction in scraper.py",
+            "check": {
+              "kind": "regex",
+              "pattern": "TODO comment about the title extraction"
+            },
+            "ev": "leave a TODO comment about the title extraction and close the file",
+            "nm": null,
+            "optional": false
+          },
+          {
+            "id": "f04",
+            "text": "The image download fix was committed and pushed to the private repo",
+            "check": {
+              "kind": "regex",
+              "pattern": "git push origin main"
+            },
+            "ev": "git push origin main",
+            "nm": null,
+            "optional": false
+          }
+        ],
+        "negative": false,
+        "hallucination": "A made-up answer would claim the scraper was fully working or that you were stuck on the Cloudflare challenge",
+        "target_ev": "scraper.py — recipe_scraper — Visual Studio Code",
+        "allow_overlap": []
+      }
+    },
+    "ok": true
+  },
+  {
+    "at": "2026-10-06T15:21:49.956982-05:00",
+    "by": "harness author (hand, pre-freeze)",
+    "fixes": {
+      "q08": "the repaired negative's reference and hallucination note contradicted the ground truth (day 4: Lena sent a 6:30 reservation confirmation for the German place, and the note called that a hallucination); rewritten to match the ledger. The question is unchanged."
+    },
+    "before": {
+      "q08": {
+        "id": "q08",
+        "type": "negative",
+        "question": "Did I ever call the German restaurant on Main Street in Fredericksburg to book dinner for Saturday?",
+        "need": "wants to know whether the dinner reservation was actually made or if Lena is still waiting on it",
+        "reference": "No — on Tuesday you told Lena you'd call the German place on Main Street tomorrow, but there's no record of any call, search, or reservation for it in the week. The only dinner plan that materialized was Lena booking a BBQ place on Main St for 7.",
+        "facts": [
+          {
+            "id": "f11",
+            "text": "There is no trace of calling or booking the German restaurant on Main Street",
+            "check": null,
+            "ev": null,
+            "nm": null,
+            "optional": false
+          }
+        ],
+        "negative": true,
+        "hallucination": "A made-up answer would claim you called and booked the German place, or that the reservation was confirmed for 6:30 or 7.",
+        "target_ev": "Messages — Lena Park",
+        "allow_overlap": []
+      }
+    },
+    "ok": true
+  }
+]

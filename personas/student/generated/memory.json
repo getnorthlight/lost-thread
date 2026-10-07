@@ -1,0 +1,38 @@
+{
+  "saved_memories": [
+    {
+      "from": "c01",
+      "text": "Works as an RA, coding interview transcripts in NVivo for a lab"
+    },
+    {
+      "from": "c02",
+      "text": "Building a volunteer signup form for a nonprofit web app"
+    },
+    {
+      "from": "c04",
+      "text": "Is in an HCI group project doing usability testing"
+    },
+    {
+      "from": "c05",
+      "text": "Has a nonprofit web app with event dates"
+    },
+    {
+      "from": "c08",
+      "text": "Is an information science student choosing electives"
+    },
+    {
+      "from": "c13",
+      "text": "Does freelance web work for a nonprofit and invoiced $350–400"
+    },
+    {
+      "from": "c16",
+      "text": "Has a deadline to finish coding transcripts for the lab by Friday"
+    }
+  ],
+  "claude_summary": {
+    "Work context": "User is an information science student with an RA job coding qualitative interview transcripts in NVivo. They are also doing an HCI group project involving usability testing, and they do freelance web development for a nonprofit (built a React app with a volunteer signup form and event dates).",
+    "Personal context": "Shopping for their dad's birthday; ordered a personalized tackle box and is second-guessing it. They get distracted easily and have been procrastinating on transcript coding.",
+    "Top of mind": "Recent chats are about asking for a deadline extension on transcript coding, last-minute gift anxiety, and worrying about a professor's mixed reviews for Critical AI Ethics.",
+    "Brief history": "Over the past two months the user has cycled between coursework, RA work, and freelance nonprofit web work. They've gotten help with NVivo coding, React form validation, Firebase timezone bugs, Netlify deploys, usability testing methods, and writing a methods section. They also deliberated over electives and are leaning toward or considering Critical AI Ethics despite mixed professor reviews."
+  }
+}

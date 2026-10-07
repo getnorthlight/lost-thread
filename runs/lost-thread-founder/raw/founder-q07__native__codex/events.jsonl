@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a112f0-7923-7cc2-8936-829922d4a5fe"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"I don’t see any mention of emailing Leo about the new onboarding flow in our past chats, but I can’t access your email to confirm. Try searching Sent for `Leo \"onboarding\"`."}}
+{"type":"turn.completed","usage":{"input_tokens":5505,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":70,"reasoning_output_tokens":24}}

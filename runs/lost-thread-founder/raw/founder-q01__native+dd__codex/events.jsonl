@@ -1,0 +1,4 @@
+{"type":"thread.started","thread_id":"01a112f4-0f8c-7d93-9ca5-2e81c52091b2"}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_0","type":"agent_message","text":"I don’t have that invoice number in our conversation history. I remember the export bug dropped line items on orders with more than 5, but no specific invoice number was recorded."}}
+{"type":"turn.completed","usage":{"input_tokens":6287,"cached_input_tokens":3456,"cache_write_input_tokens":0,"output_tokens":69,"reasoning_output_tokens":27}}

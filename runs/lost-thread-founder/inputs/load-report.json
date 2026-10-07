@@ -1,0 +1,21 @@
+{
+  "home": "<lost-thread>/stores/founder/home",
+  "kept": {
+    "app.activated": 306,
+    "keyboard.submit": 11,
+    "keyboard.text_input": 27,
+    "mouse.click": 1058,
+    "window.changed": 707
+  },
+  "loadedAt": "2026-10-06T20:34:22Z",
+  "policyRevision": "E30086D3-BE8A-402C-A1A5-697B1FC1E625",
+  "refused": {
+    "window.changed": 1
+  },
+  "refusedIDs": [
+    "native-57008F92-975C-513D-8681-15B01625E4CC-403"
+  ],
+  "rows": 2110,
+  "typedRetention": "30d",
+  "store_sha256": "0f391f0e7b92e2002674740ea86387cc8f7cf628ec943dd2a260f0df1bc93b83"
+}

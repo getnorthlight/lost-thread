@@ -1,0 +1,650 @@
+{
+ "P0001": {
+  "item_id": "developer-q01",
+  "contestant": "claude",
+  "answer_1": "A0122",
+  "answer_2": "A0043"
+ },
+ "P0002": {
+  "item_id": "developer-q01",
+  "contestant": "claude",
+  "answer_1": "A0043",
+  "answer_2": "A0122"
+ },
+ "P0003": {
+  "item_id": "developer-q01",
+  "contestant": "codex",
+  "answer_1": "A0023",
+  "answer_2": "A0149"
+ },
+ "P0004": {
+  "item_id": "developer-q01",
+  "contestant": "codex",
+  "answer_1": "A0149",
+  "answer_2": "A0023"
+ },
+ "P0005": {
+  "item_id": "developer-q02",
+  "contestant": "claude",
+  "answer_1": "A0109",
+  "answer_2": "A0103"
+ },
+ "P0006": {
+  "item_id": "developer-q02",
+  "contestant": "claude",
+  "answer_1": "A0103",
+  "answer_2": "A0109"
+ },
+ "P0007": {
+  "item_id": "developer-q02",
+  "contestant": "codex",
+  "answer_1": "A0036",
+  "answer_2": "A0073"
+ },
+ "P0008": {
+  "item_id": "developer-q02",
+  "contestant": "codex",
+  "answer_1": "A0073",
+  "answer_2": "A0036"
+ },
+ "P0009": {
+  "item_id": "developer-q03",
+  "contestant": "claude",
+  "answer_1": "A0138",
+  "answer_2": "A0005"
+ },
+ "P0010": {
+  "item_id": "developer-q03",
+  "contestant": "claude",
+  "answer_1": "A0005",
+  "answer_2": "A0138"
+ },
+ "P0011": {
+  "item_id": "developer-q03",
+  "contestant": "codex",
+  "answer_1": "A0012",
+  "answer_2": "A0151"
+ },
+ "P0012": {
+  "item_id": "developer-q03",
+  "contestant": "codex",
+  "answer_1": "A0151",
+  "answer_2": "A0012"
+ },
+ "P0013": {
+  "item_id": "developer-q04",
+  "contestant": "claude",
+  "answer_1": "A0106",
+  "answer_2": "A0081"
+ },
+ "P0014": {
+  "item_id": "developer-q04",
+  "contestant": "claude",
+  "answer_1": "A0081",
+  "answer_2": "A0106"
+ },
+ "P0015": {
+  "item_id": "developer-q04",
+  "contestant": "codex",
+  "answer_1": "A0107",
+  "answer_2": "A0027"
+ },
+ "P0016": {
+  "item_id": "developer-q04",
+  "contestant": "codex",
+  "answer_1": "A0027",
+  "answer_2": "A0107"
+ },
+ "P0017": {
+  "item_id": "developer-q05",
+  "contestant": "claude",
+  "answer_1": "A0060",
+  "answer_2": "A0069"
+ },
+ "P0018": {
+  "item_id": "developer-q05",
+  "contestant": "claude",
+  "answer_1": "A0069",
+  "answer_2": "A0060"
+ },
+ "P0019": {
+  "item_id": "developer-q05",
+  "contestant": "codex",
+  "answer_1": "A0126",
+  "answer_2": "A0086"
+ },
+ "P0020": {
+  "item_id": "developer-q05",
+  "contestant": "codex",
+  "answer_1": "A0086",
+  "answer_2": "A0126"
+ },
+ "P0021": {
+  "item_id": "developer-q06",
+  "contestant": "claude",
+  "answer_1": "A0115",
+  "answer_2": "A0147"
+ },
+ "P0022": {
+  "item_id": "developer-q06",
+  "contestant": "claude",
+  "answer_1": "A0147",
+  "answer_2": "A0115"
+ },
+ "P0023": {
+  "item_id": "developer-q06",
+  "contestant": "codex",
+  "answer_1": "A0037",
+  "answer_2": "A0133"
+ },
+ "P0024": {
+  "item_id": "developer-q06",
+  "contestant": "codex",
+  "answer_1": "A0133",
+  "answer_2": "A0037"
+ },
+ "P0025": {
+  "item_id": "developer-q07",
+  "contestant": "claude",
+  "answer_1": "A0136",
+  "answer_2": "A0095"
+ },
+ "P0026": {
+  "item_id": "developer-q07",
+  "contestant": "claude",
+  "answer_1": "A0095",
+  "answer_2": "A0136"
+ },
+ "P0027": {
+  "item_id": "developer-q07",
+  "contestant": "codex",
+  "answer_1": "A0030",
+  "answer_2": "A0010"
+ },
+ "P0028": {
+  "item_id": "developer-q07",
+  "contestant": "codex",
+  "answer_1": "A0010",
+  "answer_2": "A0030"
+ },
+ "P0029": {
+  "item_id": "developer-q08",
+  "contestant": "claude",
+  "answer_1": "A0034",
+  "answer_2": "A0134"
+ },
+ "P0030": {
+  "item_id": "developer-q08",
+  "contestant": "claude",
+  "answer_1": "A0134",
+  "answer_2": "A0034"
+ },
+ "P0031": {
+  "item_id": "developer-q08",
+  "contestant": "codex",
+  "answer_1": "A0140",
+  "answer_2": "A0129"
+ },
+ "P0032": {
+  "item_id": "developer-q08",
+  "contestant": "codex",
+  "answer_1": "A0129",
+  "answer_2": "A0140"
+ },
+ "P0033": {
+  "item_id": "developer-q09",
+  "contestant": "claude",
+  "answer_1": "A0019",
+  "answer_2": "A0139"
+ },
+ "P0034": {
+  "item_id": "developer-q09",
+  "contestant": "claude",
+  "answer_1": "A0139",
+  "answer_2": "A0019"
+ },
+ "P0035": {
+  "item_id": "developer-q09",
+  "contestant": "codex",
+  "answer_1": "A0014",
+  "answer_2": "A0131"
+ },
+ "P0036": {
+  "item_id": "developer-q09",
+  "contestant": "codex",
+  "answer_1": "A0131",
+  "answer_2": "A0014"
+ },
+ "P0037": {
+  "item_id": "founder-q01",
+  "contestant": "claude",
+  "answer_1": "A0123",
+  "answer_2": "A0049"
+ },
+ "P0038": {
+  "item_id": "founder-q01",
+  "contestant": "claude",
+  "answer_1": "A0049",
+  "answer_2": "A0123"
+ },
+ "P0039": {
+  "item_id": "founder-q01",
+  "contestant": "codex",
+  "answer_1": "A0028",
+  "answer_2": "A0003"
+ },
+ "P0040": {
+  "item_id": "founder-q01",
+  "contestant": "codex",
+  "answer_1": "A0003",
+  "answer_2": "A0028"
+ },
+ "P0041": {
+  "item_id": "founder-q02",
+  "contestant": "claude",
+  "answer_1": "A0146",
+  "answer_2": "A0152"
+ },
+ "P0042": {
+  "item_id": "founder-q02",
+  "contestant": "claude",
+  "answer_1": "A0152",
+  "answer_2": "A0146"
+ },
+ "P0043": {
+  "item_id": "founder-q02",
+  "contestant": "codex",
+  "answer_1": "A0125",
+  "answer_2": "A0076"
+ },
+ "P0044": {
+  "item_id": "founder-q02",
+  "contestant": "codex",
+  "answer_1": "A0076",
+  "answer_2": "A0125"
+ },
+ "P0045": {
+  "item_id": "founder-q03",
+  "contestant": "claude",
+  "answer_1": "A0156",
+  "answer_2": "A0035"
+ },
+ "P0046": {
+  "item_id": "founder-q03",
+  "contestant": "claude",
+  "answer_1": "A0035",
+  "answer_2": "A0156"
+ },
+ "P0047": {
+  "item_id": "founder-q03",
+  "contestant": "codex",
+  "answer_1": "A0158",
+  "answer_2": "A0017"
+ },
+ "P0048": {
+  "item_id": "founder-q03",
+  "contestant": "codex",
+  "answer_1": "A0017",
+  "answer_2": "A0158"
+ },
+ "P0049": {
+  "item_id": "founder-q04",
+  "contestant": "claude",
+  "answer_1": "A0137",
+  "answer_2": "A0041"
+ },
+ "P0050": {
+  "item_id": "founder-q04",
+  "contestant": "claude",
+  "answer_1": "A0041",
+  "answer_2": "A0137"
+ },
+ "P0051": {
+  "item_id": "founder-q04",
+  "contestant": "codex",
+  "answer_1": "A0154",
+  "answer_2": "A0065"
+ },
+ "P0052": {
+  "item_id": "founder-q04",
+  "contestant": "codex",
+  "answer_1": "A0065",
+  "answer_2": "A0154"
+ },
+ "P0053": {
+  "item_id": "founder-q05",
+  "contestant": "claude",
+  "answer_1": "A0120",
+  "answer_2": "A0159"
+ },
+ "P0054": {
+  "item_id": "founder-q05",
+  "contestant": "claude",
+  "answer_1": "A0159",
+  "answer_2": "A0120"
+ },
+ "P0055": {
+  "item_id": "founder-q05",
+  "contestant": "codex",
+  "answer_1": "A0118",
+  "answer_2": "A0119"
+ },
+ "P0056": {
+  "item_id": "founder-q05",
+  "contestant": "codex",
+  "answer_1": "A0119",
+  "answer_2": "A0118"
+ },
+ "P0057": {
+  "item_id": "founder-q06",
+  "contestant": "claude",
+  "answer_1": "A0002",
+  "answer_2": "A0102"
+ },
+ "P0058": {
+  "item_id": "founder-q06",
+  "contestant": "claude",
+  "answer_1": "A0102",
+  "answer_2": "A0002"
+ },
+ "P0059": {
+  "item_id": "founder-q06",
+  "contestant": "codex",
+  "answer_1": "A0127",
+  "answer_2": "A0100"
+ },
+ "P0060": {
+  "item_id": "founder-q06",
+  "contestant": "codex",
+  "answer_1": "A0100",
+  "answer_2": "A0127"
+ },
+ "P0061": {
+  "item_id": "founder-q07",
+  "contestant": "claude",
+  "answer_1": "A0075",
+  "answer_2": "A0098"
+ },
+ "P0062": {
+  "item_id": "founder-q07",
+  "contestant": "claude",
+  "answer_1": "A0098",
+  "answer_2": "A0075"
+ },
+ "P0063": {
+  "item_id": "founder-q07",
+  "contestant": "codex",
+  "answer_1": "A0020",
+  "answer_2": "A0084"
+ },
+ "P0064": {
+  "item_id": "founder-q07",
+  "contestant": "codex",
+  "answer_1": "A0084",
+  "answer_2": "A0020"
+ },
+ "P0065": {
+  "item_id": "founder-q08",
+  "contestant": "claude",
+  "answer_1": "A0144",
+  "answer_2": "A0045"
+ },
+ "P0066": {
+  "item_id": "founder-q08",
+  "contestant": "claude",
+  "answer_1": "A0045",
+  "answer_2": "A0144"
+ },
+ "P0067": {
+  "item_id": "founder-q08",
+  "contestant": "codex",
+  "answer_1": "A0090",
+  "answer_2": "A0143"
+ },
+ "P0068": {
+  "item_id": "founder-q08",
+  "contestant": "codex",
+  "answer_1": "A0143",
+  "answer_2": "A0090"
+ },
+ "P0069": {
+  "item_id": "founder-q09",
+  "contestant": "claude",
+  "answer_1": "A0044",
+  "answer_2": "A0058"
+ },
+ "P0070": {
+  "item_id": "founder-q09",
+  "contestant": "claude",
+  "answer_1": "A0058",
+  "answer_2": "A0044"
+ },
+ "P0071": {
+  "item_id": "founder-q09",
+  "contestant": "codex",
+  "answer_1": "A0114",
+  "answer_2": "A0016"
+ },
+ "P0072": {
+  "item_id": "founder-q09",
+  "contestant": "codex",
+  "answer_1": "A0016",
+  "answer_2": "A0114"
+ },
+ "P0073": {
+  "item_id": "student-q01",
+  "contestant": "claude",
+  "answer_1": "A0057",
+  "answer_2": "A0099"
+ },
+ "P0074": {
+  "item_id": "student-q01",
+  "contestant": "claude",
+  "answer_1": "A0099",
+  "answer_2": "A0057"
+ },
+ "P0075": {
+  "item_id": "student-q01",
+  "contestant": "codex",
+  "answer_1": "A0064",
+  "answer_2": "A0142"
+ },
+ "P0076": {
+  "item_id": "student-q01",
+  "contestant": "codex",
+  "answer_1": "A0142",
+  "answer_2": "A0064"
+ },
+ "P0077": {
+  "item_id": "student-q02",
+  "contestant": "claude",
+  "answer_1": "A0062",
+  "answer_2": "A0046"
+ },
+ "P0078": {
+  "item_id": "student-q02",
+  "contestant": "claude",
+  "answer_1": "A0046",
+  "answer_2": "A0062"
+ },
+ "P0079": {
+  "item_id": "student-q02",
+  "contestant": "codex",
+  "answer_1": "A0004",
+  "answer_2": "A0092"
+ },
+ "P0080": {
+  "item_id": "student-q02",
+  "contestant": "codex",
+  "answer_1": "A0092",
+  "answer_2": "A0004"
+ },
+ "P0081": {
+  "item_id": "student-q03",
+  "contestant": "claude",
+  "answer_1": "A0052",
+  "answer_2": "A0091"
+ },
+ "P0082": {
+  "item_id": "student-q03",
+  "contestant": "claude",
+  "answer_1": "A0091",
+  "answer_2": "A0052"
+ },
+ "P0083": {
+  "item_id": "student-q03",
+  "contestant": "codex",
+  "answer_1": "A0022",
+  "answer_2": "A0121"
+ },
+ "P0084": {
+  "item_id": "student-q03",
+  "contestant": "codex",
+  "answer_1": "A0121",
+  "answer_2": "A0022"
+ },
+ "P0085": {
+  "item_id": "student-q04",
+  "contestant": "claude",
+  "answer_1": "A0066",
+  "answer_2": "A0160"
+ },
+ "P0086": {
+  "item_id": "student-q04",
+  "contestant": "claude",
+  "answer_1": "A0160",
+  "answer_2": "A0066"
+ },
+ "P0087": {
+  "item_id": "student-q04",
+  "contestant": "codex",
+  "answer_1": "A0039",
+  "answer_2": "A0111"
+ },
+ "P0088": {
+  "item_id": "student-q04",
+  "contestant": "codex",
+  "answer_1": "A0111",
+  "answer_2": "A0039"
+ },
+ "P0089": {
+  "item_id": "student-q05",
+  "contestant": "claude",
+  "answer_1": "A0077",
+  "answer_2": "A0009"
+ },
+ "P0090": {
+  "item_id": "student-q05",
+  "contestant": "claude",
+  "answer_1": "A0009",
+  "answer_2": "A0077"
+ },
+ "P0091": {
+  "item_id": "student-q05",
+  "contestant": "codex",
+  "answer_1": "A0096",
+  "answer_2": "A0097"
+ },
+ "P0092": {
+  "item_id": "student-q05",
+  "contestant": "codex",
+  "answer_1": "A0097",
+  "answer_2": "A0096"
+ },
+ "P0093": {
+  "item_id": "student-q06",
+  "contestant": "claude",
+  "answer_1": "A0108",
+  "answer_2": "A0059"
+ },
+ "P0094": {
+  "item_id": "student-q06",
+  "contestant": "claude",
+  "answer_1": "A0059",
+  "answer_2": "A0108"
+ },
+ "P0095": {
+  "item_id": "student-q06",
+  "contestant": "codex",
+  "answer_1": "A0070",
+  "answer_2": "A0074"
+ },
+ "P0096": {
+  "item_id": "student-q06",
+  "contestant": "codex",
+  "answer_1": "A0074",
+  "answer_2": "A0070"
+ },
+ "P0097": {
+  "item_id": "student-q07",
+  "contestant": "claude",
+  "answer_1": "A0079",
+  "answer_2": "A0047"
+ },
+ "P0098": {
+  "item_id": "student-q07",
+  "contestant": "claude",
+  "answer_1": "A0047",
+  "answer_2": "A0079"
+ },
+ "P0099": {
+  "item_id": "student-q07",
+  "contestant": "codex",
+  "answer_1": "A0110",
+  "answer_2": "A0063"
+ },
+ "P0100": {
+  "item_id": "student-q07",
+  "contestant": "codex",
+  "answer_1": "A0063",
+  "answer_2": "A0110"
+ },
+ "P0101": {
+  "item_id": "student-q08",
+  "contestant": "claude",
+  "answer_1": "A0011",
+  "answer_2": "A0094"
+ },
+ "P0102": {
+  "item_id": "student-q08",
+  "contestant": "claude",
+  "answer_1": "A0094",
+  "answer_2": "A0011"
+ },
+ "P0103": {
+  "item_id": "student-q08",
+  "contestant": "codex",
+  "answer_1": "A0141",
+  "answer_2": "A0001"
+ },
+ "P0104": {
+  "item_id": "student-q08",
+  "contestant": "codex",
+  "answer_1": "A0001",
+  "answer_2": "A0141"
+ },
+ "P0105": {
+  "item_id": "student-q09",
+  "contestant": "claude",
+  "answer_1": "A0024",
+  "answer_2": "A0055"
+ },
+ "P0106": {
+  "item_id": "student-q09",
+  "contestant": "claude",
+  "answer_1": "A0055",
+  "answer_2": "A0024"
+ },
+ "P0107": {
+  "item_id": "student-q09",
+  "contestant": "codex",
+  "answer_1": "A0061",
+  "answer_2": "A0029"
+ },
+ "P0108": {
+  "item_id": "student-q09",
+  "contestant": "codex",
+  "answer_1": "A0029",
+  "answer_2": "A0061"
+ }
+}

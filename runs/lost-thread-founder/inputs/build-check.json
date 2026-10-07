@@ -1,0 +1,18 @@
+{
+  "errors": [],
+  "warnings": [
+    "q05/f05a: in the chats but not in memory ['claude'] ('\\\\$29 but add a usage cap')",
+    "q05/f05b: happened but DayDream didn't record it ('next sprint'): coverage gap",
+    "q06/f06a: answer pattern also appears in native memory ['codex', 'claude'] (possible lucky guess)",
+    "q09/f09a: in the chats but not in memory ['claude'] ('50 orders')",
+    "q09: control answerable from only one app's memory: {'f09a': {'codex': True, 'claude': False}}"
+  ],
+  "refused_by_daydream": [
+    {
+      "id": "native-57008F92-975C-513D-8681-15B01625E4CC-403",
+      "kind": "window.changed",
+      "title": "Dashboard - Stripe",
+      "url": "https://stripe.com"
+    }
+  ]
+}

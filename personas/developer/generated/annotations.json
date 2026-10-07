@@ -1,0 +1,60 @@
+{
+  "_provenance": "Drafted by deepseek/deepseek-v4-flash-0731 @ <local OpenRouter proxy> from bench/annotate.py CAPABILITIES (0.1.6 code); reviewed by the harness author against ledger.json before the freeze. edited=true marks hand edits. Reviewed 2026-10-06T15:34:16.965838-05:00: every line checked against the recorded rows (events.jsonl) and ledger.json; DeepSeek's founder drafts claimed recorded typing that wasn't recorded (q05, q06, q09), those were rewritten.",
+  "items": {
+    "q01": {
+      "can_know": "Can know: the PR number #1187 from the Chrome tab title 'feat(kafka): migrate event bridge from RabbitMQ by maya-chen · Pull Request #1187 · lumenary/event-bridge' and the merged PR page. Cannot know: whether the PR was actually merged, since DayDream only records tab titles and typed words, not GitHub merge status.",
+      "drafted": "Can know: the PR number #1187 from the Chrome tab title 'feat(kafka): migrate event bridge from RabbitMQ by maya-chen · Pull Request #1187 · lumenary/event-bridge' and the merged PR page. Cannot know: whether the PR was actually merged, since DayDream only records tab titles and typed words, not GitHub merge status.",
+      "reviewed": true,
+      "edited": false
+    },
+    "q02": {
+      "can_know": "Can know: the reservation number HB-88231 from the Chrome tab title 'Cabin in Fredericksburg, TX - reservation #HB-88231'. Cannot know: the reservation details or whether it was confirmed, since DayDream only sees the tab title.",
+      "drafted": "Can know: the reservation number HB-88231 from the Chrome tab title 'Cabin in Fredericksburg, TX - reservation #HB-88231'. Cannot know: the reservation details or whether it was confirmed, since DayDream only sees the tab title.",
+      "reviewed": true,
+      "edited": false
+    },
+    "q03": {
+      "can_know": "Can know: that on Monday, October 5 you were in scraper.py and ran 'python scraper.py', and that the image download fix was committed and pushed (git push origin main, commit history page). Cannot know: the TODO comment about recipe title extraction, because DayDream does not record file contents or uncommitted code comments; it also cannot know an unread DM from Priya.",
+      "drafted": "Can know: that on Monday, October 5 you were in scraper.py and ran 'python scraper.py', and that the image download fix was committed and pushed (git push origin main, commit history page). Cannot know: the TODO comment about recipe title extraction, because DayDream does not record file contents or uncommitted code comments; it also cannot know an unread DM from Priya.",
+      "reviewed": true,
+      "edited": false
+    },
+    "q04": {
+      "can_know": "Can know: the exact words typed in the Gmail replies to Jules about the schema change (e.g. 'in our backlog and will be picked up next sprint', 'now scoped and will be picked up next sprint') and that the schema change was added to Notion/backlog notes. Cannot know: whether the emails were actually sent or whether Jules received them.",
+      "drafted": "Can know: the exact words typed in the Gmail replies to Jules about the schema change (e.g. 'in our backlog and will be picked up next sprint', 'now scoped and will be picked up next sprint') and that the schema change was added to Notion/backlog notes. Cannot know: whether the emails were actually sent or whether Jules received them.",
+      "reviewed": true,
+      "edited": false
+    },
+    "q05": {
+      "can_know": "Can know: the times Slack was the frontmost app on Tuesday, September 29 from the recorded rows, and can estimate a lower/upper bound for time in Slack from those switches. Cannot know: exact time spent, because DayDream only records switch/click/type moments, not continuous active time; idle time and time in other apps create gaps.",
+      "drafted": "Can know: the times Slack was the frontmost app on Tuesday, September 29 from the recorded rows, and can estimate a lower/upper bound for time in Slack from those switches. Cannot know: exact time spent, because DayDream only records switch/click/type moments, not continuous active time; idle time and time in other apps create gaps.",
+      "reviewed": true,
+      "edited": false
+    },
+    "q06": {
+      "can_know": "Can know: the final convention <service>-<env>-v<n> / order-sync-prod-v2 from the Confluence runbook tab title, the Google Docs tab, the Notion page, and typed Slack messages. Cannot know: the actual vote tally or meeting discussion, except what was typed in the doc/runbook (e.g. 'Team voted 4-2 on 6/5').",
+      "drafted": "Can know: the final convention <service>-<env>-v<n> / order-sync-prod-v2 from the Confluence runbook tab title, the Google Docs tab, the Notion page, and typed Slack messages. Cannot know: the actual vote tally or meeting discussion, except what was typed in the doc/runbook (e.g. 'Team voted 4-2 on 6/5').",
+      "reviewed": true,
+      "edited": false
+    },
+    "q07": {
+      "can_know": "Can know: the Grafana dashboard title 'Kafka Consumer Lag' and 'Kafka Consumer Lag - order-sync-prod-v2 - Grafana' from Chrome tab titles. Cannot know: the actual lag values or what was on the dashboard, since DayDream only records the tab title, not page contents.",
+      "drafted": "Can know: the Grafana dashboard title 'Kafka Consumer Lag' and 'Kafka Consumer Lag - order-sync-prod-v2 - Grafana' from Chrome tab titles. Cannot know: the actual lag values or what was on the dashboard, since DayDream only records the tab title, not page contents.",
+      "reviewed": true,
+      "edited": false
+    },
+    "q08": {
+      "can_know": "Can know: that on Wednesday, September 30 you typed to Lena 'i'll call tomorrow' about the German place, and on Friday, October 2 you searched for 'fredericksburg texas dinner reservations saturday' and typed 'let's book the Gemran place, does 6:30 work?'. Cannot know: whether you actually called the restaurant, because phone calls are off-Mac and DayDream records no call activity; it also cannot know Lena's reservation confirmation, since that is an incoming message.",
+      "drafted": "Can know: that on Wednesday, September 30 you typed to Lena 'i'll call tomorrow' about the German place, and on Friday, October 2 you searched for 'fredericksburg texas dinner reservations saturday' and typed 'let's book the Gemran place, does 6:30 work?'. Cannot know: whether you actually called the restaurant, because phone calls are off-Mac and DayDream records no call activity; it also cannot know Lena's reservation confirmation, since that is an incoming message.",
+      "reviewed": true,
+      "edited": false
+    },
+    "q09": {
+      "can_know": "Can know: that the name 'Lena Park' appears in Messages window titles and typed messages this week. Cannot know: from DayDream alone that Lena is the friend you are going to Fredericksburg with, unless inferred from the trip-related messages; the control answer comes from past chats, which DayDream does not have.",
+      "drafted": "Can know: that the name 'Lena Park' appears in Messages window titles and typed messages this week. Cannot know: from DayDream alone that Lena is the friend you are going to Fredericksburg with, unless inferred from the trip-related messages; the control answer comes from past chats, which DayDream does not have.",
+      "reviewed": true,
+      "edited": false
+    }
+  },
+  "reviewed_at": "2026-10-06T15:34:16.965838-05:00"
+}

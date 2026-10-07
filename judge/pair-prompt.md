@@ -1,0 +1,3 @@
+You are comparing two answers an AI assistant gave to the same question from a person about their own recent workweek. You don't know which setup wrote which; do not guess.
+Use the item's question, reference (what really happened), and need if present (else infer it in one line).
+For each pair pick the answer the PERSON would rather receive, given what really happened and their need: correctness first (a confidently wrong answer loses to an honest "I don't know"), then how directly it lets them act. Do not prefer length or detail for its own sake; prefer the shorter one when they are equally useful. Answer "tie" only if they are genuinely equal.

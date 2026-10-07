@@ -1,0 +1,521 @@
+{
+  "developer-q01": {
+    "item_id": "developer-q01",
+    "type": "exact_recall",
+    "question": "What was the PR number for the Kafka bridge migration PR that got merged?",
+    "need": "wants to reference the merged PR in a status update or retro without hunting through GitHub",
+    "can_know": "Can know: the PR number #1187 from the Chrome tab title 'feat(kafka): migrate event bridge from RabbitMQ by maya-chen · Pull Request #1187 · lumenary/event-bridge' and the merged PR page. Cannot know: whether the PR was actually merged, since DayDream only records tab titles and typed words, not GitHub merge status.",
+    "reference": "PR #1187",
+    "negative": false,
+    "hallucination": "A made-up answer would claim a different PR number like #1192 or #482",
+    "facts": [
+      {
+        "id": "f01",
+        "text": "The migration PR was #1187",
+        "optional": false
+      }
+    ]
+  },
+  "developer-q02": {
+    "item_id": "developer-q02",
+    "type": "exact_recall",
+    "question": "What was the Airbnb reservation number for the Fredericksburg cabin?",
+    "need": "wants to double-check the reservation details before the weekend trip",
+    "can_know": "Can know: the reservation number HB-88231 from the Chrome tab title 'Cabin in Fredericksburg, TX - reservation #HB-88231'. Cannot know: the reservation details or whether it was confirmed, since DayDream only sees the tab title.",
+    "reference": "Reservation #HB-88231",
+    "negative": false,
+    "hallucination": "A made-up answer would claim a different reservation number",
+    "facts": [
+      {
+        "id": "f02",
+        "text": "The Airbnb reservation number was HB-88231",
+        "optional": false
+      }
+    ]
+  },
+  "developer-q03": {
+    "item_id": "developer-q03",
+    "type": "where_left_off",
+    "question": "Where did I leave off with the recipe scraper at the end of yesterday?",
+    "need": "wants to pick up the side project without re-reading the code to remember the last state",
+    "can_know": "Can know: that on Monday, October 5 you were in scraper.py and ran 'python scraper.py', and that the image download fix was committed and pushed (git push origin main, commit history page). Cannot know: the TODO comment about recipe title extraction, because DayDream does not record file contents or uncommitted code comments; it also cannot know an unread DM from Priya.",
+    "reference": "On Monday, October 5 you left the recipe scraper with a TODO comment about recipe title extraction in scraper.py and an unread DM from Priya about the schema registry; the image download fix was committed and pushed to the private repo.",
+    "negative": false,
+    "hallucination": "A made-up answer would claim the scraper was fully working or that you were stuck on the Cloudflare challenge",
+    "facts": [
+      {
+        "id": "f03",
+        "text": "The last thing you did was leave a TODO comment about title extraction in scraper.py",
+        "optional": false
+      },
+      {
+        "id": "f04",
+        "text": "The image download fix was committed and pushed to the private repo",
+        "optional": false
+      }
+    ]
+  },
+  "developer-q04": {
+    "item_id": "developer-q04",
+    "type": "cross_app",
+    "question": "What did I tell Jules about the schema change after checking the backlog?",
+    "need": "wants to recall the exact commitment made to the client so they don't contradict it in a follow-up",
+    "can_know": "Can know: the exact words typed in the Gmail replies to Jules about the schema change (e.g. 'in our backlog and will be picked up next sprint', 'now scoped and will be picked up next sprint') and that the schema change was added to Notion/backlog notes. Cannot know: whether the emails were actually sent or whether Jules received them.",
+    "reference": "You told Jules the schema change was in the backlog and would be picked up next sprint, and later that it was scoped and would be picked up next sprint.",
+    "negative": false,
+    "hallucination": "A made-up answer would claim you promised Jules it would be done this sprint or gave a specific date",
+    "facts": [
+      {
+        "id": "f05",
+        "text": "You emailed Jules that the schema change is in the backlog and will be picked up next sprint",
+        "optional": false
+      },
+      {
+        "id": "f06",
+        "text": "You added the schema change to the Notion backlog",
+        "optional": false
+      }
+    ]
+  },
+  "developer-q05": {
+    "item_id": "developer-q05",
+    "type": "time_spent",
+    "question": "How much time did I spend in Slack on Tuesday, September 29?",
+    "need": "wants to see how much of the day went to Slack for a time-tracking or focus retrospective",
+    "can_know": "Can know: the times Slack was the frontmost app on Tuesday, September 29 from the recorded rows, and can estimate a lower/upper bound for time in Slack from those switches. Cannot know: exact time spent, because DayDream only records switch/click/type moments, not continuous active time; idle time and time in other apps create gaps.",
+    "reference": "You spent about 61 minutes in Slack on Tuesday, September 29.",
+    "negative": false,
+    "hallucination": "A made-up answer would claim a round number like 30 minutes or an hour without basis",
+    "facts": [
+      {
+        "id": "f07",
+        "text": "Time spent in Slack on day 1",
+        "optional": false
+      }
+    ]
+  },
+  "developer-q06": {
+    "item_id": "developer-q06",
+    "type": "decision",
+    "question": "What did we end up deciding for the consumer group naming convention?",
+    "need": "wants to confirm the final convention before updating more scripts or docs",
+    "can_know": "Can know: the final convention <service>-<env>-v<n> / order-sync-prod-v2 from the Confluence runbook tab title, the Google Docs tab, the Notion page, and typed Slack messages. Cannot know: the actual vote tally or meeting discussion, except what was typed in the doc/runbook (e.g. 'Team voted 4-2 on 6/5').",
+    "reference": "The team voted 4-2 for the version-suffix style, so the convention is <service>-<env>-v<n>, e.g. order-sync-prod-v2. You updated the runbook and migration script to use it.",
+    "negative": false,
+    "hallucination": "A made-up answer would claim the team chose plain service-env or that Marcus's date-suffix idea won",
+    "facts": [
+      {
+        "id": "f08",
+        "text": "The final convention is order-sync-prod-v2 style",
+        "optional": false
+      },
+      {
+        "id": "f09",
+        "text": "The team voted 4-2 for the version suffix style",
+        "optional": false
+      }
+    ]
+  },
+  "developer-q07": {
+    "item_id": "developer-q07",
+    "type": "vague",
+    "question": "What was that page I looked at to check how far behind the new pipeline was?",
+    "need": "wants to find the Grafana dashboard again without remembering its exact name",
+    "can_know": "Can know: the Grafana dashboard title 'Kafka Consumer Lag' and 'Kafka Consumer Lag - order-sync-prod-v2 - Grafana' from Chrome tab titles. Cannot know: the actual lag values or what was on the dashboard, since DayDream only records the tab title, not page contents.",
+    "reference": "You looked at the Kafka Consumer Lag dashboard in Grafana, specifically for order-sync-prod-v2.",
+    "negative": false,
+    "hallucination": "A made-up answer would claim it was a throughput dashboard or an error-rate dashboard",
+    "facts": [
+      {
+        "id": "f10",
+        "text": "The dashboard was the Kafka Consumer Lag dashboard",
+        "optional": false
+      }
+    ]
+  },
+  "developer-q08": {
+    "item_id": "developer-q08",
+    "type": "negative",
+    "question": "Did I ever call the German restaurant on Main Street in Fredericksburg to book dinner for Saturday?",
+    "need": "wants to know whether the dinner reservation was actually made or if Lena is still waiting on it",
+    "can_know": "Can know: that on Wednesday, September 30 you typed to Lena 'i'll call tomorrow' about the German place, and on Friday, October 2 you searched for 'fredericksburg texas dinner reservations saturday' and typed 'let's book the Gemran place, does 6:30 work?'. Cannot know: whether you actually called the restaurant, because phone calls are off-Mac and DayDream records no call activity; it also cannot know Lena's reservation confirmation, since that is an incoming message.",
+    "reference": "No sign of a call: on Wednesday, September 30 you texted Lena that you'd call the German place on Main Street the next day, but there's no record of you booking it (a phone call wouldn't show up on the Mac either). On Friday, October 2 you searched for Fredericksburg dinner reservations and texted Lena about booking the German place for 6:30, and Lena then sent the reservation confirmation.",
+    "negative": true,
+    "hallucination": "A made-up answer would claim you called the restaurant and booked the table yourself.",
+    "facts": [
+      {
+        "id": "f11",
+        "text": "There is no trace of calling or booking the German restaurant on Main Street",
+        "optional": false
+      }
+    ]
+  },
+  "developer-q09": {
+    "item_id": "developer-q09",
+    "type": "control",
+    "question": "What's the name of the friend I'm going to Fredericksburg with?",
+    "need": "wants to confirm the name for a calendar invite or message",
+    "can_know": "Can know: that the name 'Lena Park' appears in Messages window titles and typed messages this week. Cannot know: from DayDream alone that Lena is the friend you are going to Fredericksburg with, unless inferred from the trip-related messages; the control answer comes from past chats, which DayDream does not have.",
+    "reference": "Lena Park",
+    "negative": false,
+    "hallucination": "A made-up answer would claim a different friend's name",
+    "facts": [
+      {
+        "id": "f12",
+        "text": "The friend is Lena Park",
+        "optional": false
+      }
+    ]
+  },
+  "student-q01": {
+    "item_id": "student-q01",
+    "type": "exact_recall",
+    "question": "What invoice number did I send to Lila for the Open Streets web app?",
+    "need": "wants to recall the exact invoice number to reference it in a follow-up email or accounting conversation",
+    "can_know": "Can know: the typed text in the Gmail compose window on 2026-09-29 includes 'Invoice #2024-0317 is attached', so the invoice number 2024-0317 is visible in DayDream's recorded typed words. Cannot know: whether the email was actually sent or whether Lila received it.",
+    "reference": "Invoice #2024-0317",
+    "negative": false,
+    "hallucination": "A made-up answer would claim a different invoice number like 2024-0318 or 2024-0316",
+    "facts": [
+      {
+        "id": "f01a",
+        "text": "The invoice number was 2024-0317",
+        "optional": false
+      }
+    ]
+  },
+  "student-q02": {
+    "item_id": "student-q02",
+    "type": "where_left_off",
+    "question": "Where did I leave off on the HCI methods section at the end of yesterday?",
+    "need": "wants to know the last state of the methods section so they can resume without re-reading everything",
+    "can_know": "Can know: the windows and pages in front on Monday, October 5 and before (e.g. Keynote 'HCI Group Presentation', the methods doc's Google Docs tab titles), with times. Cannot know: what was written in the Google Doc or posted in Slack desktop (typing there isn't recorded), so not that the methods section was finished or posted.",
+    "reference": "On Monday, October 5, Maya finished the methods section draft, added the usability numbers, and posted the final methods section in #hci-group-project, then started building the presentation slides in Keynote and added a limitations slide.",
+    "negative": false,
+    "hallucination": "A made-up answer would claim she was still writing the participants subsection or hadn't started the slides",
+    "facts": [
+      {
+        "id": "f02a",
+        "text": "The methods section was finalized and posted to the group Slack",
+        "optional": false
+      },
+      {
+        "id": "f02b",
+        "text": "Maya then worked on the HCI presentation slides in Keynote",
+        "optional": false
+      }
+    ]
+  },
+  "student-q03": {
+    "item_id": "student-q03",
+    "type": "cross_app",
+    "question": "What did I tell Lila after I checked the Firebase console to see if volunteer signups were coming through?",
+    "need": "wants to know what they communicated to the client after verifying the app was working, so they can follow up consistently",
+    "can_know": "Can know: that on 2026-10-02 Maya opened 'Firebase Console - Open Streets Collective' in Chrome, and that on 2026-10-02 she typed in Gmail 'No problem! Happy to wait for the board. Let me know if they have any questions.' in a reply about the Open Streets invoice. Cannot know: that the Firebase check was specifically to see volunteer signups, or that the Gmail reply was actually sent.",
+    "reference": "After checking the Firebase console, Maya replied to Lila's invoice email saying 'No problem! Happy to wait for the board. Let me know if they have any questions.'",
+    "negative": false,
+    "hallucination": "A made-up answer would claim she told Lila the signups were working or that she was sending a new invoice",
+    "facts": [
+      {
+        "id": "f03a",
+        "text": "Maya checked the Firebase console for volunteer signups",
+        "optional": false
+      },
+      {
+        "id": "f03b",
+        "text": "Maya replied to Lila saying she was happy to wait for the board",
+        "optional": false
+      }
+    ]
+  },
+  "student-q04": {
+    "item_id": "student-q04",
+    "type": "time_spent",
+    "question": "How much time did I spend on Reddit on Tuesday, September 29?",
+    "need": "wants to know how long they were distracted on Reddit on the first day of the week",
+    "can_know": "Can know: that on 2026-09-29 Chrome tabs titled 'r/ADHD - How do you stop procrastinating? - Reddit' and 'r/ADHD - How do you stop procrastinating?' were in front at switch/click/type times. Cannot know: how long Maya spent on Reddit, because DayDream only records switch times and idle time leaves gaps; duration can only be estimated as a lower/upper bound, not measured.",
+    "reference": "On Tuesday, September 29, Maya spent about 18 minutes on Reddit.",
+    "negative": false,
+    "hallucination": "A made-up answer would claim a different amount of time, like 2 minutes or 30 minutes",
+    "facts": [
+      {
+        "id": "f04a",
+        "text": "Time spent on Reddit on day 1",
+        "optional": false
+      }
+    ]
+  },
+  "student-q05": {
+    "item_id": "student-q05",
+    "type": "decision",
+    "question": "Which elective did I end up choosing for next semester, and what was the waitlist position?",
+    "need": "wants to confirm their final course registration decision and waitlist status before the add/drop deadline",
+    "can_know": "Can know: that on 2026-10-02 Chrome showed 'Registration - University of Minnesota - Canvas' with the typed text 'Confirm registration for INFO 6502 and drop INFO 6501', and that Maya repeatedly looked at 'INFO 6502 - Critical AI Ethics' pages. Cannot know: the waitlist position (3), because that number was not typed by Maya and is not in any recorded title or typed text.",
+    "reference": "Maya chose INFO 6502 Critical AI Ethics and dropped INFO 6501 Data Visualization. The waitlist position was 3, but she got in because she registered early.",
+    "negative": false,
+    "hallucination": "A made-up answer would claim she chose Data Visualization or that the waitlist position was different",
+    "facts": [
+      {
+        "id": "f05a",
+        "text": "Maya dropped INFO 6501 and kept INFO 6502",
+        "optional": false
+      },
+      {
+        "id": "f05b",
+        "text": "The waitlist position for INFO 6502 was 3",
+        "optional": true
+      }
+    ]
+  },
+  "student-q06": {
+    "item_id": "student-q06",
+    "type": "vague",
+    "question": "What was that thread I kept opening about not being able to get started on things?",
+    "need": "wants to find the Reddit thread they kept opening when procrastinating, to maybe read the advice or close the tab",
+    "can_know": "Can know: the Reddit thread title from Chrome tab titles: 'r/ADHD - How do you stop procrastinating?' appeared multiple times. Cannot know: the content of the thread or what Maya read in it.",
+    "reference": "The thread was 'r/ADHD - How do you stop procrastinating?' on Reddit.",
+    "negative": false,
+    "hallucination": "A made-up answer would claim it was a thread about body doubling or focus music",
+    "facts": [
+      {
+        "id": "f06a",
+        "text": "The thread title was 'How do you stop procrastinating?'",
+        "optional": false
+      }
+    ]
+  },
+  "student-q07": {
+    "item_id": "student-q07",
+    "type": "vague",
+    "question": "What was that article I kept opening but never actually finished?",
+    "need": "wants to remember the NYT article they kept opening in new tabs but never read, so they can decide whether to read it or close it",
+    "can_know": "Can know: the NYT article title from Chrome tab titles: 'The Sunday Read: The Lost Art of Doing Nothing' (or 'The Lost Art of Doing Nothing - The New York Times') appeared repeatedly. Cannot know: whether Maya actually read it or how long she looked at it.",
+    "reference": "The article was 'The Sunday Read: The Lost Art of Doing Nothing' from The New York Times.",
+    "negative": false,
+    "hallucination": "A made-up answer would claim it was a different article, like a productivity piece or a podcast episode",
+    "facts": [
+      {
+        "id": "f07a",
+        "text": "The article was 'The Sunday Read: The Lost Art of Doing Nothing'",
+        "optional": false
+      }
+    ]
+  },
+  "student-q08": {
+    "item_id": "student-q08",
+    "type": "negative",
+    "question": "Did I ever send that reply to Raj about doing the pilot test at 1pm?",
+    "need": "wants to know if they actually sent the message offering to do the pilot at 1pm, or if it was left as a draft",
+    "can_know": "Can know: that on 2026-09-29 the Slack channel '#hci-group-project - University of Minnesota - Slack' was in front, but DayDream did not record the typed text 'i can do 1pm if needed but i have lab work after, lmk' (it is not in the recorded rows). Cannot know: whether that reply was sent, because DayDream cannot see sent/unsent status and the typed words were not captured.",
+    "reference": "No, that reply was never sent. Maya typed 'i can do 1pm if needed but i have lab work after, lmk' but got distracted and left it unsent.",
+    "negative": true,
+    "hallucination": "A made-up answer would claim the message was sent and Raj replied",
+    "facts": [
+      {
+        "id": "f08a",
+        "text": "The reply was typed but not sent",
+        "optional": false
+      }
+    ]
+  },
+  "student-q09": {
+    "item_id": "student-q09",
+    "type": "control",
+    "question": "What did you suggest for my dad's birthday gift?",
+    "need": "wants to recall the gift ideas the assistant gave for their dad's birthday",
+    "can_know": "Can know: that Maya browsed 'Personalized Tackle Box - Fishing Gift for Dad - Etsy' and typed messages about ordering a tackle box for Dad. Cannot know: any gift suggestions the assistant made in past chats, because DayDream only records this week's typed words on this Mac and the assistant's past suggestions are not in the recorded rows.",
+    "reference": "The assistant suggested a personalized tackle box, a vintage radio restoration kit, a woodworking tool set, and a subscription to a fishing magazine.",
+    "negative": false,
+    "hallucination": "A made-up answer would claim the assistant suggested something else, like a new phone or a gift card",
+    "facts": [
+      {
+        "id": "f09a",
+        "text": "The assistant suggested a personalized tackle box",
+        "optional": false
+      },
+      {
+        "id": "f09b",
+        "text": "The assistant suggested a vintage radio restoration kit",
+        "optional": true
+      },
+      {
+        "id": "f09c",
+        "text": "The assistant suggested a woodworking tool set",
+        "optional": true
+      },
+      {
+        "id": "f09d",
+        "text": "The assistant suggested a fishing magazine subscription",
+        "optional": true
+      }
+    ]
+  },
+  "founder-q01": {
+    "item_id": "founder-q01",
+    "type": "exact_recall",
+    "question": "What was the invoice number that Tom flagged as missing line items?",
+    "need": "wants to recall the exact invoice ID from the export bug so they can reference it in the postmortem",
+    "can_know": "Can know: the invoice number 2841 appears in the typed email to Tom in the Mail window 'Re: Invoice #2841 export issue' and in the typed text 'Sorry about the invoice #2841 issue'. Cannot know: whether Tom actually received or read the email, or any details beyond what was typed.",
+    "reference": "Invoice #2841",
+    "negative": false,
+    "hallucination": "A made-up answer would claim a different invoice number like 2842 or 3017",
+    "facts": [
+      {
+        "id": "f01a",
+        "text": "The invoice number was 2841",
+        "optional": false
+      }
+    ]
+  },
+  "founder-q02": {
+    "item_id": "founder-q02",
+    "type": "where_left_off",
+    "question": "Where did I leave the roaster map side project at the end of last Friday?",
+    "need": "wants to know the last state of the side project so they can pick it up without re-orienting",
+    "can_know": "Can know: that on Friday, October 2 the roaster-map windows included roasters.json in the editor and 'roaster-map — git commit' and 'roaster-map — git push' in the terminal, with times. Cannot know: what the commit contained or its message, whether the push succeeded, or what was done off this Mac.",
+    "reference": "You had just committed the 3 new roasters to roasters.json and pushed to GitHub (git push origin main) after adding the filter and fixing the empty state.",
+    "negative": false,
+    "hallucination": "A made-up answer would claim you were still debugging the scraper rate limit or had only sketched the layout in Figma",
+    "facts": [
+      {
+        "id": "f02a",
+        "text": "The last code change was committing 3 new roasters to roasters.json",
+        "optional": false
+      },
+      {
+        "id": "f02b",
+        "text": "The last terminal step was a git push",
+        "optional": false
+      }
+    ]
+  },
+  "founder-q03": {
+    "item_id": "founder-q03",
+    "type": "cross_app",
+    "question": "What did I end up telling Tom about the feature he asked for that we can't build?",
+    "need": "wants to recall the exact wording sent to the customer so they stay consistent on Tuesday's call",
+    "can_know": "Can know: the typed email to Tom on day 3 at 13:31 says the feature isn't feasible with the current data model because wholesale orders don't carry a per-item roast date, and offers a workaround. Cannot know: whether the email was actually sent or received, or Tom's reaction.",
+    "reference": "You emailed Tom that the feature isn't feasible with the current data model because wholesale orders don't carry a per-item roast date, and offered a workaround using the batch number on the invoice plus a lookup endpoint.",
+    "negative": false,
+    "hallucination": "A made-up answer would claim you promised to build the feature in Q4 or said it was already on the roadmap",
+    "facts": [
+      {
+        "id": "f03a",
+        "text": "The email said the feature isn't feasible because wholesale orders don't carry a per-item roast date",
+        "optional": false
+      },
+      {
+        "id": "f03b",
+        "text": "The email offered a workaround using the batch number on the invoice and a lookup endpoint",
+        "optional": false
+      }
+    ]
+  },
+  "founder-q04": {
+    "item_id": "founder-q04",
+    "type": "time_spent",
+    "question": "How much time did I spend on the roaster map side project yesterday?",
+    "need": "wants to see how much time the side project ate on Friday so they can budget better next week",
+    "can_know": "Can know: the recorded roaster-map app/window/terminal events on day 5 with timestamps, from which an estimate of active time can be inferred. Cannot know: exactly how long was spent, because DayDream only records switches and idle time leaves gaps; the reference 78 minutes is not directly recorded.",
+    "reference": "You spent about 78 minutes on the roaster map on Monday, October 5.",
+    "negative": false,
+    "hallucination": "A made-up answer would claim you spent hours on it or none at all",
+    "facts": [
+      {
+        "id": "f04a",
+        "text": "Time spent on the roaster map side project on day 5",
+        "optional": false
+      }
+    ]
+  },
+  "founder-q05": {
+    "item_id": "founder-q05",
+    "type": "decision",
+    "question": "Did we end up raising the Starter plan price or not?",
+    "need": "wants to confirm the final pricing decision before the rollout announcement goes out",
+    "can_know": "Can know: the pricing windows this week with times (Excel 'pricing_model_usage_cap.xlsx' and 'pricing_decision_matrix.xlsx', Notion 'Pricing Decision' and 'Pricing rollout checklist'). Cannot know: the decision itself or the rollout timing, which were written in Notion/Google Docs and Slack desktop, where typing isn't recorded.",
+    "reference": "You decided to keep the Starter plan at $29 and add a usage cap instead of raising the price to $39. The rollout was scheduled for the next sprint.",
+    "negative": false,
+    "hallucination": "A made-up answer would claim you raised the price to $39 or postponed the decision",
+    "facts": [
+      {
+        "id": "f05a",
+        "text": "The final decision was to keep $29 and add a usage cap",
+        "optional": false
+      },
+      {
+        "id": "f05b",
+        "text": "The rollout was scheduled for the next sprint",
+        "optional": true
+      }
+    ]
+  },
+  "founder-q06": {
+    "item_id": "founder-q06",
+    "type": "vague",
+    "question": "What was that coffee-themed thing I was tinkering with in Figma this week?",
+    "need": "wants to remember the side project without naming it directly",
+    "can_know": "Can know: the Figma windows 'Roaster Map — Figma' and 'Roaster Map — Prototype — Figma' with times across the week. Cannot know: what was changed in the design (the pin hover state, the filter dropdown): Figma typing and canvas contents aren't recorded.",
+    "reference": "You were working on the roaster map prototype in Figma, tweaking the pin hover state and adding a filter dropdown for region.",
+    "negative": false,
+    "hallucination": "A made-up answer would claim it was a coffee brand logo or a packaging design",
+    "facts": [
+      {
+        "id": "f06a",
+        "text": "The Figma file was the roaster map prototype",
+        "optional": false
+      }
+    ]
+  },
+  "founder-q07": {
+    "item_id": "founder-q07",
+    "type": "negative",
+    "question": "Did I ever email Leo about the new onboarding flow?",
+    "need": "wants to know whether she already contacted the freelance designer about the onboarding flow, so she doesn't double-message him or assume he's seen it",
+    "can_know": "Can know: there is no recorded email to Leo in the DayDream rows; no Mail window or typed text mentions Leo. Cannot know: emails sent from other devices, in-person messages, or anything off this Mac.",
+    "reference": "No — there's no trace of any email to Leo this week. You never wrote to him about the onboarding flow or anything else.",
+    "negative": true,
+    "hallucination": "A made-up answer would claim you emailed Leo about the onboarding flow, or that he replied with a timeline or a design file.",
+    "facts": [
+      {
+        "id": "f07a",
+        "text": "No email to Leo was sent or drafted this week",
+        "optional": false
+      }
+    ]
+  },
+  "founder-q08": {
+    "item_id": "founder-q08",
+    "type": "negative",
+    "question": "Did I ever get back to Jordan about the Q3 tax stuff?",
+    "need": "wants to know whether she replied to her accountant about Q3 taxes, so she can follow up if not",
+    "can_know": "Can know: there is no recorded reply to Jordan about Q3 taxes in the DayDream rows; no Mail window or typed text mentions Jordan. Cannot know: whether an email was sent from another device or in person, or the content of Jordan's incoming email.",
+    "reference": "No — you never replied to Jordan. The email from Jordan about Q3 taxes sat unread in your inbox on Friday, October 2, and there's no other trace of you responding.",
+    "negative": true,
+    "hallucination": "A made-up answer would claim you replied to Jordan, scheduled a call, or sent over the Q3 numbers.",
+    "facts": [
+      {
+        "id": "f08a",
+        "text": "No reply to Jordan about Q3 taxes was sent or drafted",
+        "optional": false
+      }
+    ]
+  },
+  "founder-q09": {
+    "item_id": "founder-q09",
+    "type": "control",
+    "question": "What's the median order volume for our customers? I'm trying to sanity-check the usage cap we discussed.",
+    "need": "wants to recall the customer usage benchmark they told the assistant, to validate the Starter plan usage cap decision",
+    "can_know": "Can know: nothing about the customers' median order volume; it was never typed or shown in a title this week (the usage cap typed in Slack desktop wasn't recorded either). Cannot know: anything from the person's past chats with the assistant.",
+    "reference": "Your median customer has about 50 orders a month.",
+    "negative": false,
+    "hallucination": "A made-up answer would claim a different median like 100 orders or 25 orders per month",
+    "facts": [
+      {
+        "id": "f09a",
+        "text": "The median customer has 50 orders per month",
+        "optional": false
+      }
+    ]
+  }
+}

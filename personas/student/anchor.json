@@ -1,0 +1,26 @@
+{
+  "persona": "student",
+  "ask_day": "2026-10-06",
+  "built_at": "2026-10-06T15:34:22.497473-05:00",
+  "ask_at": "2026-10-06T15:34:22.497481-05:00",
+  "dates": [
+    "2026-09-29",
+    "2026-09-30",
+    "2026-10-01",
+    "2026-10-02",
+    "2026-10-05"
+  ],
+  "seed": 11,
+  "source": "generated",
+  "generator": "deepseek/deepseek-v4-flash-0731 @ <local OpenRouter proxy>",
+  "store_sha256": "9acb7ce1e368c018ff7096ead6bc2dc28439c01584d2f57a2c5446f3887f9516",
+  "rows": 1624,
+  "kept": {
+    "app.activated": 214,
+    "keyboard.submit": 16,
+    "keyboard.text_input": 34,
+    "mouse.click": 782,
+    "window.changed": 578
+  },
+  "typed_retention": "30d"
+}

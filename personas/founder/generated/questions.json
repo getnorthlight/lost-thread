@@ -1,0 +1,250 @@
+{
+  "items": [
+    {
+      "id": "q01",
+      "type": "exact_recall",
+      "question": "What was the invoice number that Tom flagged as missing line items?",
+      "need": "wants to recall the exact invoice ID from the export bug so they can reference it in the postmortem",
+      "reference": "Invoice #2841",
+      "facts": [
+        {
+          "id": "f01a",
+          "text": "The invoice number was 2841",
+          "check": {
+            "kind": "regex",
+            "pattern": "2841"
+          },
+          "ev": "2841",
+          "nm": null,
+          "optional": false
+        }
+      ],
+      "negative": false,
+      "hallucination": "A made-up answer would claim a different invoice number like 2842 or 3017",
+      "target_ev": "2841",
+      "allow_overlap": []
+    },
+    {
+      "id": "q02",
+      "type": "where_left_off",
+      "question": "Where did I leave the roaster map side project at the end of {d4}?",
+      "need": "wants to know the last state of the side project so they can pick it up without re-orienting",
+      "reference": "You had just committed the 3 new roasters to roasters.json and pushed to GitHub (git push origin main) after adding the filter and fixing the empty state.",
+      "facts": [
+        {
+          "id": "f02a",
+          "text": "The last code change was committing 3 new roasters to roasters.json",
+          "check": {
+            "kind": "regex",
+            "pattern": "roasters\\.json"
+          },
+          "ev": "roasters\\.json",
+          "nm": null,
+          "optional": false
+        },
+        {
+          "id": "f02b",
+          "text": "The last terminal step was a git push",
+          "check": {
+            "kind": "regex",
+            "pattern": "push"
+          },
+          "ev": "roaster-map — git push",
+          "nm": null,
+          "optional": false
+        }
+      ],
+      "negative": false,
+      "hallucination": "A made-up answer would claim you were still debugging the scraper rate limit or had only sketched the layout in Figma",
+      "target_ev": "git push origin main",
+      "allow_overlap": []
+    },
+    {
+      "id": "q03",
+      "type": "cross_app",
+      "question": "What did I end up telling Tom about the feature he asked for that we can't build?",
+      "need": "wants to recall the exact wording sent to the customer so they stay consistent on Tuesday's call",
+      "reference": "You emailed Tom that the feature isn't feasible with the current data model because wholesale orders don't carry a per-item roast date, and offered a workaround using the batch number on the invoice plus a lookup endpoint.",
+      "facts": [
+        {
+          "id": "f03a",
+          "text": "The email said the feature isn't feasible because wholesale orders don't carry a per-item roast date",
+          "check": {
+            "kind": "regex",
+            "pattern": "don't carry a per-item roast date"
+          },
+          "ev": "don't carry a per-item roast date",
+          "nm": null,
+          "optional": false
+        },
+        {
+          "id": "f03b",
+          "text": "The email offered a workaround using the batch number on the invoice and a lookup endpoint",
+          "check": {
+            "kind": "regex",
+            "pattern": "batch number on the invoice"
+          },
+          "ev": "batch number on the invoice",
+          "nm": null,
+          "optional": false
+        }
+      ],
+      "negative": false,
+      "hallucination": "A made-up answer would claim you promised to build the feature in Q4 or said it was already on the roadmap",
+      "target_ev": "batch number on the invoice",
+      "allow_overlap": []
+    },
+    {
+      "id": "q04",
+      "type": "time_spent",
+      "question": "How much time did I spend on the roaster map side project {d5}?",
+      "need": "wants to see how much time the side project ate on Friday so they can budget better next week",
+      "reference": "You spent about {min:thread:5:side_project_roaster_map} minutes on the roaster map on {date:d5}.",
+      "facts": [
+        {
+          "id": "f04a",
+          "text": "Time spent on the roaster map side project on day 5",
+          "check": {
+            "kind": "number",
+            "value": "{min:thread:5:side_project_roaster_map}",
+            "unit": "minutes",
+            "full": 0.25,
+            "half": 0.5
+          },
+          "ev": null,
+          "nm": null,
+          "optional": false
+        }
+      ],
+      "negative": false,
+      "hallucination": "A made-up answer would claim you spent hours on it or none at all",
+      "target_ev": "roaster_map.fig",
+      "allow_overlap": []
+    },
+    {
+      "id": "q05",
+      "type": "decision",
+      "question": "Did we end up raising the Starter plan price or not?",
+      "need": "wants to confirm the final pricing decision before the rollout announcement goes out",
+      "reference": "You decided to keep the Starter plan at $29 and add a usage cap instead of raising the price to $39. The rollout was scheduled for the next sprint.",
+      "facts": [
+        {
+          "id": "f05a",
+          "text": "The final decision was to keep $29 and add a usage cap",
+          "check": {
+            "kind": "regex",
+            "pattern": "29[\\s\\S]*cap|cap[\\s\\S]*29"
+          },
+          "ev": "usage_cap",
+          "nm": "\\$29 but add a usage cap",
+          "optional": false
+        },
+        {
+          "id": "f05b",
+          "text": "The rollout was scheduled for the next sprint",
+          "check": {
+            "kind": "regex",
+            "pattern": "next sprint"
+          },
+          "ev": "next sprint",
+          "nm": null,
+          "optional": true
+        }
+      ],
+      "negative": false,
+      "hallucination": "A made-up answer would claim you raised the price to $39 or postponed the decision",
+      "target_ev": "keeping $29 with a usage cap",
+      "allow_overlap": []
+    },
+    {
+      "id": "q06",
+      "type": "vague",
+      "question": "What was that coffee-themed thing I was tinkering with in Figma this week?",
+      "need": "wants to remember the side project without naming it directly",
+      "reference": "You were working on the roaster map prototype in Figma, tweaking the pin hover state and adding a filter dropdown for region.",
+      "facts": [
+        {
+          "id": "f06a",
+          "text": "The Figma file was the roaster map prototype",
+          "check": {
+            "kind": "regex",
+            "pattern": "Roaster Map"
+          },
+          "ev": "Roaster Map",
+          "nm": null,
+          "optional": false
+        }
+      ],
+      "negative": false,
+      "hallucination": "A made-up answer would claim it was a coffee brand logo or a packaging design",
+      "target_ev": "Roaster Map",
+      "allow_overlap": []
+    },
+    {
+      "id": "q07",
+      "type": "negative",
+      "question": "Did I ever email Leo about the new onboarding flow?",
+      "need": "wants to know whether she already contacted the freelance designer about the onboarding flow, so she doesn't double-message him or assume he's seen it",
+      "reference": "No — there's no trace of any email to Leo this week. You never wrote to him about the onboarding flow or anything else.",
+      "facts": [
+        {
+          "id": "f07a",
+          "text": "No email to Leo was sent or drafted this week",
+          "check": null,
+          "ev": null,
+          "nm": null,
+          "optional": false
+        }
+      ],
+      "negative": true,
+      "hallucination": "A made-up answer would claim you emailed Leo about the onboarding flow, or that he replied with a timeline or a design file.",
+      "target_ev": "Leo Park",
+      "allow_overlap": []
+    },
+    {
+      "id": "q08",
+      "type": "negative",
+      "question": "Did I ever get back to Jordan about the Q3 tax stuff?",
+      "need": "wants to know whether she replied to her accountant about Q3 taxes, so she can follow up if not",
+      "reference": "No — you never replied to Jordan. The email from Jordan about Q3 taxes sat unread in your inbox on {date:d4}, and there's no other trace of you responding.",
+      "facts": [
+        {
+          "id": "f08a",
+          "text": "No reply to Jordan about Q3 taxes was sent or drafted",
+          "check": null,
+          "ev": null,
+          "nm": null,
+          "optional": false
+        }
+      ],
+      "negative": true,
+      "hallucination": "A made-up answer would claim you replied to Jordan, scheduled a call, or sent over the Q3 numbers.",
+      "target_ev": "Jordan Lee",
+      "allow_overlap": []
+    },
+    {
+      "id": "q09",
+      "type": "control",
+      "question": "What's the median order volume for our customers? I'm trying to sanity-check the usage cap we discussed.",
+      "need": "wants to recall the customer usage benchmark they told the assistant, to validate the Starter plan usage cap decision",
+      "reference": "Your median customer has about 50 orders a month.",
+      "facts": [
+        {
+          "id": "f09a",
+          "text": "The median customer has 50 orders per month",
+          "check": {
+            "kind": "regex",
+            "pattern": "50 orders"
+          },
+          "ev": null,
+          "nm": "50 orders",
+          "optional": false
+        }
+      ],
+      "negative": false,
+      "hallucination": "A made-up answer would claim a different median like 100 orders or 25 orders per month",
+      "target_ev": null,
+      "allow_overlap": []
+    }
+  ]
+}
